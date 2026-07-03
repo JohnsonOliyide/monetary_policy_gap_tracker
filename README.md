@@ -1,86 +1,73 @@
 # Monetary Policy Gap Tracker
 
-This is a static dashboard prototype for tracking whether monetary policy appears restrictive, neutral, or accommodative across alternative estimates of the natural rate of interest, r*.
+**Tracking whether monetary policy is restrictive or accommodative across alternative r\* estimates.**
 
-The dashboard does **not** average the r* measures into a single index. It preserves each estimate and calculates a separate policy gap under the selected policy rate and inflation-expectations measure:
+This dashboard compares the real policy rate with alternative estimates of the natural rate of interest, r\*, to assess whether monetary policy appears restrictive, neutral, or accommodative under the selected policy rate and inflation-expectations measure.
 
-```text
-Policy gap = (Policy rate - Expected inflation) - r*
-```
+\[
+\text{Policy gap} = (\text{Policy rate} - \text{Expected inflation}) - r^*
+\]
 
-Positive values indicate a restrictive stance. Negative values indicate an accommodative stance. Values close to zero indicate a neutral or approximately neutral stance.
-
-## Suggested public-facing description
-
-**Monetary Policy Gap Tracker** compares the real policy rate with alternative estimates of the natural rate of interest, r*, to show whether policy looks restrictive, neutral, or accommodative under different assumptions about inflation expectations.
-
-The dashboard is designed to make model disagreement transparent. Instead of creating one composite r* index, it shows the policy gap implied by each measure separately.
+Positive policy gaps indicate restrictive policy. Negative policy gaps indicate accommodative policy. Values close to zero suggest a neutral or ambiguous stance.
 
 ## What is included
 
-- `index.html` — dashboard layout
-- `styles.css` — dashboard styling
-- `app.js` — dashboard logic, charting, date-range controls, latest table, summary and frequency handling
-- `data/sample_data.json` — illustrative sample data for the prototype
-- `scripts/update_data.py` — starter data pipeline for replacing the sample data with live data
-- `.github/workflows/update-data.yml` — starter GitHub Actions workflow
+The prototype includes:
 
-## r* measures in the prototype
+- a left-side controls panel for policy-rate selection, inflation-expectations selection, date range, and r\* measure checkboxes;
+- a latest available readings table;
+- a dynamic summary of latest policy-gap readings;
+- a policy-gap chart across alternative r\* measures;
+- an underlying r\* estimates chart;
+- same-page sections for Methodology, Sources, and About;
+- author and Federal Reserve disclaimer footer.
 
-### Monthly measures
+## r\* measures
+
+Monthly measures:
 
 - Kansas City Fed Model-Based Natural Rate of Interest
-- D’Amico-Kim-Wei Market-Based r*
+- D’Amico-Kim-Wei Market-Based r\*
 - 10-Year, 10-Year Forward TIPS Real Rate
 
-### Quarterly model-based measures
+Quarterly model-based measures:
 
 - Holston-Laubach-Williams Natural Rate of Interest
 - Laubach-Williams Natural Rate of Interest
 - Lubik-Matthes Natural Rate of Interest
 
-### Quarterly policymaker-based measure
+Quarterly policymaker-based measure:
 
 - FOMC SEP-Implied Longer-Run Real Neutral Rate
 
-## Inflation expectation options
+## Inflation-expectations options
 
-The default selection is:
+Moving-average proxies:
 
 - Core PCE moving-average proxy
-
-Other options included in the interface are:
-
 - Headline PCE moving-average proxy
 - Core CPI moving-average proxy
 - Headline CPI moving-average proxy
+
+Survey/model-based expectations:
+
 - Cleveland Fed 1-year expected inflation
 - Michigan 1-year expected inflation
 - New York Fed SCE 1-year expected inflation
-- Survey of Professional Forecasters 1-year expected inflation
+- SPF 1-year expected inflation
 
-## Frequency rules
+When SPF is selected, all stance calculations switch to quarterly frequency.
 
-- Monthly r* measures remain monthly when the selected inflation expectation is monthly.
-- Quarterly r* measures remain quarterly.
-- Quarterly r* estimates are not interpolated.
-- If SPF is selected, all policy-stance estimates switch to quarterly frequency.
-- Latest readings show each measure at its own latest available reference period.
+## Frequency handling
 
+Monthly r\* measures remain monthly. Quarterly r\* measures remain quarterly. The dashboard does not interpolate quarterly r\* estimates into monthly observations. The date range controls filter the visible chart range and the latest available readings table.
 
-## Start date and date range
+## Preview locally
 
-The illustrative prototype currently starts in **January 2020** and ends in **June 2026**, because `data/sample_data.json` contains sample observations over that range.
-
-The dashboard now includes a **Date range** control in the top filter bar. Users can choose a start date and end date, and both charts plus the latest-reading table update to reflect the selected window. The table reports the latest available observation **within the selected date range**.
-
-When the dashboard is connected to live data, the available start and end dates will be taken from the data file rather than hard-coded. The common historical start date will depend on which r* measures are selected because the model-based, market-based, and SEP-implied measures do not all begin at the same time.
-
-## Local preview
-
-From this folder, run:
+After unzipping the project folder, run:
 
 ```bash
+cd monetary_policy_gap_tracker
 python3 -m http.server 8000
 ```
 
@@ -90,28 +77,12 @@ Then open:
 http://localhost:8000
 ```
 
-Opening `index.html` directly from your file system may block `data/sample_data.json` in some browsers, so using a local server is safer.
+## Data status
 
-## GitHub Pages deployment
+The current dashboard uses illustrative sample data so the interface can run immediately. The included update pipeline is a starter structure for replacing the sample values with publicly available data from Federal Reserve sources and author calculations.
 
-1. Create a new GitHub repository.
-2. Upload the files in this folder.
-3. Go to **Settings → Pages**.
-4. Set the source to the main branch and root folder.
-5. Visit the GitHub Pages URL after it finishes deploying.
+## Author and disclaimer
 
-## Important note
+Author: [Johnson Oliyide](https://www.johnsonoliyide.com/)
 
-The current `sample_data.json` values are illustrative. Use `scripts/update_data.py` as the starting point for replacing the sample data with live data.
-
-## Data-source plan
-
-The update pipeline is designed around these public sources:
-
-- Kansas City Fed r* and u* CSV: `https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv`
-- New York Fed LW current estimates: `https://www.newyorkfed.org/medialibrary/media/research/economists/williams/data/Laubach_Williams_current_estimates.xlsx`
-- New York Fed HLW current estimates: `https://www.newyorkfed.org/medialibrary/media/research/economists/williams/data/Holston_Laubach_Williams_current_estimates.xlsx`
-- Richmond Fed Lubik-Matthes XLSX: `https://www.richmondfed.org/-/media/RichmondFedOrg/research/economists/bios/data/lubik_matthes_natural_rate_interest.xlsx`
-- FRED CSV endpoint for policy rates and price indexes: `https://fred.stlouisfed.org/graph/fredgraph.csv?id=SERIES_ID`
-
-Some series, especially DKW and the 10Y10Y TIPS real-rate measure, may require additional source confirmation before final automation.
+The views expressed in this dashboard are those of the author and should not be interpreted as reflecting the views of the Federal Reserve Bank of Kansas City or the Federal Reserve System.

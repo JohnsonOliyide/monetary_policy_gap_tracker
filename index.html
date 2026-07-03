@@ -9,71 +9,14 @@
 </head>
 <body>
   <div class="app-shell">
-    <aside class="sidebar">
-      <div class="brand">
-        <div class="brand-mark"><span></span><span></span><span></span></div>
-        <div>
-          <div class="brand-title">MacroInsights</div>
-          <div class="brand-subtitle">Economics Analytics</div>
+    <aside class="sidebar" aria-label="Dashboard inputs">
+      <section class="input-panel">
+        <div class="sidebar-heading">
+          <span class="eyebrow">Inputs</span>
+          <h2>Dashboard controls</h2>
+          <p>Choose the assumptions used to calculate the policy gap.</p>
         </div>
-      </div>
 
-      <div class="sidebar-section-title">r* Measures <span class="info">i</span></div>
-
-      <div class="measure-group">
-        <div class="measure-group-title">Monthly measures</div>
-        <label class="measure-check"><input type="checkbox" data-measure="kc_fed" checked /> <span>Kansas City Fed Model-Based Natural Rate of Interest</span></label>
-        <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei Market-Based r*</span></label>
-        <label class="measure-check"><input type="checkbox" data-measure="tips_10y10y" checked /> <span>10-Year, 10-Year Forward TIPS Real Rate</span></label>
-      </div>
-
-      <div class="measure-group">
-        <div class="measure-group-title">Quarterly model-based measures</div>
-        <label class="measure-check"><input type="checkbox" data-measure="hlw" checked /> <span>Holston-Laubach-Williams Natural Rate of Interest</span></label>
-        <label class="measure-check"><input type="checkbox" data-measure="lw" checked /> <span>Laubach-Williams Natural Rate of Interest</span></label>
-        <label class="measure-check"><input type="checkbox" data-measure="lubik_matthes" checked /> <span>Lubik-Matthes Natural Rate of Interest</span></label>
-      </div>
-
-      <div class="measure-group">
-        <div class="measure-group-title">Quarterly policymaker-based measure</div>
-        <label class="measure-check"><input type="checkbox" data-measure="sep_implied" checked /> <span>FOMC SEP-Implied Longer-Run Real Neutral Rate</span></label>
-      </div>
-
-      <div class="sidebar-note"><span class="note-icon">i</span> Uncheck measures to hide them from the charts, table and summary.</div>
-
-      <nav class="sidebar-nav" aria-label="Dashboard navigation">
-        <a href="#" class="active">⌂ Dashboard</a>
-        <a href="#methodology">▦ Data Explorer</a>
-        <a href="#downloads">⇩ Downloads</a>
-        <a href="#methodology">◎ Methodology</a>
-        <a href="#about">ⓘ About</a>
-      </nav>
-    </aside>
-
-    <main class="main">
-      <section class="control-bar">
-        <div class="control-block wide">
-          <label for="inflationSelect">Inflation expectation</label>
-          <select id="inflationSelect">
-            <option value="core_pce_ma" selected>Core PCE moving-average proxy</option>
-            <option value="headline_pce_ma">Headline PCE moving-average proxy</option>
-            <option value="core_cpi_ma">Core CPI moving-average proxy</option>
-            <option value="headline_cpi_ma">Headline CPI moving-average proxy</option>
-            <option value="cleveland_1y">Cleveland Fed 1-year expected inflation</option>
-            <option value="michigan_1y">Michigan 1-year expected inflation</option>
-            <option value="nyfed_sce_1y">NY Fed SCE 1-year expected inflation</option>
-            <option value="spf_1y">SPF 1-year expected inflation</option>
-          </select>
-          <div class="chip-row" id="inflationChips">
-            <button data-inflation="headline_pce_ma">Headline PCE</button>
-            <button data-inflation="core_cpi_ma">Core CPI</button>
-            <button data-inflation="headline_cpi_ma">Headline CPI</button>
-            <button data-inflation="cleveland_1y">Cleveland Fed 1y</button>
-            <button data-inflation="michigan_1y">Michigan 1y</button>
-            <button data-inflation="nyfed_sce_1y">NY Fed SCE 1y</button>
-            <button data-inflation="spf_1y">SPF 1y</button>
-          </div>
-        </div>
         <div class="control-block">
           <label for="policySelect">Policy rate</label>
           <select id="policySelect">
@@ -81,57 +24,90 @@
             <option value="treasury_1y">1-Year Treasury Yield</option>
           </select>
         </div>
+
+        <div class="control-block">
+          <label for="inflationSelect">Inflation expectation</label>
+          <select id="inflationSelect">
+            <optgroup label="Moving-average proxies">
+              <option value="core_pce_ma" selected>Core PCE moving-average proxy</option>
+              <option value="headline_pce_ma">Headline PCE moving-average proxy</option>
+              <option value="core_cpi_ma">Core CPI moving-average proxy</option>
+              <option value="headline_cpi_ma">Headline CPI moving-average proxy</option>
+            </optgroup>
+            <optgroup label="Survey/model-based expectations">
+              <option value="cleveland_1y">Cleveland Fed 1-year expected inflation</option>
+              <option value="michigan_1y">Michigan 1-year expected inflation</option>
+              <option value="nyfed_sce_1y">NY Fed SCE 1-year expected inflation</option>
+              <option value="spf_1y">SPF 1-year expected inflation</option>
+            </optgroup>
+          </select>
+        </div>
+
         <div class="control-block date-control">
           <label>Date range</label>
-          <div class="date-row">
-            <input type="date" id="startDate" aria-label="Start date" />
-            <span>to</span>
-            <input type="date" id="endDate" aria-label="End date" />
-            <button type="button" id="resetDates">Reset</button>
+          <div class="date-stack">
+            <div>
+              <span>Start</span>
+              <input type="date" id="startDate" aria-label="Start date" />
+            </div>
+            <div>
+              <span>End</span>
+              <input type="date" id="endDate" aria-label="End date" />
+            </div>
+            <button type="button" id="resetDates">Reset full range</button>
           </div>
         </div>
-        <div class="segmented" aria-label="Measure grouping quick filter">
-          <button class="active" data-mode="all">All</button>
-          <button data-mode="monthly">Monthly</button>
-          <button data-mode="quarterly">Quarterly</button>
-        </div>
-        <div class="top-note"><span class="note-icon">i</span> SPF selection switches stance calculations to quarterly.</div>
+
+        <div class="sidebar-note"><span class="note-icon">i</span> If SPF is selected, stance calculations switch to quarterly frequency.</div>
       </section>
 
-      <section class="intro-card">
-        <div>
-          <h1>Monetary Policy Gap Tracker</h1>
-          <p class="intro-subtitle"><strong>Tracking whether policy is restrictive or accommodative across alternative r* estimates.</strong></p>
-          <p>This dashboard compares the real policy rate with alternative estimates of the natural rate of interest, r*, to assess whether monetary policy appears restrictive, neutral, or accommodative under the selected policy rate and inflation-expectations measure.</p>
-          <div class="formula">Policy gap = (Policy rate − Expected inflation) − r*</div>
-          <p class="interpretation">Positive policy gaps indicate restrictive policy; negative policy gaps indicate accommodative policy.</p>
-        </div>
-      </section>
+      <section class="measure-panel">
+        <div class="sidebar-section-title">r* measures</div>
 
-      <section class="layout-grid">
+        <div class="measure-group">
+          <div class="measure-group-title">Monthly measures</div>
+          <label class="measure-check"><input type="checkbox" data-measure="kc_fed" checked /> <span>Kansas City Fed Model-Based Natural Rate of Interest</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei Market-Based r*</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="tips_10y10y" checked /> <span>10-Year, 10-Year Forward TIPS Real Rate</span></label>
+        </div>
+
+        <div class="measure-group">
+          <div class="measure-group-title">Quarterly model-based measures</div>
+          <label class="measure-check"><input type="checkbox" data-measure="hlw" checked /> <span>Holston-Laubach-Williams Natural Rate of Interest</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="lw" checked /> <span>Laubach-Williams Natural Rate of Interest</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="lubik_matthes" checked /> <span>Lubik-Matthes Natural Rate of Interest</span></label>
+        </div>
+
+        <div class="measure-group">
+          <div class="measure-group-title">Quarterly policymaker-based measure</div>
+          <label class="measure-check"><input type="checkbox" data-measure="sep_implied" checked /> <span>FOMC SEP-Implied Longer-Run Real Neutral Rate</span></label>
+        </div>
+
+        <div class="sidebar-note"><span class="note-icon">i</span> Uncheck measures to hide them from the charts, table and summary.</div>
+      </section>
+    </aside>
+
+    <main class="main">
+      <header class="page-header" id="top">
+        <div class="header-bar">
+          <div>
+            <h1>Monetary Policy Gap Tracker</h1>
+            <p class="intro-subtitle">Tracking whether monetary policy is restrictive or accommodative across alternative r* estimates.</p>
+          </div>
+          <nav class="top-nav" aria-label="Page navigation">
+            <a href="#methodology">Methodology</a>
+            <a href="#sources">Sources</a>
+            <a href="#about">About</a>
+          </nav>
+        </div>
+
+        <p class="intro-text">This dashboard compares the real policy rate with alternative estimates of the natural rate of interest, r*, to assess whether monetary policy appears restrictive, neutral, or accommodative under the selected policy rate and inflation-expectations measure.</p>
+        <div class="formula">Policy gap = (Policy rate − Expected inflation) − r*</div>
+        <p class="interpretation">Positive policy gaps indicate restrictive policy. Negative policy gaps indicate accommodative policy. Values close to zero suggest a neutral or ambiguous stance.</p>
+      </header>
+
+      <section class="layout-grid" id="dashboard">
         <div class="left-column">
-          <article class="card chart-card">
-            <div class="card-header">
-              <div>
-                <h2>Policy Stance by r* Measure</h2>
-                <p id="stanceSubtitle">Policy stance in this view is calculated using the selected policy rate and selected inflation expectation.</p>
-              </div>
-            </div>
-            <div id="stanceChart" class="plot"></div>
-          </article>
-
-          <article class="card chart-card">
-            <div class="card-header">
-              <div>
-                <h2>Underlying r* Estimates</h2>
-                <p>Native-frequency r* series. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
-              </div>
-            </div>
-            <div id="rstarChart" class="plot small"></div>
-          </article>
-        </div>
-
-        <div class="right-column">
           <article class="card table-card">
             <h2>Latest Available Readings and Policy Gap</h2>
             <p id="tableSubtitle">Stance calculated using the selected policy rate and selected inflation expectation.</p>
@@ -142,8 +118,8 @@
                     <th>Measure</th>
                     <th>Frequency</th>
                     <th>Latest period</th>
-                    <th>r* (%)</th>
-                    <th>Policy gap (%)</th>
+                    <th class="num">r* (%)</th>
+                    <th class="num">Policy gap (%)</th>
                     <th>Stance</th>
                   </tr>
                 </thead>
@@ -160,16 +136,57 @@
               <ul id="summaryBullets"></ul>
             </div>
           </article>
+
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <h2>Policy Gap by r* Measure</h2>
+                <p id="stanceSubtitle">Policy stance in this view is calculated using the selected policy rate and selected inflation expectation.</p>
+              </div>
+            </div>
+            <div id="stanceChart" class="plot"></div>
+          </article>
+
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <h2>Alternative r* Estimates</h2>
+                <p>Underlying r* estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
+              </div>
+            </div>
+            <div id="rstarChart" class="plot small"></div>
+          </article>
         </div>
       </section>
 
-      <section class="method-card" id="methodology">
-        <div class="method-item"><strong>Formula</strong><br />Policy gap = (Policy rate − Expected inflation) − r*</div>
-        <div class="method-item"><strong>Selected policy rate</strong><br /><span id="selectedPolicyLabel">Effective Federal Funds Rate</span></div>
-        <div class="method-item"><strong>Selected inflation expectation</strong><br /><span id="selectedInflationLabel">Core PCE moving-average proxy</span></div>
-        <div class="method-item"><strong>Date and frequency handling</strong><br /><span id="selectedDateRangeLabel">Full available range</span><br />Monthly measures remain monthly; quarterly measures remain quarterly; no interpolation of quarterly r* estimates.</div>
-        <div class="method-item"><strong>Sources</strong><br />Federal Reserve, Kansas City Fed, New York Fed, Richmond Fed, Cleveland Fed, FRED, authors’ calculations.</div>
+      <section class="detail-section" id="methodology">
+        <h2>Methodology</h2>
+        <p>The dashboard calculates the monetary policy gap as:</p>
+        <div class="formula compact">Policy gap<sub>j,t</sub> = (i<sub>t</sub> − π<sup>e</sup><sub>t</sub>) − r*<sub>j,t</sub></div>
+        <p>Here, <em>i</em><sub>t</sub> is the selected policy rate, π<sup>e</sup><sub>t</sub> is the selected expected-inflation measure, and r*<sub>j,t</sub> is the natural-rate estimate from measure <em>j</em>. A positive gap means the real policy rate is above the selected r* estimate, suggesting a restrictive stance. A negative gap means the real policy rate is below r*, suggesting an accommodative stance.</p>
+        <p><strong>Frequency treatment:</strong> monthly r* measures remain monthly, while quarterly r* measures remain quarterly. The dashboard does not interpolate quarterly r* estimates into monthly observations. When a quarterly inflation-expectations measure such as SPF is selected, all policy-gap calculations are reported at quarterly frequency.</p>
+        <div class="method-grid">
+          <div><strong>Selected policy rate</strong><br /><span id="selectedPolicyLabel">Effective Federal Funds Rate</span></div>
+          <div><strong>Selected inflation expectation</strong><br /><span id="selectedInflationLabel">Core PCE moving-average proxy</span></div>
+          <div><strong>Selected date range</strong><br /><span id="selectedDateRangeLabel">Full available range</span></div>
+        </div>
       </section>
+
+      <section class="detail-section" id="sources">
+        <h2>Sources</h2>
+        <p>The dashboard is designed to use publicly available series from Federal Reserve sources, including the Kansas City Fed, New York Fed, Richmond Fed, Cleveland Fed, FRED and FOMC Summary of Economic Projections releases, together with author calculations.</p>
+        <p>The current prototype uses illustrative sample values. The included update pipeline is a starting point for replacing the sample data with live or periodically refreshed public data.</p>
+      </section>
+
+      <section class="detail-section" id="about">
+        <h2>About</h2>
+        <p>The Monetary Policy Gap Tracker is a research dashboard designed to compare assessments of the stance of monetary policy across alternative estimates of the natural rate of interest. It does not estimate a new r* series and does not combine existing estimates into a single index. Instead, it shows how the implied policy stance changes across existing model-based, market-based and policymaker-based measures.</p>
+      </section>
+
+      <footer class="site-footer">
+        <p><strong>Author:</strong> <a href="https://www.johnsonoliyide.com/" target="_blank" rel="noopener">Johnson Oliyide</a></p>
+        <p>The views expressed in this dashboard are those of the author and should not be interpreted as reflecting the views of the Federal Reserve Bank of Kansas City or the Federal Reserve System.</p>
+      </footer>
     </main>
   </div>
 
