@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monetary Policy Gap Tracker</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div>
+          <div class="brand-title">MacroInsights</div>
+          <div class="brand-subtitle">Economics Analytics</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section-title">r* Measures <span class="info">i</span></div>
+
+      <div class="measure-group">
+        <div class="measure-group-title">Monthly measures</div>
+        <label class="measure-check"><input type="checkbox" data-measure="kc_fed" checked /> <span>Kansas City Fed Model-Based Natural Rate of Interest</span></label>
+        <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei Market-Based r*</span></label>
+        <label class="measure-check"><input type="checkbox" data-measure="tips_10y10y" checked /> <span>10-Year, 10-Year Forward TIPS Real Rate</span></label>
+      </div>
+
+      <div class="measure-group">
+        <div class="measure-group-title">Quarterly model-based measures</div>
+        <label class="measure-check"><input type="checkbox" data-measure="hlw" checked /> <span>Holston-Laubach-Williams Natural Rate of Interest</span></label>
+        <label class="measure-check"><input type="checkbox" data-measure="lw" checked /> <span>Laubach-Williams Natural Rate of Interest</span></label>
+        <label class="measure-check"><input type="checkbox" data-measure="lubik_matthes" checked /> <span>Lubik-Matthes Natural Rate of Interest</span></label>
+      </div>
+
+      <div class="measure-group">
+        <div class="measure-group-title">Quarterly policymaker-based measure</div>
+        <label class="measure-check"><input type="checkbox" data-measure="sep_implied" checked /> <span>FOMC SEP-Implied Longer-Run Real Neutral Rate</span></label>
+      </div>
+
+      <div class="sidebar-note"><span class="note-icon">i</span> Uncheck measures to hide them from the charts, table and summary.</div>
+
+      <nav class="sidebar-nav" aria-label="Dashboard navigation">
+        <a href="#" class="active">⌂ Dashboard</a>
+        <a href="#methodology">▦ Data Explorer</a>
+        <a href="#downloads">⇩ Downloads</a>
+        <a href="#methodology">◎ Methodology</a>
+        <a href="#about">ⓘ About</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <section class="control-bar">
+        <div class="control-block wide">
+          <label for="inflationSelect">Inflation expectation</label>
+          <select id="inflationSelect">
+            <option value="core_pce_ma" selected>Core PCE moving-average proxy</option>
+            <option value="headline_pce_ma">Headline PCE moving-average proxy</option>
+            <option value="core_cpi_ma">Core CPI moving-average proxy</option>
+            <option value="headline_cpi_ma">Headline CPI moving-average proxy</option>
+            <option value="cleveland_1y">Cleveland Fed 1-year expected inflation</option>
+            <option value="michigan_1y">Michigan 1-year expected inflation</option>
+            <option value="nyfed_sce_1y">NY Fed SCE 1-year expected inflation</option>
+            <option value="spf_1y">SPF 1-year expected inflation</option>
+          </select>
+          <div class="chip-row" id="inflationChips">
+            <button data-inflation="headline_pce_ma">Headline PCE</button>
+            <button data-inflation="core_cpi_ma">Core CPI</button>
+            <button data-inflation="headline_cpi_ma">Headline CPI</button>
+            <button data-inflation="cleveland_1y">Cleveland Fed 1y</button>
+            <button data-inflation="michigan_1y">Michigan 1y</button>
+            <button data-inflation="nyfed_sce_1y">NY Fed SCE 1y</button>
+            <button data-inflation="spf_1y">SPF 1y</button>
+          </div>
+        </div>
+        <div class="control-block">
+          <label for="policySelect">Policy rate</label>
+          <select id="policySelect">
+            <option value="effr" selected>Effective Federal Funds Rate</option>
+            <option value="treasury_1y">1-Year Treasury Yield</option>
+          </select>
+        </div>
+        <div class="segmented" aria-label="Measure grouping quick filter">
+          <button class="active" data-mode="all">All</button>
+          <button data-mode="monthly">Monthly</button>
+          <button data-mode="quarterly">Quarterly</button>
+        </div>
+        <div class="top-note"><span class="note-icon">i</span> SPF selection switches stance calculations to quarterly.</div>
+      </section>
+
+      <section class="intro-card">
+        <div>
+          <h1>Monetary Policy Gap Tracker</h1>
+          <p class="intro-subtitle"><strong>Tracking whether policy is restrictive or accommodative across alternative r* estimates.</strong></p>
+          <p>This dashboard compares the real policy rate with alternative estimates of the natural rate of interest, r*, to assess whether monetary policy appears restrictive, neutral, or accommodative under the selected policy rate and inflation-expectations measure.</p>
+          <div class="formula">Policy gap = (Policy rate − Expected inflation) − r*</div>
+          <p class="interpretation">Positive policy gaps indicate restrictive policy; negative policy gaps indicate accommodative policy.</p>
+        </div>
+      </section>
+
+      <section class="layout-grid">
+        <div class="left-column">
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <h2>Policy Stance by r* Measure</h2>
+                <p id="stanceSubtitle">Policy stance in this view is calculated using the selected policy rate and selected inflation expectation.</p>
+              </div>
+            </div>
+            <div id="stanceChart" class="plot"></div>
+          </article>
+
+          <article class="card chart-card">
+            <div class="card-header">
+              <div>
+                <h2>Underlying r* Estimates</h2>
+                <p>Native-frequency r* series. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
+              </div>
+            </div>
+            <div id="rstarChart" class="plot small"></div>
+          </article>
+        </div>
+
+        <div class="right-column">
+          <article class="card table-card">
+            <h2>Latest Available Readings and Policy Gap</h2>
+            <p id="tableSubtitle">Stance calculated using the selected policy rate and selected inflation expectation.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Measure</th>
+                    <th>Frequency</th>
+                    <th>Latest period</th>
+                    <th>r* (%)</th>
+                    <th>Policy gap (%)</th>
+                    <th>Stance</th>
+                  </tr>
+                </thead>
+                <tbody id="latestTableBody"></tbody>
+              </table>
+            </div>
+            <p class="caption">Latest periods differ by measure. Values in this prototype are illustrative until the update pipeline is connected to live data.</p>
+          </article>
+
+          <article class="card summary-card">
+            <div class="summary-icon">▥</div>
+            <div>
+              <h2>Summary of Latest Available Policy Gap</h2>
+              <ul id="summaryBullets"></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="method-card" id="methodology">
+        <div class="method-item"><strong>Formula</strong><br />Policy gap = (Policy rate − Expected inflation) − r*</div>
+        <div class="method-item"><strong>Selected policy rate</strong><br /><span id="selectedPolicyLabel">Effective Federal Funds Rate</span></div>
+        <div class="method-item"><strong>Selected inflation expectation</strong><br /><span id="selectedInflationLabel">Core PCE moving-average proxy</span></div>
+        <div class="method-item"><strong>Frequency handling</strong><br />Monthly measures remain monthly; quarterly measures remain quarterly; no interpolation of quarterly r* estimates.</div>
+        <div class="method-item"><strong>Sources</strong><br />Federal Reserve, Kansas City Fed, New York Fed, Richmond Fed, Cleveland Fed, FRED, authors’ calculations.</div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
