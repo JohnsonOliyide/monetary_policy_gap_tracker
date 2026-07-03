@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2026-07-03T18:45:31Z",
-    "prototype_note": "Illustrative sample data for UI and calculation testing. Replace with live data using scripts/update_data.py before publishing as a data product."
+    "generated_at": "2026-07-03T20:56:13+00:00",
+    "prototype_note": "Illustrative sample data for UI and calculation testing. Replace with live data before publishing as a data product."
   },
   "months": [
     {
