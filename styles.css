@@ -84,13 +84,13 @@ body {
 .main { padding: 26px 30px 38px; min-width: 0; }
 .control-bar {
   display: grid;
-  grid-template-columns: minmax(320px, 1.35fr) minmax(240px, .8fr) auto minmax(240px, .75fr);
+  grid-template-columns: minmax(320px, 1.25fr) minmax(220px, .7fr) minmax(330px, .9fr) auto minmax(230px, .75fr);
   gap: 20px;
   align-items: start;
   margin-bottom: 18px;
 }
 .control-block label { display: block; font-weight: 800; font-size: 13px; margin-bottom: 8px; }
-select {
+select, input[type="date"] {
   width: 100%;
   min-height: 46px;
   background: #fff;
@@ -101,6 +101,23 @@ select {
   font-weight: 700;
   font-size: 14px;
 }
+
+.date-control { min-width: 0; }
+.date-row { display: flex; gap: 8px; align-items: center; }
+.date-row input[type="date"] { min-width: 128px; padding: 0 10px; font-size: 13px; }
+.date-row span { color: var(--muted); font-weight: 800; font-size: 13px; }
+.date-row button {
+  min-height: 46px;
+  border: 1px solid #cbd6e6;
+  background: #fff;
+  color: var(--blue-800);
+  border-radius: 10px;
+  padding: 0 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+.date-row button:hover { background: var(--blue-100); }
+
 .chip-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
 .chip-row button, .segmented button {
   border: 1px solid #cbd6e6;

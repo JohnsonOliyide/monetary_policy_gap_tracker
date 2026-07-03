@@ -81,6 +81,15 @@
             <option value="treasury_1y">1-Year Treasury Yield</option>
           </select>
         </div>
+        <div class="control-block date-control">
+          <label>Date range</label>
+          <div class="date-row">
+            <input type="date" id="startDate" aria-label="Start date" />
+            <span>to</span>
+            <input type="date" id="endDate" aria-label="End date" />
+            <button type="button" id="resetDates">Reset</button>
+          </div>
+        </div>
         <div class="segmented" aria-label="Measure grouping quick filter">
           <button class="active" data-mode="all">All</button>
           <button data-mode="monthly">Monthly</button>
@@ -141,7 +150,7 @@
                 <tbody id="latestTableBody"></tbody>
               </table>
             </div>
-            <p class="caption">Latest periods differ by measure. Values in this prototype are illustrative until the update pipeline is connected to live data.</p>
+            <p class="caption">Latest periods are the latest available observations within the selected date range. Values in this prototype are illustrative until the update pipeline is connected to live data.</p>
           </article>
 
           <article class="card summary-card">
@@ -158,7 +167,7 @@
         <div class="method-item"><strong>Formula</strong><br />Policy gap = (Policy rate − Expected inflation) − r*</div>
         <div class="method-item"><strong>Selected policy rate</strong><br /><span id="selectedPolicyLabel">Effective Federal Funds Rate</span></div>
         <div class="method-item"><strong>Selected inflation expectation</strong><br /><span id="selectedInflationLabel">Core PCE moving-average proxy</span></div>
-        <div class="method-item"><strong>Frequency handling</strong><br />Monthly measures remain monthly; quarterly measures remain quarterly; no interpolation of quarterly r* estimates.</div>
+        <div class="method-item"><strong>Date and frequency handling</strong><br /><span id="selectedDateRangeLabel">Full available range</span><br />Monthly measures remain monthly; quarterly measures remain quarterly; no interpolation of quarterly r* estimates.</div>
         <div class="method-item"><strong>Sources</strong><br />Federal Reserve, Kansas City Fed, New York Fed, Richmond Fed, Cleveland Fed, FRED, authors’ calculations.</div>
       </section>
     </main>

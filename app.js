@@ -94,6 +94,64 @@ const monthlyInflationOptions = new Set([
 
 let rawData;
 let viewMode = 'all';
+let fullStartDate = null;
+let fullEndDate = null;
+
+
+function parseDateMs(dateStr) {
+  return new Date(dateStr + 'T00:00:00Z').getTime();
+}
+
+function getDateRange() {
+  const startEl = document.getElementById('startDate');
+  const endEl = document.getElementById('endDate');
+  let start = startEl && startEl.value ? startEl.value : fullStartDate;
+  let end = endEl && endEl.value ? endEl.value : fullEndDate;
+  if (start && end && parseDateMs(start) > parseDateMs(end)) {
+    const tmp = start;
+    start = end;
+    end = tmp;
+  }
+  return { start, end };
+}
+
+function inSelectedDateRange(row) {
+  const { start, end } = getDateRange();
+  if (!row || !row.date) return false;
+  const t = parseDateMs(row.date);
+  if (start && t < parseDateMs(start)) return false;
+  if (end && t > parseDateMs(end)) return false;
+  return true;
+}
+
+function filterDateRows(rows) {
+  return rows.filter(inSelectedDateRange);
+}
+
+function formatDateForLabel(dateStr) {
+  if (!dateStr) return '—';
+  const d = new Date(dateStr + 'T00:00:00Z');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+}
+
+function initDateControls() {
+  const allDates = [
+    ...rawData.months.map(d => d.date),
+    ...rawData.quarters.map(d => d.date),
+    ...rawData.sep.map(d => d.date)
+  ].sort();
+  fullStartDate = allDates[0];
+  fullEndDate = allDates[allDates.length - 1];
+
+  const startEl = document.getElementById('startDate');
+  const endEl = document.getElementById('endDate');
+  startEl.min = fullStartDate;
+  startEl.max = fullEndDate;
+  endEl.min = fullStartDate;
+  endEl.max = fullEndDate;
+  startEl.value = fullStartDate;
+  endEl.value = fullEndDate;
+}
 
 function fmt(value, digits = 2) {
   if (value === null || value === undefined || Number.isNaN(value)) return '—';
@@ -143,17 +201,18 @@ function getQuarterRow(q) {
 }
 
 function getLatestMonthlyMeasure(measureId) {
-  const rows = rawData.months.filter(d => d.rstar[measureId] !== undefined);
-  return rows[rows.length - 1];
+  const rows = filterDateRows(rawData.months).filter(d => d.rstar[measureId] !== undefined);
+  return rows[rows.length - 1] || null;
 }
 
 function getLatestQuarterlyMeasure(measureId) {
-  const rows = rawData.quarters.filter(d => d.rstar[measureId] !== undefined);
-  return rows[rows.length - 1];
+  const rows = filterDateRows(rawData.quarters).filter(d => d.rstar[measureId] !== undefined);
+  return rows[rows.length - 1] || null;
 }
 
 function getLatestSepMeasure() {
-  return rawData.sep[rawData.sep.length - 1];
+  const rows = filterDateRows(rawData.sep);
+  return rows[rows.length - 1] || null;
 }
 
 function getPolicyAndInflationForQuarter(q, policyKey, inflationKey) {
@@ -175,7 +234,7 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
     const x = [];
     const y = [];
     const text = [];
-    rawData.sep.forEach(row => {
+    filterDateRows(rawData.sep).forEach(row => {
       const qi = getPolicyAndInflationForQuarter(row.quarter, policyKey, inflationKey);
       const gap = policyGap(qi.policy, qi.inflation, row.rstar);
       if (gap !== null) {
@@ -201,7 +260,7 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
     const y = [];
     const text = [];
     const monthlyQuarterAverages = meta.group === 'monthly' ? averageMonthlyRstarByQuarter(measureId) : null;
-    rawData.quarters.forEach(qrow => {
+    filterDateRows(rawData.quarters).forEach(qrow => {
       const rstar = meta.group === 'monthly' ? monthlyQuarterAverages.get(qrow.quarter) : qrow.rstar[measureId];
       if (rstar === undefined || rstar === null) return;
       const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], rstar);
@@ -226,7 +285,7 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
     const x = [];
     const y = [];
     const text = [];
-    rawData.months.forEach(row => {
+    filterDateRows(rawData.months).forEach(row => {
       const rstar = row.rstar[measureId];
       const infl = row.inflation[inflationKey];
       const gap = policyGap(row.policy[policyKey], infl, rstar);
@@ -249,7 +308,7 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
   const x = [];
   const y = [];
   const text = [];
-  rawData.quarters.forEach(qrow => {
+  filterDateRows(rawData.quarters).forEach(qrow => {
     const rstar = qrow.rstar[measureId];
     if (rstar === undefined) return;
     const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], rstar);
@@ -273,10 +332,11 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
 function buildRstarTrace(measureId, inflationKey) {
   const meta = measures[measureId];
   if (measureId === 'sep_implied') {
+    const rows = filterDateRows(rawData.sep);
     return {
-      x: rawData.sep.map(d => d.date),
-      y: rawData.sep.map(d => d.rstar),
-      text: rawData.sep.map(d => `${d.period}<br>r*: ${fmt(d.rstar)}%`),
+      x: rows.map(d => d.date),
+      y: rows.map(d => d.rstar),
+      text: rows.map(d => `${d.period}<br>r*: ${fmt(d.rstar)}%`),
       type: 'scatter',
       mode: 'lines+markers',
       name: meta.short,
@@ -286,7 +346,7 @@ function buildRstarTrace(measureId, inflationKey) {
     };
   }
   if (meta.group === 'monthly') {
-    const rows = rawData.months.filter(d => d.rstar[measureId] !== undefined);
+    const rows = filterDateRows(rawData.months).filter(d => d.rstar[measureId] !== undefined);
     return {
       x: rows.map(d => d.date),
       y: rows.map(d => d.rstar[measureId]),
@@ -298,7 +358,7 @@ function buildRstarTrace(measureId, inflationKey) {
       hovertemplate: '%{text}<extra></extra>'
     };
   }
-  const rows = rawData.quarters.filter(d => d.rstar[measureId] !== undefined);
+  const rows = filterDateRows(rawData.quarters).filter(d => d.rstar[measureId] !== undefined);
   return {
     x: rows.map(d => d.date),
     y: rows.map(d => d.rstar[measureId]),
@@ -318,6 +378,7 @@ function latestReading(measureId, policyKey, inflationKey) {
 
   if (measureId === 'sep_implied') {
     const row = getLatestSepMeasure();
+    if (!row) return null;
     const qi = getPolicyAndInflationForQuarter(row.quarter, policyKey, inflationKey);
     const gap = policyGap(qi.policy, qi.inflation, row.rstar);
     return { measureId, period: row.period, frequency: meta.frequency, rstar: row.rstar, gap };
@@ -325,7 +386,8 @@ function latestReading(measureId, policyKey, inflationKey) {
 
   if (spfMode) {
     // Latest completed quarter with all necessary values.
-    const qrow = [...rawData.quarters].reverse().find(q => q.inflation[inflationKey] !== undefined);
+    const qrow = [...filterDateRows(rawData.quarters)].reverse().find(q => q.inflation[inflationKey] !== undefined);
+    if (!qrow) return null;
     let rstar = null;
     if (meta.group === 'monthly') {
       const map = averageMonthlyRstarByQuarter(measureId);
@@ -339,11 +401,13 @@ function latestReading(measureId, policyKey, inflationKey) {
 
   if (meta.group === 'monthly') {
     const row = getLatestMonthlyMeasure(measureId);
+    if (!row) return null;
     const gap = policyGap(row.policy[policyKey], row.inflation[inflationKey], row.rstar[measureId]);
     return { measureId, period: row.period, frequency: meta.frequency, rstar: row.rstar[measureId], gap };
   }
 
   const qrow = getLatestQuarterlyMeasure(measureId);
+  if (!qrow) return null;
   const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], qrow.rstar[measureId]);
   return { measureId, period: qrow.period, frequency: meta.frequency, rstar: qrow.rstar[measureId], gap };
 }
@@ -416,6 +480,11 @@ function renderTableAndSummary() {
     tbody.appendChild(tr);
   });
 
+  if (!rows.length) {
+    document.getElementById('summaryBullets').innerHTML = '<li>No selected measures have observations inside the selected date range.</li>';
+    return;
+  }
+
   const positive = rows.filter(r => r.gap > 0.05).length;
   const negative = rows.filter(r => r.gap < -0.05).length;
   const neutral = rows.length - positive - negative;
@@ -445,6 +514,8 @@ function updateLabels() {
   document.getElementById('tableSubtitle').textContent = `Stance calculated using ${policyName} and ${inflationName}.`;
   document.getElementById('selectedPolicyLabel').textContent = policyName;
   document.getElementById('selectedInflationLabel').textContent = inflationName;
+  const { start, end } = getDateRange();
+  document.getElementById('selectedDateRangeLabel').textContent = `${formatDateForLabel(start)} to ${formatDateForLabel(end)}`;
 
   document.querySelectorAll('#inflationChips button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.inflation === inflationKey);
@@ -460,6 +531,13 @@ function updateAll() {
 function attachEvents() {
   document.getElementById('inflationSelect').addEventListener('change', updateAll);
   document.getElementById('policySelect').addEventListener('change', updateAll);
+  document.getElementById('startDate').addEventListener('change', updateAll);
+  document.getElementById('endDate').addEventListener('change', updateAll);
+  document.getElementById('resetDates').addEventListener('click', () => {
+    document.getElementById('startDate').value = fullStartDate;
+    document.getElementById('endDate').value = fullEndDate;
+    updateAll();
+  });
   document.querySelectorAll('input[data-measure]').forEach(el => el.addEventListener('change', updateAll));
   document.querySelectorAll('#inflationChips button').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -480,6 +558,7 @@ fetch(DATA_URL)
   .then(response => response.json())
   .then(data => {
     rawData = data;
+    initDateControls();
     attachEvents();
     updateAll();
   })
