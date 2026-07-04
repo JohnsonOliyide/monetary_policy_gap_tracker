@@ -374,3 +374,17 @@ td.num, th.num { text-align: right; }
   .plot.small { height: 300px; }
   .card, .detail-section { padding: 16px; }
 }
+
+.data-warning {
+  background: #fff7ed;
+  color: #7c2d12;
+  border-bottom: 1px solid #fed7aa;
+  padding: 10px 30px;
+  font-size: 13px;
+  font-weight: 750;
+}
+.data-warning code {
+  background: #ffedd5;
+  border-radius: 5px;
+  padding: 2px 5px;
+}

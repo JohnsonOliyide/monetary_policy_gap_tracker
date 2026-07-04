@@ -1,4 +1,5 @@
-const DATA_URL = 'data/sample_data.json';
+const DATA_URL = 'data/data.json';
+const SAMPLE_DATA_URL = 'data/sample_data.json';
 
 const measures = {
   kc_fed: {
@@ -11,8 +12,8 @@ const measures = {
     marker: 'circle'
   },
   dkw: {
-    short: 'DKW',
-    full: 'D’Amico-Kim-Wei Market-Based Natural Rate of Interest',
+    short: 'DKW 5–10Y real short rate',
+    full: 'D’Amico-Kim-Wei 5-to-10-Year-Ahead Expected Real Short Rate',
     frequency: 'Monthly',
     group: 'monthly',
     color: '#168c96',
@@ -522,15 +523,36 @@ function attachEvents() {
   document.querySelectorAll('input[data-measure]').forEach(el => el.addEventListener('change', updateAll));
 }
 
-fetch(DATA_URL)
-  .then(response => response.json())
+async function loadDashboardData() {
+  try {
+    const live = await fetch(DATA_URL, { cache: 'no-store' });
+    if (live.ok) {
+      const data = await live.json();
+      data.__isSample = false;
+      return data;
+    }
+    throw new Error(`Live data request returned ${live.status}`);
+  } catch (liveErr) {
+    console.warn('Live data unavailable; falling back to sample data.', liveErr);
+    const sample = await fetch(SAMPLE_DATA_URL, { cache: 'no-store' });
+    if (!sample.ok) throw new Error(`Sample data request returned ${sample.status}`);
+    const data = await sample.json();
+    data.__isSample = true;
+    return data;
+  }
+}
+
+loadDashboardData()
   .then(data => {
     rawData = data;
     initDateControls();
     attachEvents();
     updateAll();
+    if (rawData.__isSample) {
+      document.body.insertAdjacentHTML('afterbegin', `<div class="data-warning">Showing illustrative sample data because data/data.json has not been generated yet. Run <code>python scripts/update_data.py</code> or the GitHub Action to build the live data file.</div>`);
+    }
   })
   .catch(err => {
     console.error(err);
-    document.body.insertAdjacentHTML('afterbegin', `<div style="padding:20px;background:#fff3cd;color:#6b4e00">Could not load sample data. Run this dashboard from a local web server rather than opening index.html directly.</div>`);
+    document.body.insertAdjacentHTML('afterbegin', `<div style="padding:20px;background:#fff3cd;color:#6b4e00">Could not load dashboard data. Run this dashboard from a local web server rather than opening index.html directly.</div>`);
   });

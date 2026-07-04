@@ -83,7 +83,7 @@
         <div class="measure-group">
           <div class="measure-group-title">Monthly model and market-based measures</div>
           <label class="measure-check"><input type="checkbox" data-measure="kc_fed" checked /> <span>Kansas City Fed Model-Based Natural Rate of Interest</span></label>
-          <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei Market-Based Natural Rate of Interest</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei 5-to-10-Year-Ahead Expected Real Short Rate</span></label>
           <label class="measure-check"><input type="checkbox" data-measure="tips_10y10y" checked /> <span>10-Year, 10-Year Forward TIPS Real Rate</span></label>
         </div>
 
@@ -152,7 +152,7 @@
             <tbody id="latestTableBody"></tbody>
           </table>
         </div>
-        <p class="caption">Latest periods are the latest available observations within the selected date range. Values in this prototype are illustrative until the update pipeline is connected to live data.</p>
+        <p class="caption">Latest periods are the latest available observations within the selected date range. Values are generated from public sources by the data update pipeline. If the live data file is missing, the page falls back to illustrative sample values.</p>
       </article>
 
       <article class="card summary-card">
@@ -223,7 +223,7 @@
         <p>The options include Cleveland Fed 1-Year Expected Inflation, University of Michigan 1-Year Inflation Expectation, New York Fed Survey of Consumer Expectations 1-Year Inflation Expectation, and Survey of Professional Forecasters 1-Year Inflation Forecast. When the SPF measure is selected, policy-gap calculations are reported at quarterly frequency because SPF is a quarterly series. The dashboard does not manufacture monthly SPF-based policy gaps.</p>
 
         <h3>Natural rate of interest measures</h3>
-        <p>The dashboard compares the real policy rate with several natural rate of interest measures. These include model-based, market-based, policymaker-implied, and simple benchmark measures. The fixed 2 percent benchmark is not an estimated natural rate. It is included as a simple reference assumption, r* = 2%, so users can compare model-based and market-based estimates with a constant real neutral-rate benchmark.</p>
+        <p>The dashboard compares the real policy rate with several natural rate of interest measures and natural-rate proxies. These include model-based estimates, market-implied longer-run real-rate measures, policymaker-implied measures, and a simple benchmark. The D’Amico-Kim-Wei measure is the 5-to-10-year-ahead expected real short rate from the Federal Reserve’s DKW updates file. It is useful as a market-based longer-run neutral-rate proxy, but it should not be interpreted as the same type of structural model estimate as KC Fed, HLW, LW, or Lubik-Matthes. The fixed 2 percent benchmark is not an estimated natural rate. It is included as a simple reference assumption, r* = 2%, so users can compare model-based and market-based estimates with a constant real neutral-rate benchmark.</p>
         <p>For Laubach-Williams, the dashboard allows users to choose between the one-sided and two-sided estimate when those source series are available. The one-sided estimate uses only information available up to that date, making it more appropriate for real-time policy assessment. The two-sided estimate uses information from the full sample and is more appropriate for revised historical analysis. Holston-Laubach-Williams is treated as a current published estimate.</p>
 
         <h3>Frequency treatment</h3>
@@ -236,15 +236,15 @@
 
       <section class="detail-section" id="sources">
         <h2>Sources</h2>
-        <p>Each source below links to the original publication page, data page, or official description for the series used or planned in the dashboard. The current prototype still uses illustrative sample values until the update pipeline is connected to these public sources.</p>
+        <p>Each source below links to the original publication page, data page, or official description for the series used by the dashboard. The update pipeline builds the dashboard data from these public sources when stable machine-readable files are available.</p>
 
         <h3>Natural rate of interest measures</h3>
         <ul class="source-list">
           <li><a href="https://www.kansascityfed.org/data-and-trends/kansas-city-fed-model-based-natural-rate-of-interest-and-natural-unemployment-rate/" target="_blank" rel="noopener">Kansas City Fed Model-Based Natural Rate of Interest</a></li>
           <li><a href="https://www.newyorkfed.org/research/policy/rstar" target="_blank" rel="noopener">Holston-Laubach-Williams and Laubach-Williams Natural Rate of Interest estimates</a></li>
           <li><a href="https://www.richmondfed.org/research/national_economy/natural_rate_interest" target="_blank" rel="noopener">Lubik-Matthes Natural Rate of Interest</a></li>
-          <li><a href="https://www.federalreserve.gov/econres/notes/feds-notes/DKW_updates.csv" target="_blank" rel="noopener">D’Amico-Kim-Wei market-based estimates data file</a></li>
-          <li><a href="https://www.stlouisfed.org/on-the-economy/2024/mar/has-economy-transitioned-higher-long-run-real-rate-regime" target="_blank" rel="noopener">10-Year, 10-Year Forward TIPS Real Rate description</a></li>
+          <li><a href="https://www.federalreserve.gov/econres/notes/feds-notes/tips-from-tips-update-and-discussions-20190521.html" target="_blank" rel="noopener">D’Amico-Kim-Wei updates: 5-to-10-year-ahead expected real short rate</a> <span class="source-note">(<a href="https://www.federalreserve.gov/econres/notes/feds-notes/DKW_updates.csv" target="_blank" rel="noopener">CSV</a>)</span></li>
+          <li><a href="https://www.federalreserve.gov/data/tips-yield-curve-and-inflation-compensation.htm" target="_blank" rel="noopener">Federal Reserve TIPS Yield Curve and Inflation Compensation data</a></li>
           <li><a href="https://fred.stlouisfed.org/series/FEDTARMDLR" target="_blank" rel="noopener">FOMC SEP longer-run federal funds rate median</a></li>
         </ul>
 
