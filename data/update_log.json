@@ -1,0 +1,25 @@
+{
+  "success": [
+    "Fetched FRED EFFR",
+    "Fetched FRED DGS1",
+    "Fetched FRED PCEPI",
+    "Fetched FRED PCEPILFE",
+    "Fetched FRED CPIAUCSL",
+    "Fetched FRED CPILFESL",
+    "Fetched FRED EXPINF1YR",
+    "Fetched FRED MICH",
+    "Fetched FRED FEDTARMDLR",
+    "Fetched KC Fed r-star",
+    "Fetched DKW 5-to-10-year-ahead expected real short rate",
+    "Fetched HLW current r-star",
+    "Fetched LW current/two-sided r-star",
+    "Fetched LW real-time/one-sided r-star",
+    "Fetched Lubik-Matthes r-star"
+  ],
+  "warnings": [
+    "NY Fed SCE unavailable or could not be parsed: Could not identify SCE one-year inflation expectation column",
+    "SPF one-year inflation expectation unavailable or could not be parsed: expected <class 'datetime.datetime'>",
+    "Failed to fetch/construct 10Y10Y TIPS: Error tokenizing data. C error: Expected 1 fields in line 4, saw 3\n"
+  ],
+  "errors": []
+}
