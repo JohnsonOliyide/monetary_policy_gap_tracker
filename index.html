@@ -70,7 +70,8 @@
               <span>End</span>
               <input type="date" id="endDate" aria-label="End date" />
             </div>
-            <button type="button" id="resetDates">Reset full range</button>
+            <button type="button" id="resetDates">Reset available range</button>
+            <p id="availableRangeNote" class="range-note">Start date updates with the selected inflation expectation and policy rate.</p>
           </div>
         </div>
 
@@ -173,27 +174,25 @@
         <div id="stanceChart" class="plot"></div>
       </article>
 
-      <section class="paired-charts" aria-label="Historical real rate and natural-rate charts">
-        <article class="card chart-card">
-          <div class="card-header">
-            <div>
-              <h2>Historical Real Policy Rate</h2>
-              <p id="realRateSubtitle">Real policy rate implied by the selected policy rate and selected inflation expectation.</p>
-            </div>
+      <article class="card chart-card">
+        <div class="card-header">
+          <div>
+            <h2>Historical Real Policy Rate</h2>
+            <p id="realRateSubtitle">Real policy rate implied by the selected policy rate and selected inflation expectation.</p>
           </div>
-          <div id="realRateChart" class="plot small"></div>
-        </article>
+        </div>
+        <div id="realRateChart" class="plot"></div>
+      </article>
 
-        <article class="card chart-card">
-          <div class="card-header">
-            <div>
-              <h2>Historical Alternative Natural Rate of Interest Estimates</h2>
-              <p>Underlying natural-rate estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
-            </div>
+      <article class="card chart-card">
+        <div class="card-header">
+          <div>
+            <h2>Historical Natural Rate of Interest Estimates</h2>
+            <p>Underlying natural-rate estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
           </div>
-          <div id="rstarChart" class="plot small"></div>
-        </article>
-      </section>
+        </div>
+        <div id="rstarChart" class="plot"></div>
+      </article>
 
       <section class="detail-section" id="methodology">
         <h2>Methodology</h2>

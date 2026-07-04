@@ -12,11 +12,12 @@ Positive policy gaps indicate restrictive policy. Negative policy gaps indicate 
 
 ## What is included
 
-- Left-side control panel for policy rate, inflation expectation, date range, and natural-rate measure checkboxes.
+- Left-side control panel for policy rate, inflation expectation, data-driven date range, and natural-rate measure checkboxes.
 - Latest available readings table with the policy rate, expected inflation, real rate, r\*, and policy gap.
 - Dynamic summary of latest policy-gap readings.
 - Historical policy-gap chart across alternative natural-rate measures.
-- Side-by-side charts for the historical real policy rate and historical alternative natural-rate estimates.
+- Full-width historical real policy rate chart.
+- Full-width historical natural-rate estimates chart.
 - Methodology section written as a short research note.
 - Sources section linking each series to its original publication page or data page.
 - Author link and Federal Reserve disclaimer in the footer.
@@ -62,6 +63,12 @@ Survey/model-based expectations:
 - SPF 1-year expected inflation
 
 When SPF is selected, all stance calculations switch to quarterly frequency.
+
+## Date range behavior
+
+The dashboard never displays observations before January 2000. The selected policy rate and inflation-expectation measure determine the available real-policy-rate sample. If the selected inflation-expectation measure starts after January 2000, the date range automatically begins at that later date. Natural-rate measures are then shown whenever they become available within the selected real-policy-rate sample; the dashboard does not require every natural-rate measure to share the same start date.
+
+Users can still choose a more recent start date within the available sample. The date range filters the latest-readings table, summary, historical policy-gap chart, historical real policy rate chart, and historical natural-rate estimates chart.
 
 ## Data pipeline
 

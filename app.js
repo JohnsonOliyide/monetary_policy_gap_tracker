@@ -93,8 +93,11 @@ const policyLabels = {
 };
 
 let rawData;
+const DEFAULT_FLOOR_DATE = '2000-01-01';
 let fullStartDate = null;
 let fullEndDate = null;
+let userHasCustomDateRange = false;
+let suppressDateChange = false;
 
 function parseDateMs(dateStr) {
   return new Date(dateStr + 'T00:00:00Z').getTime();
@@ -124,23 +127,120 @@ function filterDateRows(rows) {
   return rows.filter(inSelectedDateRange);
 }
 
-function initDateControls() {
-  const allDates = [
-    ...rawData.months.map(d => d.date),
-    ...rawData.quarters.map(d => d.date),
-    ...rawData.sep.map(d => d.date)
-  ].sort();
-  fullStartDate = allDates[0];
-  fullEndDate = allDates[allDates.length - 1];
+function hasNumber(value) {
+  return value !== null && value !== undefined && !Number.isNaN(value);
+}
+
+function validDatesForRealRate(policyKey, inflationKey) {
+  const spfMode = inflationKey === 'spf_1y';
+  const sourceRows = spfMode ? rawData.quarters : rawData.months;
+  return sourceRows
+    .filter(row => hasNumber(row.policy?.[policyKey]) && hasNumber(row.inflation?.[inflationKey]))
+    .map(row => row.date)
+    .sort();
+}
+
+function validDatesForMeasure(measureId, policyKey, inflationKey) {
+  const spfMode = inflationKey === 'spf_1y';
+  const dates = [];
+
+  if (measureId === 'sep_implied') {
+    rawData.sep.forEach(row => {
+      const qi = getPolicyAndInflationForQuarter(row.quarter, policyKey, inflationKey);
+      const gap = policyGap(qi.policy, qi.inflation, row.rstar);
+      if (gap !== null) dates.push(row.date);
+    });
+    return dates.sort();
+  }
+
+  if (spfMode) {
+    const monthlyQuarterAverages = isMonthlyMeasure(measureId) ? averageMonthlyRstarByQuarter(measureId) : null;
+    rawData.quarters.forEach(qrow => {
+      const rstar = isMonthlyMeasure(measureId) ? monthlyQuarterAverages.get(qrow.quarter) : getRstarFromQuarter(qrow, measureId);
+      const gap = policyGap(qrow.policy?.[policyKey], qrow.inflation?.[inflationKey], rstar);
+      if (gap !== null) dates.push(qrow.date);
+    });
+    return dates.sort();
+  }
+
+  if (isMonthlyMeasure(measureId)) {
+    rawData.months.forEach(row => {
+      const rstar = getRstarFromMonth(row, measureId);
+      const gap = policyGap(row.policy?.[policyKey], row.inflation?.[inflationKey], rstar);
+      if (gap !== null) dates.push(row.date);
+    });
+    return dates.sort();
+  }
+
+  rawData.quarters.forEach(qrow => {
+    const rstar = getRstarFromQuarter(qrow, measureId);
+    const gap = policyGap(qrow.policy?.[policyKey], qrow.inflation?.[inflationKey], rstar);
+    if (gap !== null) dates.push(qrow.date);
+  });
+  return dates.sort();
+}
+
+function computeAvailableRange() {
+  const policyKey = document.getElementById('policySelect')?.value || 'effr';
+  const inflationKey = document.getElementById('inflationSelect')?.value || 'core_pce_ma';
+
+  // The display sample is determined by the selected policy rate and
+  // inflation-expectations measure, not by the latest-starting natural-rate
+  // measure. Natural-rate lines enter the charts whenever they become
+  // available inside this real-policy-rate sample.
+  const dates = validDatesForRealRate(policyKey, inflationKey);
+
+  if (!dates.length) {
+    return { start: DEFAULT_FLOOR_DATE, end: DEFAULT_FLOOR_DATE };
+  }
+
+  const firstValidDate = dates.find(d => parseDateMs(d) >= parseDateMs(DEFAULT_FLOOR_DATE)) || dates[0];
+  const start = parseDateMs(firstValidDate) > parseDateMs(DEFAULT_FLOOR_DATE) ? firstValidDate : DEFAULT_FLOOR_DATE;
+  const end = dates[dates.length - 1];
+  return { start, end };
+}
+
+function formatRangeDate(dateStr) {
+  if (!dateStr) return '—';
+  const d = new Date(dateStr + 'T00:00:00Z');
+  return d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', timeZone: 'UTC' });
+}
+
+function syncDateControlsToAvailableRange({ resetStart = false, resetEnd = false } = {}) {
+  const range = computeAvailableRange();
+  fullStartDate = range.start;
+  fullEndDate = range.end;
 
   const startEl = document.getElementById('startDate');
   const endEl = document.getElementById('endDate');
+  const rangeNote = document.getElementById('availableRangeNote');
+  if (!startEl || !endEl) return;
+
+  suppressDateChange = true;
   startEl.min = fullStartDate;
   startEl.max = fullEndDate;
   endEl.min = fullStartDate;
   endEl.max = fullEndDate;
-  startEl.value = fullStartDate;
-  endEl.value = fullEndDate;
+
+  if (resetStart || !startEl.value || parseDateMs(startEl.value) < parseDateMs(fullStartDate) || parseDateMs(startEl.value) > parseDateMs(fullEndDate)) {
+    startEl.value = fullStartDate;
+  }
+  if (resetEnd || !endEl.value || parseDateMs(endEl.value) > parseDateMs(fullEndDate) || parseDateMs(endEl.value) < parseDateMs(startEl.value)) {
+    endEl.value = fullEndDate;
+  }
+  if (parseDateMs(startEl.value) > parseDateMs(endEl.value)) {
+    startEl.value = fullStartDate;
+    endEl.value = fullEndDate;
+  }
+  suppressDateChange = false;
+
+  if (rangeNote) {
+    rangeNote.textContent = `Start date adjusts to the selected inflation expectation and policy rate. Current range: ${formatRangeDate(fullStartDate)} to ${formatRangeDate(fullEndDate)}.`;
+  }
+}
+
+function initDateControls() {
+  syncDateControlsToAvailableRange({ resetStart: true, resetEnd: true });
 }
 
 function fmt(value, digits = 2) {
@@ -389,17 +489,22 @@ function latestReading(measureId, policyKey, inflationKey) {
 }
 
 function chartLayout(base = {}) {
-  return {
+  const { start, end } = getDateRange();
+  const baseXAxis = { gridcolor: '#eef2f7', zeroline: false, tickformat: '%Y' };
+  if (start && end) baseXAxis.range = [start, end];
+  const layout = {
     paper_bgcolor: 'rgba(0,0,0,0)',
     plot_bgcolor: 'rgba(0,0,0,0)',
     font: { family: 'Inter, Segoe UI, sans-serif', color: '#172033', size: 12 },
     margin: { l: 54, r: 28, t: 18, b: 64 },
     legend: { orientation: 'h', y: -0.25, x: 0, font: { size: 12 } },
-    xaxis: { gridcolor: '#eef2f7', zeroline: false, tickformat: '%Y' },
+    xaxis: baseXAxis,
     yaxis: { gridcolor: '#eef2f7', zeroline: false, ticksuffix: '%', title: '' },
     hovermode: 'x unified',
     ...base
   };
+  layout.xaxis = { ...baseXAxis, ...(base.xaxis || {}) };
+  return layout;
 }
 
 function renderCharts() {
@@ -504,23 +609,33 @@ function updateLabels() {
     : 'Monthly measures remain monthly; quarterly measures remain quarterly.';
 }
 
-function updateAll() {
+function updateAll({ preserveUserDates = true } = {}) {
+  syncDateControlsToAvailableRange({ resetStart: !preserveUserDates && !userHasCustomDateRange, resetEnd: !preserveUserDates && !userHasCustomDateRange });
   updateLabels();
   renderCharts();
   renderTableAndSummary();
 }
 
 function attachEvents() {
-  ['inflationSelect', 'policySelect', 'startDate', 'endDate', 'lwTypeSelect'].forEach(id => {
+  ['inflationSelect', 'policySelect', 'lwTypeSelect'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener('change', updateAll);
+    if (el) el.addEventListener('change', () => updateAll({ preserveUserDates: userHasCustomDateRange }));
   });
+
+  ['startDate', 'endDate'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', () => {
+      if (!suppressDateChange) userHasCustomDateRange = true;
+      updateAll({ preserveUserDates: true });
+    });
+  });
+
   document.getElementById('resetDates').addEventListener('click', () => {
-    document.getElementById('startDate').value = fullStartDate;
-    document.getElementById('endDate').value = fullEndDate;
-    updateAll();
+    userHasCustomDateRange = false;
+    syncDateControlsToAvailableRange({ resetStart: true, resetEnd: true });
+    updateAll({ preserveUserDates: true });
   });
-  document.querySelectorAll('input[data-measure]').forEach(el => el.addEventListener('change', updateAll));
+  document.querySelectorAll('input[data-measure]').forEach(el => el.addEventListener('change', () => updateAll({ preserveUserDates: userHasCustomDateRange })));
 }
 
 async function loadDashboardData() {
