@@ -14,7 +14,7 @@
         <h1>Monetary Policy Gap Tracker</h1>
         <p class="intro-subtitle">Tracking whether monetary policy is restrictive or accommodative across alternative r* estimates.</p>
         <p class="intro-text">This dashboard compares the real policy rate with alternative estimates of the natural rate of interest, r*, to assess whether monetary policy appears restrictive, neutral, or accommodative under the selected policy rate and inflation-expectations measure.</p>
-        <div class="formula">Policy gap = (Policy rate − Expected inflation) − r*</div>
+        <div class="formula hero-formula">Policy gap = (Policy rate − Expected inflation) − r*</div>
         <p class="interpretation">Positive policy gaps indicate restrictive policy. Negative policy gaps indicate accommodative policy. Values close to zero suggest a neutral or ambiguous stance.</p>
       </div>
       <nav class="top-nav" aria-label="Page navigation">
@@ -107,10 +107,6 @@
     <main class="main" id="dashboard">
       <section class="assumption-card card" aria-label="Selected assumptions">
         <div>
-          <strong>Formula</strong>
-          <span>Policy gap = (Policy rate − Expected inflation) − r*</span>
-        </div>
-        <div>
           <strong>Selected policy rate</strong>
           <span id="selectedPolicyLabel">Effective Federal Funds Rate</span>
         </div>
@@ -124,78 +120,86 @@
         </div>
       </section>
 
-      <section class="layout-grid">
-        <div class="left-column">
-          <article class="card table-card">
-            <h2>Latest Available Readings and Policy Gap</h2>
-            <p id="tableSubtitle">Stance calculated using the selected policy rate and selected inflation expectation.</p>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Measure</th>
-                    <th>Frequency</th>
-                    <th>Latest period</th>
-                    <th class="num">r* (%)</th>
-                    <th class="num">Policy gap (%)</th>
-                    <th>Stance</th>
-                  </tr>
-                </thead>
-                <tbody id="latestTableBody"></tbody>
-              </table>
-            </div>
-            <p class="caption">Latest periods are the latest available observations within the selected date range. Values in this prototype are illustrative until the update pipeline is connected to live data.</p>
-          </article>
-
-          <article class="card summary-card">
-            <div class="summary-icon">▥</div>
-            <div>
-              <h2>Summary of Latest Available Policy Gap</h2>
-              <ul id="summaryBullets"></ul>
-            </div>
-          </article>
-
-          <article class="card chart-card">
-            <div class="card-header">
-              <div>
-                <h2>Historical Policy Gap by r* Measure</h2>
-                <p id="stanceSubtitle">Policy stance in this view is calculated using the selected policy rate and selected inflation expectation.</p>
-              </div>
-            </div>
-            <div id="stanceChart" class="plot"></div>
-          </article>
-
-          <article class="card chart-card">
-            <div class="card-header">
-              <div>
-                <h2>Historical Alternative r* Estimates</h2>
-                <p>Underlying r* estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
-              </div>
-            </div>
-            <div id="rstarChart" class="plot small"></div>
-          </article>
+      <article class="card table-card">
+        <h2>Latest Available Readings and Policy Gap</h2>
+        <p id="tableSubtitle">Stance calculated using the selected policy rate and selected inflation expectation.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Measure</th>
+                <th>Frequency</th>
+                <th>Latest period</th>
+                <th class="num">Real rate (%)</th>
+                <th class="num">r* (%)</th>
+                <th class="num">Policy gap (%)</th>
+                <th>Stance</th>
+              </tr>
+            </thead>
+            <tbody id="latestTableBody"></tbody>
+          </table>
         </div>
+        <p class="caption">Latest periods are the latest available observations within the selected date range. Values in this prototype are illustrative until the update pipeline is connected to live data.</p>
+      </article>
+
+      <article class="card summary-card">
+        <div class="summary-icon">▥</div>
+        <div>
+          <h2>Summary of Latest Available Policy Gap</h2>
+          <ul id="summaryBullets"></ul>
+        </div>
+      </article>
+
+      <article class="card chart-card main-chart-card">
+        <div class="card-header">
+          <div>
+            <h2>Historical Policy Gap by r* Measure</h2>
+            <p id="stanceSubtitle">Policy stance in this view is calculated using the selected policy rate and selected inflation expectation.</p>
+          </div>
+        </div>
+        <div id="stanceChart" class="plot"></div>
+      </article>
+
+      <section class="paired-charts" aria-label="Historical real rate and r-star charts">
+        <article class="card chart-card">
+          <div class="card-header">
+            <div>
+              <h2>Historical Real Policy Rate</h2>
+              <p id="realRateSubtitle">Real policy rate implied by the selected policy rate and selected inflation expectation.</p>
+            </div>
+          </div>
+          <div id="realRateChart" class="plot small"></div>
+        </article>
+
+        <article class="card chart-card">
+          <div class="card-header">
+            <div>
+              <h2>Historical Alternative r* Estimates</h2>
+              <p>Underlying r* estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
+            </div>
+          </div>
+          <div id="rstarChart" class="plot small"></div>
+        </article>
       </section>
 
       <section class="detail-section" id="methodology">
         <h2>Methodology</h2>
         <p>The dashboard calculates the monetary policy gap as:</p>
         <div class="formula compact">Policy gap<sub>j,t</sub> = (i<sub>t</sub> − π<sup>e</sup><sub>t</sub>) − r*<sub>j,t</sub></div>
-        <p>Here, <em>i</em><sub>t</sub> is the selected policy rate, π<sup>e</sup><sub>t</sub> is the selected expected-inflation measure, and r*<sub>j,t</sub> is the natural-rate estimate from measure <em>j</em>. A positive gap means the real policy rate is above the selected r* estimate, suggesting a restrictive stance. A negative gap means the real policy rate is below r*, suggesting an accommodative stance.</p>
+        <p>Here, <em>i</em><sub>t</sub> is the selected policy rate, π<sup>e</sup><sub>t</sub> is the selected expected-inflation measure, and r*<sub>j,t</sub> is the natural-rate estimate from measure <em>j</em>. The real policy rate is <em>i</em><sub>t</sub> − π<sup>e</sup><sub>t</sub>. A positive gap means the real policy rate is above the selected r* estimate, suggesting a restrictive stance. A negative gap means the real policy rate is below r*, suggesting an accommodative stance.</p>
 
         <h3>Moving-average inflation-expectation proxies</h3>
         <p>The moving-average options are not survey responses. They are adaptive proxies for expected inflation, constructed from recent inflation. This is useful because the approach is transparent, reproducible, available over long samples, and close to the way several r* models construct the ex-ante real interest rate.</p>
         <p>For monthly policy-gap calculations, the proxy for price index <em>k</em> is the average of the previous 12 annualized month-over-month inflation rates:</p>
         <div class="formula compact">π<sup>e,k</sup><sub>t</sub> = (1 / 12) × Σ<sub>j=1</sub><sup>12</sup> π<sup>k</sup><sub>t−j, MoM annualized</sub></div>
-        <p>The current month is excluded, so the expectation proxy for month <em>t</em> only uses inflation data through month <em>t−1</em>. The same method is applied separately to core PCE, headline PCE, core CPI, and headline CPI.</p>
+        <p>The current month is excluded. For example, the May 2026 proxy uses inflation observations through April 2026. The same method is applied separately to core PCE, headline PCE, core CPI, and headline CPI.</p>
         <p>For quarterly policy-gap calculations, the proxy is the average of the previous four annualized quarter-over-quarter inflation rates:</p>
         <div class="formula compact">π<sup>e,k</sup><sub>q</sub> = (1 / 4) × Σ<sub>j=1</sub><sup>4</sup> π<sup>k</sup><sub>q−j, QoQ annualized</sub></div>
-        <p>The dashboard uses the quarterly construction for quarterly r* measures rather than interpolating quarterly r* estimates into monthly values.</p>
+        <p>This preserves the natural frequency of the quarterly r* estimates instead of interpolating them into monthly values.</p>
 
-        <h3>Survey and model-based expectations</h3>
-        <p>The survey/model-based options use published expected-inflation measures rather than moving averages of realized inflation. The Cleveland Fed option is a model-based one-year expected inflation series. Michigan and the New York Fed Survey of Consumer Expectations are household-based one-year expectations. The Survey of Professional Forecasters is a professional-forecaster expectation and is quarterly. When SPF is selected, all displayed policy-gap calculations switch to quarterly frequency.</p>
-
-        <p><strong>Frequency treatment:</strong> monthly r* measures remain monthly, while quarterly r* measures remain quarterly. The dashboard does not interpolate quarterly r* estimates into monthly observations. When a quarterly inflation-expectations measure such as SPF is selected, all policy-gap calculations are reported at quarterly frequency.</p>
+        <h3>Survey and model-based inflation expectations</h3>
+        <p>The survey/model-based options use external one-year-ahead inflation expectations where available, such as Cleveland Fed model-based expected inflation, Michigan consumer inflation expectations, New York Fed Survey of Consumer Expectations, and the Survey of Professional Forecasters. These measures are useful robustness checks because they reflect different information sets and respondent groups.</p>
+        <p>When a monthly expectation is selected, monthly r* measures produce monthly policy gaps and quarterly r* measures remain quarterly. When SPF is selected, all stance calculations are reported at quarterly frequency because SPF is a quarterly survey.</p>
       </section>
 
       <section class="detail-section" id="sources">
