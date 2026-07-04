@@ -12,7 +12,7 @@ const measures = {
   },
   dkw: {
     short: 'DKW',
-    full: 'D’Amico-Kim-Wei Market-Based r*',
+    full: 'D’Amico-Kim-Wei Market-Based Natural Rate of Interest',
     frequency: 'Monthly',
     group: 'monthly',
     color: '#168c96',
@@ -56,13 +56,22 @@ const measures = {
     marker: 'square'
   },
   sep_implied: {
-    short: 'SEP-implied',
-    full: 'FOMC SEP-Implied Longer-Run Real Neutral Rate',
+    short: 'SEP-implied median',
+    full: 'FOMC SEP-Implied Median Longer-Run Real Neutral Rate',
     frequency: 'Quarterly (SEP)',
-    group: 'quarterly',
+    group: 'sep',
     color: '#0b2c5f',
     dash: 'dash',
     marker: 'diamond'
+  },
+  fixed_2: {
+    short: 'Fixed 2% r*',
+    full: 'Fixed 2% Real Natural Rate Benchmark',
+    frequency: 'Monthly/quarterly',
+    group: 'benchmark',
+    color: '#6b7280',
+    dash: 'dashdot',
+    marker: 'circle-open'
   }
 };
 
@@ -102,8 +111,8 @@ function getDateRange() {
 }
 
 function inSelectedDateRange(row) {
-  const { start, end } = getDateRange();
   if (!row || !row.date) return false;
+  const { start, end } = getDateRange();
   const t = parseDateMs(row.date);
   if (start && t < parseDateMs(start)) return false;
   if (end && t > parseDateMs(end)) return false;
@@ -138,53 +147,49 @@ function fmt(value, digits = 2) {
   return Number(value).toFixed(digits);
 }
 
-function stanceClass(gap) {
-  if (gap === null || gap === undefined || Number.isNaN(gap)) return '—';
-  if (Math.abs(gap) < 0.05) return 'Neutral';
-  return gap > 0 ? 'Restrictive' : 'Accommodative';
-}
-
-function stanceClassName(stance) {
-  return stance === '—' ? '' : stance.toLowerCase();
-}
-
-function selectedMeasures() {
-  return Array.from(document.querySelectorAll('input[data-measure]:checked')).map(el => el.dataset.measure);
-}
-
 function avg(nums) {
   const vals = nums.filter(v => v !== null && v !== undefined && !Number.isNaN(v));
   if (!vals.length) return null;
   return vals.reduce((a, b) => a + b, 0) / vals.length;
 }
 
-function averageMonthlyRstarByQuarter(measureId) {
-  const out = new Map();
-  const quarters = [...new Set(rawData.months.map(m => m.quarter))];
-  quarters.forEach(q => {
-    const ms = rawData.months.filter(m => m.quarter === q && m.rstar[measureId] !== undefined);
-    if (ms.length) out.set(q, avg(ms.map(m => m.rstar[measureId])));
-  });
-  return out;
+function selectedMeasures() {
+  return Array.from(document.querySelectorAll('input[data-measure]:checked')).map(el => el.dataset.measure);
+}
+
+function selectedLwType() {
+  return document.getElementById('lwTypeSelect')?.value || 'one_sided';
 }
 
 function getQuarterRow(q) {
   return rawData.quarters.find(d => d.quarter === q);
 }
 
-function getLatestMonthlyMeasure(measureId) {
-  const rows = filterDateRows(rawData.months).filter(d => d.rstar[measureId] !== undefined);
-  return rows[rows.length - 1] || null;
+function getRstarFromQuarter(row, measureId) {
+  if (!row) return null;
+  if (measureId === 'fixed_2') return 2;
+  if (measureId === 'sep_implied') return row.rstar;
+  if (!row.rstar) return null;
+  if (measureId === 'lw') {
+    const lwKey = selectedLwType() === 'two_sided' ? 'lw_two_sided' : 'lw_one_sided';
+    return row.rstar[lwKey] ?? row.rstar.lw ?? null;
+  }
+  return row.rstar[measureId] ?? null;
 }
 
-function getLatestQuarterlyMeasure(measureId) {
-  const rows = filterDateRows(rawData.quarters).filter(d => d.rstar[measureId] !== undefined);
-  return rows[rows.length - 1] || null;
+function getRstarFromMonth(row, measureId) {
+  if (!row) return null;
+  if (measureId === 'fixed_2') return 2;
+  if (!row.rstar) return null;
+  return row.rstar[measureId] ?? null;
 }
 
-function getLatestSepMeasure() {
-  const rows = filterDateRows(rawData.sep);
-  return rows[rows.length - 1] || null;
+function getPolicyAndInflationForQuarter(q, policyKey, inflationKey) {
+  const row = getQuarterRow(q);
+  if (!row) return { policy: null, inflation: null, realRate: null };
+  const policy = row.policy[policyKey];
+  const inflation = row.inflation[inflationKey];
+  return { policy, inflation, realRate: policy - inflation };
 }
 
 function policyGap(policy, inflation, rstar) {
@@ -192,15 +197,29 @@ function policyGap(policy, inflation, rstar) {
   return policy - inflation - rstar;
 }
 
-function realPolicyRate(policy, inflation) {
-  if ([policy, inflation].some(v => v === null || v === undefined || Number.isNaN(v))) return null;
-  return policy - inflation;
+function stanceClass(gap) {
+  if (gap === null || gap === undefined || Number.isNaN(gap)) return '—';
+  if (Math.abs(gap) < 0.05) return 'Neutral';
+  return gap > 0 ? 'Restrictive' : 'Accommodative';
 }
 
-function getPolicyAndInflationForQuarter(q, policyKey, inflationKey) {
-  const row = getQuarterRow(q);
-  if (!row) return { policy: null, inflation: null };
-  return { policy: row.policy[policyKey], inflation: row.inflation[inflationKey] };
+function stanceClassName(stance) {
+  return String(stance).toLowerCase();
+}
+
+function averageMonthlyRstarByQuarter(measureId) {
+  const out = new Map();
+  const quarters = [...new Set(rawData.months.map(m => m.quarter))];
+  quarters.forEach(q => {
+    const ms = rawData.months.filter(m => m.quarter === q);
+    const vals = ms.map(m => getRstarFromMonth(m, measureId)).filter(v => v !== null && v !== undefined);
+    if (vals.length) out.set(q, avg(vals));
+  });
+  return out;
+}
+
+function isMonthlyMeasure(measureId) {
+  return measures[measureId].group === 'monthly' || measures[measureId].group === 'benchmark';
 }
 
 function buildGapTrace(measureId, policyKey, inflationKey) {
@@ -217,39 +236,38 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
       if (gap !== null) {
         x.push(row.date);
         y.push(gap);
-        text.push(`${row.period}<br>Real rate: ${fmt(realPolicyRate(qi.policy, qi.inflation))}%<br>r*: ${fmt(row.rstar)}%<br>Gap: ${fmt(gap)}%`);
+        text.push(`${row.period}<br>Real rate: ${fmt(qi.realRate)}%<br>r*: ${fmt(row.rstar)}%<br>Gap: ${fmt(gap)}%`);
       }
     });
   } else if (spfMode) {
-    const monthlyQuarterAverages = meta.group === 'monthly' ? averageMonthlyRstarByQuarter(measureId) : null;
+    const monthlyQuarterAverages = isMonthlyMeasure(measureId) ? averageMonthlyRstarByQuarter(measureId) : null;
     filterDateRows(rawData.quarters).forEach(qrow => {
-      const rstar = meta.group === 'monthly' ? monthlyQuarterAverages.get(qrow.quarter) : qrow.rstar[measureId];
-      if (rstar === undefined || rstar === null) return;
+      const rstar = isMonthlyMeasure(measureId) ? monthlyQuarterAverages.get(qrow.quarter) : getRstarFromQuarter(qrow, measureId);
       const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], rstar);
       if (gap !== null) {
         x.push(qrow.date);
         y.push(gap);
-        text.push(`${qrow.period}<br>Real rate: ${fmt(realPolicyRate(qrow.policy[policyKey], qrow.inflation[inflationKey]))}%<br>r*: ${fmt(rstar)}%<br>Gap: ${fmt(gap)}%`);
+        text.push(`${qrow.period}<br>Real rate: ${fmt(qrow.policy[policyKey] - qrow.inflation[inflationKey])}%<br>r*: ${fmt(rstar)}%<br>Gap: ${fmt(gap)}%`);
       }
     });
-  } else if (meta.group === 'monthly') {
+  } else if (isMonthlyMeasure(measureId)) {
     filterDateRows(rawData.months).forEach(row => {
-      const rstar = row.rstar[measureId];
+      const rstar = getRstarFromMonth(row, measureId);
       const gap = policyGap(row.policy[policyKey], row.inflation[inflationKey], rstar);
       if (gap !== null) {
         x.push(row.date);
         y.push(gap);
-        text.push(`${row.period}<br>Real rate: ${fmt(realPolicyRate(row.policy[policyKey], row.inflation[inflationKey]))}%<br>r*: ${fmt(rstar)}%<br>Gap: ${fmt(gap)}%`);
+        text.push(`${row.period}<br>Real rate: ${fmt(row.policy[policyKey] - row.inflation[inflationKey])}%<br>r*: ${fmt(rstar)}%<br>Gap: ${fmt(gap)}%`);
       }
     });
   } else {
     filterDateRows(rawData.quarters).forEach(qrow => {
-      const rstar = qrow.rstar[measureId];
+      const rstar = getRstarFromQuarter(qrow, measureId);
       const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], rstar);
       if (gap !== null) {
         x.push(qrow.date);
         y.push(gap);
-        text.push(`${qrow.period}<br>Real rate: ${fmt(realPolicyRate(qrow.policy[policyKey], qrow.inflation[inflationKey]))}%<br>r*: ${fmt(rstar)}%<br>Gap: ${fmt(gap)}%`);
+        text.push(`${qrow.period}<br>Real rate: ${fmt(qrow.policy[policyKey] - qrow.inflation[inflationKey])}%<br>r*: ${fmt(rstar)}%<br>Gap: ${fmt(gap)}%`);
       }
     });
   }
@@ -257,102 +275,70 @@ function buildGapTrace(measureId, policyKey, inflationKey) {
   return {
     x, y, text,
     type: 'scatter',
-    mode: meta.group === 'monthly' && !spfMode ? 'lines' : 'lines+markers',
+    mode: isMonthlyMeasure(measureId) && !spfMode ? 'lines' : 'lines+markers',
     name: meta.short,
-    line: { color: meta.color, dash: meta.group === 'monthly' && !spfMode ? meta.dash : (meta.group === 'monthly' ? 'solid' : meta.dash), width: meta.group === 'monthly' && !spfMode ? 2.5 : 2 },
+    line: { color: meta.color, dash: meta.dash, width: isMonthlyMeasure(measureId) ? 2.5 : 2 },
     marker: { color: meta.color, symbol: meta.marker, size: 7 },
     hovertemplate: '%{text}<extra></extra>'
   };
 }
 
-function buildRstarTrace(measureId) {
+function buildRstarTrace(measureId, inflationKey) {
   const meta = measures[measureId];
-  let rows;
+  const x = [];
+  const y = [];
+  const text = [];
+
   if (measureId === 'sep_implied') {
-    rows = filterDateRows(rawData.sep);
-    return {
-      x: rows.map(d => d.date),
-      y: rows.map(d => d.rstar),
-      text: rows.map(d => `${d.period}<br>r*: ${fmt(d.rstar)}%`),
-      type: 'scatter',
-      mode: 'lines+markers',
-      name: meta.short,
-      line: { color: meta.color, dash: meta.dash, width: 2 },
-      marker: { color: meta.color, symbol: meta.marker, size: 7 },
-      hovertemplate: '%{text}<extra></extra>'
-    };
+    filterDateRows(rawData.sep).forEach(row => {
+      x.push(row.date);
+      y.push(row.rstar);
+      text.push(`${row.period}<br>r*: ${fmt(row.rstar)}%`);
+    });
+  } else if (isMonthlyMeasure(measureId)) {
+    filterDateRows(rawData.months).forEach(row => {
+      const rstar = getRstarFromMonth(row, measureId);
+      if (rstar !== null) {
+        x.push(row.date);
+        y.push(rstar);
+        text.push(`${row.period}<br>r*: ${fmt(rstar)}%`);
+      }
+    });
+  } else {
+    filterDateRows(rawData.quarters).forEach(row => {
+      const rstar = getRstarFromQuarter(row, measureId);
+      if (rstar !== null) {
+        x.push(row.date);
+        y.push(rstar);
+        text.push(`${row.period}<br>r*: ${fmt(rstar)}%`);
+      }
+    });
   }
 
-  if (meta.group === 'monthly') {
-    rows = filterDateRows(rawData.months).filter(d => d.rstar[measureId] !== undefined);
-    return {
-      x: rows.map(d => d.date),
-      y: rows.map(d => d.rstar[measureId]),
-      text: rows.map(d => `${d.period}<br>r*: ${fmt(d.rstar[measureId])}%`),
-      type: 'scatter',
-      mode: 'lines',
-      name: meta.short,
-      line: { color: meta.color, dash: meta.dash, width: 2.5 },
-      hovertemplate: '%{text}<extra></extra>'
-    };
-  }
+  return {
+    x, y, text,
+    type: 'scatter',
+    mode: isMonthlyMeasure(measureId) ? 'lines' : 'lines+markers',
+    name: meta.short,
+    line: { color: meta.color, dash: meta.dash, width: 2.2 },
+    marker: { color: meta.color, symbol: meta.marker, size: 7 },
+    hovertemplate: '%{text}<extra></extra>'
+  };
+}
 
-  rows = filterDateRows(rawData.quarters).filter(d => d.rstar[measureId] !== undefined);
+function buildRealRateTrace(policyKey, inflationKey) {
+  const spfMode = inflationKey === 'spf_1y';
+  const rows = filterDateRows(spfMode ? rawData.quarters : rawData.months);
   return {
     x: rows.map(d => d.date),
-    y: rows.map(d => d.rstar[measureId]),
-    text: rows.map(d => `${d.period}<br>r*: ${fmt(d.rstar[measureId])}%`),
-    type: 'scatter',
-    mode: 'lines+markers',
-    name: meta.short,
-    line: { color: meta.color, dash: meta.dash, width: 2 },
-    marker: { color: meta.color, symbol: meta.marker, size: 7 },
-    hovertemplate: '%{text}<extra></extra>'
-  };
-}
-
-function buildRealRateTraces(policyKey, inflationKey) {
-  const traces = [];
-  if (inflationKey === 'spf_1y') {
-    const rows = filterDateRows(rawData.quarters).filter(d => d.inflation[inflationKey] !== undefined);
-    traces.push({
-      x: rows.map(d => d.date),
-      y: rows.map(d => realPolicyRate(d.policy[policyKey], d.inflation[inflationKey])),
-      text: rows.map(d => `${d.period}<br>Real rate: ${fmt(realPolicyRate(d.policy[policyKey], d.inflation[inflationKey]))}%`),
-      type: 'scatter',
-      mode: 'lines+markers',
-      name: 'Quarterly real policy rate',
-      line: { color: '#0b2c5f', width: 2.5 },
-      marker: { color: '#0b2c5f', size: 7 },
-      hovertemplate: '%{text}<extra></extra>'
-    });
-    return traces;
-  }
-
-  const months = filterDateRows(rawData.months).filter(d => d.inflation[inflationKey] !== undefined);
-  traces.push({
-    x: months.map(d => d.date),
-    y: months.map(d => realPolicyRate(d.policy[policyKey], d.inflation[inflationKey])),
-    text: months.map(d => `${d.period}<br>Real rate: ${fmt(realPolicyRate(d.policy[policyKey], d.inflation[inflationKey]))}%`),
+    y: rows.map(d => d.policy[policyKey] - d.inflation[inflationKey]),
+    text: rows.map(d => `${d.period}<br>Policy rate: ${fmt(d.policy[policyKey])}%<br>Expected inflation: ${fmt(d.inflation[inflationKey])}%<br>Real rate: ${fmt(d.policy[policyKey] - d.inflation[inflationKey])}%`),
     type: 'scatter',
     mode: 'lines',
-    name: 'Monthly real policy rate',
+    name: 'Real policy rate',
     line: { color: '#0b2c5f', width: 2.8 },
     hovertemplate: '%{text}<extra></extra>'
-  });
-
-  const quarters = filterDateRows(rawData.quarters).filter(d => d.inflation[inflationKey] !== undefined);
-  traces.push({
-    x: quarters.map(d => d.date),
-    y: quarters.map(d => realPolicyRate(d.policy[policyKey], d.inflation[inflationKey])),
-    text: quarters.map(d => `${d.period}<br>Quarterly real rate: ${fmt(realPolicyRate(d.policy[policyKey], d.inflation[inflationKey]))}%`),
-    type: 'scatter',
-    mode: 'markers',
-    name: 'Quarterly real policy rate',
-    marker: { color: '#5a667a', size: 7, symbol: 'circle-open', line: { width: 1.5 } },
-    hovertemplate: '%{text}<extra></extra>'
-  });
-  return traces;
+  };
 }
 
 function latestReading(measureId, policyKey, inflationKey) {
@@ -360,54 +346,58 @@ function latestReading(measureId, policyKey, inflationKey) {
   const spfMode = inflationKey === 'spf_1y';
 
   if (measureId === 'sep_implied') {
-    const row = getLatestSepMeasure();
+    const row = [...filterDateRows(rawData.sep)].reverse()[0];
     if (!row) return null;
     const qi = getPolicyAndInflationForQuarter(row.quarter, policyKey, inflationKey);
-    const realRate = realPolicyRate(qi.policy, qi.inflation);
     const gap = policyGap(qi.policy, qi.inflation, row.rstar);
-    return gap === null ? null : { measureId, period: row.period, frequency: meta.frequency, realRate, rstar: row.rstar, gap };
+    return { measureId, period: row.period, frequency: meta.frequency, policy: qi.policy, inflation: qi.inflation, realRate: qi.realRate, rstar: row.rstar, gap };
   }
 
   if (spfMode) {
     const qrow = [...filterDateRows(rawData.quarters)].reverse().find(q => q.inflation[inflationKey] !== undefined);
     if (!qrow) return null;
-    let rstar = null;
-    if (meta.group === 'monthly') {
-      const map = averageMonthlyRstarByQuarter(measureId);
-      rstar = map.get(qrow.quarter);
+    let rstar;
+    if (isMonthlyMeasure(measureId)) {
+      rstar = averageMonthlyRstarByQuarter(measureId).get(qrow.quarter);
     } else {
-      rstar = qrow.rstar[measureId];
+      rstar = getRstarFromQuarter(qrow, measureId);
     }
-    const realRate = realPolicyRate(qrow.policy[policyKey], qrow.inflation[inflationKey]);
-    const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], rstar);
-    return gap === null ? null : { measureId, period: qrow.period, frequency: 'Quarterly', realRate, rstar, gap };
+    const policy = qrow.policy[policyKey];
+    const inflation = qrow.inflation[inflationKey];
+    const gap = policyGap(policy, inflation, rstar);
+    return { measureId, period: qrow.period, frequency: 'Quarterly', policy, inflation, realRate: policy - inflation, rstar, gap };
   }
 
-  if (meta.group === 'monthly') {
-    const row = getLatestMonthlyMeasure(measureId);
+  if (isMonthlyMeasure(measureId)) {
+    const row = [...filterDateRows(rawData.months)].reverse().find(d => getRstarFromMonth(d, measureId) !== null);
     if (!row) return null;
-    const realRate = realPolicyRate(row.policy[policyKey], row.inflation[inflationKey]);
-    const gap = policyGap(row.policy[policyKey], row.inflation[inflationKey], row.rstar[measureId]);
-    return gap === null ? null : { measureId, period: row.period, frequency: meta.frequency, realRate, rstar: row.rstar[measureId], gap };
+    const policy = row.policy[policyKey];
+    const inflation = row.inflation[inflationKey];
+    const rstar = getRstarFromMonth(row, measureId);
+    const gap = policyGap(policy, inflation, rstar);
+    return { measureId, period: row.period, frequency: meta.frequency, policy, inflation, realRate: policy - inflation, rstar, gap };
   }
 
-  const qrow = getLatestQuarterlyMeasure(measureId);
+  const qrow = [...filterDateRows(rawData.quarters)].reverse().find(d => getRstarFromQuarter(d, measureId) !== null);
   if (!qrow) return null;
-  const realRate = realPolicyRate(qrow.policy[policyKey], qrow.inflation[inflationKey]);
-  const gap = policyGap(qrow.policy[policyKey], qrow.inflation[inflationKey], qrow.rstar[measureId]);
-  return gap === null ? null : { measureId, period: qrow.period, frequency: meta.frequency, realRate, rstar: qrow.rstar[measureId], gap };
+  const policy = qrow.policy[policyKey];
+  const inflation = qrow.inflation[inflationKey];
+  const rstar = getRstarFromQuarter(qrow, measureId);
+  const gap = policyGap(policy, inflation, rstar);
+  return { measureId, period: qrow.period, frequency: meta.frequency, policy, inflation, realRate: policy - inflation, rstar, gap };
 }
 
-function commonPlotLayout() {
+function chartLayout(base = {}) {
   return {
     paper_bgcolor: 'rgba(0,0,0,0)',
     plot_bgcolor: 'rgba(0,0,0,0)',
     font: { family: 'Inter, Segoe UI, sans-serif', color: '#172033', size: 12 },
-    margin: { l: 52, r: 26, t: 14, b: 58 },
-    legend: { orientation: 'h', y: -0.22, x: 0, font: { size: 12 } },
+    margin: { l: 54, r: 28, t: 18, b: 64 },
+    legend: { orientation: 'h', y: -0.25, x: 0, font: { size: 12 } },
     xaxis: { gridcolor: '#eef2f7', zeroline: false, tickformat: '%Y' },
     yaxis: { gridcolor: '#eef2f7', zeroline: false, ticksuffix: '%', title: '' },
-    hovermode: 'x unified'
+    hovermode: 'x unified',
+    ...base
   };
 }
 
@@ -417,34 +407,31 @@ function renderCharts() {
   const activeMeasures = selectedMeasures();
 
   const stanceTraces = activeMeasures.map(id => buildGapTrace(id, policyKey, inflationKey)).filter(t => t && t.x.length);
-  const rstarTraces = activeMeasures.map(id => buildRstarTrace(id)).filter(t => t && t.x.length);
-  const realRateTraces = buildRealRateTraces(policyKey, inflationKey).filter(t => t && t.x.length);
+  const rstarTraces = activeMeasures.map(id => buildRstarTrace(id, inflationKey)).filter(t => t && t.x.length);
+  const realRateTrace = buildRealRateTrace(policyKey, inflationKey);
 
-  const base = commonPlotLayout();
-  const stanceLayout = {
-    ...base,
-    yaxis: { ...base.yaxis, title: 'Policy gap (%)' },
+  const stanceLayout = chartLayout({
+    yaxis: { gridcolor: '#eef2f7', zeroline: false, ticksuffix: '%', title: 'Policy gap (%)', range: [-4, 4] },
     shapes: [{ type: 'line', xref: 'paper', x0: 0, x1: 1, y0: 0, y1: 0, line: { color: '#6f7c8f', width: 1.5 } }],
     annotations: [
       { text: 'Neutral', xref: 'paper', x: 1.01, y: 0, showarrow: false, xanchor: 'left', font: { color: '#4b5563', size: 12 } },
-      { text: 'Restrictive', xref: 'paper', x: 0.52, yref: 'paper', y: 0.95, showarrow: false, font: { color: '#6b7280', size: 13 } },
-      { text: 'Accommodative', xref: 'paper', x: 0.52, yref: 'paper', y: 0.05, showarrow: false, font: { color: '#6b7280', size: 13 } }
+      { text: 'Restrictive', xref: 'paper', x: 0.52, y: 3.3, showarrow: false, font: { color: '#6b7280', size: 13 } },
+      { text: 'Accommodative', xref: 'paper', x: 0.52, y: -3.3, showarrow: false, font: { color: '#6b7280', size: 13 } }
     ]
-  };
-  const realRateLayout = {
-    ...base,
-    yaxis: { ...base.yaxis, title: 'Real policy rate (%)' },
-    margin: { l: 52, r: 22, t: 10, b: 58 },
-    shapes: [{ type: 'line', xref: 'paper', x0: 0, x1: 1, y0: 0, y1: 0, line: { color: '#c7d0dd', width: 1 } }]
-  };
-  const rstarLayout = {
-    ...base,
-    yaxis: { ...base.yaxis, title: 'r* (%)' },
-    margin: { l: 52, r: 22, t: 10, b: 58 }
-  };
+  });
+
+  const realRateLayout = chartLayout({
+    yaxis: { gridcolor: '#eef2f7', zeroline: false, ticksuffix: '%', title: 'Real policy rate (%)' },
+    margin: { l: 54, r: 24, t: 12, b: 58 }
+  });
+
+  const rstarLayout = chartLayout({
+    yaxis: { gridcolor: '#eef2f7', zeroline: false, ticksuffix: '%', title: 'r* (%)', range: [-2.2, 3.5] },
+    margin: { l: 54, r: 24, t: 12, b: 58 }
+  });
 
   Plotly.react('stanceChart', stanceTraces, stanceLayout, { responsive: true, displayModeBar: false });
-  Plotly.react('realRateChart', realRateTraces, realRateLayout, { responsive: true, displayModeBar: false });
+  Plotly.react('realRateChart', [realRateTrace], realRateLayout, { responsive: true, displayModeBar: false });
   Plotly.react('rstarChart', rstarTraces, rstarLayout, { responsive: true, displayModeBar: false });
 }
 
@@ -453,19 +440,21 @@ function renderTableAndSummary() {
   const inflationKey = document.getElementById('inflationSelect').value;
   const policyName = policyLabels[policyKey];
   const inflationName = inflationLabels[inflationKey];
-  const rows = selectedMeasures().map(id => latestReading(id, policyKey, inflationKey)).filter(Boolean);
+  const rows = selectedMeasures().map(id => latestReading(id, policyKey, inflationKey)).filter(row => row && row.gap !== null);
 
   const tbody = document.getElementById('latestTableBody');
   tbody.innerHTML = '';
   rows.forEach(row => {
     const meta = measures[row.measureId];
     const stance = stanceClass(row.gap);
-    const swatchClass = meta.marker === 'diamond' ? 'legend-diamond' : (meta.group === 'monthly' ? 'legend-swatch' : 'legend-square');
+    const swatchClass = meta.marker === 'diamond' ? 'legend-diamond' : (isMonthlyMeasure(row.measureId) ? 'legend-swatch' : 'legend-square');
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td><span class="measure-cell"><span class="${swatchClass}" style="background:${meta.color}"></span>${meta.short}</span></td>
       <td>${row.frequency}</td>
       <td>${row.period}</td>
+      <td class="num">${fmt(row.policy)}</td>
+      <td class="num">${fmt(row.inflation)}</td>
       <td class="num">${fmt(row.realRate)}</td>
       <td class="num">${fmt(row.rstar)}</td>
       <td class="num" style="font-weight:900;color:${meta.color}">${fmt(row.gap)}</td>
@@ -485,12 +474,12 @@ function renderTableAndSummary() {
   const neutral = rows.length - positive - negative;
   const spfSentence = inflationKey === 'spf_1y'
     ? 'Because SPF is quarterly, all displayed stance estimates are calculated at quarterly frequency.'
-    : 'Monthly r* measures remain monthly, while quarterly r* measures remain quarterly.';
+    : 'Monthly natural-rate measures remain monthly, while quarterly natural-rate measures remain quarterly.';
 
   const bullets = [
     `Using ${policyName} and the ${inflationName}, ${positive} of ${rows.length} displayed measures imply a positive policy gap${positive ? ' and therefore a restrictive stance' : ''}.`,
     `${spfSentence} Latest reference periods differ across measures.`,
-    `Differences across measures should be read as differences in the estimated neutral rate, not as inconsistencies in the policy-gap formula.`
+    `Differences across measures should be read as differences in the estimated natural rate of interest, not as inconsistencies in the policy-gap formula.`
   ];
   if (negative > 0 || neutral > 0) {
     bullets.splice(1, 0, `${negative} displayed measure${negative === 1 ? '' : 's'} imply accommodation and ${neutral} are approximately neutral under the current settings.`);
@@ -504,13 +493,13 @@ function updateLabels() {
   const policyName = policyLabels[policyKey];
   const inflationName = inflationLabels[inflationKey];
 
-  document.getElementById('stanceSubtitle').textContent = `Policy stance in this view is calculated using the selected policy rate: ${policyName}, and the selected inflation expectation: ${inflationName}.`;
-  document.getElementById('realRateSubtitle').textContent = `Real policy rate calculated as ${policyName} minus ${inflationName}.`;
+  document.getElementById('stanceSubtitle').textContent = `Policy stance in this view is calculated using ${policyName} and ${inflationName}.`;
+  document.getElementById('realRateSubtitle').textContent = `Real policy rate implied by ${policyName} and ${inflationName}.`;
   document.getElementById('tableSubtitle').textContent = `Stance calculated using ${policyName} and ${inflationName}.`;
   document.getElementById('selectedPolicyLabel').textContent = policyName;
   document.getElementById('selectedInflationLabel').textContent = inflationName;
   document.getElementById('frequencyRuleLabel').textContent = inflationKey === 'spf_1y'
-    ? 'SPF is quarterly, so all displayed stance calculations switch to quarterly frequency.'
+    ? 'SPF is quarterly, so all displayed stance calculations are quarterly.'
     : 'Monthly measures remain monthly; quarterly measures remain quarterly.';
 }
 
@@ -521,10 +510,10 @@ function updateAll() {
 }
 
 function attachEvents() {
-  document.getElementById('inflationSelect').addEventListener('change', updateAll);
-  document.getElementById('policySelect').addEventListener('change', updateAll);
-  document.getElementById('startDate').addEventListener('change', updateAll);
-  document.getElementById('endDate').addEventListener('change', updateAll);
+  ['inflationSelect', 'policySelect', 'startDate', 'endDate', 'lwTypeSelect'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', updateAll);
+  });
   document.getElementById('resetDates').addEventListener('click', () => {
     document.getElementById('startDate').value = fullStartDate;
     document.getElementById('endDate').value = fullEndDate;

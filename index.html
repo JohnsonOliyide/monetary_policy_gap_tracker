@@ -12,7 +12,7 @@
     <div class="header-bar">
       <div class="hero-copy">
         <h1>Monetary Policy Gap Tracker</h1>
-        <p class="intro-subtitle">Tracking whether monetary policy is restrictive or accommodative across alternative r* estimates.</p>
+        <p class="intro-subtitle">Tracking whether monetary policy is restrictive or accommodative across alternative natural rate of interest estimates.</p>
         <p class="intro-text">This dashboard compares the real policy rate with alternative estimates of the natural rate of interest, r*, to assess whether monetary policy appears restrictive, neutral, or accommodative under the selected policy rate and inflation-expectations measure.</p>
         <div class="formula hero-formula">Policy gap = (Policy rate − Expected inflation) − r*</div>
         <p class="interpretation">Positive policy gaps indicate restrictive policy. Negative policy gaps indicate accommodative policy. Values close to zero suggest a neutral or ambiguous stance.</p>
@@ -20,7 +20,6 @@
       <nav class="top-nav" aria-label="Page navigation">
         <a href="#methodology">Methodology</a>
         <a href="#sources">Sources</a>
-        <a href="#about">About</a>
       </nav>
     </div>
   </header>
@@ -79,25 +78,37 @@
       </section>
 
       <section class="measure-panel">
-        <div class="sidebar-section-title">r* measures</div>
+        <div class="sidebar-section-title">Natural Rate of Interest Measures</div>
 
         <div class="measure-group">
-          <div class="measure-group-title">Monthly measures</div>
+          <div class="measure-group-title">Monthly model and market-based measures</div>
           <label class="measure-check"><input type="checkbox" data-measure="kc_fed" checked /> <span>Kansas City Fed Model-Based Natural Rate of Interest</span></label>
-          <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei Market-Based r*</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="dkw" checked /> <span>D’Amico-Kim-Wei Market-Based Natural Rate of Interest</span></label>
           <label class="measure-check"><input type="checkbox" data-measure="tips_10y10y" checked /> <span>10-Year, 10-Year Forward TIPS Real Rate</span></label>
         </div>
 
         <div class="measure-group">
           <div class="measure-group-title">Quarterly model-based measures</div>
           <label class="measure-check"><input type="checkbox" data-measure="hlw" checked /> <span>Holston-Laubach-Williams Natural Rate of Interest</span></label>
-          <label class="measure-check"><input type="checkbox" data-measure="lw" checked /> <span>Laubach-Williams Natural Rate of Interest</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="lw" /> <span>Laubach-Williams Natural Rate of Interest</span></label>
+          <div class="nested-control">
+            <label for="lwTypeSelect">Laubach-Williams estimate type</label>
+            <select id="lwTypeSelect">
+              <option value="one_sided" selected>One-sided estimate</option>
+              <option value="two_sided">Two-sided estimate</option>
+            </select>
+          </div>
           <label class="measure-check"><input type="checkbox" data-measure="lubik_matthes" checked /> <span>Lubik-Matthes Natural Rate of Interest</span></label>
         </div>
 
         <div class="measure-group">
           <div class="measure-group-title">Quarterly policymaker-based measure</div>
-          <label class="measure-check"><input type="checkbox" data-measure="sep_implied" checked /> <span>FOMC SEP-Implied Longer-Run Real Neutral Rate</span></label>
+          <label class="measure-check"><input type="checkbox" data-measure="sep_implied" checked /> <span>FOMC SEP-Implied Median Longer-Run Real Neutral Rate</span></label>
+        </div>
+
+        <div class="measure-group">
+          <div class="measure-group-title">Simple benchmark</div>
+          <label class="measure-check"><input type="checkbox" data-measure="fixed_2" /> <span>Fixed 2% Real Natural Rate Benchmark</span></label>
         </div>
 
         <div class="sidebar-note"><span class="note-icon">i</span> Uncheck measures to hide them from the charts, table and summary.</div>
@@ -130,6 +141,8 @@
                 <th>Measure</th>
                 <th>Frequency</th>
                 <th>Latest period</th>
+                <th class="num">Policy rate (%)</th>
+                <th class="num">Expected inflation (%)</th>
                 <th class="num">Real rate (%)</th>
                 <th class="num">r* (%)</th>
                 <th class="num">Policy gap (%)</th>
@@ -153,14 +166,14 @@
       <article class="card chart-card main-chart-card">
         <div class="card-header">
           <div>
-            <h2>Historical Policy Gap by r* Measure</h2>
+            <h2>Historical Policy Gap by Natural Rate of Interest Measure</h2>
             <p id="stanceSubtitle">Policy stance in this view is calculated using the selected policy rate and selected inflation expectation.</p>
           </div>
         </div>
         <div id="stanceChart" class="plot"></div>
       </article>
 
-      <section class="paired-charts" aria-label="Historical real rate and r-star charts">
+      <section class="paired-charts" aria-label="Historical real rate and natural-rate charts">
         <article class="card chart-card">
           <div class="card-header">
             <div>
@@ -174,8 +187,8 @@
         <article class="card chart-card">
           <div class="card-header">
             <div>
-              <h2>Historical Alternative r* Estimates</h2>
-              <p>Underlying r* estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
+              <h2>Historical Alternative Natural Rate of Interest Estimates</h2>
+              <p>Underlying natural-rate estimates shown at their native frequency. Monthly measures appear as lines; quarterly and SEP-based measures appear as points or step lines.</p>
             </div>
           </div>
           <div id="rstarChart" class="plot small"></div>
@@ -184,33 +197,74 @@
 
       <section class="detail-section" id="methodology">
         <h2>Methodology</h2>
-        <p>The dashboard calculates the monetary policy gap as:</p>
+        <p>The Monetary Policy Gap Tracker evaluates the stance of monetary policy by comparing the real policy rate with alternative estimates of the natural rate of interest, r*. The natural rate of interest is commonly interpreted as the real interest rate that is consistent with the economy operating near its potential and inflation remaining stable. Because r* is not directly observed, different models and market-based approaches can produce different estimates.</p>
+        <p>The dashboard does not estimate a new r* series and does not combine existing measures into a single index. Instead, it asks a more transparent question: given a selected policy rate and a selected measure of expected inflation, does monetary policy appear restrictive or accommodative across alternative natural-rate estimates?</p>
         <div class="formula compact">Policy gap<sub>j,t</sub> = (i<sub>t</sub> − π<sup>e</sup><sub>t</sub>) − r*<sub>j,t</sub></div>
-        <p>Here, <em>i</em><sub>t</sub> is the selected policy rate, π<sup>e</sup><sub>t</sub> is the selected expected-inflation measure, and r*<sub>j,t</sub> is the natural-rate estimate from measure <em>j</em>. The real policy rate is <em>i</em><sub>t</sub> − π<sup>e</sup><sub>t</sub>. A positive gap means the real policy rate is above the selected r* estimate, suggesting a restrictive stance. A negative gap means the real policy rate is below r*, suggesting an accommodative stance.</p>
+        <p>Here, <em>i</em><sub>t</sub> is the selected nominal policy rate, π<sup>e</sup><sub>t</sub> is the selected measure of expected inflation, and r*<sub>j,t</sub> is natural-rate estimate <em>j</em>. A positive policy gap means the real policy rate is above the selected estimate of r*, suggesting a restrictive policy stance. A negative policy gap means the real policy rate is below r*, suggesting an accommodative stance. Values close to zero suggest that policy is near neutral under that particular set of assumptions.</p>
+
+        <h3>Policy rate</h3>
+        <p>The default policy-rate measure is the Effective Federal Funds Rate. This is the main short-term interest rate associated with the Federal Reserve’s policy stance and is the most natural benchmark for comparing the real policy rate with estimates of the neutral real short-term rate. The dashboard also includes the 1-Year Treasury Yield as an alternative policy-rate measure. The 1-Year Treasury Yield provides a market-based rate at a one-year horizon, but it reflects expected future policy rates and other market factors, so it should be interpreted as a sensitivity check rather than the baseline policy instrument.</p>
+
+        <h3>Expected inflation</h3>
+        <p>To convert the nominal policy rate into a real policy rate, the dashboard subtracts a selected measure of expected inflation:</p>
+        <div class="formula compact">Real policy rate<sub>t</sub> = i<sub>t</sub> − π<sup>e</sup><sub>t</sub></div>
+        <p>Expected inflation is important because the same nominal interest rate can imply different real policy stances depending on the inflation expectation used. For example, a 5 percent nominal policy rate is more restrictive if expected inflation is 2 percent than if expected inflation is 4 percent. The dashboard includes two broad types of expected-inflation inputs: moving-average proxies and survey/model-based expectations.</p>
 
         <h3>Moving-average inflation-expectation proxies</h3>
-        <p>The moving-average options are not survey responses. They are adaptive proxies for expected inflation, constructed from recent inflation. This is useful because the approach is transparent, reproducible, available over long samples, and close to the way several r* models construct the ex-ante real interest rate.</p>
-        <p>For monthly policy-gap calculations, the proxy for price index <em>k</em> is the average of the previous 12 annualized month-over-month inflation rates:</p>
+        <p>The default expected-inflation measure is the Core PCE moving-average proxy. This proxy uses recent realized inflation as a simple measure of expected inflation. The idea is that expectations may be partly adaptive: when recent inflation has been high, the inflation rate used to form the real policy rate may also be higher. This approach is useful because it is transparent, reproducible, available over a long history, and closely related to the real-rate construction used in several natural-rate models.</p>
+        <p>For monthly calculations, the moving-average proxy is calculated as the average of the previous 12 months of annualized month-over-month inflation:</p>
         <div class="formula compact">π<sup>e,k</sup><sub>t</sub> = (1 / 12) × Σ<sub>j=1</sub><sup>12</sup> π<sup>k</sup><sub>t−j, MoM annualized</sub></div>
-        <p>The current month is excluded. For example, the May 2026 proxy uses inflation observations through April 2026. The same method is applied separately to core PCE, headline PCE, core CPI, and headline CPI.</p>
-        <p>For quarterly policy-gap calculations, the proxy is the average of the previous four annualized quarter-over-quarter inflation rates:</p>
+        <p>The current month is excluded, so the expectation proxy for month <em>t</em> uses inflation information available through month <em>t−1</em>. For quarterly calculations, the proxy is calculated as the average of the previous four quarters of annualized quarter-over-quarter inflation:</p>
         <div class="formula compact">π<sup>e,k</sup><sub>q</sub> = (1 / 4) × Σ<sub>j=1</sub><sup>4</sup> π<sup>k</sup><sub>q−j, QoQ annualized</sub></div>
-        <p>This preserves the natural frequency of the quarterly r* estimates instead of interpolating them into monthly values.</p>
+        <p>The dashboard includes moving-average proxies based on core PCE inflation, headline PCE inflation, core CPI inflation, and headline CPI inflation. Core PCE is the default because it is less volatile than headline inflation and is closely related to the inflation concept commonly emphasized in Federal Reserve analysis. The other options allow users to examine whether the implied stance of policy changes when expectations are proxied using broader or CPI-based inflation measures.</p>
 
         <h3>Survey and model-based inflation expectations</h3>
-        <p>The survey/model-based options use external one-year-ahead inflation expectations where available, such as Cleveland Fed model-based expected inflation, Michigan consumer inflation expectations, New York Fed Survey of Consumer Expectations, and the Survey of Professional Forecasters. These measures are useful robustness checks because they reflect different information sets and respondent groups.</p>
-        <p>When a monthly expectation is selected, monthly r* measures produce monthly policy gaps and quarterly r* measures remain quarterly. When SPF is selected, all stance calculations are reported at quarterly frequency because SPF is a quarterly survey.</p>
+        <p>The dashboard also includes direct or model-based measures of inflation expectations. These measures differ from the moving-average proxies because they are not constructed mechanically from recent realized inflation. Instead, they come from surveys or models designed to measure expected inflation more directly.</p>
+        <p>The options include Cleveland Fed 1-Year Expected Inflation, University of Michigan 1-Year Inflation Expectation, New York Fed Survey of Consumer Expectations 1-Year Inflation Expectation, and Survey of Professional Forecasters 1-Year Inflation Forecast. When the SPF measure is selected, policy-gap calculations are reported at quarterly frequency because SPF is a quarterly series. The dashboard does not manufacture monthly SPF-based policy gaps.</p>
+
+        <h3>Natural rate of interest measures</h3>
+        <p>The dashboard compares the real policy rate with several natural rate of interest measures. These include model-based, market-based, policymaker-implied, and simple benchmark measures. The fixed 2 percent benchmark is not an estimated natural rate. It is included as a simple reference assumption, r* = 2%, so users can compare model-based and market-based estimates with a constant real neutral-rate benchmark.</p>
+        <p>For Laubach-Williams, the dashboard allows users to choose between the one-sided and two-sided estimate when those source series are available. The one-sided estimate uses only information available up to that date, making it more appropriate for real-time policy assessment. The two-sided estimate uses information from the full sample and is more appropriate for revised historical analysis. Holston-Laubach-Williams is treated as a current published estimate.</p>
+
+        <h3>Frequency treatment</h3>
+        <p>The dashboard preserves the natural frequency of each series. Monthly natural-rate measures remain monthly, while quarterly natural-rate measures remain quarterly. The dashboard does not interpolate quarterly r* estimates into monthly values.</p>
+        <p>When a monthly inflation-expectation measure is selected, monthly natural-rate measures produce monthly policy gaps and quarterly natural-rate measures produce quarterly policy gaps. For quarterly natural-rate measures, the real policy rate is calculated at quarterly frequency. When a quarterly inflation-expectation measure, such as SPF, is selected, all policy-gap calculations are reported at quarterly frequency. Monthly natural-rate measures are converted to quarterly frequency using quarterly averages for that view.</p>
+
+        <h3>Interpretation</h3>
+        <p>The dashboard should be interpreted as a comparison tool rather than a single estimate of the “true” stance of policy. If most natural-rate measures imply a positive policy gap, then policy appears restrictive under the selected assumptions. If most imply a negative gap, then policy appears accommodative. If the measures disagree, then the assessment of policy stance is sensitive to the choice of r*, policy rate, or inflation-expectation measure.</p>
       </section>
 
       <section class="detail-section" id="sources">
         <h2>Sources</h2>
-        <p>The dashboard is designed to use publicly available series from Federal Reserve sources, including the Kansas City Fed, New York Fed, Richmond Fed, Cleveland Fed, FRED and FOMC Summary of Economic Projections releases, together with author calculations.</p>
-        <p>The current prototype uses illustrative sample values. The included update pipeline is a starting point for replacing the sample data with live or periodically refreshed public data.</p>
-      </section>
+        <p>Each source below links to the original publication page, data page, or official description for the series used or planned in the dashboard. The current prototype still uses illustrative sample values until the update pipeline is connected to these public sources.</p>
 
-      <section class="detail-section" id="about">
-        <h2>About</h2>
-        <p>The Monetary Policy Gap Tracker is a research dashboard designed to compare assessments of the stance of monetary policy across alternative estimates of the natural rate of interest. It does not estimate a new r* series and does not combine existing estimates into a single index. Instead, it shows how the implied policy stance changes across existing model-based, market-based and policymaker-based measures.</p>
+        <h3>Natural rate of interest measures</h3>
+        <ul class="source-list">
+          <li><a href="https://www.kansascityfed.org/data-and-trends/kansas-city-fed-model-based-natural-rate-of-interest-and-natural-unemployment-rate/" target="_blank" rel="noopener">Kansas City Fed Model-Based Natural Rate of Interest</a></li>
+          <li><a href="https://www.newyorkfed.org/research/policy/rstar" target="_blank" rel="noopener">Holston-Laubach-Williams and Laubach-Williams Natural Rate of Interest estimates</a></li>
+          <li><a href="https://www.richmondfed.org/research/national_economy/natural_rate_interest" target="_blank" rel="noopener">Lubik-Matthes Natural Rate of Interest</a></li>
+          <li><a href="https://www.federalreserve.gov/econres/notes/feds-notes/DKW_updates.csv" target="_blank" rel="noopener">D’Amico-Kim-Wei market-based estimates data file</a></li>
+          <li><a href="https://www.stlouisfed.org/on-the-economy/2024/mar/has-economy-transitioned-higher-long-run-real-rate-regime" target="_blank" rel="noopener">10-Year, 10-Year Forward TIPS Real Rate description</a></li>
+          <li><a href="https://fred.stlouisfed.org/series/FEDTARMDLR" target="_blank" rel="noopener">FOMC SEP longer-run federal funds rate median</a></li>
+        </ul>
+
+        <h3>Policy-rate measures</h3>
+        <ul class="source-list">
+          <li><a href="https://fred.stlouisfed.org/series/EFFR" target="_blank" rel="noopener">Effective Federal Funds Rate</a></li>
+          <li><a href="https://fred.stlouisfed.org/series/DGS1" target="_blank" rel="noopener">1-Year Treasury Constant Maturity Yield</a></li>
+        </ul>
+
+        <h3>Inflation indexes and inflation expectations</h3>
+        <ul class="source-list">
+          <li><a href="https://fred.stlouisfed.org/series/PCEPILFE" target="_blank" rel="noopener">Core PCE Price Index</a></li>
+          <li><a href="https://fred.stlouisfed.org/series/PCEPI" target="_blank" rel="noopener">Headline PCE Price Index</a></li>
+          <li><a href="https://fred.stlouisfed.org/series/CPILFESL" target="_blank" rel="noopener">Core CPI</a></li>
+          <li><a href="https://fred.stlouisfed.org/series/CPIAUCSL" target="_blank" rel="noopener">Headline CPI</a></li>
+          <li><a href="https://www.clevelandfed.org/indicators-and-data/inflation-expectations" target="_blank" rel="noopener">Cleveland Fed Inflation Expectations</a></li>
+          <li><a href="https://fred.stlouisfed.org/series/MICH" target="_blank" rel="noopener">University of Michigan 1-Year Inflation Expectation</a></li>
+          <li><a href="https://www.newyorkfed.org/microeconomics/sce" target="_blank" rel="noopener">New York Fed Survey of Consumer Expectations</a></li>
+          <li><a href="https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/survey-of-professional-forecasters" target="_blank" rel="noopener">Survey of Professional Forecasters</a></li>
+        </ul>
       </section>
 
       <footer class="site-footer">
