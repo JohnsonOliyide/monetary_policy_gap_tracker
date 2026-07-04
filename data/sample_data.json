@@ -1,30 +1,27 @@
 {
-  "metadata": {
-    "generated_at": "2026-07-04T21:05:44+00:00",
-    "prototype_note": "Illustrative sample data for UI and calculation testing. Replace with live data before publishing as a data product."
-  },
   "months": [
     {
       "date": "2020-01-31",
       "period": "Jan 2020",
       "quarter": "2020 Q1",
       "policy": {
-        "effr": 0.08,
-        "treasury_1y": 0.13
+        "effr": 0.1,
+        "treasury_1y": 0.45
       },
       "inflation": {
-        "core_pce_ma": 1.853,
-        "headline_pce_ma": 1.853,
-        "core_cpi_ma": 2.203,
-        "headline_cpi_ma": 2.303,
-        "cleveland_1y": 2.054,
-        "michigan_1y": 2.8,
-        "nyfed_sce_1y": 2.6
+        "core_pce_ma": 1.84,
+        "headline_pce_ma": 1.84,
+        "core_cpi_ma": 2.19,
+        "headline_cpi_ma": 2.39,
+        "cleveland_1y": 2.18,
+        "michigan_1y": 2.77,
+        "nyfed_sce_1y": 2.47,
+        "spf_1y": 2.26
       },
       "rstar": {
-        "kc_fed": 0.661,
-        "dkw": 0.679,
-        "tips_10y10y": -0.777
+        "kc_fed": 0.4,
+        "dkw": 0.45,
+        "tips_10y10y": -0.4
       }
     },
     {
@@ -32,22 +29,23 @@
       "period": "Feb 2020",
       "quarter": "2020 Q1",
       "policy": {
-        "effr": 0.085,
-        "treasury_1y": 0.165
+        "effr": 0.11,
+        "treasury_1y": 0.49
       },
       "inflation": {
-        "core_pce_ma": 1.862,
-        "headline_pce_ma": 1.944,
-        "core_cpi_ma": 2.232,
-        "headline_cpi_ma": 2.464,
-        "cleveland_1y": 2.066,
-        "michigan_1y": 2.849,
-        "nyfed_sce_1y": 2.62
+        "core_pce_ma": 1.9,
+        "headline_pce_ma": 2.02,
+        "core_cpi_ma": 2.28,
+        "headline_cpi_ma": 2.64,
+        "cleveland_1y": 2.21,
+        "michigan_1y": 2.83,
+        "nyfed_sce_1y": 2.51,
+        "spf_1y": 2.27
       },
       "rstar": {
-        "kc_fed": 0.655,
-        "dkw": 0.78,
-        "tips_10y10y": -0.702
+        "kc_fed": 0.43,
+        "dkw": 0.48,
+        "tips_10y10y": -0.37
       }
     },
     {
@@ -55,22 +53,23 @@
       "period": "Mar 2020",
       "quarter": "2020 Q1",
       "policy": {
-        "effr": 0.09,
-        "treasury_1y": 0.198
+        "effr": 0.12,
+        "treasury_1y": 0.54
       },
       "inflation": {
-        "core_pce_ma": 1.872,
-        "headline_pce_ma": 2.026,
-        "core_cpi_ma": 2.261,
-        "headline_cpi_ma": 2.607,
-        "cleveland_1y": 2.079,
-        "michigan_1y": 2.893,
-        "nyfed_sce_1y": 2.638
+        "core_pce_ma": 1.98,
+        "headline_pce_ma": 2.19,
+        "core_cpi_ma": 2.38,
+        "headline_cpi_ma": 2.88,
+        "cleveland_1y": 2.24,
+        "michigan_1y": 2.89,
+        "nyfed_sce_1y": 2.55,
+        "spf_1y": 2.28
       },
       "rstar": {
-        "kc_fed": 0.735,
-        "dkw": 0.746,
-        "tips_10y10y": -0.705
+        "kc_fed": 0.46,
+        "dkw": 0.52,
+        "tips_10y10y": -0.35
       }
     },
     {
@@ -78,22 +77,23 @@
       "period": "Apr 2020",
       "quarter": "2020 Q2",
       "policy": {
-        "effr": 0.094,
-        "treasury_1y": 0.228
+        "effr": 0.13,
+        "treasury_1y": 0.58
       },
       "inflation": {
-        "core_pce_ma": 1.881,
-        "headline_pce_ma": 2.091,
-        "core_cpi_ma": 2.287,
-        "headline_cpi_ma": 2.717,
-        "cleveland_1y": 2.091,
-        "michigan_1y": 2.926,
-        "nyfed_sce_1y": 2.655
+        "core_pce_ma": 2.05,
+        "headline_pce_ma": 2.35,
+        "core_cpi_ma": 2.47,
+        "headline_cpi_ma": 3.09,
+        "cleveland_1y": 2.28,
+        "michigan_1y": 2.95,
+        "nyfed_sce_1y": 2.59,
+        "spf_1y": 2.29
       },
       "rstar": {
-        "kc_fed": 0.693,
-        "dkw": 0.79,
-        "tips_10y10y": -0.669
+        "kc_fed": 0.49,
+        "dkw": 0.55,
+        "tips_10y10y": -0.33
       }
     },
     {
@@ -101,22 +101,23 @@
       "period": "May 2020",
       "quarter": "2020 Q2",
       "policy": {
-        "effr": 0.097,
-        "treasury_1y": 0.254
+        "effr": 0.14,
+        "treasury_1y": 0.61
       },
       "inflation": {
-        "core_pce_ma": 1.89,
-        "headline_pce_ma": 2.133,
-        "core_cpi_ma": 2.312,
-        "headline_cpi_ma": 2.781,
-        "cleveland_1y": 2.102,
-        "michigan_1y": 2.946,
-        "nyfed_sce_1y": 2.667
+        "core_pce_ma": 2.13,
+        "headline_pce_ma": 2.47,
+        "core_cpi_ma": 2.57,
+        "headline_cpi_ma": 3.25,
+        "cleveland_1y": 2.31,
+        "michigan_1y": 3.01,
+        "nyfed_sce_1y": 2.63,
+        "spf_1y": 2.31
       },
       "rstar": {
-        "kc_fed": 0.719,
-        "dkw": 0.819,
-        "tips_10y10y": -0.625
+        "kc_fed": 0.52,
+        "dkw": 0.57,
+        "tips_10y10y": -0.31
       }
     },
     {
@@ -124,22 +125,23 @@
       "period": "Jun 2020",
       "quarter": "2020 Q2",
       "policy": {
-        "effr": 0.099,
-        "treasury_1y": 0.275
+        "effr": 0.15,
+        "treasury_1y": 0.64
       },
       "inflation": {
-        "core_pce_ma": 1.898,
-        "headline_pce_ma": 2.147,
-        "core_cpi_ma": 2.333,
-        "headline_cpi_ma": 2.793,
-        "cleveland_1y": 2.113,
-        "michigan_1y": 2.949,
-        "nyfed_sce_1y": 2.676
+        "core_pce_ma": 2.21,
+        "headline_pce_ma": 2.55,
+        "core_cpi_ma": 2.67,
+        "headline_cpi_ma": 3.35,
+        "cleveland_1y": 2.35,
+        "michigan_1y": 3.06,
+        "nyfed_sce_1y": 2.67,
+        "spf_1y": 2.32
       },
       "rstar": {
-        "kc_fed": 0.786,
-        "dkw": 0.852,
-        "tips_10y10y": -0.608
+        "kc_fed": 0.55,
+        "dkw": 0.59,
+        "tips_10y10y": -0.3
       }
     },
     {
@@ -147,22 +149,23 @@
       "period": "Jul 2020",
       "quarter": "2020 Q3",
       "policy": {
-        "effr": 0.1,
-        "treasury_1y": 0.29
+        "effr": 0.15,
+        "treasury_1y": 0.67
       },
       "inflation": {
-        "core_pce_ma": 1.907,
-        "headline_pce_ma": 2.134,
-        "core_cpi_ma": 2.35,
-        "headline_cpi_ma": 2.752,
-        "cleveland_1y": 2.124,
-        "michigan_1y": 2.936,
-        "nyfed_sce_1y": 2.68
+        "core_pce_ma": 2.28,
+        "headline_pce_ma": 2.6,
+        "core_cpi_ma": 2.76,
+        "headline_cpi_ma": 3.4,
+        "cleveland_1y": 2.39,
+        "michigan_1y": 3.12,
+        "nyfed_sce_1y": 2.71,
+        "spf_1y": 2.34
       },
       "rstar": {
-        "kc_fed": 0.833,
-        "dkw": 0.862,
-        "tips_10y10y": -0.558
+        "kc_fed": 0.57,
+        "dkw": 0.6,
+        "tips_10y10y": -0.29
       }
     },
     {
@@ -170,22 +173,23 @@
       "period": "Aug 2020",
       "quarter": "2020 Q3",
       "policy": {
-        "effr": 0.1,
-        "treasury_1y": 0.297
+        "effr": 0.15,
+        "treasury_1y": 0.69
       },
       "inflation": {
-        "core_pce_ma": 1.915,
-        "headline_pce_ma": 2.095,
-        "core_cpi_ma": 2.363,
-        "headline_cpi_ma": 2.665,
-        "cleveland_1y": 2.133,
-        "michigan_1y": 2.908,
-        "nyfed_sce_1y": 2.679
+        "core_pce_ma": 2.36,
+        "headline_pce_ma": 2.62,
+        "core_cpi_ma": 2.85,
+        "headline_cpi_ma": 3.39,
+        "cleveland_1y": 2.43,
+        "michigan_1y": 3.16,
+        "nyfed_sce_1y": 2.75,
+        "spf_1y": 2.36
       },
       "rstar": {
-        "kc_fed": 0.849,
-        "dkw": 0.926,
-        "tips_10y10y": -0.613
+        "kc_fed": 0.6,
+        "dkw": 0.61,
+        "tips_10y10y": -0.28
       }
     },
     {
@@ -193,22 +197,23 @@
       "period": "Sep 2020",
       "quarter": "2020 Q3",
       "policy": {
-        "effr": 0.098,
-        "treasury_1y": 0.298
+        "effr": 0.15,
+        "treasury_1y": 0.71
       },
       "inflation": {
-        "core_pce_ma": 1.923,
-        "headline_pce_ma": 2.037,
-        "core_cpi_ma": 2.372,
-        "headline_cpi_ma": 2.543,
-        "cleveland_1y": 2.142,
-        "michigan_1y": 2.869,
-        "nyfed_sce_1y": 2.673
+        "core_pce_ma": 2.44,
+        "headline_pce_ma": 2.6,
+        "core_cpi_ma": 2.94,
+        "headline_cpi_ma": 3.34,
+        "cleveland_1y": 2.47,
+        "michigan_1y": 3.21,
+        "nyfed_sce_1y": 2.78,
+        "spf_1y": 2.38
       },
       "rstar": {
-        "kc_fed": 0.894,
-        "dkw": 0.956,
-        "tips_10y10y": -0.599
+        "kc_fed": 0.62,
+        "dkw": 0.62,
+        "tips_10y10y": -0.28
       }
     },
     {
@@ -216,22 +221,23 @@
       "period": "Oct 2020",
       "quarter": "2020 Q4",
       "policy": {
-        "effr": 0.096,
-        "treasury_1y": 0.292
+        "effr": 0.14,
+        "treasury_1y": 0.71
       },
       "inflation": {
-        "core_pce_ma": 1.93,
-        "headline_pce_ma": 1.966,
-        "core_cpi_ma": 2.378,
-        "headline_cpi_ma": 2.401,
-        "cleveland_1y": 2.15,
-        "michigan_1y": 2.821,
-        "nyfed_sce_1y": 2.662
+        "core_pce_ma": 2.52,
+        "headline_pce_ma": 2.57,
+        "core_cpi_ma": 3.02,
+        "headline_cpi_ma": 3.26,
+        "cleveland_1y": 2.51,
+        "michigan_1y": 3.25,
+        "nyfed_sce_1y": 2.8,
+        "spf_1y": 2.41
       },
       "rstar": {
-        "kc_fed": 0.849,
-        "dkw": 1.038,
-        "tips_10y10y": -0.519
+        "kc_fed": 0.64,
+        "dkw": 0.61,
+        "tips_10y10y": -0.28
       }
     },
     {
@@ -239,22 +245,23 @@
       "period": "Nov 2020",
       "quarter": "2020 Q4",
       "policy": {
-        "effr": 0.092,
-        "treasury_1y": 0.278
+        "effr": 0.13,
+        "treasury_1y": 0.72
       },
       "inflation": {
-        "core_pce_ma": 1.939,
-        "headline_pce_ma": 1.891,
-        "core_cpi_ma": 2.38,
-        "headline_cpi_ma": 2.258,
-        "cleveland_1y": 2.158,
-        "michigan_1y": 2.771,
-        "nyfed_sce_1y": 2.648
+        "core_pce_ma": 2.6,
+        "headline_pce_ma": 2.54,
+        "core_cpi_ma": 3.1,
+        "headline_cpi_ma": 3.16,
+        "cleveland_1y": 2.55,
+        "michigan_1y": 3.29,
+        "nyfed_sce_1y": 2.83,
+        "spf_1y": 2.44
       },
       "rstar": {
-        "kc_fed": 0.929,
-        "dkw": 1.056,
-        "tips_10y10y": -0.509
+        "kc_fed": 0.66,
+        "dkw": 0.61,
+        "tips_10y10y": -0.28
       }
     },
     {
@@ -262,22 +269,23 @@
       "period": "Dec 2020",
       "quarter": "2020 Q4",
       "policy": {
-        "effr": 0.088,
-        "treasury_1y": 0.259
+        "effr": 0.12,
+        "treasury_1y": 0.71
       },
       "inflation": {
-        "core_pce_ma": 1.948,
-        "headline_pce_ma": 1.823,
-        "core_cpi_ma": 2.379,
-        "headline_cpi_ma": 2.131,
-        "cleveland_1y": 2.164,
-        "michigan_1y": 2.725,
-        "nyfed_sce_1y": 2.631
+        "core_pce_ma": 2.68,
+        "headline_pce_ma": 2.52,
+        "core_cpi_ma": 3.18,
+        "headline_cpi_ma": 3.07,
+        "cleveland_1y": 2.6,
+        "michigan_1y": 3.32,
+        "nyfed_sce_1y": 2.85,
+        "spf_1y": 2.47
       },
       "rstar": {
-        "kc_fed": 0.964,
-        "dkw": 1.051,
-        "tips_10y10y": -0.491
+        "kc_fed": 0.68,
+        "dkw": 0.59,
+        "tips_10y10y": -0.29
       }
     },
     {
@@ -285,22 +293,23 @@
       "period": "Jan 2021",
       "quarter": "2021 Q1",
       "policy": {
-        "effr": 0.083,
-        "treasury_1y": 0.234
+        "effr": 0.11,
+        "treasury_1y": 0.71
       },
       "inflation": {
-        "core_pce_ma": 1.959,
-        "headline_pce_ma": 1.77,
-        "core_cpi_ma": 2.376,
-        "headline_cpi_ma": 2.038,
-        "cleveland_1y": 2.171,
-        "michigan_1y": 2.686,
-        "nyfed_sce_1y": 2.611
+        "core_pce_ma": 2.77,
+        "headline_pce_ma": 2.52,
+        "core_cpi_ma": 3.25,
+        "headline_cpi_ma": 3.0,
+        "cleveland_1y": 2.65,
+        "michigan_1y": 3.35,
+        "nyfed_sce_1y": 2.87,
+        "spf_1y": 2.5
       },
       "rstar": {
-        "kc_fed": 0.974,
-        "dkw": 1.104,
-        "tips_10y10y": -0.44
+        "kc_fed": 0.69,
+        "dkw": 0.58,
+        "tips_10y10y": -0.3
       }
     },
     {
@@ -308,22 +317,23 @@
       "period": "Feb 2021",
       "quarter": "2021 Q1",
       "policy": {
-        "effr": 0.078,
-        "treasury_1y": 0.205
+        "effr": 0.09,
+        "treasury_1y": 0.69
       },
       "inflation": {
-        "core_pce_ma": 1.972,
-        "headline_pce_ma": 1.74,
-        "core_cpi_ma": 2.374,
-        "headline_cpi_ma": 1.99,
-        "cleveland_1y": 2.177,
-        "michigan_1y": 2.661,
-        "nyfed_sce_1y": 2.591
+        "core_pce_ma": 2.85,
+        "headline_pce_ma": 2.55,
+        "core_cpi_ma": 3.33,
+        "headline_cpi_ma": 2.97,
+        "cleveland_1y": 2.69,
+        "michigan_1y": 3.38,
+        "nyfed_sce_1y": 2.89,
+        "spf_1y": 2.53
       },
       "rstar": {
-        "kc_fed": 0.974,
-        "dkw": 1.142,
-        "tips_10y10y": -0.527
+        "kc_fed": 0.7,
+        "dkw": 0.56,
+        "tips_10y10y": -0.31
       }
     },
     {
@@ -331,22 +341,23 @@
       "period": "Mar 2021",
       "quarter": "2021 Q1",
       "policy": {
-        "effr": 0.073,
-        "treasury_1y": 0.173
+        "effr": 0.08,
+        "treasury_1y": 0.68
       },
       "inflation": {
-        "core_pce_ma": 1.988,
-        "headline_pce_ma": 1.739,
-        "core_cpi_ma": 2.372,
-        "headline_cpi_ma": 1.997,
-        "cleveland_1y": 2.183,
-        "michigan_1y": 2.65,
-        "nyfed_sce_1y": 2.572
+        "core_pce_ma": 2.94,
+        "headline_pce_ma": 2.63,
+        "core_cpi_ma": 3.4,
+        "headline_cpi_ma": 2.99,
+        "cleveland_1y": 2.74,
+        "michigan_1y": 3.4,
+        "nyfed_sce_1y": 2.92,
+        "spf_1y": 2.57
       },
       "rstar": {
-        "kc_fed": 0.966,
-        "dkw": 1.128,
-        "tips_10y10y": -0.514
+        "kc_fed": 0.71,
+        "dkw": 0.54,
+        "tips_10y10y": -0.32
       }
     },
     {
@@ -354,22 +365,23 @@
       "period": "Apr 2021",
       "quarter": "2021 Q2",
       "policy": {
-        "effr": 0.069,
-        "treasury_1y": 0.14
+        "effr": 0.07,
+        "treasury_1y": 0.66
       },
       "inflation": {
-        "core_pce_ma": 2.009,
-        "headline_pce_ma": 1.769,
-        "core_cpi_ma": 2.373,
-        "headline_cpi_ma": 2.059,
-        "cleveland_1y": 2.189,
-        "michigan_1y": 2.656,
-        "nyfed_sce_1y": 2.554
+        "core_pce_ma": 3.04,
+        "headline_pce_ma": 2.75,
+        "core_cpi_ma": 3.48,
+        "headline_cpi_ma": 3.07,
+        "cleveland_1y": 2.79,
+        "michigan_1y": 3.43,
+        "nyfed_sce_1y": 2.94,
+        "spf_1y": 2.61
       },
       "rstar": {
-        "kc_fed": 0.985,
-        "dkw": 1.137,
-        "tips_10y10y": -0.483
+        "kc_fed": 0.72,
+        "dkw": 0.51,
+        "tips_10y10y": -0.33
       }
     },
     {
@@ -377,22 +389,23 @@
       "period": "May 2021",
       "quarter": "2021 Q2",
       "policy": {
-        "effr": 0.065,
-        "treasury_1y": 0.106
+        "effr": 0.06,
+        "treasury_1y": 0.64
       },
       "inflation": {
-        "core_pce_ma": 2.035,
-        "headline_pce_ma": 1.832,
-        "core_cpi_ma": 2.379,
-        "headline_cpi_ma": 2.174,
-        "cleveland_1y": 2.196,
-        "michigan_1y": 2.678,
-        "nyfed_sce_1y": 2.539
+        "core_pce_ma": 3.14,
+        "headline_pce_ma": 2.91,
+        "core_cpi_ma": 3.56,
+        "headline_cpi_ma": 3.21,
+        "cleveland_1y": 2.84,
+        "michigan_1y": 3.45,
+        "nyfed_sce_1y": 2.96,
+        "spf_1y": 2.64
       },
       "rstar": {
-        "kc_fed": 1.034,
-        "dkw": 1.19,
-        "tips_10y10y": -0.468
+        "kc_fed": 0.72,
+        "dkw": 0.49,
+        "tips_10y10y": -0.34
       }
     },
     {
@@ -400,22 +413,23 @@
       "period": "Jun 2021",
       "quarter": "2021 Q2",
       "policy": {
-        "effr": 0.062,
-        "treasury_1y": 0.074
+        "effr": 0.06,
+        "treasury_1y": 0.62
       },
       "inflation": {
-        "core_pce_ma": 2.068,
-        "headline_pce_ma": 1.923,
-        "core_cpi_ma": 2.392,
-        "headline_cpi_ma": 2.331,
-        "cleveland_1y": 2.203,
-        "michigan_1y": 2.713,
-        "nyfed_sce_1y": 2.528
+        "core_pce_ma": 3.25,
+        "headline_pce_ma": 3.12,
+        "core_cpi_ma": 3.64,
+        "headline_cpi_ma": 3.42,
+        "cleveland_1y": 2.89,
+        "michigan_1y": 3.48,
+        "nyfed_sce_1y": 2.98,
+        "spf_1y": 2.69
       },
       "rstar": {
-        "kc_fed": 1.016,
-        "dkw": 1.206,
-        "tips_10y10y": -0.398
+        "kc_fed": 0.73,
+        "dkw": 0.47,
+        "tips_10y10y": -0.35
       }
     },
     {
@@ -423,22 +437,23 @@
       "period": "Jul 2021",
       "quarter": "2021 Q3",
       "policy": {
-        "effr": 0.06,
-        "treasury_1y": 0.044
+        "effr": 0.05,
+        "treasury_1y": 0.6
       },
       "inflation": {
-        "core_pce_ma": 2.109,
-        "headline_pce_ma": 2.039,
-        "core_cpi_ma": 2.414,
-        "headline_cpi_ma": 2.518,
-        "cleveland_1y": 2.212,
-        "michigan_1y": 2.758,
-        "nyfed_sce_1y": 2.522
+        "core_pce_ma": 3.36,
+        "headline_pce_ma": 3.35,
+        "core_cpi_ma": 3.73,
+        "headline_cpi_ma": 3.67,
+        "cleveland_1y": 2.94,
+        "michigan_1y": 3.5,
+        "nyfed_sce_1y": 3.01,
+        "spf_1y": 2.73
       },
       "rstar": {
-        "kc_fed": 1.067,
-        "dkw": 1.266,
-        "tips_10y10y": -0.49
+        "kc_fed": 0.73,
+        "dkw": 0.44,
+        "tips_10y10y": -0.36
       }
     },
     {
@@ -446,22 +461,23 @@
       "period": "Aug 2021",
       "quarter": "2021 Q3",
       "policy": {
-        "effr": 0.06,
-        "treasury_1y": 0.018
+        "effr": 0.05,
+        "treasury_1y": 0.57
       },
       "inflation": {
-        "core_pce_ma": 2.159,
-        "headline_pce_ma": 2.171,
-        "core_cpi_ma": 2.448,
-        "headline_cpi_ma": 2.718,
-        "cleveland_1y": 2.222,
-        "michigan_1y": 2.808,
-        "nyfed_sce_1y": 2.52
+        "core_pce_ma": 3.48,
+        "headline_pce_ma": 3.6,
+        "core_cpi_ma": 3.82,
+        "headline_cpi_ma": 3.97,
+        "cleveland_1y": 3.0,
+        "michigan_1y": 3.53,
+        "nyfed_sce_1y": 3.05,
+        "spf_1y": 2.77
       },
       "rstar": {
-        "kc_fed": 1.087,
-        "dkw": 1.245,
-        "tips_10y10y": -0.468
+        "kc_fed": 0.73,
+        "dkw": 0.42,
+        "tips_10y10y": -0.36
       }
     },
     {
@@ -469,22 +485,23 @@
       "period": "Sep 2021",
       "quarter": "2021 Q3",
       "policy": {
-        "effr": 0.061,
-        "treasury_1y": -0.003
+        "effr": 0.05,
+        "treasury_1y": 0.55
       },
       "inflation": {
-        "core_pce_ma": 2.219,
-        "headline_pce_ma": 2.313,
-        "core_cpi_ma": 2.493,
-        "headline_cpi_ma": 2.914,
-        "cleveland_1y": 2.234,
-        "michigan_1y": 2.856,
-        "nyfed_sce_1y": 2.523
+        "core_pce_ma": 3.6,
+        "headline_pce_ma": 3.86,
+        "core_cpi_ma": 3.92,
+        "headline_cpi_ma": 4.28,
+        "cleveland_1y": 3.05,
+        "michigan_1y": 3.57,
+        "nyfed_sce_1y": 3.08,
+        "spf_1y": 2.81
       },
       "rstar": {
-        "kc_fed": 1.121,
-        "dkw": 1.316,
-        "tips_10y10y": -0.452
+        "kc_fed": 0.72,
+        "dkw": 0.4,
+        "tips_10y10y": -0.37
       }
     },
     {
@@ -492,22 +509,23 @@
       "period": "Oct 2021",
       "quarter": "2021 Q4",
       "policy": {
-        "effr": 0.063,
-        "treasury_1y": -0.018
+        "effr": 0.06,
+        "treasury_1y": 0.53
       },
       "inflation": {
-        "core_pce_ma": 2.29,
-        "headline_pce_ma": 2.454,
-        "core_cpi_ma": 2.553,
-        "headline_cpi_ma": 3.092,
-        "cleveland_1y": 2.247,
-        "michigan_1y": 2.899,
-        "nyfed_sce_1y": 2.531
+        "core_pce_ma": 3.73,
+        "headline_pce_ma": 4.12,
+        "core_cpi_ma": 4.03,
+        "headline_cpi_ma": 4.6,
+        "cleveland_1y": 3.1,
+        "michigan_1y": 3.61,
+        "nyfed_sce_1y": 3.13,
+        "spf_1y": 2.86
       },
       "rstar": {
-        "kc_fed": 1.108,
-        "dkw": 1.358,
-        "tips_10y10y": -0.434
+        "kc_fed": 0.72,
+        "dkw": 0.39,
+        "tips_10y10y": -0.37
       }
     },
     {
@@ -515,22 +533,23 @@
       "period": "Nov 2021",
       "quarter": "2021 Q4",
       "policy": {
-        "effr": 0.066,
-        "treasury_1y": -0.027
+        "effr": 0.06,
+        "treasury_1y": 0.51
       },
       "inflation": {
-        "core_pce_ma": 2.37,
-        "headline_pce_ma": 2.587,
-        "core_cpi_ma": 2.625,
-        "headline_cpi_ma": 3.237,
-        "cleveland_1y": 2.263,
-        "michigan_1y": 2.93,
-        "nyfed_sce_1y": 2.544
+        "core_pce_ma": 3.86,
+        "headline_pce_ma": 4.35,
+        "core_cpi_ma": 4.13,
+        "headline_cpi_ma": 4.9,
+        "cleveland_1y": 3.15,
+        "michigan_1y": 3.65,
+        "nyfed_sce_1y": 3.17,
+        "spf_1y": 2.9
       },
       "rstar": {
-        "kc_fed": 1.083,
-        "dkw": 1.298,
-        "tips_10y10y": -0.499
+        "kc_fed": 0.71,
+        "dkw": 0.38,
+        "tips_10y10y": -0.37
       }
     },
     {
@@ -539,21 +558,22 @@
       "quarter": "2021 Q4",
       "policy": {
         "effr": 0.07,
-        "treasury_1y": -0.029
+        "treasury_1y": 0.49
       },
       "inflation": {
-        "core_pce_ma": 2.46,
-        "headline_pce_ma": 2.706,
-        "core_cpi_ma": 2.711,
-        "headline_cpi_ma": 3.343,
-        "cleveland_1y": 2.279,
-        "michigan_1y": 2.947,
-        "nyfed_sce_1y": 2.559
+        "core_pce_ma": 3.99,
+        "headline_pce_ma": 4.55,
+        "core_cpi_ma": 4.25,
+        "headline_cpi_ma": 5.17,
+        "cleveland_1y": 3.19,
+        "michigan_1y": 3.7,
+        "nyfed_sce_1y": 3.23,
+        "spf_1y": 2.94
       },
       "rstar": {
-        "kc_fed": 1.095,
-        "dkw": 1.335,
-        "tips_10y10y": -0.437
+        "kc_fed": 0.71,
+        "dkw": 0.37,
+        "tips_10y10y": -0.37
       }
     },
     {
@@ -561,22 +581,23 @@
       "period": "Jan 2022",
       "quarter": "2022 Q1",
       "policy": {
-        "effr": 0.074,
-        "treasury_1y": -0.025
+        "effr": 0.25,
+        "treasury_1y": 0.64
       },
       "inflation": {
-        "core_pce_ma": 2.556,
-        "headline_pce_ma": 2.804,
-        "core_cpi_ma": 2.807,
-        "headline_cpi_ma": 3.404,
-        "cleveland_1y": 2.297,
-        "michigan_1y": 2.948,
-        "nyfed_sce_1y": 2.578
+        "core_pce_ma": 4.13,
+        "headline_pce_ma": 4.71,
+        "core_cpi_ma": 4.36,
+        "headline_cpi_ma": 5.39,
+        "cleveland_1y": 3.24,
+        "michigan_1y": 3.75,
+        "nyfed_sce_1y": 3.29,
+        "spf_1y": 2.98
       },
       "rstar": {
-        "kc_fed": 1.153,
-        "dkw": 1.364,
-        "tips_10y10y": -0.456
+        "kc_fed": 0.7,
+        "dkw": 0.37,
+        "tips_10y10y": -0.36
       }
     },
     {
@@ -584,22 +605,23 @@
       "period": "Feb 2022",
       "quarter": "2022 Q1",
       "policy": {
-        "effr": 0.319,
-        "treasury_1y": 0.225
+        "effr": 0.62,
+        "treasury_1y": 0.98
       },
       "inflation": {
-        "core_pce_ma": 2.657,
-        "headline_pce_ma": 2.879,
-        "core_cpi_ma": 2.911,
-        "headline_cpi_ma": 3.424,
-        "cleveland_1y": 2.317,
-        "michigan_1y": 2.933,
-        "nyfed_sce_1y": 2.597
+        "core_pce_ma": 4.26,
+        "headline_pce_ma": 4.83,
+        "core_cpi_ma": 4.48,
+        "headline_cpi_ma": 5.56,
+        "cleveland_1y": 3.28,
+        "michigan_1y": 3.81,
+        "nyfed_sce_1y": 3.35,
+        "spf_1y": 3.02
       },
       "rstar": {
-        "kc_fed": 1.122,
-        "dkw": 1.441,
-        "tips_10y10y": -0.466
+        "kc_fed": 0.69,
+        "dkw": 0.38,
+        "tips_10y10y": -0.35
       }
     },
     {
@@ -607,22 +629,23 @@
       "period": "Mar 2022",
       "quarter": "2022 Q1",
       "policy": {
-        "effr": 0.564,
-        "treasury_1y": 0.482
+        "effr": 1.0,
+        "treasury_1y": 1.32
       },
       "inflation": {
-        "core_pce_ma": 2.759,
-        "headline_pce_ma": 2.931,
-        "core_cpi_ma": 3.021,
-        "headline_cpi_ma": 3.409,
-        "cleveland_1y": 2.337,
-        "michigan_1y": 2.903,
-        "nyfed_sce_1y": 2.617
+        "core_pce_ma": 4.39,
+        "headline_pce_ma": 4.9,
+        "core_cpi_ma": 4.6,
+        "headline_cpi_ma": 5.68,
+        "cleveland_1y": 3.32,
+        "michigan_1y": 3.87,
+        "nyfed_sce_1y": 3.41,
+        "spf_1y": 3.05
       },
       "rstar": {
-        "kc_fed": 1.119,
-        "dkw": 1.389,
-        "tips_10y10y": -0.442
+        "kc_fed": 0.69,
+        "dkw": 0.39,
+        "tips_10y10y": -0.34
       }
     },
     {
@@ -630,22 +653,23 @@
       "period": "Apr 2022",
       "quarter": "2022 Q2",
       "policy": {
-        "effr": 0.809,
-        "treasury_1y": 0.743
+        "effr": 1.37,
+        "treasury_1y": 1.66
       },
       "inflation": {
-        "core_pce_ma": 2.859,
-        "headline_pce_ma": 2.962,
-        "core_cpi_ma": 3.132,
-        "headline_cpi_ma": 3.369,
-        "cleveland_1y": 2.357,
-        "michigan_1y": 2.862,
-        "nyfed_sce_1y": 2.636
+        "core_pce_ma": 4.51,
+        "headline_pce_ma": 4.94,
+        "core_cpi_ma": 4.71,
+        "headline_cpi_ma": 5.74,
+        "cleveland_1y": 3.36,
+        "michigan_1y": 3.94,
+        "nyfed_sce_1y": 3.48,
+        "spf_1y": 3.08
       },
       "rstar": {
-        "kc_fed": 1.125,
-        "dkw": 1.437,
-        "tips_10y10y": -0.392
+        "kc_fed": 0.68,
+        "dkw": 0.4,
+        "tips_10y10y": -0.32
       }
     },
     {
@@ -653,22 +677,23 @@
       "period": "May 2022",
       "quarter": "2022 Q2",
       "policy": {
-        "effr": 1.053,
-        "treasury_1y": 1.308
+        "effr": 1.74,
+        "treasury_1y": 2.0
       },
       "inflation": {
-        "core_pce_ma": 2.955,
-        "headline_pce_ma": 3.527,
-        "core_cpi_ma": 3.242,
-        "headline_cpi_ma": 3.869,
-        "cleveland_1y": 2.377,
-        "michigan_1y": 4.514,
-        "nyfed_sce_1y": 3.853
+        "core_pce_ma": 4.62,
+        "headline_pce_ma": 4.95,
+        "core_cpi_ma": 4.82,
+        "headline_cpi_ma": 5.75,
+        "cleveland_1y": 3.4,
+        "michigan_1y": 4.01,
+        "nyfed_sce_1y": 3.54,
+        "spf_1y": 3.11
       },
       "rstar": {
-        "kc_fed": 1.141,
-        "dkw": 1.413,
-        "tips_10y10y": -0.372
+        "kc_fed": 0.67,
+        "dkw": 0.42,
+        "tips_10y10y": -0.3
       }
     },
     {
@@ -676,22 +701,23 @@
       "period": "Jun 2022",
       "quarter": "2022 Q2",
       "policy": {
-        "effr": 1.296,
-        "treasury_1y": 1.577
+        "effr": 2.11,
+        "treasury_1y": 2.35
       },
       "inflation": {
-        "core_pce_ma": 3.043,
-        "headline_pce_ma": 3.533,
-        "core_cpi_ma": 3.347,
-        "headline_cpi_ma": 3.823,
-        "cleveland_1y": 2.397,
-        "michigan_1y": 4.464,
-        "nyfed_sce_1y": 3.866
+        "core_pce_ma": 4.72,
+        "headline_pce_ma": 4.94,
+        "core_cpi_ma": 4.92,
+        "headline_cpi_ma": 5.71,
+        "cleveland_1y": 3.42,
+        "michigan_1y": 4.07,
+        "nyfed_sce_1y": 3.61,
+        "spf_1y": 3.14
       },
       "rstar": {
-        "kc_fed": 1.155,
-        "dkw": 1.41,
-        "tips_10y10y": -0.479
+        "kc_fed": 0.67,
+        "dkw": 0.45,
+        "tips_10y10y": -0.28
       }
     },
     {
@@ -699,22 +725,23 @@
       "period": "Jul 2022",
       "quarter": "2022 Q3",
       "policy": {
-        "effr": 1.539,
-        "treasury_1y": 1.847
+        "effr": 2.49,
+        "treasury_1y": 2.69
       },
       "inflation": {
-        "core_pce_ma": 3.123,
-        "headline_pce_ma": 3.537,
-        "core_cpi_ma": 3.446,
-        "headline_cpi_ma": 3.795,
-        "cleveland_1y": 2.416,
-        "michigan_1y": 4.418,
-        "nyfed_sce_1y": 3.875
+        "core_pce_ma": 4.8,
+        "headline_pce_ma": 4.91,
+        "core_cpi_ma": 5.01,
+        "headline_cpi_ma": 5.65,
+        "cleveland_1y": 3.45,
+        "michigan_1y": 4.14,
+        "nyfed_sce_1y": 3.67,
+        "spf_1y": 3.16
       },
       "rstar": {
-        "kc_fed": 1.128,
-        "dkw": 1.472,
-        "tips_10y10y": -0.384
+        "kc_fed": 0.66,
+        "dkw": 0.48,
+        "tips_10y10y": -0.25
       }
     },
     {
@@ -722,22 +749,23 @@
       "period": "Aug 2022",
       "quarter": "2022 Q3",
       "policy": {
-        "effr": 1.78,
-        "treasury_1y": 2.117
+        "effr": 2.86,
+        "treasury_1y": 3.04
       },
       "inflation": {
-        "core_pce_ma": 3.195,
-        "headline_pce_ma": 3.548,
-        "core_cpi_ma": 3.537,
-        "headline_cpi_ma": 3.798,
-        "cleveland_1y": 2.434,
-        "michigan_1y": 4.382,
-        "nyfed_sce_1y": 3.88
+        "core_pce_ma": 4.87,
+        "headline_pce_ma": 4.89,
+        "core_cpi_ma": 5.09,
+        "headline_cpi_ma": 5.57,
+        "cleveland_1y": 3.47,
+        "michigan_1y": 4.21,
+        "nyfed_sce_1y": 3.73,
+        "spf_1y": 3.18
       },
       "rstar": {
-        "kc_fed": 1.158,
-        "dkw": 1.422,
-        "tips_10y10y": -0.429
+        "kc_fed": 0.66,
+        "dkw": 0.52,
+        "tips_10y10y": -0.22
       }
     },
     {
@@ -745,22 +773,23 @@
       "period": "Sep 2022",
       "quarter": "2022 Q3",
       "policy": {
-        "effr": 2.02,
-        "treasury_1y": 2.387
+        "effr": 3.23,
+        "treasury_1y": 3.39
       },
       "inflation": {
-        "core_pce_ma": 3.258,
-        "headline_pce_ma": 3.571,
-        "core_cpi_ma": 3.619,
-        "headline_cpi_ma": 3.84,
-        "cleveland_1y": 2.452,
-        "michigan_1y": 4.358,
-        "nyfed_sce_1y": 3.879
+        "core_pce_ma": 4.92,
+        "headline_pce_ma": 4.87,
+        "core_cpi_ma": 5.15,
+        "headline_cpi_ma": 5.49,
+        "cleveland_1y": 3.49,
+        "michigan_1y": 4.27,
+        "nyfed_sce_1y": 3.79,
+        "spf_1y": 3.19
       },
       "rstar": {
-        "kc_fed": 1.208,
-        "dkw": 1.473,
-        "tips_10y10y": -0.354
+        "kc_fed": 0.66,
+        "dkw": 0.55,
+        "tips_10y10y": -0.19
       }
     },
     {
@@ -768,22 +797,23 @@
       "period": "Oct 2022",
       "quarter": "2022 Q4",
       "policy": {
-        "effr": 2.258,
-        "treasury_1y": 2.655
+        "effr": 3.6,
+        "treasury_1y": 3.75
       },
       "inflation": {
-        "core_pce_ma": 3.312,
-        "headline_pce_ma": 3.612,
-        "core_cpi_ma": 3.693,
-        "headline_cpi_ma": 3.921,
-        "cleveland_1y": 2.469,
-        "michigan_1y": 4.35,
-        "nyfed_sce_1y": 3.874
+        "core_pce_ma": 4.95,
+        "headline_pce_ma": 4.86,
+        "core_cpi_ma": 5.2,
+        "headline_cpi_ma": 5.41,
+        "cleveland_1y": 3.5,
+        "michigan_1y": 4.33,
+        "nyfed_sce_1y": 3.83,
+        "spf_1y": 3.2
       },
       "rstar": {
-        "kc_fed": 1.202,
-        "dkw": 1.422,
-        "tips_10y10y": -0.381
+        "kc_fed": 0.66,
+        "dkw": 0.59,
+        "tips_10y10y": -0.15
       }
     },
     {
@@ -791,22 +821,23 @@
       "period": "Nov 2022",
       "quarter": "2022 Q4",
       "policy": {
-        "effr": 2.496,
-        "treasury_1y": 2.92
+        "effr": 3.98,
+        "treasury_1y": 4.1
       },
       "inflation": {
-        "core_pce_ma": 3.359,
-        "headline_pce_ma": 3.673,
-        "core_cpi_ma": 3.758,
-        "headline_cpi_ma": 4.041,
-        "cleveland_1y": 2.486,
-        "michigan_1y": 4.358,
-        "nyfed_sce_1y": 3.864
+        "core_pce_ma": 4.96,
+        "headline_pce_ma": 4.86,
+        "core_cpi_ma": 5.22,
+        "headline_cpi_ma": 5.34,
+        "cleveland_1y": 3.5,
+        "michigan_1y": 4.37,
+        "nyfed_sce_1y": 3.87,
+        "spf_1y": 3.2
       },
       "rstar": {
-        "kc_fed": 1.193,
-        "dkw": 1.474,
-        "tips_10y10y": -0.433
+        "kc_fed": 0.66,
+        "dkw": 0.64,
+        "tips_10y10y": -0.12
       }
     },
     {
@@ -814,22 +845,23 @@
       "period": "Dec 2022",
       "quarter": "2022 Q4",
       "policy": {
-        "effr": 2.732,
-        "treasury_1y": 3.181
+        "effr": 4.35,
+        "treasury_1y": 4.46
       },
       "inflation": {
-        "core_pce_ma": 3.399,
-        "headline_pce_ma": 3.754,
-        "core_cpi_ma": 3.815,
-        "headline_cpi_ma": 4.19,
-        "cleveland_1y": 2.502,
-        "michigan_1y": 4.383,
-        "nyfed_sce_1y": 3.85
+        "core_pce_ma": 4.94,
+        "headline_pce_ma": 4.88,
+        "core_cpi_ma": 5.23,
+        "headline_cpi_ma": 5.29,
+        "cleveland_1y": 3.5,
+        "michigan_1y": 4.42,
+        "nyfed_sce_1y": 3.9,
+        "spf_1y": 3.2
       },
       "rstar": {
-        "kc_fed": 1.195,
-        "dkw": 1.428,
-        "tips_10y10y": -0.41
+        "kc_fed": 0.67,
+        "dkw": 0.68,
+        "tips_10y10y": -0.08
       }
     },
     {
@@ -837,22 +869,23 @@
       "period": "Jan 2023",
       "quarter": "2023 Q1",
       "policy": {
-        "effr": 2.968,
-        "treasury_1y": 3.437
+        "effr": 4.35,
+        "treasury_1y": 4.46
       },
       "inflation": {
-        "core_pce_ma": 3.434,
-        "headline_pce_ma": 3.85,
-        "core_cpi_ma": 3.863,
-        "headline_cpi_ma": 4.357,
-        "cleveland_1y": 2.517,
-        "michigan_1y": 4.42,
-        "nyfed_sce_1y": 3.833
+        "core_pce_ma": 4.9,
+        "headline_pce_ma": 4.9,
+        "core_cpi_ma": 5.21,
+        "headline_cpi_ma": 5.26,
+        "cleveland_1y": 3.49,
+        "michigan_1y": 4.45,
+        "nyfed_sce_1y": 3.92,
+        "spf_1y": 3.19
       },
       "rstar": {
-        "kc_fed": 1.186,
-        "dkw": 1.505,
-        "tips_10y10y": -0.354
+        "kc_fed": 0.67,
+        "dkw": 0.72,
+        "tips_10y10y": -0.04
       }
     },
     {
@@ -860,22 +893,23 @@
       "period": "Feb 2023",
       "quarter": "2023 Q1",
       "policy": {
-        "effr": 3.203,
-        "treasury_1y": 3.688
+        "effr": 4.49,
+        "treasury_1y": 4.59
       },
       "inflation": {
-        "core_pce_ma": 3.464,
-        "headline_pce_ma": 3.956,
-        "core_cpi_ma": 3.903,
-        "headline_cpi_ma": 4.527,
-        "cleveland_1y": 2.533,
-        "michigan_1y": 4.465,
-        "nyfed_sce_1y": 3.814
+        "core_pce_ma": 4.84,
+        "headline_pce_ma": 4.92,
+        "core_cpi_ma": 5.17,
+        "headline_cpi_ma": 5.24,
+        "cleveland_1y": 3.48,
+        "michigan_1y": 4.47,
+        "nyfed_sce_1y": 3.92,
+        "spf_1y": 3.18
       },
       "rstar": {
-        "kc_fed": 1.178,
-        "dkw": 1.45,
-        "tips_10y10y": -0.435
+        "kc_fed": 0.68,
+        "dkw": 0.76,
+        "tips_10y10y": 0.0
       }
     },
     {
@@ -883,22 +917,23 @@
       "period": "Mar 2023",
       "quarter": "2023 Q1",
       "policy": {
-        "effr": 3.438,
-        "treasury_1y": 3.934
+        "effr": 4.62,
+        "treasury_1y": 4.72
       },
       "inflation": {
-        "core_pce_ma": 3.489,
-        "headline_pce_ma": 3.514,
-        "core_cpi_ma": 3.936,
-        "headline_cpi_ma": 4.133,
-        "cleveland_1y": 2.548,
-        "michigan_1y": 4.515,
-        "nyfed_sce_1y": 3.794
+        "core_pce_ma": 4.76,
+        "headline_pce_ma": 4.93,
+        "core_cpi_ma": 5.11,
+        "headline_cpi_ma": 5.23,
+        "cleveland_1y": 3.47,
+        "michigan_1y": 4.47,
+        "nyfed_sce_1y": 3.91,
+        "spf_1y": 3.16
       },
       "rstar": {
-        "kc_fed": 1.237,
-        "dkw": 1.474,
-        "tips_10y10y": -0.417
+        "kc_fed": 0.69,
+        "dkw": 0.8,
+        "tips_10y10y": 0.04
       }
     },
     {
@@ -906,22 +941,23 @@
       "period": "Apr 2023",
       "quarter": "2023 Q2",
       "policy": {
-        "effr": 3.674,
-        "treasury_1y": 4.173
+        "effr": 4.76,
+        "treasury_1y": 4.86
       },
       "inflation": {
-        "core_pce_ma": 3.511,
-        "headline_pce_ma": 3.616,
-        "core_cpi_ma": 3.961,
-        "headline_cpi_ma": 4.262,
-        "cleveland_1y": 2.563,
-        "michigan_1y": 4.563,
-        "nyfed_sce_1y": 3.774
+        "core_pce_ma": 4.65,
+        "headline_pce_ma": 4.91,
+        "core_cpi_ma": 5.03,
+        "headline_cpi_ma": 5.21,
+        "cleveland_1y": 3.44,
+        "michigan_1y": 4.47,
+        "nyfed_sce_1y": 3.89,
+        "spf_1y": 3.14
       },
       "rstar": {
-        "kc_fed": 1.223,
-        "dkw": 1.432,
-        "tips_10y10y": -0.43
+        "kc_fed": 0.71,
+        "dkw": 0.84,
+        "tips_10y10y": 0.08
       }
     },
     {
@@ -929,22 +965,23 @@
       "period": "May 2023",
       "quarter": "2023 Q2",
       "policy": {
-        "effr": 3.909,
-        "treasury_1y": 4.408
+        "effr": 4.89,
+        "treasury_1y": 4.6
       },
       "inflation": {
-        "core_pce_ma": 3.53,
-        "headline_pce_ma": 3.703,
-        "core_cpi_ma": 3.979,
-        "headline_cpi_ma": 4.351,
-        "cleveland_1y": 2.578,
-        "michigan_1y": 4.604,
-        "nyfed_sce_1y": 3.756
+        "core_pce_ma": 4.52,
+        "headline_pce_ma": 4.86,
+        "core_cpi_ma": 4.93,
+        "headline_cpi_ma": 5.18,
+        "cleveland_1y": 3.42,
+        "michigan_1y": 4.45,
+        "nyfed_sce_1y": 3.86,
+        "spf_1y": 3.11
       },
       "rstar": {
-        "kc_fed": 1.242,
-        "dkw": 1.407,
-        "tips_10y10y": -0.349
+        "kc_fed": 0.72,
+        "dkw": 0.87,
+        "tips_10y10y": 0.12
       }
     },
     {
@@ -952,22 +989,23 @@
       "period": "Jun 2023",
       "quarter": "2023 Q2",
       "policy": {
-        "effr": 4.145,
-        "treasury_1y": 4.636
+        "effr": 5.03,
+        "treasury_1y": 4.75
       },
       "inflation": {
-        "core_pce_ma": 3.546,
-        "headline_pce_ma": 3.768,
-        "core_cpi_ma": 3.99,
-        "headline_cpi_ma": 4.393,
-        "cleveland_1y": 2.593,
-        "michigan_1y": 4.634,
-        "nyfed_sce_1y": 2.991
+        "core_pce_ma": 4.38,
+        "headline_pce_ma": 4.76,
+        "core_cpi_ma": 4.81,
+        "headline_cpi_ma": 5.13,
+        "cleveland_1y": 3.39,
+        "michigan_1y": 4.41,
+        "nyfed_sce_1y": 3.82,
+        "spf_1y": 3.08
       },
       "rstar": {
-        "kc_fed": 1.232,
-        "dkw": 1.333,
-        "tips_10y10y": -0.397
+        "kc_fed": 0.74,
+        "dkw": 0.9,
+        "tips_10y10y": 0.16
       }
     },
     {
@@ -975,22 +1013,23 @@
       "period": "Jul 2023",
       "quarter": "2023 Q3",
       "policy": {
-        "effr": 4.382,
-        "treasury_1y": 4.861
+        "effr": 5.16,
+        "treasury_1y": 4.9
       },
       "inflation": {
-        "core_pce_ma": 3.559,
-        "headline_pce_ma": 3.807,
-        "core_cpi_ma": 3.994,
-        "headline_cpi_ma": 4.387,
-        "cleveland_1y": 2.608,
-        "michigan_1y": 4.649,
-        "nyfed_sce_1y": 2.98
+        "core_pce_ma": 4.22,
+        "headline_pce_ma": 4.62,
+        "core_cpi_ma": 4.67,
+        "headline_cpi_ma": 5.04,
+        "cleveland_1y": 3.35,
+        "michigan_1y": 4.37,
+        "nyfed_sce_1y": 3.77,
+        "spf_1y": 3.05
       },
       "rstar": {
-        "kc_fed": 1.2,
-        "dkw": 1.403,
-        "tips_10y10y": -0.322
+        "kc_fed": 0.76,
+        "dkw": 0.92,
+        "tips_10y10y": 0.2
       }
     },
     {
@@ -998,22 +1037,23 @@
       "period": "Aug 2023",
       "quarter": "2023 Q3",
       "policy": {
-        "effr": 4.621,
-        "treasury_1y": 5.081
+        "effr": 5.3,
+        "treasury_1y": 5.05
       },
       "inflation": {
-        "core_pce_ma": 3.57,
-        "headline_pce_ma": 3.815,
-        "core_cpi_ma": 3.993,
-        "headline_cpi_ma": 4.334,
-        "cleveland_1y": 2.623,
-        "michigan_1y": 3.547,
-        "nyfed_sce_1y": 2.972
+        "core_pce_ma": 4.05,
+        "headline_pce_ma": 4.44,
+        "core_cpi_ma": 4.52,
+        "headline_cpi_ma": 4.92,
+        "cleveland_1y": 3.31,
+        "michigan_1y": 4.31,
+        "nyfed_sce_1y": 3.7,
+        "spf_1y": 3.02
       },
       "rstar": {
-        "kc_fed": 1.274,
-        "dkw": 1.317,
-        "tips_10y10y": -0.411
+        "kc_fed": 0.78,
+        "dkw": 0.94,
+        "tips_10y10y": 0.23
       }
     },
     {
@@ -1021,22 +1061,23 @@
       "period": "Sep 2023",
       "quarter": "2023 Q3",
       "policy": {
-        "effr": 4.86,
-        "treasury_1y": 5.298
+        "effr": 5.3,
+        "treasury_1y": 5.07
       },
       "inflation": {
-        "core_pce_ma": 3.579,
-        "headline_pce_ma": 3.795,
-        "core_cpi_ma": 3.987,
-        "headline_cpi_ma": 4.243,
-        "cleveland_1y": 2.637,
-        "michigan_1y": 3.529,
-        "nyfed_sce_1y": 2.97
+        "core_pce_ma": 3.87,
+        "headline_pce_ma": 4.2,
+        "core_cpi_ma": 4.35,
+        "headline_cpi_ma": 4.75,
+        "cleveland_1y": 3.27,
+        "michigan_1y": 4.24,
+        "nyfed_sce_1y": 3.63,
+        "spf_1y": 2.98
       },
       "rstar": {
-        "kc_fed": 1.285,
-        "dkw": 1.357,
-        "tips_10y10y": -0.397
+        "kc_fed": 0.81,
+        "dkw": 0.95,
+        "tips_10y10y": 0.26
       }
     },
     {
@@ -1044,22 +1085,23 @@
       "period": "Oct 2023",
       "quarter": "2023 Q4",
       "policy": {
-        "effr": 5.28,
-        "treasury_1y": 5.392
+        "effr": 5.3,
+        "treasury_1y": 5.1
       },
       "inflation": {
-        "core_pce_ma": 3.586,
-        "headline_pce_ma": 3.498,
-        "core_cpi_ma": 3.977,
-        "headline_cpi_ma": 3.877,
-        "cleveland_1y": 2.651,
-        "michigan_1y": 3.498,
-        "nyfed_sce_1y": 2.973
+        "core_pce_ma": 3.68,
+        "headline_pce_ma": 3.93,
+        "core_cpi_ma": 4.17,
+        "headline_cpi_ma": 4.55,
+        "cleveland_1y": 3.22,
+        "michigan_1y": 4.15,
+        "nyfed_sce_1y": 3.55,
+        "spf_1y": 2.94
       },
       "rstar": {
-        "kc_fed": 1.262,
-        "dkw": 1.245,
-        "tips_10y10y": -0.303
+        "kc_fed": 0.83,
+        "dkw": 0.96,
+        "tips_10y10y": 0.29
       }
     },
     {
@@ -1067,22 +1109,23 @@
       "period": "Nov 2023",
       "quarter": "2023 Q4",
       "policy": {
-        "effr": 5.25,
-        "treasury_1y": 5.333
+        "effr": 5.3,
+        "treasury_1y": 5.12
       },
       "inflation": {
-        "core_pce_ma": 3.545,
-        "headline_pce_ma": 3.387,
-        "core_cpi_ma": 3.918,
-        "headline_cpi_ma": 3.705,
-        "cleveland_1y": 2.664,
-        "michigan_1y": 3.455,
-        "nyfed_sce_1y": 2.98
+        "core_pce_ma": 3.49,
+        "headline_pce_ma": 3.64,
+        "core_cpi_ma": 3.99,
+        "headline_cpi_ma": 4.32,
+        "cleveland_1y": 3.17,
+        "michigan_1y": 4.06,
+        "nyfed_sce_1y": 3.47,
+        "spf_1y": 2.9
       },
       "rstar": {
-        "kc_fed": 1.291,
-        "dkw": 1.226,
-        "tips_10y10y": -0.322
+        "kc_fed": 0.86,
+        "dkw": 0.96,
+        "tips_10y10y": 0.31
       }
     },
     {
@@ -1090,22 +1133,23 @@
       "period": "Dec 2023",
       "quarter": "2023 Q4",
       "policy": {
-        "effr": 5.22,
-        "treasury_1y": 5.274
+        "effr": 5.3,
+        "treasury_1y": 5.15
       },
       "inflation": {
-        "core_pce_ma": 3.503,
-        "headline_pce_ma": 3.263,
-        "core_cpi_ma": 3.856,
-        "headline_cpi_ma": 3.537,
-        "cleveland_1y": 2.676,
-        "michigan_1y": 3.406,
-        "nyfed_sce_1y": 2.992
+        "core_pce_ma": 3.3,
+        "headline_pce_ma": 3.33,
+        "core_cpi_ma": 3.8,
+        "headline_cpi_ma": 4.07,
+        "cleveland_1y": 3.12,
+        "michigan_1y": 3.96,
+        "nyfed_sce_1y": 3.38,
+        "spf_1y": 2.86
       },
       "rstar": {
-        "kc_fed": 1.279,
-        "dkw": 1.216,
-        "tips_10y10y": -0.257
+        "kc_fed": 0.89,
+        "dkw": 0.95,
+        "tips_10y10y": 0.33
       }
     },
     {
@@ -1113,22 +1157,23 @@
       "period": "Jan 2024",
       "quarter": "2024 Q1",
       "policy": {
-        "effr": 5.19,
-        "treasury_1y": 5.214
+        "effr": 5.3,
+        "treasury_1y": 5.18
       },
       "inflation": {
-        "core_pce_ma": 3.459,
-        "headline_pce_ma": 3.137,
-        "core_cpi_ma": 3.792,
-        "headline_cpi_ma": 3.389,
-        "cleveland_1y": 2.687,
-        "michigan_1y": 3.357,
-        "nyfed_sce_1y": 3.007
+        "core_pce_ma": 3.12,
+        "headline_pce_ma": 3.02,
+        "core_cpi_ma": 3.62,
+        "headline_cpi_ma": 3.8,
+        "cleveland_1y": 3.07,
+        "michigan_1y": 3.85,
+        "nyfed_sce_1y": 3.29,
+        "spf_1y": 2.81
       },
       "rstar": {
-        "kc_fed": 1.274,
-        "dkw": 1.188,
-        "tips_10y10y": -0.277
+        "kc_fed": 0.92,
+        "dkw": 0.95,
+        "tips_10y10y": 0.35
       }
     },
     {
@@ -1136,22 +1181,23 @@
       "period": "Feb 2024",
       "quarter": "2024 Q1",
       "policy": {
-        "effr": 5.16,
-        "treasury_1y": 5.155
+        "effr": 5.28,
+        "treasury_1y": 5.19
       },
       "inflation": {
-        "core_pce_ma": 3.413,
-        "headline_pce_ma": 3.017,
-        "core_cpi_ma": 3.727,
-        "headline_cpi_ma": 3.272,
-        "cleveland_1y": 2.698,
-        "michigan_1y": 3.312,
-        "nyfed_sce_1y": 3.025
+        "core_pce_ma": 2.94,
+        "headline_pce_ma": 2.74,
+        "core_cpi_ma": 3.43,
+        "headline_cpi_ma": 3.54,
+        "cleveland_1y": 3.02,
+        "michigan_1y": 3.73,
+        "nyfed_sce_1y": 3.2,
+        "spf_1y": 2.77
       },
       "rstar": {
-        "kc_fed": 1.302,
-        "dkw": 1.164,
-        "tips_10y10y": -0.283
+        "kc_fed": 0.95,
+        "dkw": 0.93,
+        "tips_10y10y": 0.36
       }
     },
     {
@@ -1159,22 +1205,23 @@
       "period": "Mar 2024",
       "quarter": "2024 Q1",
       "policy": {
-        "effr": 5.13,
-        "treasury_1y": 5.098
+        "effr": 5.25,
+        "treasury_1y": 5.2
       },
       "inflation": {
-        "core_pce_ma": 3.366,
-        "headline_pce_ma": 2.911,
-        "core_cpi_ma": 3.662,
-        "headline_cpi_ma": 3.194,
-        "cleveland_1y": 2.707,
-        "michigan_1y": 3.277,
-        "nyfed_sce_1y": 3.045
+        "core_pce_ma": 2.77,
+        "headline_pce_ma": 2.49,
+        "core_cpi_ma": 3.25,
+        "headline_cpi_ma": 3.28,
+        "cleveland_1y": 2.97,
+        "michigan_1y": 3.62,
+        "nyfed_sce_1y": 3.12,
+        "spf_1y": 2.73
       },
       "rstar": {
-        "kc_fed": 1.327,
-        "dkw": 1.188,
-        "tips_10y10y": -0.243
+        "kc_fed": 0.98,
+        "dkw": 0.92,
+        "tips_10y10y": 0.37
       }
     },
     {
@@ -1182,22 +1229,23 @@
       "period": "Apr 2024",
       "quarter": "2024 Q2",
       "policy": {
-        "effr": 5.1,
-        "treasury_1y": 5.045
+        "effr": 5.23,
+        "treasury_1y": 5.2
       },
       "inflation": {
-        "core_pce_ma": 3.317,
-        "headline_pce_ma": 2.827,
-        "core_cpi_ma": 3.597,
-        "headline_cpi_ma": 3.158,
-        "cleveland_1y": 2.698,
-        "michigan_1y": 3.256,
-        "nyfed_sce_1y": 3.065
+        "core_pce_ma": 2.61,
+        "headline_pce_ma": 2.28,
+        "core_cpi_ma": 3.08,
+        "headline_cpi_ma": 3.05,
+        "cleveland_1y": 2.91,
+        "michigan_1y": 3.5,
+        "nyfed_sce_1y": 3.03,
+        "spf_1y": 2.69
       },
       "rstar": {
-        "kc_fed": 1.291,
-        "dkw": 1.114,
-        "tips_10y10y": -0.242
+        "kc_fed": 1.01,
+        "dkw": 0.9,
+        "tips_10y10y": 0.38
       }
     },
     {
@@ -1205,22 +1253,23 @@
       "period": "May 2024",
       "quarter": "2024 Q2",
       "policy": {
-        "effr": 5.07,
-        "treasury_1y": 4.996
+        "effr": 5.21,
+        "treasury_1y": 5.21
       },
       "inflation": {
-        "core_pce_ma": 3.267,
-        "headline_pce_ma": 2.768,
-        "core_cpi_ma": 3.535,
-        "headline_cpi_ma": 3.163,
-        "cleveland_1y": 2.688,
-        "michigan_1y": 3.25,
-        "nyfed_sce_1y": 3.084
+        "core_pce_ma": 2.47,
+        "headline_pce_ma": 2.12,
+        "core_cpi_ma": 2.92,
+        "headline_cpi_ma": 2.86,
+        "cleveland_1y": 2.86,
+        "michigan_1y": 3.39,
+        "nyfed_sce_1y": 2.96,
+        "spf_1y": 2.64
       },
       "rstar": {
-        "kc_fed": 1.278,
-        "dkw": 1.14,
-        "tips_10y10y": -0.232
+        "kc_fed": 1.04,
+        "dkw": 0.87,
+        "tips_10y10y": 0.38
       }
     },
     {
@@ -1228,22 +1277,23 @@
       "period": "Jun 2024",
       "quarter": "2024 Q2",
       "policy": {
-        "effr": 5.04,
-        "treasury_1y": 4.702
+        "effr": 5.19,
+        "treasury_1y": 5.22
       },
       "inflation": {
-        "core_pce_ma": 3.216,
-        "headline_pce_ma": 2.735,
-        "core_cpi_ma": 3.474,
-        "headline_cpi_ma": 3.201,
-        "cleveland_1y": 2.677,
-        "michigan_1y": 3.261,
-        "nyfed_sce_1y": 3.101
+        "core_pce_ma": 2.34,
+        "headline_pce_ma": 2.01,
+        "core_cpi_ma": 2.77,
+        "headline_cpi_ma": 2.7,
+        "cleveland_1y": 2.8,
+        "michigan_1y": 3.27,
+        "nyfed_sce_1y": 2.88,
+        "spf_1y": 2.61
       },
       "rstar": {
-        "kc_fed": 1.27,
-        "dkw": 1.068,
-        "tips_10y10y": -0.173
+        "kc_fed": 1.07,
+        "dkw": 0.85,
+        "tips_10y10y": 0.38
       }
     },
     {
@@ -1251,22 +1301,23 @@
       "period": "Jul 2024",
       "quarter": "2024 Q3",
       "policy": {
-        "effr": 5.01,
-        "treasury_1y": 4.663
+        "effr": 5.16,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 3.164,
-        "headline_pce_ma": 2.727,
-        "core_cpi_ma": 3.416,
-        "headline_cpi_ma": 3.261,
-        "cleveland_1y": 2.663,
-        "michigan_1y": 3.287,
-        "nyfed_sce_1y": 3.114
+        "core_pce_ma": 2.22,
+        "headline_pce_ma": 1.96,
+        "core_cpi_ma": 2.63,
+        "headline_cpi_ma": 2.58,
+        "cleveland_1y": 2.75,
+        "michigan_1y": 3.17,
+        "nyfed_sce_1y": 2.82,
+        "spf_1y": 2.57
       },
       "rstar": {
-        "kc_fed": 1.271,
-        "dkw": 1.131,
-        "tips_10y10y": -0.131
+        "kc_fed": 1.1,
+        "dkw": 0.83,
+        "tips_10y10y": 0.37
       }
     },
     {
@@ -1274,22 +1325,23 @@
       "period": "Aug 2024",
       "quarter": "2024 Q3",
       "policy": {
-        "effr": 4.98,
-        "treasury_1y": 4.63
+        "effr": 5.14,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 3.112,
-        "headline_pce_ma": 2.738,
-        "core_cpi_ma": 3.362,
-        "headline_cpi_ma": 3.331,
-        "cleveland_1y": 2.649,
-        "michigan_1y": 3.326,
-        "nyfed_sce_1y": 2.674
+        "core_pce_ma": 2.13,
+        "headline_pce_ma": 1.95,
+        "core_cpi_ma": 2.51,
+        "headline_cpi_ma": 2.5,
+        "cleveland_1y": 2.7,
+        "michigan_1y": 3.07,
+        "nyfed_sce_1y": 2.77,
+        "spf_1y": 2.53
       },
       "rstar": {
-        "kc_fed": 1.259,
-        "dkw": 1.044,
-        "tips_10y10y": -0.137
+        "kc_fed": 1.13,
+        "dkw": 0.8,
+        "tips_10y10y": 0.37
       }
     },
     {
@@ -1297,22 +1349,23 @@
       "period": "Sep 2024",
       "quarter": "2024 Q3",
       "policy": {
-        "effr": 4.95,
-        "treasury_1y": 4.603
+        "effr": 5.12,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 3.059,
-        "headline_pce_ma": 3.013,
-        "core_cpi_ma": 3.311,
-        "headline_cpi_ma": 3.646,
-        "cleveland_1y": 2.632,
-        "michigan_1y": 2.773,
-        "nyfed_sce_1y": 2.679
+        "core_pce_ma": 2.05,
+        "headline_pce_ma": 1.98,
+        "core_cpi_ma": 2.41,
+        "headline_cpi_ma": 2.46,
+        "cleveland_1y": 2.65,
+        "michigan_1y": 2.97,
+        "nyfed_sce_1y": 2.72,
+        "spf_1y": 2.5
       },
       "rstar": {
-        "kc_fed": 1.272,
-        "dkw": 1.014,
-        "tips_10y10y": -0.087
+        "kc_fed": 1.15,
+        "dkw": 0.78,
+        "tips_10y10y": 0.36
       }
     },
     {
@@ -1320,22 +1373,23 @@
       "period": "Oct 2024",
       "quarter": "2024 Q4",
       "policy": {
-        "effr": 4.92,
-        "treasury_1y": 4.582
+        "effr": 5.1,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 3.006,
-        "headline_pce_ma": 3.043,
-        "core_cpi_ma": 3.264,
-        "headline_cpi_ma": 3.693,
-        "cleveland_1y": 2.614,
-        "michigan_1y": 2.822,
-        "nyfed_sce_1y": 2.679
+        "core_pce_ma": 1.98,
+        "headline_pce_ma": 2.03,
+        "core_cpi_ma": 2.32,
+        "headline_cpi_ma": 2.45,
+        "cleveland_1y": 2.6,
+        "michigan_1y": 2.89,
+        "nyfed_sce_1y": 2.68,
+        "spf_1y": 2.47
       },
       "rstar": {
-        "kc_fed": 1.302,
-        "dkw": 1.028,
-        "tips_10y10y": -0.083
+        "kc_fed": 1.18,
+        "dkw": 0.76,
+        "tips_10y10y": 0.35
       }
     },
     {
@@ -1343,22 +1397,23 @@
       "period": "Nov 2024",
       "quarter": "2024 Q4",
       "policy": {
-        "effr": 4.89,
-        "treasury_1y": 4.567
+        "effr": 5.07,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 2.953,
-        "headline_pce_ma": 3.069,
-        "core_cpi_ma": 3.22,
-        "headline_cpi_ma": 3.71,
-        "cleveland_1y": 2.594,
-        "michigan_1y": 2.87,
-        "nyfed_sce_1y": 2.675
+        "core_pce_ma": 1.93,
+        "headline_pce_ma": 2.1,
+        "core_cpi_ma": 2.25,
+        "headline_cpi_ma": 2.46,
+        "cleveland_1y": 2.55,
+        "michigan_1y": 2.82,
+        "nyfed_sce_1y": 2.65,
+        "spf_1y": 2.44
       },
       "rstar": {
-        "kc_fed": 1.322,
-        "dkw": 0.98,
-        "tips_10y10y": -0.142
+        "kc_fed": 1.2,
+        "dkw": 0.74,
+        "tips_10y10y": 0.34
       }
     },
     {
@@ -1366,22 +1421,23 @@
       "period": "Dec 2024",
       "quarter": "2024 Q4",
       "policy": {
-        "effr": 4.86,
-        "treasury_1y": 4.556
+        "effr": 5.05,
+        "treasury_1y": 5.22
       },
       "inflation": {
-        "core_pce_ma": 2.9,
-        "headline_pce_ma": 3.082,
-        "core_cpi_ma": 3.18,
-        "headline_cpi_ma": 3.691,
-        "cleveland_1y": 2.572,
-        "michigan_1y": 2.909,
-        "nyfed_sce_1y": 2.665
+        "core_pce_ma": 1.9,
+        "headline_pce_ma": 2.15,
+        "core_cpi_ma": 2.19,
+        "headline_cpi_ma": 2.48,
+        "cleveland_1y": 2.5,
+        "michigan_1y": 2.76,
+        "nyfed_sce_1y": 2.63,
+        "spf_1y": 2.41
       },
       "rstar": {
-        "kc_fed": 1.295,
-        "dkw": 0.984,
-        "tips_10y10y": -0.073
+        "kc_fed": 1.22,
+        "dkw": 0.73,
+        "tips_10y10y": 0.33
       }
     },
     {
@@ -1389,22 +1445,23 @@
       "period": "Jan 2025",
       "quarter": "2025 Q1",
       "policy": {
-        "effr": 4.83,
-        "treasury_1y": 4.55
+        "effr": 5.05,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 2.848,
-        "headline_pce_ma": 3.076,
-        "core_cpi_ma": 3.144,
-        "headline_cpi_ma": 3.632,
-        "cleveland_1y": 2.55,
-        "michigan_1y": 2.937,
-        "nyfed_sce_1y": 2.652
+        "core_pce_ma": 1.88,
+        "headline_pce_ma": 2.2,
+        "core_cpi_ma": 2.15,
+        "headline_cpi_ma": 2.5,
+        "cleveland_1y": 2.45,
+        "michigan_1y": 2.71,
+        "nyfed_sce_1y": 2.61,
+        "spf_1y": 2.38
       },
       "rstar": {
-        "kc_fed": 1.321,
-        "dkw": 0.989,
-        "tips_10y10y": 0.017
+        "kc_fed": 1.24,
+        "dkw": 0.72,
+        "tips_10y10y": 0.32
       }
     },
     {
@@ -1412,22 +1469,23 @@
       "period": "Feb 2025",
       "quarter": "2025 Q1",
       "policy": {
-        "effr": 4.8,
-        "treasury_1y": 4.546
+        "effr": 4.99,
+        "treasury_1y": 5.18
       },
       "inflation": {
-        "core_pce_ma": 2.796,
-        "headline_pce_ma": 3.045,
-        "core_cpi_ma": 3.11,
-        "headline_cpi_ma": 3.536,
-        "cleveland_1y": 2.526,
-        "michigan_1y": 2.949,
-        "nyfed_sce_1y": 2.635
+        "core_pce_ma": 1.87,
+        "headline_pce_ma": 2.22,
+        "core_cpi_ma": 2.12,
+        "headline_cpi_ma": 2.52,
+        "cleveland_1y": 2.41,
+        "michigan_1y": 2.68,
+        "nyfed_sce_1y": 2.6,
+        "spf_1y": 2.36
       },
       "rstar": {
-        "kc_fed": 1.275,
-        "dkw": 0.942,
-        "tips_10y10y": -0.031
+        "kc_fed": 1.26,
+        "dkw": 0.72,
+        "tips_10y10y": 0.31
       }
     },
     {
@@ -1435,22 +1493,23 @@
       "period": "Mar 2025",
       "quarter": "2025 Q1",
       "policy": {
-        "effr": 4.77,
-        "treasury_1y": 4.545
+        "effr": 4.93,
+        "treasury_1y": 5.13
       },
       "inflation": {
-        "core_pce_ma": 2.745,
-        "headline_pce_ma": 2.988,
-        "core_cpi_ma": 3.079,
-        "headline_cpi_ma": 3.408,
-        "cleveland_1y": 2.501,
-        "michigan_1y": 2.945,
-        "nyfed_sce_1y": 2.617
+        "core_pce_ma": 1.87,
+        "headline_pce_ma": 2.21,
+        "core_cpi_ma": 2.1,
+        "headline_cpi_ma": 2.53,
+        "cleveland_1y": 2.37,
+        "michigan_1y": 2.65,
+        "nyfed_sce_1y": 2.6,
+        "spf_1y": 2.34
       },
       "rstar": {
-        "kc_fed": 1.341,
-        "dkw": 0.907,
-        "tips_10y10y": -0.018
+        "kc_fed": 1.27,
+        "dkw": 0.72,
+        "tips_10y10y": 0.3
       }
     },
     {
@@ -1458,22 +1517,23 @@
       "period": "Apr 2025",
       "quarter": "2025 Q2",
       "policy": {
-        "effr": 4.74,
-        "treasury_1y": 4.545
+        "effr": 4.87,
+        "treasury_1y": 5.07
       },
       "inflation": {
-        "core_pce_ma": 2.696,
-        "headline_pce_ma": 2.905,
-        "core_cpi_ma": 3.049,
-        "headline_cpi_ma": 3.258,
-        "cleveland_1y": 2.475,
-        "michigan_1y": 2.925,
-        "nyfed_sce_1y": 2.597
+        "core_pce_ma": 1.87,
+        "headline_pce_ma": 2.16,
+        "core_cpi_ma": 2.09,
+        "headline_cpi_ma": 2.53,
+        "cleveland_1y": 2.32,
+        "michigan_1y": 2.64,
+        "nyfed_sce_1y": 2.6,
+        "spf_1y": 2.32
       },
       "rstar": {
-        "kc_fed": 1.313,
-        "dkw": 0.905,
-        "tips_10y10y": 0.025
+        "kc_fed": 1.29,
+        "dkw": 0.72,
+        "tips_10y10y": 0.29
       }
     },
     {
@@ -1481,22 +1541,23 @@
       "period": "May 2025",
       "quarter": "2025 Q2",
       "policy": {
-        "effr": 4.71,
-        "treasury_1y": 4.545
+        "effr": 4.81,
+        "treasury_1y": 5.01
       },
       "inflation": {
-        "core_pce_ma": 2.648,
-        "headline_pce_ma": 2.8,
-        "core_cpi_ma": 3.021,
-        "headline_cpi_ma": 3.098,
-        "cleveland_1y": 2.448,
-        "michigan_1y": 2.892,
-        "nyfed_sce_1y": 2.577
+        "core_pce_ma": 1.88,
+        "headline_pce_ma": 2.1,
+        "core_cpi_ma": 2.09,
+        "headline_cpi_ma": 2.51,
+        "cleveland_1y": 2.29,
+        "michigan_1y": 2.64,
+        "nyfed_sce_1y": 2.61,
+        "spf_1y": 2.31
       },
       "rstar": {
-        "kc_fed": 1.304,
-        "dkw": 0.936,
-        "tips_10y10y": 0.079
+        "kc_fed": 1.3,
+        "dkw": 0.73,
+        "tips_10y10y": 0.29
       }
     },
     {
@@ -1504,22 +1565,23 @@
       "period": "Jun 2025",
       "quarter": "2025 Q2",
       "policy": {
-        "effr": 4.68,
-        "treasury_1y": 4.543
+        "effr": 4.75,
+        "treasury_1y": 4.95
       },
       "inflation": {
-        "core_pce_ma": 2.601,
-        "headline_pce_ma": 2.68,
-        "core_cpi_ma": 2.993,
-        "headline_cpi_ma": 2.942,
-        "cleveland_1y": 2.421,
-        "michigan_1y": 2.848,
-        "nyfed_sce_1y": 2.559
+        "core_pce_ma": 1.9,
+        "headline_pce_ma": 2.01,
+        "core_cpi_ma": 2.1,
+        "headline_cpi_ma": 2.49,
+        "cleveland_1y": 2.25,
+        "michigan_1y": 2.65,
+        "nyfed_sce_1y": 2.61,
+        "spf_1y": 2.29
       },
       "rstar": {
-        "kc_fed": 1.361,
-        "dkw": 0.88,
-        "tips_10y10y": 0.066
+        "kc_fed": 1.3,
+        "dkw": 0.75,
+        "tips_10y10y": 0.28
       }
     },
     {
@@ -1527,22 +1589,23 @@
       "period": "Jul 2025",
       "quarter": "2025 Q3",
       "policy": {
-        "effr": 4.65,
-        "treasury_1y": 4.539
+        "effr": 4.7,
+        "treasury_1y": 4.88
       },
       "inflation": {
-        "core_pce_ma": 2.555,
-        "headline_pce_ma": 2.553,
-        "core_cpi_ma": 2.964,
-        "headline_cpi_ma": 2.803,
-        "cleveland_1y": 2.394,
-        "michigan_1y": 2.799,
-        "nyfed_sce_1y": 2.543
+        "core_pce_ma": 1.91,
+        "headline_pce_ma": 1.91,
+        "core_cpi_ma": 2.11,
+        "headline_cpi_ma": 2.46,
+        "cleveland_1y": 2.22,
+        "michigan_1y": 2.67,
+        "nyfed_sce_1y": 2.62,
+        "spf_1y": 2.28
       },
       "rstar": {
-        "kc_fed": 1.381,
-        "dkw": 0.89,
-        "tips_10y10y": 0.212
+        "kc_fed": 1.31,
+        "dkw": 0.77,
+        "tips_10y10y": 0.28
       }
     },
     {
@@ -1550,22 +1613,23 @@
       "period": "Aug 2025",
       "quarter": "2025 Q3",
       "policy": {
-        "effr": 4.62,
-        "treasury_1y": 4.531
+        "effr": 4.64,
+        "treasury_1y": 4.8
       },
       "inflation": {
-        "core_pce_ma": 2.511,
-        "headline_pce_ma": 2.427,
-        "core_cpi_ma": 2.935,
-        "headline_cpi_ma": 2.69,
-        "cleveland_1y": 2.366,
-        "michigan_1y": 2.75,
-        "nyfed_sce_1y": 2.531
+        "core_pce_ma": 1.92,
+        "headline_pce_ma": 1.8,
+        "core_cpi_ma": 2.12,
+        "headline_cpi_ma": 2.43,
+        "cleveland_1y": 2.18,
+        "michigan_1y": 2.69,
+        "nyfed_sce_1y": 2.62,
+        "spf_1y": 2.27
       },
       "rstar": {
-        "kc_fed": 1.385,
-        "dkw": 0.873,
-        "tips_10y10y": 0.153
+        "kc_fed": 1.31,
+        "dkw": 0.8,
+        "tips_10y10y": 0.29
       }
     },
     {
@@ -1573,22 +1637,23 @@
       "period": "Sep 2025",
       "quarter": "2025 Q3",
       "policy": {
-        "effr": 4.59,
-        "treasury_1y": 4.519
+        "effr": 4.58,
+        "treasury_1y": 4.73
       },
       "inflation": {
-        "core_pce_ma": 2.468,
-        "headline_pce_ma": 2.311,
-        "core_cpi_ma": 2.904,
-        "headline_cpi_ma": 2.612,
-        "cleveland_1y": 2.339,
-        "michigan_1y": 2.706,
-        "nyfed_sce_1y": 2.523
+        "core_pce_ma": 1.93,
+        "headline_pce_ma": 1.71,
+        "core_cpi_ma": 2.14,
+        "headline_cpi_ma": 2.4,
+        "cleveland_1y": 2.15,
+        "michigan_1y": 2.72,
+        "nyfed_sce_1y": 2.62,
+        "spf_1y": 2.26
       },
       "rstar": {
-        "kc_fed": 1.362,
-        "dkw": 0.792,
-        "tips_10y10y": 0.218
+        "kc_fed": 1.31,
+        "dkw": 0.83,
+        "tips_10y10y": 0.29
       }
     },
     {
@@ -1596,22 +1661,23 @@
       "period": "Oct 2025",
       "quarter": "2025 Q4",
       "policy": {
-        "effr": 4.56,
-        "treasury_1y": 4.502
+        "effr": 4.52,
+        "treasury_1y": 4.65
       },
       "inflation": {
-        "core_pce_ma": 2.426,
-        "headline_pce_ma": 2.215,
-        "core_cpi_ma": 2.871,
-        "headline_cpi_ma": 2.571,
-        "cleveland_1y": 2.312,
-        "michigan_1y": 2.673,
-        "nyfed_sce_1y": 2.52
+        "core_pce_ma": 1.94,
+        "headline_pce_ma": 1.64,
+        "core_cpi_ma": 2.15,
+        "headline_cpi_ma": 2.38,
+        "cleveland_1y": 2.13,
+        "michigan_1y": 2.75,
+        "nyfed_sce_1y": 2.62,
+        "spf_1y": 2.25
       },
       "rstar": {
-        "kc_fed": 1.34,
-        "dkw": 0.791,
-        "tips_10y10y": 0.325
+        "kc_fed": 1.31,
+        "dkw": 0.87,
+        "tips_10y10y": 0.3
       }
     },
     {
@@ -1619,22 +1685,23 @@
       "period": "Nov 2025",
       "quarter": "2025 Q4",
       "policy": {
-        "effr": 4.53,
-        "treasury_1y": 4.479
+        "effr": 4.46,
+        "treasury_1y": 4.57
       },
       "inflation": {
-        "core_pce_ma": 2.386,
-        "headline_pce_ma": 2.142,
-        "core_cpi_ma": 2.835,
-        "headline_cpi_ma": 2.566,
-        "cleveland_1y": 2.286,
-        "michigan_1y": 2.654,
-        "nyfed_sce_1y": 2.522
+        "core_pce_ma": 1.94,
+        "headline_pce_ma": 1.59,
+        "core_cpi_ma": 2.17,
+        "headline_cpi_ma": 2.37,
+        "cleveland_1y": 2.1,
+        "michigan_1y": 2.79,
+        "nyfed_sce_1y": 2.61,
+        "spf_1y": 2.24
       },
       "rstar": {
-        "kc_fed": 1.37,
-        "dkw": 0.815,
-        "tips_10y10y": 0.299
+        "kc_fed": 1.31,
+        "dkw": 0.91,
+        "tips_10y10y": 0.32
       }
     },
     {
@@ -1642,22 +1709,23 @@
       "period": "Dec 2025",
       "quarter": "2025 Q4",
       "policy": {
-        "effr": 4.5,
-        "treasury_1y": 4.45
+        "effr": 4.4,
+        "treasury_1y": 4.48
       },
       "inflation": {
-        "core_pce_ma": 2.347,
-        "headline_pce_ma": 2.098,
-        "core_cpi_ma": 2.796,
-        "headline_cpi_ma": 2.592,
-        "cleveland_1y": 2.261,
-        "michigan_1y": 2.651,
-        "nyfed_sce_1y": 2.529
+        "core_pce_ma": 1.93,
+        "headline_pce_ma": 1.58,
+        "core_cpi_ma": 2.18,
+        "headline_cpi_ma": 2.38,
+        "cleveland_1y": 2.08,
+        "michigan_1y": 2.82,
+        "nyfed_sce_1y": 2.6,
+        "spf_1y": 2.23
       },
       "rstar": {
-        "kc_fed": 1.398,
-        "dkw": 0.816,
-        "tips_10y10y": 0.401
+        "kc_fed": 1.31,
+        "dkw": 0.95,
+        "tips_10y10y": 0.33
       }
     },
     {
@@ -1665,22 +1733,23 @@
       "period": "Jan 2026",
       "quarter": "2026 Q1",
       "policy": {
-        "effr": 4.47,
-        "treasury_1y": 4.415
+        "effr": 4.4,
+        "treasury_1y": 4.45
       },
       "inflation": {
-        "core_pce_ma": 2.308,
-        "headline_pce_ma": 2.082,
-        "core_cpi_ma": 2.755,
-        "headline_cpi_ma": 2.642,
-        "cleveland_1y": 2.237,
-        "michigan_1y": 2.664,
-        "nyfed_sce_1y": 2.54
+        "core_pce_ma": 1.92,
+        "headline_pce_ma": 1.6,
+        "core_cpi_ma": 2.19,
+        "headline_cpi_ma": 2.4,
+        "cleveland_1y": 2.06,
+        "michigan_1y": 2.86,
+        "nyfed_sce_1y": 2.59,
+        "spf_1y": 2.23
       },
       "rstar": {
-        "kc_fed": 1.424,
-        "dkw": 0.777,
-        "tips_10y10y": 0.336
+        "kc_fed": 1.3,
+        "dkw": 0.99,
+        "tips_10y10y": 0.35
       }
     },
     {
@@ -1688,22 +1757,23 @@
       "period": "Feb 2026",
       "quarter": "2026 Q1",
       "policy": {
-        "effr": 4.44,
-        "treasury_1y": 4.374
+        "effr": 4.35,
+        "treasury_1y": 4.37
       },
       "inflation": {
-        "core_pce_ma": 2.271,
-        "headline_pce_ma": 2.091,
-        "core_cpi_ma": 2.71,
-        "headline_cpi_ma": 2.703,
-        "cleveland_1y": 2.214,
-        "michigan_1y": 2.692,
-        "nyfed_sce_1y": 2.555
+        "core_pce_ma": 1.9,
+        "headline_pce_ma": 1.65,
+        "core_cpi_ma": 2.19,
+        "headline_cpi_ma": 2.42,
+        "cleveland_1y": 2.05,
+        "michigan_1y": 2.89,
+        "nyfed_sce_1y": 2.57,
+        "spf_1y": 2.22
       },
       "rstar": {
-        "kc_fed": 1.421,
-        "dkw": 0.788,
-        "tips_10y10y": 0.423
+        "kc_fed": 1.3,
+        "dkw": 1.03,
+        "tips_10y10y": 0.38
       }
     },
     {
@@ -1711,22 +1781,23 @@
       "period": "Mar 2026",
       "quarter": "2026 Q1",
       "policy": {
-        "effr": 4.41,
-        "treasury_1y": 4.328
+        "effr": 4.3,
+        "treasury_1y": 4.29
       },
       "inflation": {
-        "core_pce_ma": 2.233,
-        "headline_pce_ma": 2.121,
-        "core_cpi_ma": 2.662,
-        "headline_cpi_ma": 2.764,
-        "cleveland_1y": 2.193,
-        "michigan_1y": 2.733,
-        "nyfed_sce_1y": 2.573
+        "core_pce_ma": 1.87,
+        "headline_pce_ma": 1.71,
+        "core_cpi_ma": 2.19,
+        "headline_cpi_ma": 2.45,
+        "cleveland_1y": 2.04,
+        "michigan_1y": 2.91,
+        "nyfed_sce_1y": 2.55,
+        "spf_1y": 2.22
       },
       "rstar": {
-        "kc_fed": 1.459,
-        "dkw": 0.752,
-        "tips_10y10y": 0.396
+        "kc_fed": 1.29,
+        "dkw": 1.08,
+        "tips_10y10y": 0.4
       }
     },
     {
@@ -1734,22 +1805,23 @@
       "period": "Apr 2026",
       "quarter": "2026 Q2",
       "policy": {
-        "effr": 4.38,
-        "treasury_1y": 4.278
+        "effr": 4.25,
+        "treasury_1y": 4.21
       },
       "inflation": {
-        "core_pce_ma": 2.197,
-        "headline_pce_ma": 2.164,
-        "core_cpi_ma": 2.612,
-        "headline_cpi_ma": 2.813,
-        "cleveland_1y": 2.173,
-        "michigan_1y": 2.78,
-        "nyfed_sce_1y": 2.592
+        "core_pce_ma": 1.84,
+        "headline_pce_ma": 1.79,
+        "core_cpi_ma": 2.18,
+        "headline_cpi_ma": 2.48,
+        "cleveland_1y": 2.03,
+        "michigan_1y": 2.94,
+        "nyfed_sce_1y": 2.52,
+        "spf_1y": 2.21
       },
       "rstar": {
-        "kc_fed": 1.481,
-        "dkw": 0.715,
-        "tips_10y10y": 0.525
+        "kc_fed": 1.28,
+        "dkw": 1.12,
+        "tips_10y10y": 0.43
       }
     },
     {
@@ -1757,22 +1829,23 @@
       "period": "May 2026",
       "quarter": "2026 Q2",
       "policy": {
-        "effr": 4.35,
-        "treasury_1y": 4.223
+        "effr": 4.2,
+        "treasury_1y": 4.13
       },
       "inflation": {
-        "core_pce_ma": 2.16,
-        "headline_pce_ma": 2.21,
-        "core_cpi_ma": 2.559,
-        "headline_cpi_ma": 2.841,
-        "cleveland_1y": 2.155,
-        "michigan_1y": 2.83,
-        "nyfed_sce_1y": 2.612
+        "core_pce_ma": 1.81,
+        "headline_pce_ma": 1.88,
+        "core_cpi_ma": 2.17,
+        "headline_cpi_ma": 2.49,
+        "cleveland_1y": 2.02,
+        "michigan_1y": 2.95,
+        "nyfed_sce_1y": 2.49,
+        "spf_1y": 2.21
       },
       "rstar": {
-        "kc_fed": 1.468,
-        "dkw": 0.748,
-        "tips_10y10y": 0.465
+        "kc_fed": 1.28,
+        "dkw": 1.15,
+        "tips_10y10y": 0.47
       }
     },
     {
@@ -1780,22 +1853,23 @@
       "period": "Jun 2026",
       "quarter": "2026 Q2",
       "policy": {
-        "effr": 4.32,
-        "treasury_1y": 4.165
+        "effr": 4.15,
+        "treasury_1y": 4.05
       },
       "inflation": {
-        "core_pce_ma": 2.123,
-        "headline_pce_ma": 2.25,
-        "core_cpi_ma": 2.503,
-        "headline_cpi_ma": 2.84,
-        "cleveland_1y": 2.138,
-        "michigan_1y": 2.876,
-        "nyfed_sce_1y": 2.631
+        "core_pce_ma": 1.77,
+        "headline_pce_ma": 1.94,
+        "core_cpi_ma": 2.16,
+        "headline_cpi_ma": 2.49,
+        "cleveland_1y": 2.01,
+        "michigan_1y": 2.96,
+        "nyfed_sce_1y": 2.46,
+        "spf_1y": 2.21
       },
       "rstar": {
-        "kc_fed": 1.491,
-        "dkw": 0.701,
-        "tips_10y10y": 0.568
+        "kc_fed": 1.27,
+        "dkw": 1.19,
+        "tips_10y10y": 0.5
       }
     }
   ],
@@ -1805,263 +1879,225 @@
       "period": "2020 Q1",
       "quarter": "2020 Q1",
       "policy": {
-        "effr": 0.085,
-        "treasury_1y": 0.164
+        "effr": 0.11,
+        "treasury_1y": 0.49
       },
       "inflation": {
-        "core_pce_ma": 1.862,
-        "headline_pce_ma": 1.941,
-        "core_cpi_ma": 2.232,
-        "headline_cpi_ma": 2.458,
-        "cleveland_1y": 2.066,
-        "michigan_1y": 2.847,
-        "nyfed_sce_1y": 2.619,
-        "spf_1y": 2.157
+        "core_pce_ma": 1.91,
+        "headline_pce_ma": 2.02,
+        "core_cpi_ma": 2.28,
+        "headline_cpi_ma": 2.64,
+        "cleveland_1y": 2.21,
+        "michigan_1y": 2.83,
+        "nyfed_sce_1y": 2.51,
+        "spf_1y": 2.27
       },
-      "rstar": {
-        "hlw": 0.6,
-        "lw": 0.85,
-        "lubik_matthes": 1.037
-      }
+      "rstar": {}
     },
     {
       "date": "2020-06-30",
       "period": "2020 Q2",
       "quarter": "2020 Q2",
       "policy": {
-        "effr": 0.097,
-        "treasury_1y": 0.252
+        "effr": 0.14,
+        "treasury_1y": 0.61
       },
       "inflation": {
-        "core_pce_ma": 1.89,
-        "headline_pce_ma": 2.124,
-        "core_cpi_ma": 2.311,
-        "headline_cpi_ma": 2.764,
-        "cleveland_1y": 2.102,
-        "michigan_1y": 2.94,
-        "nyfed_sce_1y": 2.666,
-        "spf_1y": 2.174
+        "core_pce_ma": 2.13,
+        "headline_pce_ma": 2.46,
+        "core_cpi_ma": 2.57,
+        "headline_cpi_ma": 3.23,
+        "cleveland_1y": 2.31,
+        "michigan_1y": 3.01,
+        "nyfed_sce_1y": 2.63,
+        "spf_1y": 2.31
       },
-      "rstar": {
-        "hlw": 0.641,
-        "lw": 0.875,
-        "lubik_matthes": 1.086
-      }
+      "rstar": {}
     },
     {
       "date": "2020-09-30",
       "period": "2020 Q3",
       "quarter": "2020 Q3",
       "policy": {
-        "effr": 0.099,
-        "treasury_1y": 0.295
+        "effr": 0.15,
+        "treasury_1y": 0.69
       },
       "inflation": {
-        "core_pce_ma": 1.915,
-        "headline_pce_ma": 2.089,
-        "core_cpi_ma": 2.362,
-        "headline_cpi_ma": 2.653,
-        "cleveland_1y": 2.133,
-        "michigan_1y": 2.904,
-        "nyfed_sce_1y": 2.677,
-        "spf_1y": 2.193
+        "core_pce_ma": 2.36,
+        "headline_pce_ma": 2.61,
+        "core_cpi_ma": 2.85,
+        "headline_cpi_ma": 3.38,
+        "cleveland_1y": 2.43,
+        "michigan_1y": 3.16,
+        "nyfed_sce_1y": 2.75,
+        "spf_1y": 2.36
       },
-      "rstar": {
-        "hlw": 0.681,
-        "lw": 0.9,
-        "lubik_matthes": 1.138
-      }
+      "rstar": {}
     },
     {
       "date": "2020-12-31",
       "period": "2020 Q4",
       "quarter": "2020 Q4",
       "policy": {
-        "effr": 0.092,
-        "treasury_1y": 0.276
+        "effr": 0.13,
+        "treasury_1y": 0.71
       },
       "inflation": {
-        "core_pce_ma": 1.939,
-        "headline_pce_ma": 1.893,
-        "core_cpi_ma": 2.379,
-        "headline_cpi_ma": 2.263,
-        "cleveland_1y": 2.157,
-        "michigan_1y": 2.772,
-        "nyfed_sce_1y": 2.647,
-        "spf_1y": 2.215
+        "core_pce_ma": 2.6,
+        "headline_pce_ma": 2.54,
+        "core_cpi_ma": 3.1,
+        "headline_cpi_ma": 3.16,
+        "cleveland_1y": 2.55,
+        "michigan_1y": 3.29,
+        "nyfed_sce_1y": 2.83,
+        "spf_1y": 2.44
       },
-      "rstar": {
-        "hlw": 0.716,
-        "lw": 0.923,
-        "lubik_matthes": 1.192
-      }
+      "rstar": {}
     },
     {
       "date": "2021-03-31",
       "period": "2021 Q1",
       "quarter": "2021 Q1",
       "policy": {
-        "effr": 0.078,
-        "treasury_1y": 0.204
+        "effr": 0.09,
+        "treasury_1y": 0.69
       },
       "inflation": {
-        "core_pce_ma": 1.973,
-        "headline_pce_ma": 1.75,
-        "core_cpi_ma": 2.374,
-        "headline_cpi_ma": 2.008,
-        "cleveland_1y": 2.177,
-        "michigan_1y": 2.666,
-        "nyfed_sce_1y": 2.591,
-        "spf_1y": 2.241
+        "core_pce_ma": 2.85,
+        "headline_pce_ma": 2.57,
+        "core_cpi_ma": 3.33,
+        "headline_cpi_ma": 2.99,
+        "cleveland_1y": 2.69,
+        "michigan_1y": 3.38,
+        "nyfed_sce_1y": 2.89,
+        "spf_1y": 2.53
       },
-      "rstar": {
-        "hlw": 0.747,
-        "lw": 0.944,
-        "lubik_matthes": 1.245
-      }
+      "rstar": {}
     },
     {
       "date": "2021-06-30",
       "period": "2021 Q2",
       "quarter": "2021 Q2",
       "policy": {
-        "effr": 0.065,
-        "treasury_1y": 0.107
+        "effr": 0.06,
+        "treasury_1y": 0.64
       },
       "inflation": {
-        "core_pce_ma": 2.037,
-        "headline_pce_ma": 1.841,
-        "core_cpi_ma": 2.381,
-        "headline_cpi_ma": 2.188,
-        "cleveland_1y": 2.196,
-        "michigan_1y": 2.682,
-        "nyfed_sce_1y": 2.54,
-        "spf_1y": 2.275
+        "core_pce_ma": 3.14,
+        "headline_pce_ma": 2.93,
+        "core_cpi_ma": 3.56,
+        "headline_cpi_ma": 3.23,
+        "cleveland_1y": 2.84,
+        "michigan_1y": 3.45,
+        "nyfed_sce_1y": 2.96,
+        "spf_1y": 2.65
       },
-      "rstar": {
-        "hlw": 0.77,
-        "lw": 0.961,
-        "lubik_matthes": 1.297
-      }
+      "rstar": {}
     },
     {
       "date": "2021-09-30",
       "period": "2021 Q3",
       "quarter": "2021 Q3",
       "policy": {
-        "effr": 0.06,
-        "treasury_1y": 0.02
+        "effr": 0.05,
+        "treasury_1y": 0.57
       },
       "inflation": {
-        "core_pce_ma": 2.162,
-        "headline_pce_ma": 2.174,
-        "core_cpi_ma": 2.452,
-        "headline_cpi_ma": 2.717,
-        "cleveland_1y": 2.223,
-        "michigan_1y": 2.807,
-        "nyfed_sce_1y": 2.522,
-        "spf_1y": 2.318
+        "core_pce_ma": 3.48,
+        "headline_pce_ma": 3.6,
+        "core_cpi_ma": 3.82,
+        "headline_cpi_ma": 3.97,
+        "cleveland_1y": 3.0,
+        "michigan_1y": 3.53,
+        "nyfed_sce_1y": 3.05,
+        "spf_1y": 2.77
       },
-      "rstar": {
-        "hlw": 0.786,
-        "lw": 0.975,
-        "lubik_matthes": 1.345
-      }
+      "rstar": {}
     },
     {
       "date": "2021-12-31",
       "period": "2021 Q4",
       "quarter": "2021 Q4",
       "policy": {
-        "effr": 0.066,
-        "treasury_1y": -0.025
+        "effr": 0.06,
+        "treasury_1y": 0.51
       },
       "inflation": {
-        "core_pce_ma": 2.373,
-        "headline_pce_ma": 2.582,
-        "core_cpi_ma": 2.63,
-        "headline_cpi_ma": 3.224,
-        "cleveland_1y": 2.263,
-        "michigan_1y": 2.925,
-        "nyfed_sce_1y": 2.545,
-        "spf_1y": 2.374
+        "core_pce_ma": 3.86,
+        "headline_pce_ma": 4.34,
+        "core_cpi_ma": 4.14,
+        "headline_cpi_ma": 4.89,
+        "cleveland_1y": 3.15,
+        "michigan_1y": 3.65,
+        "nyfed_sce_1y": 3.18,
+        "spf_1y": 2.9
       },
-      "rstar": {
-        "hlw": 0.793,
-        "lw": 0.983,
-        "lubik_matthes": 1.388
-      }
+      "rstar": {}
     },
     {
       "date": "2022-03-31",
       "period": "2022 Q1",
       "quarter": "2022 Q1",
       "policy": {
-        "effr": 0.319,
-        "treasury_1y": 0.227
+        "effr": 0.62,
+        "treasury_1y": 0.98
       },
       "inflation": {
-        "core_pce_ma": 2.657,
-        "headline_pce_ma": 2.871,
-        "core_cpi_ma": 2.913,
-        "headline_cpi_ma": 3.412,
-        "cleveland_1y": 2.317,
-        "michigan_1y": 2.928,
-        "nyfed_sce_1y": 2.597,
-        "spf_1y": 2.441
+        "core_pce_ma": 4.26,
+        "headline_pce_ma": 4.81,
+        "core_cpi_ma": 4.48,
+        "headline_cpi_ma": 5.54,
+        "cleveland_1y": 3.28,
+        "michigan_1y": 3.81,
+        "nyfed_sce_1y": 3.35,
+        "spf_1y": 3.02
       },
-      "rstar": {
-        "hlw": 0.79,
-        "lw": 0.986,
-        "lubik_matthes": 1.425
-      }
+      "rstar": {}
     },
     {
       "date": "2022-06-30",
       "period": "2022 Q2",
       "quarter": "2022 Q2",
       "policy": {
-        "effr": 1.053,
-        "treasury_1y": 1.209
+        "effr": 1.74,
+        "treasury_1y": 2.0
       },
       "inflation": {
-        "core_pce_ma": 2.952,
-        "headline_pce_ma": 3.341,
-        "core_cpi_ma": 3.24,
-        "headline_cpi_ma": 3.687,
-        "cleveland_1y": 2.377,
-        "michigan_1y": 3.947,
-        "nyfed_sce_1y": 3.452,
-        "spf_1y": 2.514
+        "core_pce_ma": 4.62,
+        "headline_pce_ma": 4.94,
+        "core_cpi_ma": 4.82,
+        "headline_cpi_ma": 5.73,
+        "cleveland_1y": 3.39,
+        "michigan_1y": 4.01,
+        "nyfed_sce_1y": 3.54,
+        "spf_1y": 3.11
       },
-      "rstar": {
-        "hlw": 0.778,
-        "lw": 0.982,
-        "lubik_matthes": 1.453
-      }
+      "rstar": {}
     },
     {
       "date": "2022-09-30",
       "period": "2022 Q3",
       "quarter": "2022 Q3",
       "policy": {
-        "effr": 1.78,
-        "treasury_1y": 2.117
+        "effr": 2.86,
+        "treasury_1y": 3.04
       },
       "inflation": {
-        "core_pce_ma": 3.192,
-        "headline_pce_ma": 3.552,
-        "core_cpi_ma": 3.534,
-        "headline_cpi_ma": 3.811,
-        "cleveland_1y": 2.434,
-        "michigan_1y": 4.386,
-        "nyfed_sce_1y": 3.878,
-        "spf_1y": 2.585
+        "core_pce_ma": 4.86,
+        "headline_pce_ma": 4.89,
+        "core_cpi_ma": 5.08,
+        "headline_cpi_ma": 5.57,
+        "cleveland_1y": 3.47,
+        "michigan_1y": 4.21,
+        "nyfed_sce_1y": 3.73,
+        "spf_1y": 3.18
       },
       "rstar": {
-        "hlw": 0.755,
-        "lw": 0.972,
-        "lubik_matthes": 1.473
+        "hlw": 0.73,
+        "lw": 0.9,
+        "lubik_matthes": 0.47,
+        "lw_one_sided": 0.9,
+        "lw_two_sided": 1.02
       }
     },
     {
@@ -2069,23 +2105,25 @@
       "period": "2022 Q4",
       "quarter": "2022 Q4",
       "policy": {
-        "effr": 2.495,
-        "treasury_1y": 2.919
+        "effr": 3.98,
+        "treasury_1y": 4.1
       },
       "inflation": {
-        "core_pce_ma": 3.357,
-        "headline_pce_ma": 3.68,
-        "core_cpi_ma": 3.755,
-        "headline_cpi_ma": 4.051,
-        "cleveland_1y": 2.486,
-        "michigan_1y": 4.364,
-        "nyfed_sce_1y": 3.863,
-        "spf_1y": 2.644
+        "core_pce_ma": 4.95,
+        "headline_pce_ma": 4.87,
+        "core_cpi_ma": 5.22,
+        "headline_cpi_ma": 5.35,
+        "cleveland_1y": 3.5,
+        "michigan_1y": 4.37,
+        "nyfed_sce_1y": 3.87,
+        "spf_1y": 3.2
       },
       "rstar": {
-        "hlw": 0.724,
-        "lw": 0.954,
-        "lubik_matthes": 1.482
+        "hlw": 0.69,
+        "lw": 0.88,
+        "lubik_matthes": 0.52,
+        "lw_one_sided": 0.88,
+        "lw_two_sided": 1.0
       }
     },
     {
@@ -2093,23 +2131,25 @@
       "period": "2023 Q1",
       "quarter": "2023 Q1",
       "policy": {
-        "effr": 3.203,
-        "treasury_1y": 3.686
+        "effr": 4.49,
+        "treasury_1y": 4.59
       },
       "inflation": {
-        "core_pce_ma": 3.462,
-        "headline_pce_ma": 3.773,
-        "core_cpi_ma": 3.901,
-        "headline_cpi_ma": 4.339,
-        "cleveland_1y": 2.533,
-        "michigan_1y": 4.467,
-        "nyfed_sce_1y": 3.814,
-        "spf_1y": 2.688
+        "core_pce_ma": 4.83,
+        "headline_pce_ma": 4.92,
+        "core_cpi_ma": 5.16,
+        "headline_cpi_ma": 5.24,
+        "cleveland_1y": 3.48,
+        "michigan_1y": 4.46,
+        "nyfed_sce_1y": 3.92,
+        "spf_1y": 3.18
       },
       "rstar": {
-        "hlw": 0.685,
-        "lw": 0.929,
-        "lubik_matthes": 1.48
+        "hlw": 0.66,
+        "lw": 0.87,
+        "lubik_matthes": 0.57,
+        "lw_one_sided": 0.87,
+        "lw_two_sided": 0.99
       }
     },
     {
@@ -2117,23 +2157,25 @@
       "period": "2023 Q2",
       "quarter": "2023 Q2",
       "policy": {
-        "effr": 3.909,
-        "treasury_1y": 4.406
+        "effr": 4.89,
+        "treasury_1y": 4.74
       },
       "inflation": {
-        "core_pce_ma": 3.529,
-        "headline_pce_ma": 3.696,
-        "core_cpi_ma": 3.977,
-        "headline_cpi_ma": 4.335,
-        "cleveland_1y": 2.578,
-        "michigan_1y": 4.6,
-        "nyfed_sce_1y": 3.507,
-        "spf_1y": 2.717
+        "core_pce_ma": 4.52,
+        "headline_pce_ma": 4.84,
+        "core_cpi_ma": 4.92,
+        "headline_cpi_ma": 5.17,
+        "cleveland_1y": 3.42,
+        "michigan_1y": 4.44,
+        "nyfed_sce_1y": 3.86,
+        "spf_1y": 3.11
       },
       "rstar": {
-        "hlw": 0.643,
-        "lw": 0.9,
-        "lubik_matthes": 1.469
+        "hlw": 0.64,
+        "lw": 0.85,
+        "lubik_matthes": 0.64,
+        "lw_one_sided": 0.85,
+        "lw_two_sided": 0.97
       }
     },
     {
@@ -2141,23 +2183,25 @@
       "period": "2023 Q3",
       "quarter": "2023 Q3",
       "policy": {
-        "effr": 4.621,
-        "treasury_1y": 5.08
+        "effr": 5.25,
+        "treasury_1y": 5.01
       },
       "inflation": {
-        "core_pce_ma": 3.569,
-        "headline_pce_ma": 3.806,
-        "core_cpi_ma": 3.991,
-        "headline_cpi_ma": 4.321,
-        "cleveland_1y": 2.623,
-        "michigan_1y": 3.908,
-        "nyfed_sce_1y": 2.974,
-        "spf_1y": 2.733
+        "core_pce_ma": 4.05,
+        "headline_pce_ma": 4.42,
+        "core_cpi_ma": 4.51,
+        "headline_cpi_ma": 4.9,
+        "cleveland_1y": 3.31,
+        "michigan_1y": 4.31,
+        "nyfed_sce_1y": 3.7,
+        "spf_1y": 3.02
       },
       "rstar": {
-        "hlw": 0.601,
-        "lw": 0.868,
-        "lubik_matthes": 1.448
+        "hlw": 0.62,
+        "lw": 0.85,
+        "lubik_matthes": 0.7,
+        "lw_one_sided": 0.85,
+        "lw_two_sided": 0.97
       }
     },
     {
@@ -2165,23 +2209,25 @@
       "period": "2023 Q4",
       "quarter": "2023 Q4",
       "policy": {
-        "effr": 5.25,
-        "treasury_1y": 5.333
+        "effr": 5.3,
+        "treasury_1y": 5.12
       },
       "inflation": {
-        "core_pce_ma": 3.545,
-        "headline_pce_ma": 3.383,
-        "core_cpi_ma": 3.917,
-        "headline_cpi_ma": 3.706,
-        "cleveland_1y": 2.664,
-        "michigan_1y": 3.453,
-        "nyfed_sce_1y": 2.982,
-        "spf_1y": 2.741
+        "core_pce_ma": 3.49,
+        "headline_pce_ma": 3.63,
+        "core_cpi_ma": 3.99,
+        "headline_cpi_ma": 4.31,
+        "cleveland_1y": 3.17,
+        "michigan_1y": 4.06,
+        "nyfed_sce_1y": 3.47,
+        "spf_1y": 2.9
       },
       "rstar": {
-        "hlw": 0.565,
-        "lw": 0.837,
-        "lubik_matthes": 1.42
+        "hlw": 0.62,
+        "lw": 0.84,
+        "lubik_matthes": 0.74,
+        "lw_one_sided": 0.84,
+        "lw_two_sided": 0.96
       }
     },
     {
@@ -2189,23 +2235,25 @@
       "period": "2024 Q1",
       "quarter": "2024 Q1",
       "policy": {
-        "effr": 5.16,
-        "treasury_1y": 5.156
+        "effr": 5.28,
+        "treasury_1y": 5.19
       },
       "inflation": {
-        "core_pce_ma": 3.413,
-        "headline_pce_ma": 3.022,
-        "core_cpi_ma": 3.727,
-        "headline_cpi_ma": 3.285,
-        "cleveland_1y": 2.697,
-        "michigan_1y": 3.315,
-        "nyfed_sce_1y": 3.026,
-        "spf_1y": 2.743
+        "core_pce_ma": 2.94,
+        "headline_pce_ma": 2.75,
+        "core_cpi_ma": 3.43,
+        "headline_cpi_ma": 3.54,
+        "cleveland_1y": 3.02,
+        "michigan_1y": 3.73,
+        "nyfed_sce_1y": 3.2,
+        "spf_1y": 2.77
       },
       "rstar": {
-        "hlw": 0.538,
-        "lw": 0.809,
-        "lubik_matthes": 1.389
+        "hlw": 0.63,
+        "lw": 0.84,
+        "lubik_matthes": 0.77,
+        "lw_one_sided": 0.84,
+        "lw_two_sided": 0.96
       }
     },
     {
@@ -2213,23 +2261,25 @@
       "period": "2024 Q2",
       "quarter": "2024 Q2",
       "policy": {
-        "effr": 5.07,
-        "treasury_1y": 4.914
+        "effr": 5.21,
+        "treasury_1y": 5.21
       },
       "inflation": {
-        "core_pce_ma": 3.267,
-        "headline_pce_ma": 2.777,
-        "core_cpi_ma": 3.535,
-        "headline_cpi_ma": 3.174,
-        "cleveland_1y": 2.688,
-        "michigan_1y": 3.256,
-        "nyfed_sce_1y": 3.083,
-        "spf_1y": 2.744
+        "core_pce_ma": 2.47,
+        "headline_pce_ma": 2.14,
+        "core_cpi_ma": 2.92,
+        "headline_cpi_ma": 2.87,
+        "cleveland_1y": 2.86,
+        "michigan_1y": 3.39,
+        "nyfed_sce_1y": 2.96,
+        "spf_1y": 2.65
       },
       "rstar": {
-        "hlw": 0.52,
-        "lw": 0.786,
-        "lubik_matthes": 1.357
+        "hlw": 0.65,
+        "lw": 0.84,
+        "lubik_matthes": 0.78,
+        "lw_one_sided": 0.84,
+        "lw_two_sided": 0.96
       }
     },
     {
@@ -2237,23 +2287,25 @@
       "period": "2024 Q3",
       "quarter": "2024 Q3",
       "policy": {
-        "effr": 4.98,
-        "treasury_1y": 4.632
+        "effr": 5.14,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 3.112,
-        "headline_pce_ma": 2.826,
-        "core_cpi_ma": 3.363,
-        "headline_cpi_ma": 3.413,
-        "cleveland_1y": 2.648,
-        "michigan_1y": 3.129,
-        "nyfed_sce_1y": 2.822,
-        "spf_1y": 2.719
+        "core_pce_ma": 2.13,
+        "headline_pce_ma": 1.96,
+        "core_cpi_ma": 2.52,
+        "headline_cpi_ma": 2.51,
+        "cleveland_1y": 2.7,
+        "michigan_1y": 3.07,
+        "nyfed_sce_1y": 2.77,
+        "spf_1y": 2.53
       },
       "rstar": {
-        "hlw": 0.514,
-        "lw": 0.766,
-        "lubik_matthes": 1.325
+        "hlw": 0.67,
+        "lw": 0.84,
+        "lubik_matthes": 0.77,
+        "lw_one_sided": 0.84,
+        "lw_two_sided": 0.96
       }
     },
     {
@@ -2261,23 +2313,25 @@
       "period": "2024 Q4",
       "quarter": "2024 Q4",
       "policy": {
-        "effr": 4.89,
-        "treasury_1y": 4.568
+        "effr": 5.07,
+        "treasury_1y": 5.23
       },
       "inflation": {
-        "core_pce_ma": 2.953,
-        "headline_pce_ma": 3.065,
-        "core_cpi_ma": 3.221,
-        "headline_cpi_ma": 3.698,
-        "cleveland_1y": 2.593,
-        "michigan_1y": 2.867,
-        "nyfed_sce_1y": 2.673,
-        "spf_1y": 2.696
+        "core_pce_ma": 1.94,
+        "headline_pce_ma": 2.09,
+        "core_cpi_ma": 2.25,
+        "headline_cpi_ma": 2.46,
+        "cleveland_1y": 2.55,
+        "michigan_1y": 2.82,
+        "nyfed_sce_1y": 2.65,
+        "spf_1y": 2.44
       },
       "rstar": {
-        "hlw": 0.518,
-        "lw": 0.75,
-        "lubik_matthes": 1.293
+        "hlw": 0.7,
+        "lw": 0.84,
+        "lubik_matthes": 0.75,
+        "lw_one_sided": 0.84,
+        "lw_two_sided": 0.96
       }
     },
     {
@@ -2285,23 +2339,25 @@
       "period": "2025 Q1",
       "quarter": "2025 Q1",
       "policy": {
-        "effr": 4.8,
-        "treasury_1y": 4.547
+        "effr": 4.99,
+        "treasury_1y": 5.18
       },
       "inflation": {
-        "core_pce_ma": 2.796,
-        "headline_pce_ma": 3.036,
-        "core_cpi_ma": 3.111,
-        "headline_cpi_ma": 3.525,
-        "cleveland_1y": 2.526,
-        "michigan_1y": 2.944,
-        "nyfed_sce_1y": 2.635,
-        "spf_1y": 2.674
+        "core_pce_ma": 1.87,
+        "headline_pce_ma": 2.21,
+        "core_cpi_ma": 2.12,
+        "headline_cpi_ma": 2.52,
+        "cleveland_1y": 2.41,
+        "michigan_1y": 2.68,
+        "nyfed_sce_1y": 2.6,
+        "spf_1y": 2.36
       },
       "rstar": {
-        "hlw": 0.531,
-        "lw": 0.739,
-        "lubik_matthes": 1.265
+        "hlw": 0.72,
+        "lw": 0.85,
+        "lubik_matthes": 0.74,
+        "lw_one_sided": 0.85,
+        "lw_two_sided": 0.97
       }
     },
     {
@@ -2309,23 +2365,25 @@
       "period": "2025 Q2",
       "quarter": "2025 Q2",
       "policy": {
-        "effr": 4.71,
-        "treasury_1y": 4.544
+        "effr": 4.81,
+        "treasury_1y": 5.01
       },
       "inflation": {
-        "core_pce_ma": 2.648,
-        "headline_pce_ma": 2.795,
-        "core_cpi_ma": 3.021,
-        "headline_cpi_ma": 3.099,
-        "cleveland_1y": 2.448,
-        "michigan_1y": 2.888,
-        "nyfed_sce_1y": 2.578,
-        "spf_1y": 2.655
+        "core_pce_ma": 1.88,
+        "headline_pce_ma": 2.09,
+        "core_cpi_ma": 2.09,
+        "headline_cpi_ma": 2.51,
+        "cleveland_1y": 2.29,
+        "michigan_1y": 2.64,
+        "nyfed_sce_1y": 2.61,
+        "spf_1y": 2.31
       },
       "rstar": {
-        "hlw": 0.553,
-        "lw": 0.732,
-        "lubik_matthes": 1.239
+        "hlw": 0.74,
+        "lw": 0.85,
+        "lubik_matthes": 0.74,
+        "lw_one_sided": 0.85,
+        "lw_two_sided": 0.97
       }
     },
     {
@@ -2333,23 +2391,25 @@
       "period": "2025 Q3",
       "quarter": "2025 Q3",
       "policy": {
-        "effr": 4.62,
-        "treasury_1y": 4.53
+        "effr": 4.64,
+        "treasury_1y": 4.8
       },
       "inflation": {
-        "core_pce_ma": 2.511,
-        "headline_pce_ma": 2.43,
-        "core_cpi_ma": 2.934,
-        "headline_cpi_ma": 2.702,
-        "cleveland_1y": 2.366,
-        "michigan_1y": 2.752,
-        "nyfed_sce_1y": 2.532,
-        "spf_1y": 2.639
+        "core_pce_ma": 1.92,
+        "headline_pce_ma": 1.81,
+        "core_cpi_ma": 2.12,
+        "headline_cpi_ma": 2.43,
+        "cleveland_1y": 2.18,
+        "michigan_1y": 2.69,
+        "nyfed_sce_1y": 2.62,
+        "spf_1y": 2.27
       },
       "rstar": {
-        "hlw": 0.582,
-        "lw": 0.729,
-        "lubik_matthes": 1.218
+        "hlw": 0.76,
+        "lw": 0.85,
+        "lubik_matthes": 0.75,
+        "lw_one_sided": 0.85,
+        "lw_two_sided": 0.97
       }
     },
     {
@@ -2357,23 +2417,25 @@
       "period": "2025 Q4",
       "quarter": "2025 Q4",
       "policy": {
-        "effr": 4.53,
-        "treasury_1y": 4.477
+        "effr": 4.46,
+        "treasury_1y": 4.57
       },
       "inflation": {
-        "core_pce_ma": 2.386,
-        "headline_pce_ma": 2.152,
-        "core_cpi_ma": 2.834,
-        "headline_cpi_ma": 2.576,
-        "cleveland_1y": 2.286,
-        "michigan_1y": 2.659,
-        "nyfed_sce_1y": 2.524,
-        "spf_1y": 2.624
+        "core_pce_ma": 1.94,
+        "headline_pce_ma": 1.6,
+        "core_cpi_ma": 2.17,
+        "headline_cpi_ma": 2.38,
+        "cleveland_1y": 2.1,
+        "michigan_1y": 2.79,
+        "nyfed_sce_1y": 2.61,
+        "spf_1y": 2.24
       },
       "rstar": {
-        "hlw": 0.616,
-        "lw": 0.73,
-        "lubik_matthes": 1.202
+        "hlw": 0.76,
+        "lw": 0.85,
+        "lubik_matthes": 0.78,
+        "lw_one_sided": 0.85,
+        "lw_two_sided": 0.97
       }
     },
     {
@@ -2381,23 +2443,25 @@
       "period": "2026 Q1",
       "quarter": "2026 Q1",
       "policy": {
-        "effr": 4.44,
-        "treasury_1y": 4.372
+        "effr": 4.35,
+        "treasury_1y": 4.37
       },
       "inflation": {
-        "core_pce_ma": 2.271,
-        "headline_pce_ma": 2.098,
-        "core_cpi_ma": 2.709,
-        "headline_cpi_ma": 2.703,
-        "cleveland_1y": 2.215,
-        "michigan_1y": 2.696,
-        "nyfed_sce_1y": 2.556,
-        "spf_1y": 2.611
+        "core_pce_ma": 1.9,
+        "headline_pce_ma": 1.65,
+        "core_cpi_ma": 2.19,
+        "headline_cpi_ma": 2.42,
+        "cleveland_1y": 2.05,
+        "michigan_1y": 2.89,
+        "nyfed_sce_1y": 2.57,
+        "spf_1y": 2.22
       },
       "rstar": {
-        "hlw": 0.655,
-        "lw": 0.735,
-        "lubik_matthes": 1.192
+        "hlw": 0.76,
+        "lw": 0.84,
+        "lubik_matthes": 0.83,
+        "lw_one_sided": 0.84,
+        "lw_two_sided": 0.96
       }
     },
     {
@@ -2405,182 +2469,142 @@
       "period": "2026 Q2",
       "quarter": "2026 Q2",
       "policy": {
-        "effr": 4.35,
-        "treasury_1y": 4.222
+        "effr": 4.2,
+        "treasury_1y": 4.13
       },
       "inflation": {
-        "core_pce_ma": 2.16,
-        "headline_pce_ma": 2.208,
-        "core_cpi_ma": 2.558,
-        "headline_cpi_ma": 2.831,
-        "cleveland_1y": 2.155,
-        "michigan_1y": 2.829,
-        "nyfed_sce_1y": 2.612,
-        "spf_1y": 2.598
+        "core_pce_ma": 1.81,
+        "headline_pce_ma": 1.87,
+        "core_cpi_ma": 2.17,
+        "headline_cpi_ma": 2.49,
+        "cleveland_1y": 2.02,
+        "michigan_1y": 2.95,
+        "nyfed_sce_1y": 2.49,
+        "spf_1y": 2.21
       },
       "rstar": {
-        "hlw": 0.697,
-        "lw": 0.745,
-        "lubik_matthes": 1.19
+        "hlw": 0.74,
+        "lw": 0.83,
+        "lubik_matthes": 0.89,
+        "lw_one_sided": 0.83,
+        "lw_two_sided": 0.95
       }
     }
   ],
   "sep": [
     {
-      "date": "2020-03-31",
-      "period": "Mar 2020 SEP",
-      "quarter": "2020 Q1",
-      "rstar": 0.45
-    },
-    {
-      "date": "2020-06-30",
-      "period": "Jun 2020 SEP",
-      "quarter": "2020 Q2",
-      "rstar": 0.498
-    },
-    {
-      "date": "2020-09-30",
-      "period": "Sep 2020 SEP",
-      "quarter": "2020 Q3",
-      "rstar": 0.544
-    },
-    {
-      "date": "2020-12-31",
-      "period": "Dec 2020 SEP",
-      "quarter": "2020 Q4",
-      "rstar": 0.589
-    },
-    {
-      "date": "2021-03-31",
-      "period": "Mar 2021 SEP",
-      "quarter": "2021 Q1",
-      "rstar": 0.63
-    },
-    {
-      "date": "2021-06-30",
-      "period": "Jun 2021 SEP",
-      "quarter": "2021 Q2",
-      "rstar": 0.666
-    },
-    {
-      "date": "2021-09-30",
-      "period": "Sep 2021 SEP",
-      "quarter": "2021 Q3",
-      "rstar": 0.698
-    },
-    {
       "date": "2021-12-31",
-      "period": "Dec 2021 SEP",
+      "period": "2021 Q4 SEP",
       "quarter": "2021 Q4",
-      "rstar": 0.724
+      "rstar": 0.53
     },
     {
       "date": "2022-03-31",
-      "period": "Mar 2022 SEP",
+      "period": "2022 Q1 SEP",
       "quarter": "2022 Q1",
-      "rstar": 0.744
+      "rstar": 0.53
     },
     {
       "date": "2022-06-30",
-      "period": "Jun 2022 SEP",
+      "period": "2022 Q2 SEP",
       "quarter": "2022 Q2",
-      "rstar": 0.758
+      "rstar": 0.61
     },
     {
       "date": "2022-09-30",
-      "period": "Sep 2022 SEP",
+      "period": "2022 Q3 SEP",
       "quarter": "2022 Q3",
-      "rstar": 0.766
+      "rstar": 0.61
     },
     {
       "date": "2022-12-31",
-      "period": "Dec 2022 SEP",
+      "period": "2022 Q4 SEP",
       "quarter": "2022 Q4",
-      "rstar": 0.769
+      "rstar": 0.61
     },
     {
       "date": "2023-03-31",
-      "period": "Mar 2023 SEP",
+      "period": "2023 Q1 SEP",
       "quarter": "2023 Q1",
-      "rstar": 0.767
+      "rstar": 0.61
     },
     {
       "date": "2023-06-30",
-      "period": "Jun 2023 SEP",
+      "period": "2023 Q2 SEP",
       "quarter": "2023 Q2",
-      "rstar": 0.901
+      "rstar": 0.69
     },
     {
       "date": "2023-09-30",
-      "period": "Sep 2023 SEP",
+      "period": "2023 Q3 SEP",
       "quarter": "2023 Q3",
-      "rstar": 0.892
+      "rstar": 0.69
     },
     {
       "date": "2023-12-31",
-      "period": "Dec 2023 SEP",
+      "period": "2023 Q4 SEP",
       "quarter": "2023 Q4",
-      "rstar": 0.881
+      "rstar": 0.69
     },
     {
       "date": "2024-03-31",
-      "period": "Mar 2024 SEP",
+      "period": "2024 Q1 SEP",
       "quarter": "2024 Q1",
-      "rstar": 0.869
+      "rstar": 0.69
     },
     {
       "date": "2024-06-30",
-      "period": "Jun 2024 SEP",
+      "period": "2024 Q2 SEP",
       "quarter": "2024 Q2",
-      "rstar": 0.858
+      "rstar": 0.77
     },
     {
       "date": "2024-09-30",
-      "period": "Sep 2024 SEP",
+      "period": "2024 Q3 SEP",
       "quarter": "2024 Q3",
-      "rstar": 0.848
+      "rstar": 0.77
     },
     {
       "date": "2024-12-31",
-      "period": "Dec 2024 SEP",
+      "period": "2024 Q4 SEP",
       "quarter": "2024 Q4",
-      "rstar": 0.84
+      "rstar": 0.77
     },
     {
       "date": "2025-03-31",
-      "period": "Mar 2025 SEP",
+      "period": "2025 Q1 SEP",
       "quarter": "2025 Q1",
-      "rstar": 0.836
+      "rstar": 0.77
     },
     {
       "date": "2025-06-30",
-      "period": "Jun 2025 SEP",
+      "period": "2025 Q2 SEP",
       "quarter": "2025 Q2",
-      "rstar": 0.837
+      "rstar": 0.85
     },
     {
       "date": "2025-09-30",
-      "period": "Sep 2025 SEP",
+      "period": "2025 Q3 SEP",
       "quarter": "2025 Q3",
-      "rstar": 0.843
+      "rstar": 0.85
     },
     {
       "date": "2025-12-31",
-      "period": "Dec 2025 SEP",
+      "period": "2025 Q4 SEP",
       "quarter": "2025 Q4",
-      "rstar": 0.855
+      "rstar": 0.85
     },
     {
       "date": "2026-03-31",
-      "period": "Mar 2026 SEP",
+      "period": "2026 Q1 SEP",
       "quarter": "2026 Q1",
-      "rstar": 0.873
+      "rstar": 0.85
     },
     {
       "date": "2026-06-30",
-      "period": "Jun 2026 SEP",
+      "period": "2026 Q2 SEP",
       "quarter": "2026 Q2",
-      "rstar": 0.896
+      "rstar": 0.93
     }
   ]
 }
