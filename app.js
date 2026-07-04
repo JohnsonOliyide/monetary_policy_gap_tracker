@@ -514,12 +514,10 @@ function updateLabels() {
   document.getElementById('tableSubtitle').textContent = `Stance calculated using ${policyName} and ${inflationName}.`;
   document.getElementById('selectedPolicyLabel').textContent = policyName;
   document.getElementById('selectedInflationLabel').textContent = inflationName;
-  const { start, end } = getDateRange();
-  document.getElementById('selectedDateRangeLabel').textContent = `${formatDateForLabel(start)} to ${formatDateForLabel(end)}`;
-
-  document.querySelectorAll('#inflationChips button').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.inflation === inflationKey);
-  });
+  const frequencyRule = inflationKey === 'spf_1y'
+    ? 'SPF is quarterly, so all stance calculations are shown at quarterly frequency.'
+    : 'Monthly measures remain monthly; quarterly measures remain quarterly.';
+  document.getElementById('frequencyRuleLabel').textContent = frequencyRule;
 }
 
 function updateAll() {
@@ -538,21 +536,7 @@ function attachEvents() {
     document.getElementById('endDate').value = fullEndDate;
     updateAll();
   });
-  document.querySelectorAll('input[data-measure]').forEach(el => el.addEventListener('change', updateAll));
-  document.querySelectorAll('#inflationChips button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.getElementById('inflationSelect').value = btn.dataset.inflation;
-      updateAll();
-    });
-  });
-  document.querySelectorAll('.segmented button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      viewMode = btn.dataset.mode;
-      document.querySelectorAll('.segmented button').forEach(b => b.classList.toggle('active', b === btn));
-      updateAll();
-    });
-  });
-}
+  document.querySelectorAll('input[data-measure]').forEach(el => el.addEventListener('change', updateAll));}
 
 fetch(DATA_URL)
   .then(response => response.json())
