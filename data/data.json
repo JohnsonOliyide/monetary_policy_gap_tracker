@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-07-04T23:03:39+00:00",
+    "generated_at_utc": "2026-07-08T12:54:17+00:00",
     "description": "Generated from public data sources by scripts/update_data.py.",
     "source_urls": {
       "kc_fed": "https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv",
@@ -10417,7 +10417,7 @@
       },
       "rstar": {
         "kc_fed": 1.755102,
-        "dkw": 3.395329,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10441,7 +10441,7 @@
       },
       "rstar": {
         "kc_fed": 1.834961,
-        "dkw": 3.469379,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10465,7 +10465,7 @@
       },
       "rstar": {
         "kc_fed": 1.900467,
-        "dkw": 3.375204,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10489,7 +10489,7 @@
       },
       "rstar": {
         "kc_fed": 1.955244,
-        "dkw": 3.331845,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10513,7 +10513,7 @@
       },
       "rstar": {
         "kc_fed": 1.949655,
-        "dkw": 3.336843,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10537,7 +10537,7 @@
       },
       "rstar": {
         "kc_fed": 2.096535,
-        "dkw": 3.467641,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10561,7 +10561,7 @@
       },
       "rstar": {
         "kc_fed": 2.370298,
-        "dkw": 3.65904,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10585,7 +10585,7 @@
       },
       "rstar": {
         "kc_fed": 2.440035,
-        "dkw": 3.803165,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10609,7 +10609,7 @@
       },
       "rstar": {
         "kc_fed": 2.480597,
-        "dkw": 3.739591,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10633,7 +10633,7 @@
       },
       "rstar": {
         "kc_fed": 2.512812,
-        "dkw": 3.71807,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10657,7 +10657,7 @@
       },
       "rstar": {
         "kc_fed": 2.575186,
-        "dkw": 3.749947,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10681,7 +10681,7 @@
       },
       "rstar": {
         "kc_fed": 2.536488,
-        "dkw": 3.793438,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10705,7 +10705,7 @@
       },
       "rstar": {
         "kc_fed": 2.59344,
-        "dkw": 3.735943,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10729,7 +10729,7 @@
       },
       "rstar": {
         "kc_fed": 2.745454,
-        "dkw": 3.786442,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10753,7 +10753,7 @@
       },
       "rstar": {
         "kc_fed": 2.736195,
-        "dkw": 3.97095,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10777,7 +10777,7 @@
       },
       "rstar": {
         "kc_fed": 2.776873,
-        "dkw": 4.070215,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10801,7 +10801,7 @@
       },
       "rstar": {
         "kc_fed": 2.749974,
-        "dkw": 4.333282,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10825,7 +10825,7 @@
       },
       "rstar": {
         "kc_fed": 2.840533,
-        "dkw": 4.363714,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10849,7 +10849,7 @@
       },
       "rstar": {
         "kc_fed": 2.796388,
-        "dkw": 4.288853,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10873,7 +10873,7 @@
       },
       "rstar": {
         "kc_fed": 2.826976,
-        "dkw": 4.03637,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10897,7 +10897,7 @@
       },
       "rstar": {
         "kc_fed": 2.711211,
-        "dkw": 3.925695,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10921,7 +10921,7 @@
       },
       "rstar": {
         "kc_fed": 2.469904,
-        "dkw": 3.808936,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10945,7 +10945,7 @@
       },
       "rstar": {
         "kc_fed": 2.465147,
-        "dkw": 3.679484,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10969,7 +10969,7 @@
       },
       "rstar": {
         "kc_fed": 2.378735,
-        "dkw": 3.694595,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -10993,7 +10993,7 @@
       },
       "rstar": {
         "kc_fed": 2.506761,
-        "dkw": 3.672681,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11017,7 +11017,7 @@
       },
       "rstar": {
         "kc_fed": 2.641448,
-        "dkw": 3.699567,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11041,7 +11041,7 @@
       },
       "rstar": {
         "kc_fed": 2.72259,
-        "dkw": 3.824624,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11065,7 +11065,7 @@
       },
       "rstar": {
         "kc_fed": 2.555582,
-        "dkw": 3.711562,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11089,7 +11089,7 @@
       },
       "rstar": {
         "kc_fed": 2.580601,
-        "dkw": 3.540777,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11113,7 +11113,7 @@
       },
       "rstar": {
         "kc_fed": 2.439155,
-        "dkw": 3.284065,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11137,7 +11137,7 @@
       },
       "rstar": {
         "kc_fed": 2.531837,
-        "dkw": 3.34935,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11161,7 +11161,7 @@
       },
       "rstar": {
         "kc_fed": 2.65837,
-        "dkw": 3.364704,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11185,7 +11185,7 @@
       },
       "rstar": {
         "kc_fed": 2.614226,
-        "dkw": 3.391611,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11209,7 +11209,7 @@
       },
       "rstar": {
         "kc_fed": 2.562295,
-        "dkw": 3.349127,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11233,7 +11233,7 @@
       },
       "rstar": {
         "kc_fed": 2.577284,
-        "dkw": 3.183468,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11257,7 +11257,7 @@
       },
       "rstar": {
         "kc_fed": 2.594209,
-        "dkw": 3.007333,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11281,7 +11281,7 @@
       },
       "rstar": {
         "kc_fed": 2.696917,
-        "dkw": 2.963262,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11305,7 +11305,7 @@
       },
       "rstar": {
         "kc_fed": 2.548417,
-        "dkw": 2.784047,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11329,7 +11329,7 @@
       },
       "rstar": {
         "kc_fed": 2.514925,
-        "dkw": 2.401925,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11353,7 +11353,7 @@
       },
       "rstar": {
         "kc_fed": 2.436085,
-        "dkw": 2.191968,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11377,7 +11377,7 @@
       },
       "rstar": {
         "kc_fed": 2.376464,
-        "dkw": 2.355319,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11401,7 +11401,7 @@
       },
       "rstar": {
         "kc_fed": 2.48709,
-        "dkw": 2.437219,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11425,7 +11425,7 @@
       },
       "rstar": {
         "kc_fed": 2.426574,
-        "dkw": 2.300568,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11449,7 +11449,7 @@
       },
       "rstar": {
         "kc_fed": 2.387368,
-        "dkw": 2.263414,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11473,7 +11473,7 @@
       },
       "rstar": {
         "kc_fed": 2.430466,
-        "dkw": 2.400991,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11497,7 +11497,7 @@
       },
       "rstar": {
         "kc_fed": 2.45196,
-        "dkw": 2.398991,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11521,7 +11521,7 @@
       },
       "rstar": {
         "kc_fed": 2.502111,
-        "dkw": 2.3107,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11545,7 +11545,7 @@
       },
       "rstar": {
         "kc_fed": 2.749911,
-        "dkw": 2.238896,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11569,7 +11569,7 @@
       },
       "rstar": {
         "kc_fed": 2.551776,
-        "dkw": 2.20705,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11593,7 +11593,7 @@
       },
       "rstar": {
         "kc_fed": 2.558141,
-        "dkw": 2.242842,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11617,7 +11617,7 @@
       },
       "rstar": {
         "kc_fed": 2.572668,
-        "dkw": 2.214532,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11641,7 +11641,7 @@
       },
       "rstar": {
         "kc_fed": 2.757444,
-        "dkw": 2.4823,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11665,7 +11665,7 @@
       },
       "rstar": {
         "kc_fed": 2.810967,
-        "dkw": 2.655475,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11689,7 +11689,7 @@
       },
       "rstar": {
         "kc_fed": 2.714131,
-        "dkw": 2.594627,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11713,7 +11713,7 @@
       },
       "rstar": {
         "kc_fed": 2.685718,
-        "dkw": 2.634955,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11737,7 +11737,7 @@
       },
       "rstar": {
         "kc_fed": 2.7388,
-        "dkw": 2.729786,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11761,7 +11761,7 @@
       },
       "rstar": {
         "kc_fed": 2.878937,
-        "dkw": 2.971862,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11785,7 +11785,7 @@
       },
       "rstar": {
         "kc_fed": 2.835484,
-        "dkw": 2.981262,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11809,7 +11809,7 @@
       },
       "rstar": {
         "kc_fed": 2.620703,
-        "dkw": 2.754037,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11833,7 +11833,7 @@
       },
       "rstar": {
         "kc_fed": 2.662551,
-        "dkw": 2.835295,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11857,7 +11857,7 @@
       },
       "rstar": {
         "kc_fed": 2.680153,
-        "dkw": 2.749037,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11881,7 +11881,7 @@
       },
       "rstar": {
         "kc_fed": 2.551797,
-        "dkw": 2.616385,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11905,7 +11905,7 @@
       },
       "rstar": {
         "kc_fed": 2.57958,
-        "dkw": 2.67903,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11929,7 +11929,7 @@
       },
       "rstar": {
         "kc_fed": 2.750669,
-        "dkw": 2.79789,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11953,7 +11953,7 @@
       },
       "rstar": {
         "kc_fed": 2.762984,
-        "dkw": 2.907633,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -11977,7 +11977,7 @@
       },
       "rstar": {
         "kc_fed": 2.86804,
-        "dkw": 2.794755,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12001,7 +12001,7 @@
       },
       "rstar": {
         "kc_fed": 2.832898,
-        "dkw": 2.869375,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12025,7 +12025,7 @@
       },
       "rstar": {
         "kc_fed": 2.765433,
-        "dkw": 2.9133,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12049,7 +12049,7 @@
       },
       "rstar": {
         "kc_fed": 2.836106,
-        "dkw": 2.789181,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12073,7 +12073,7 @@
       },
       "rstar": {
         "kc_fed": 2.811673,
-        "dkw": 2.72892,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12097,7 +12097,7 @@
       },
       "rstar": {
         "kc_fed": 2.794583,
-        "dkw": 2.75248,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12121,7 +12121,7 @@
       },
       "rstar": {
         "kc_fed": 2.821245,
-        "dkw": 2.7485,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12145,7 +12145,7 @@
       },
       "rstar": {
         "kc_fed": 2.813102,
-        "dkw": 2.722105,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12169,7 +12169,7 @@
       },
       "rstar": {
         "kc_fed": 2.856672,
-        "dkw": 2.739479,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12193,7 +12193,7 @@
       },
       "rstar": {
         "kc_fed": 2.872625,
-        "dkw": 2.776363,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12217,7 +12217,7 @@
       },
       "rstar": {
         "kc_fed": 2.747211,
-        "dkw": 2.72623,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12241,7 +12241,7 @@
       },
       "rstar": {
         "kc_fed": 2.695053,
-        "dkw": 2.65605,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12265,7 +12265,7 @@
       },
       "rstar": {
         "kc_fed": 2.539273,
-        "dkw": 2.467423,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12289,7 +12289,7 @@
       },
       "rstar": {
         "kc_fed": 2.494163,
-        "dkw": 2.40703,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12313,7 +12313,7 @@
       },
       "rstar": {
         "kc_fed": 2.440213,
-        "dkw": 2.406387,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12337,7 +12337,7 @@
       },
       "rstar": {
         "kc_fed": 2.423445,
-        "dkw": 2.42974,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12361,7 +12361,7 @@
       },
       "rstar": {
         "kc_fed": 2.403887,
-        "dkw": 2.386952,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12385,7 +12385,7 @@
       },
       "rstar": {
         "kc_fed": 2.300561,
-        "dkw": 2.332595,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12409,7 +12409,7 @@
       },
       "rstar": {
         "kc_fed": 2.264694,
-        "dkw": 2.30666,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12433,7 +12433,7 @@
       },
       "rstar": {
         "kc_fed": 2.220293,
-        "dkw": 2.441262,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12457,7 +12457,7 @@
       },
       "rstar": {
         "kc_fed": 2.269363,
-        "dkw": 2.530842,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12481,7 +12481,7 @@
       },
       "rstar": {
         "kc_fed": 2.239246,
-        "dkw": 2.553818,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12505,7 +12505,7 @@
       },
       "rstar": {
         "kc_fed": 2.147074,
-        "dkw": 2.62246,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12529,7 +12529,7 @@
       },
       "rstar": {
         "kc_fed": 2.09993,
-        "dkw": 2.625041,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12553,7 +12553,7 @@
       },
       "rstar": {
         "kc_fed": 2.129235,
-        "dkw": 2.538143,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12577,7 +12577,7 @@
       },
       "rstar": {
         "kc_fed": 2.003369,
-        "dkw": 2.559652,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12601,7 +12601,7 @@
       },
       "rstar": {
         "kc_fed": 1.927477,
-        "dkw": 2.704809,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12625,7 +12625,7 @@
       },
       "rstar": {
         "kc_fed": 1.85159,
-        "dkw": 2.7862,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12649,7 +12649,7 @@
       },
       "rstar": {
         "kc_fed": 1.837967,
-        "dkw": 2.713386,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12673,7 +12673,7 @@
       },
       "rstar": {
         "kc_fed": 1.75597,
-        "dkw": 2.58831,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12697,7 +12697,7 @@
       },
       "rstar": {
         "kc_fed": 1.704852,
-        "dkw": 2.470825,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12721,7 +12721,7 @@
       },
       "rstar": {
         "kc_fed": 1.664879,
-        "dkw": 2.504076,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12745,7 +12745,7 @@
       },
       "rstar": {
         "kc_fed": 1.599777,
-        "dkw": 2.421053,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12769,7 +12769,7 @@
       },
       "rstar": {
         "kc_fed": 1.608659,
-        "dkw": 2.495745,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12793,7 +12793,7 @@
       },
       "rstar": {
         "kc_fed": 1.6508,
-        "dkw": 2.47795,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12817,7 +12817,7 @@
       },
       "rstar": {
         "kc_fed": 1.601375,
-        "dkw": 2.520568,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12841,7 +12841,7 @@
       },
       "rstar": {
         "kc_fed": 1.631964,
-        "dkw": 2.58205,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12865,7 +12865,7 @@
       },
       "rstar": {
         "kc_fed": 1.658991,
-        "dkw": 2.5616,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12889,7 +12889,7 @@
       },
       "rstar": {
         "kc_fed": 1.61074,
-        "dkw": 2.4859,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12913,7 +12913,7 @@
       },
       "rstar": {
         "kc_fed": 1.596794,
-        "dkw": 2.40251,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12937,7 +12937,7 @@
       },
       "rstar": {
         "kc_fed": 1.5678,
-        "dkw": 2.372986,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12961,7 +12961,7 @@
       },
       "rstar": {
         "kc_fed": 1.542718,
-        "dkw": 2.391311,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -12985,7 +12985,7 @@
       },
       "rstar": {
         "kc_fed": 1.434483,
-        "dkw": 2.316971,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13009,7 +13009,7 @@
       },
       "rstar": {
         "kc_fed": 1.415119,
-        "dkw": 2.2853,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13033,7 +13033,7 @@
       },
       "rstar": {
         "kc_fed": 1.469387,
-        "dkw": 2.352547,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13057,7 +13057,7 @@
       },
       "rstar": {
         "kc_fed": 1.469411,
-        "dkw": 2.335718,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13081,7 +13081,7 @@
       },
       "rstar": {
         "kc_fed": 1.451401,
-        "dkw": 2.357524,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13105,7 +13105,7 @@
       },
       "rstar": {
         "kc_fed": 1.429524,
-        "dkw": 2.338205,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13129,7 +13129,7 @@
       },
       "rstar": {
         "kc_fed": 1.411963,
-        "dkw": 2.324059,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13153,7 +13153,7 @@
       },
       "rstar": {
         "kc_fed": 1.362846,
-        "dkw": 2.275559,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13177,7 +13177,7 @@
       },
       "rstar": {
         "kc_fed": 1.443113,
-        "dkw": 2.185857,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13201,7 +13201,7 @@
       },
       "rstar": {
         "kc_fed": 1.45279,
-        "dkw": 2.172981,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13225,7 +13225,7 @@
       },
       "rstar": {
         "kc_fed": 1.552553,
-        "dkw": 2.204186,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13249,7 +13249,7 @@
       },
       "rstar": {
         "kc_fed": 1.509312,
-        "dkw": 2.202442,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13273,7 +13273,7 @@
       },
       "rstar": {
         "kc_fed": 1.466555,
-        "dkw": 2.136095,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13297,7 +13297,7 @@
       },
       "rstar": {
         "kc_fed": 1.513333,
-        "dkw": 2.102794,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13321,7 +13321,7 @@
       },
       "rstar": {
         "kc_fed": 1.556813,
-        "dkw": 1.995542,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13345,7 +13345,7 @@
       },
       "rstar": {
         "kc_fed": 1.595581,
-        "dkw": 1.908948,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13369,7 +13369,7 @@
       },
       "rstar": {
         "kc_fed": 1.531781,
-        "dkw": 1.910632,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13393,7 +13393,7 @@
       },
       "rstar": {
         "kc_fed": 1.55557,
-        "dkw": 1.908285,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13417,7 +13417,7 @@
       },
       "rstar": {
         "kc_fed": 1.53346,
-        "dkw": 1.808691,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13441,7 +13441,7 @@
       },
       "rstar": {
         "kc_fed": 1.529825,
-        "dkw": 1.731486,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13465,7 +13465,7 @@
       },
       "rstar": {
         "kc_fed": 1.590037,
-        "dkw": 1.689352,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13489,7 +13489,7 @@
       },
       "rstar": {
         "kc_fed": 1.582923,
-        "dkw": 1.567386,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13513,7 +13513,7 @@
       },
       "rstar": {
         "kc_fed": 1.519123,
-        "dkw": 1.545958,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13537,7 +13537,7 @@
       },
       "rstar": {
         "kc_fed": 1.621003,
-        "dkw": 1.685585,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13561,7 +13561,7 @@
       },
       "rstar": {
         "kc_fed": 1.601147,
-        "dkw": 1.689096,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13585,7 +13585,7 @@
       },
       "rstar": {
         "kc_fed": 1.596374,
-        "dkw": 1.679153,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13609,7 +13609,7 @@
       },
       "rstar": {
         "kc_fed": 1.677265,
-        "dkw": 1.755758,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13633,7 +13633,7 @@
       },
       "rstar": {
         "kc_fed": 1.695182,
-        "dkw": 1.933735,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13657,7 +13657,7 @@
       },
       "rstar": {
         "kc_fed": 1.755677,
-        "dkw": 2.084821,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13681,7 +13681,7 @@
       },
       "rstar": {
         "kc_fed": 1.957258,
-        "dkw": 2.1325,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13705,7 +13705,7 @@
       },
       "rstar": {
         "kc_fed": 2.012862,
-        "dkw": 2.102559,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13729,7 +13729,7 @@
       },
       "rstar": {
         "kc_fed": 1.886088,
-        "dkw": 2.178805,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13753,7 +13753,7 @@
       },
       "rstar": {
         "kc_fed": 1.95656,
-        "dkw": 2.143552,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13777,7 +13777,7 @@
       },
       "rstar": {
         "kc_fed": 2.02345,
-        "dkw": 2.235067,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13801,7 +13801,7 @@
       },
       "rstar": {
         "kc_fed": 1.993795,
-        "dkw": 2.315958,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13825,7 +13825,7 @@
       },
       "rstar": {
         "kc_fed": 2.203563,
-        "dkw": 2.35378,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13849,7 +13849,7 @@
       },
       "rstar": {
         "kc_fed": 2.228936,
-        "dkw": 2.249119,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13873,7 +13873,7 @@
       },
       "rstar": {
         "kc_fed": 2.129076,
-        "dkw": 2.25336,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13897,7 +13897,7 @@
       },
       "rstar": {
         "kc_fed": 2.246343,
-        "dkw": 2.157511,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13921,7 +13921,7 @@
       },
       "rstar": {
         "kc_fed": 2.231515,
-        "dkw": 2.100618,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13945,7 +13945,7 @@
       },
       "rstar": {
         "kc_fed": 2.20354,
-        "dkw": 2.058942,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13969,7 +13969,7 @@
       },
       "rstar": {
         "kc_fed": 2.148854,
-        "dkw": 1.898891,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -13993,7 +13993,7 @@
       },
       "rstar": {
         "kc_fed": 2.184132,
-        "dkw": 1.752036,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14017,7 +14017,7 @@
       },
       "rstar": {
         "kc_fed": 2.11182,
-        "dkw": 1.79118,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14041,7 +14041,7 @@
       },
       "rstar": {
         "kc_fed": 2.113663,
-        "dkw": 1.861665,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14065,7 +14065,7 @@
       },
       "rstar": {
         "kc_fed": 2.149524,
-        "dkw": 1.75357,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14089,7 +14089,7 @@
       },
       "rstar": {
         "kc_fed": 2.147828,
-        "dkw": 1.673662,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14113,7 +14113,7 @@
       },
       "rstar": {
         "kc_fed": 2.190538,
-        "dkw": 1.643638,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14137,7 +14137,7 @@
       },
       "rstar": {
         "kc_fed": 2.091979,
-        "dkw": 1.56481,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14161,7 +14161,7 @@
       },
       "rstar": {
         "kc_fed": 2.050098,
-        "dkw": 1.560781,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14185,7 +14185,7 @@
       },
       "rstar": {
         "kc_fed": 1.964848,
-        "dkw": 1.650775,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14209,7 +14209,7 @@
       },
       "rstar": {
         "kc_fed": 2.10072,
-        "dkw": 1.798009,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14233,7 +14233,7 @@
       },
       "rstar": {
         "kc_fed": 2.069232,
-        "dkw": 1.875932,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14257,7 +14257,7 @@
       },
       "rstar": {
         "kc_fed": 2.14231,
-        "dkw": 1.937705,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14281,7 +14281,7 @@
       },
       "rstar": {
         "kc_fed": 2.203058,
-        "dkw": 1.975795,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14305,7 +14305,7 @@
       },
       "rstar": {
         "kc_fed": 2.195806,
-        "dkw": 1.946295,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14329,7 +14329,7 @@
       },
       "rstar": {
         "kc_fed": 2.138637,
-        "dkw": 1.864562,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14353,7 +14353,7 @@
       },
       "rstar": {
         "kc_fed": 2.244223,
-        "dkw": 1.95159,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14377,7 +14377,7 @@
       },
       "rstar": {
         "kc_fed": 2.132774,
-        "dkw": 1.846814,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14401,7 +14401,7 @@
       },
       "rstar": {
         "kc_fed": 2.17799,
-        "dkw": 1.724426,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14425,7 +14425,7 @@
       },
       "rstar": {
         "kc_fed": 2.088825,
-        "dkw": 1.749276,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14449,7 +14449,7 @@
       },
       "rstar": {
         "kc_fed": 2.114495,
-        "dkw": 1.842224,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14473,7 +14473,7 @@
       },
       "rstar": {
         "kc_fed": 2.089776,
-        "dkw": 1.791178,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14497,7 +14497,7 @@
       },
       "rstar": {
         "kc_fed": 2.22062,
-        "dkw": 1.894775,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14521,7 +14521,7 @@
       },
       "rstar": {
         "kc_fed": 2.305357,
-        "dkw": 1.954705,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14545,7 +14545,7 @@
       },
       "rstar": {
         "kc_fed": 2.257961,
-        "dkw": 1.888119,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14569,7 +14569,7 @@
       },
       "rstar": {
         "kc_fed": 2.276228,
-        "dkw": 1.814962,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14593,7 +14593,7 @@
       },
       "rstar": {
         "kc_fed": 2.181455,
-        "dkw": 1.713155,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14617,7 +14617,7 @@
       },
       "rstar": {
         "kc_fed": 2.276218,
-        "dkw": 1.758871,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14641,7 +14641,7 @@
       },
       "rstar": {
         "kc_fed": 2.213402,
-        "dkw": 1.727605,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14665,7 +14665,7 @@
       },
       "rstar": {
         "kc_fed": 2.328637,
-        "dkw": 1.660877,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14689,7 +14689,7 @@
       },
       "rstar": {
         "kc_fed": 2.381634,
-        "dkw": 1.582878,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14713,7 +14713,7 @@
       },
       "rstar": {
         "kc_fed": 2.321549,
-        "dkw": 1.539486,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14737,7 +14737,7 @@
       },
       "rstar": {
         "kc_fed": 2.296873,
-        "dkw": 1.47423,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14761,7 +14761,7 @@
       },
       "rstar": {
         "kc_fed": 2.254843,
-        "dkw": 1.502584,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14785,7 +14785,7 @@
       },
       "rstar": {
         "kc_fed": 2.284305,
-        "dkw": 1.513168,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14809,7 +14809,7 @@
       },
       "rstar": {
         "kc_fed": 2.383028,
-        "dkw": 1.507424,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14833,7 +14833,7 @@
       },
       "rstar": {
         "kc_fed": 2.40105,
-        "dkw": 1.517795,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14857,7 +14857,7 @@
       },
       "rstar": {
         "kc_fed": 2.359076,
-        "dkw": 1.447968,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14881,7 +14881,7 @@
       },
       "rstar": {
         "kc_fed": 2.348558,
-        "dkw": 1.426677,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14905,7 +14905,7 @@
       },
       "rstar": {
         "kc_fed": 2.285004,
-        "dkw": 1.379238,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14929,7 +14929,7 @@
       },
       "rstar": {
         "kc_fed": 2.129694,
-        "dkw": 1.248238,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14953,7 +14953,7 @@
       },
       "rstar": {
         "kc_fed": 1.994582,
-        "dkw": 1.213933,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -14977,7 +14977,7 @@
       },
       "rstar": {
         "kc_fed": 1.976836,
-        "dkw": 1.2867,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15001,7 +15001,7 @@
       },
       "rstar": {
         "kc_fed": 1.916535,
-        "dkw": 1.229486,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15025,7 +15025,7 @@
       },
       "rstar": {
         "kc_fed": 1.945903,
-        "dkw": 1.285584,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15049,7 +15049,7 @@
       },
       "rstar": {
         "kc_fed": 2.063069,
-        "dkw": 1.376942,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15073,7 +15073,7 @@
       },
       "rstar": {
         "kc_fed": 2.127638,
-        "dkw": 1.464026,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15097,7 +15097,7 @@
       },
       "rstar": {
         "kc_fed": 2.03838,
-        "dkw": 1.438695,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15121,7 +15121,7 @@
       },
       "rstar": {
         "kc_fed": 2.08584,
-        "dkw": 1.552758,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15145,7 +15145,7 @@
       },
       "rstar": {
         "kc_fed": 2.047891,
-        "dkw": 1.673027,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15169,7 +15169,7 @@
       },
       "rstar": {
         "kc_fed": 2.036163,
-        "dkw": 1.646442,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15193,7 +15193,7 @@
       },
       "rstar": {
         "kc_fed": 2.188444,
-        "dkw": 1.718055,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15217,7 +15217,7 @@
       },
       "rstar": {
         "kc_fed": 2.254985,
-        "dkw": 1.743519,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15241,7 +15241,7 @@
       },
       "rstar": {
         "kc_fed": 2.09951,
-        "dkw": 1.813975,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15265,7 +15265,7 @@
       },
       "rstar": {
         "kc_fed": 2.242707,
-        "dkw": 1.742165,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15289,7 +15289,7 @@
       },
       "rstar": {
         "kc_fed": 2.076865,
-        "dkw": 1.833382,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15313,7 +15313,7 @@
       },
       "rstar": {
         "kc_fed": 2.191073,
-        "dkw": 1.900995,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15337,7 +15337,7 @@
       },
       "rstar": {
         "kc_fed": 2.245238,
-        "dkw": 1.801305,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15361,7 +15361,7 @@
       },
       "rstar": {
         "kc_fed": 2.172322,
-        "dkw": 1.727787,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15385,7 +15385,7 @@
       },
       "rstar": {
         "kc_fed": 2.227624,
-        "dkw": 1.639989,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15409,7 +15409,7 @@
       },
       "rstar": {
         "kc_fed": 2.319447,
-        "dkw": 1.7793,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15433,7 +15433,7 @@
       },
       "rstar": {
         "kc_fed": 2.346335,
-        "dkw": 1.663414,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15457,7 +15457,7 @@
       },
       "rstar": {
         "kc_fed": 2.226845,
-        "dkw": 1.64022,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15481,7 +15481,7 @@
       },
       "rstar": {
         "kc_fed": 2.170525,
-        "dkw": 1.576952,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15505,7 +15505,7 @@
       },
       "rstar": {
         "kc_fed": 2.155277,
-        "dkw": 1.60909,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15529,7 +15529,7 @@
       },
       "rstar": {
         "kc_fed": 2.207134,
-        "dkw": 1.5889,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15553,7 +15553,7 @@
       },
       "rstar": {
         "kc_fed": 2.17361,
-        "dkw": 1.564333,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15577,7 +15577,7 @@
       },
       "rstar": {
         "kc_fed": 2.099805,
-        "dkw": 1.419245,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15601,7 +15601,7 @@
       },
       "rstar": {
         "kc_fed": 1.818548,
-        "dkw": 1.425386,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15625,7 +15625,7 @@
       },
       "rstar": {
         "kc_fed": 1.714252,
-        "dkw": 1.410784,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15649,7 +15649,7 @@
       },
       "rstar": {
         "kc_fed": 1.704454,
-        "dkw": 1.358677,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15673,7 +15673,7 @@
       },
       "rstar": {
         "kc_fed": 1.578742,
-        "dkw": 1.461905,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15697,7 +15697,7 @@
       },
       "rstar": {
         "kc_fed": 1.470157,
-        "dkw": 1.531541,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15721,7 +15721,7 @@
       },
       "rstar": {
         "kc_fed": 1.459873,
-        "dkw": 1.499329,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15745,7 +15745,7 @@
       },
       "rstar": {
         "kc_fed": 1.417372,
-        "dkw": 1.476138,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15769,7 +15769,7 @@
       },
       "rstar": {
         "kc_fed": 1.398366,
-        "dkw": 1.411643,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15793,7 +15793,7 @@
       },
       "rstar": {
         "kc_fed": 1.255308,
-        "dkw": 1.385888,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15817,7 +15817,7 @@
       },
       "rstar": {
         "kc_fed": 1.101674,
-        "dkw": 1.325114,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15841,7 +15841,7 @@
       },
       "rstar": {
         "kc_fed": 0.996737,
-        "dkw": 1.33511,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15865,7 +15865,7 @@
       },
       "rstar": {
         "kc_fed": 0.98685,
-        "dkw": 1.50028,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15889,7 +15889,7 @@
       },
       "rstar": {
         "kc_fed": 1.055252,
-        "dkw": 1.468124,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15913,7 +15913,7 @@
       },
       "rstar": {
         "kc_fed": 1.181138,
-        "dkw": 1.438332,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15937,7 +15937,7 @@
       },
       "rstar": {
         "kc_fed": 1.223362,
-        "dkw": 1.552675,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15961,7 +15961,7 @@
       },
       "rstar": {
         "kc_fed": 1.160229,
-        "dkw": 1.508991,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -15985,7 +15985,7 @@
       },
       "rstar": {
         "kc_fed": 1.184243,
-        "dkw": 1.492314,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16009,7 +16009,7 @@
       },
       "rstar": {
         "kc_fed": 1.149073,
-        "dkw": 1.41969,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16033,7 +16033,7 @@
       },
       "rstar": {
         "kc_fed": 1.187778,
-        "dkw": 1.357368,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16057,7 +16057,7 @@
       },
       "rstar": {
         "kc_fed": 1.254275,
-        "dkw": 1.248782,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16081,7 +16081,7 @@
       },
       "rstar": {
         "kc_fed": 1.223795,
-        "dkw": 1.10044,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16105,7 +16105,7 @@
       },
       "rstar": {
         "kc_fed": 1.032391,
-        "dkw": 1.156877,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16129,7 +16129,7 @@
       },
       "rstar": {
         "kc_fed": 1.106907,
-        "dkw": 1.171742,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16153,7 +16153,7 @@
       },
       "rstar": {
         "kc_fed": 1.066504,
-        "dkw": 1.164743,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16177,7 +16177,7 @@
       },
       "rstar": {
         "kc_fed": 1.157799,
-        "dkw": 1.170514,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16201,7 +16201,7 @@
       },
       "rstar": {
         "kc_fed": 1.140594,
-        "dkw": 1.104326,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16225,7 +16225,7 @@
       },
       "rstar": {
         "kc_fed": 1.177751,
-        "dkw": 1.072738,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16249,7 +16249,7 @@
       },
       "rstar": {
         "kc_fed": 1.148705,
-        "dkw": 1.123252,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16273,7 +16273,7 @@
       },
       "rstar": {
         "kc_fed": 1.157804,
-        "dkw": 0.954905,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16297,7 +16297,7 @@
       },
       "rstar": {
         "kc_fed": 1.057823,
-        "dkw": 0.868157,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16321,7 +16321,7 @@
       },
       "rstar": {
         "kc_fed": 1.074125,
-        "dkw": 1.121714,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16345,7 +16345,7 @@
       },
       "rstar": {
         "kc_fed": 1.180915,
-        "dkw": 1.312962,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16369,7 +16369,7 @@
       },
       "rstar": {
         "kc_fed": 1.2131,
-        "dkw": 1.238424,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16393,7 +16393,7 @@
       },
       "rstar": {
         "kc_fed": 1.270989,
-        "dkw": 1.235268,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16417,7 +16417,7 @@
       },
       "rstar": {
         "kc_fed": 1.335146,
-        "dkw": 1.207589,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16441,7 +16441,7 @@
       },
       "rstar": {
         "kc_fed": 1.381491,
-        "dkw": 1.187491,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16465,7 +16465,7 @@
       },
       "rstar": {
         "kc_fed": 1.384607,
-        "dkw": 1.14463,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16489,7 +16489,7 @@
       },
       "rstar": {
         "kc_fed": 1.419746,
-        "dkw": 1.117479,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16513,7 +16513,7 @@
       },
       "rstar": {
         "kc_fed": 1.360215,
-        "dkw": 1.023735,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16537,7 +16537,7 @@
       },
       "rstar": {
         "kc_fed": 1.451806,
-        "dkw": 1.211981,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16561,7 +16561,7 @@
       },
       "rstar": {
         "kc_fed": 1.480904,
-        "dkw": 1.32524,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16585,7 +16585,7 @@
       },
       "rstar": {
         "kc_fed": 1.519448,
-        "dkw": 1.316348,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16609,7 +16609,7 @@
       },
       "rstar": {
         "kc_fed": 1.60682,
-        "dkw": 1.225081,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16633,7 +16633,7 @@
       },
       "rstar": {
         "kc_fed": 1.688876,
-        "dkw": 1.150791,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16657,7 +16657,7 @@
       },
       "rstar": {
         "kc_fed": 1.688417,
-        "dkw": 1.081643,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16681,7 +16681,7 @@
       },
       "rstar": {
         "kc_fed": 1.64349,
-        "dkw": 1.067405,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16705,7 +16705,7 @@
       },
       "rstar": {
         "kc_fed": 1.683541,
-        "dkw": 1.0843,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16729,7 +16729,7 @@
       },
       "rstar": {
         "kc_fed": 1.68619,
-        "dkw": 1.078041,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16753,7 +16753,7 @@
       },
       "rstar": {
         "kc_fed": 1.700467,
-        "dkw": 1.0365,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16777,7 +16777,7 @@
       },
       "rstar": {
         "kc_fed": 1.680991,
-        "dkw": 0.980779,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16801,7 +16801,7 @@
       },
       "rstar": {
         "kc_fed": 1.745268,
-        "dkw": 1.095868,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16825,7 +16825,7 @@
       },
       "rstar": {
         "kc_fed": 1.749629,
-        "dkw": 1.034614,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16849,7 +16849,7 @@
       },
       "rstar": {
         "kc_fed": 1.784077,
-        "dkw": 0.949657,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16873,7 +16873,7 @@
       },
       "rstar": {
         "kc_fed": 1.81359,
-        "dkw": 0.876636,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16897,7 +16897,7 @@
       },
       "rstar": {
         "kc_fed": 1.815816,
-        "dkw": 0.93552,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16921,7 +16921,7 @@
       },
       "rstar": {
         "kc_fed": 1.840689,
-        "dkw": 0.96067,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16945,7 +16945,7 @@
       },
       "rstar": {
         "kc_fed": 1.774828,
-        "dkw": 0.955924,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16969,7 +16969,7 @@
       },
       "rstar": {
         "kc_fed": 1.756803,
-        "dkw": 1.04982,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -16993,7 +16993,7 @@
       },
       "rstar": {
         "kc_fed": 1.745552,
-        "dkw": 1.085295,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17017,7 +17017,7 @@
       },
       "rstar": {
         "kc_fed": 1.774447,
-        "dkw": 1.04791,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17041,7 +17041,7 @@
       },
       "rstar": {
         "kc_fed": 1.837681,
-        "dkw": 1.019645,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17065,7 +17065,7 @@
       },
       "rstar": {
         "kc_fed": 1.809039,
-        "dkw": 1.059416,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17089,7 +17089,7 @@
       },
       "rstar": {
         "kc_fed": 1.812813,
-        "dkw": 1.131448,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17113,7 +17113,7 @@
       },
       "rstar": {
         "kc_fed": 1.803383,
-        "dkw": 1.241021,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17137,7 +17137,7 @@
       },
       "rstar": {
         "kc_fed": 1.804845,
-        "dkw": 1.292591,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17161,7 +17161,7 @@
       },
       "rstar": {
         "kc_fed": 1.784741,
-        "dkw": 1.276464,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17185,7 +17185,7 @@
       },
       "rstar": {
         "kc_fed": 1.73525,
-        "dkw": 1.2634,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17209,7 +17209,7 @@
       },
       "rstar": {
         "kc_fed": 1.707454,
-        "dkw": 1.194278,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17233,7 +17233,7 @@
       },
       "rstar": {
         "kc_fed": 1.780168,
-        "dkw": 1.14142,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17257,7 +17257,7 @@
       },
       "rstar": {
         "kc_fed": 1.834684,
-        "dkw": 1.138495,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17281,7 +17281,7 @@
       },
       "rstar": {
         "kc_fed": 1.812649,
-        "dkw": 1.082167,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17305,7 +17305,7 @@
       },
       "rstar": {
         "kc_fed": 1.83742,
-        "dkw": 1.079625,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17329,7 +17329,7 @@
       },
       "rstar": {
         "kc_fed": 1.704348,
-        "dkw": 1.144038,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17353,7 +17353,7 @@
       },
       "rstar": {
         "kc_fed": 1.727473,
-        "dkw": 1.134858,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17377,7 +17377,7 @@
       },
       "rstar": {
         "kc_fed": 1.766349,
-        "dkw": 1.100727,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17401,7 +17401,7 @@
       },
       "rstar": {
         "kc_fed": 1.726439,
-        "dkw": 1.149648,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17425,7 +17425,7 @@
       },
       "rstar": {
         "kc_fed": 1.764905,
-        "dkw": 1.154195,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17449,7 +17449,7 @@
       },
       "rstar": {
         "kc_fed": 1.685163,
-        "dkw": 1.278357,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17473,7 +17473,7 @@
       },
       "rstar": {
         "kc_fed": 1.6304,
-        "dkw": 1.261071,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17497,7 +17497,7 @@
       },
       "rstar": {
         "kc_fed": 1.615048,
-        "dkw": 1.182787,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17521,7 +17521,7 @@
       },
       "rstar": {
         "kc_fed": 1.567595,
-        "dkw": 1.131963,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17545,7 +17545,7 @@
       },
       "rstar": {
         "kc_fed": 1.527857,
-        "dkw": 1.139273,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17569,7 +17569,7 @@
       },
       "rstar": {
         "kc_fed": 1.51249,
-        "dkw": 1.045175,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17593,7 +17593,7 @@
       },
       "rstar": {
         "kc_fed": 1.338791,
-        "dkw": 1.06938,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17617,7 +17617,7 @@
       },
       "rstar": {
         "kc_fed": 1.307659,
-        "dkw": 0.969848,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17641,7 +17641,7 @@
       },
       "rstar": {
         "kc_fed": 1.297139,
-        "dkw": 1.015695,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17665,7 +17665,7 @@
       },
       "rstar": {
         "kc_fed": 1.249724,
-        "dkw": 0.95487,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17689,7 +17689,7 @@
       },
       "rstar": {
         "kc_fed": 1.29273,
-        "dkw": 0.966373,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17713,7 +17713,7 @@
       },
       "rstar": {
         "kc_fed": 1.137401,
-        "dkw": 1.008638,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17737,7 +17737,7 @@
       },
       "rstar": {
         "kc_fed": 1.062154,
-        "dkw": 1.072848,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17761,7 +17761,7 @@
       },
       "rstar": {
         "kc_fed": 0.995477,
-        "dkw": 1.039364,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17785,7 +17785,7 @@
       },
       "rstar": {
         "kc_fed": 0.879035,
-        "dkw": 1.000814,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17809,7 +17809,7 @@
       },
       "rstar": {
         "kc_fed": 0.859673,
-        "dkw": 0.952838,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17833,7 +17833,7 @@
       },
       "rstar": {
         "kc_fed": 0.633618,
-        "dkw": 1.189359,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17857,7 +17857,7 @@
       },
       "rstar": {
         "kc_fed": 0.520413,
-        "dkw": 1.138894,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17881,7 +17881,7 @@
       },
       "rstar": {
         "kc_fed": 0.368105,
-        "dkw": 0.621945,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17905,7 +17905,7 @@
       },
       "rstar": {
         "kc_fed": 0.219931,
-        "dkw": 0.678865,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17929,7 +17929,7 @@
       },
       "rstar": {
         "kc_fed": 0.055973,
-        "dkw": 0.821721,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17953,7 +17953,7 @@
       },
       "rstar": {
         "kc_fed": -0.111547,
-        "dkw": 0.750582,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -17977,7 +17977,7 @@
       },
       "rstar": {
         "kc_fed": -0.218539,
-        "dkw": 0.757643,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18001,7 +18001,7 @@
       },
       "rstar": {
         "kc_fed": -0.357946,
-        "dkw": 0.927545,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18025,7 +18025,7 @@
       },
       "rstar": {
         "kc_fed": -0.335726,
-        "dkw": 1.0842,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18049,7 +18049,7 @@
       },
       "rstar": {
         "kc_fed": -0.279952,
-        "dkw": 1.014709,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18073,7 +18073,7 @@
       },
       "rstar": {
         "kc_fed": -0.284637,
-        "dkw": 0.991657,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18097,7 +18097,7 @@
       },
       "rstar": {
         "kc_fed": -0.371474,
-        "dkw": 0.918181,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18121,7 +18121,7 @@
       },
       "rstar": {
         "kc_fed": -0.503248,
-        "dkw": 0.89609,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18145,7 +18145,7 @@
       },
       "rstar": {
         "kc_fed": -0.518431,
-        "dkw": 0.925653,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18169,7 +18169,7 @@
       },
       "rstar": {
         "kc_fed": -0.507544,
-        "dkw": 0.995114,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18193,7 +18193,7 @@
       },
       "rstar": {
         "kc_fed": -0.47625,
-        "dkw": 1.034484,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18217,7 +18217,7 @@
       },
       "rstar": {
         "kc_fed": -0.454098,
-        "dkw": 1.033416,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18241,7 +18241,7 @@
       },
       "rstar": {
         "kc_fed": -0.473935,
-        "dkw": 1.024465,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18265,7 +18265,7 @@
       },
       "rstar": {
         "kc_fed": -0.462823,
-        "dkw": 1.038718,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18289,7 +18289,7 @@
       },
       "rstar": {
         "kc_fed": -0.307813,
-        "dkw": 0.886395,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18313,7 +18313,7 @@
       },
       "rstar": {
         "kc_fed": -0.241696,
-        "dkw": 0.803095,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18337,7 +18337,7 @@
       },
       "rstar": {
         "kc_fed": -0.218348,
-        "dkw": 0.729033,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18361,7 +18361,7 @@
       },
       "rstar": {
         "kc_fed": -0.291643,
-        "dkw": 0.585827,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18385,7 +18385,7 @@
       },
       "rstar": {
         "kc_fed": -0.304746,
-        "dkw": 0.564452,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18409,7 +18409,7 @@
       },
       "rstar": {
         "kc_fed": -0.284254,
-        "dkw": 0.535715,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18433,7 +18433,7 @@
       },
       "rstar": {
         "kc_fed": -0.395573,
-        "dkw": 0.627855,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18457,7 +18457,7 @@
       },
       "rstar": {
         "kc_fed": -0.247999,
-        "dkw": 0.852736,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18481,7 +18481,7 @@
       },
       "rstar": {
         "kc_fed": -0.179054,
-        "dkw": 0.89478,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18505,7 +18505,7 @@
       },
       "rstar": {
         "kc_fed": -0.151935,
-        "dkw": 0.947511,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18529,7 +18529,7 @@
       },
       "rstar": {
         "kc_fed": -0.184799,
-        "dkw": 0.883404,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18553,7 +18553,7 @@
       },
       "rstar": {
         "kc_fed": -0.273936,
-        "dkw": 0.891785,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18577,7 +18577,7 @@
       },
       "rstar": {
         "kc_fed": -0.31163,
-        "dkw": 0.790348,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18601,7 +18601,7 @@
       },
       "rstar": {
         "kc_fed": -0.355688,
-        "dkw": 0.738491,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18625,7 +18625,7 @@
       },
       "rstar": {
         "kc_fed": -0.347929,
-        "dkw": 0.745205,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18649,7 +18649,7 @@
       },
       "rstar": {
         "kc_fed": -0.366411,
-        "dkw": 0.421409,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18673,7 +18673,7 @@
       },
       "rstar": {
         "kc_fed": -0.355522,
-        "dkw": 0.256514,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18697,7 +18697,7 @@
       },
       "rstar": {
         "kc_fed": -0.266016,
-        "dkw": 0.31588,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18721,7 +18721,7 @@
       },
       "rstar": {
         "kc_fed": -0.16275,
-        "dkw": 0.25066,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18745,7 +18745,7 @@
       },
       "rstar": {
         "kc_fed": -0.14153,
-        "dkw": 0.23049,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18769,7 +18769,7 @@
       },
       "rstar": {
         "kc_fed": -0.133034,
-        "dkw": 0.2247,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18793,7 +18793,7 @@
       },
       "rstar": {
         "kc_fed": -0.111348,
-        "dkw": 0.2251,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18817,7 +18817,7 @@
       },
       "rstar": {
         "kc_fed": -0.111515,
-        "dkw": 0.315486,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18841,7 +18841,7 @@
       },
       "rstar": {
         "kc_fed": -0.150728,
-        "dkw": 0.259881,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18865,7 +18865,7 @@
       },
       "rstar": {
         "kc_fed": -0.150243,
-        "dkw": 0.131436,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18889,7 +18889,7 @@
       },
       "rstar": {
         "kc_fed": -0.154518,
-        "dkw": 0.030757,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18913,7 +18913,7 @@
       },
       "rstar": {
         "kc_fed": -0.218723,
-        "dkw": -0.008438,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18937,7 +18937,7 @@
       },
       "rstar": {
         "kc_fed": -0.203345,
-        "dkw": 0.07467,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18961,7 +18961,7 @@
       },
       "rstar": {
         "kc_fed": -0.0594,
-        "dkw": 0.095489,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -18985,7 +18985,7 @@
       },
       "rstar": {
         "kc_fed": -0.148492,
-        "dkw": 0.0985,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19009,7 +19009,7 @@
       },
       "rstar": {
         "kc_fed": -0.187707,
-        "dkw": 0.05222,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19033,7 +19033,7 @@
       },
       "rstar": {
         "kc_fed": -0.239847,
-        "dkw": 0.0831,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19057,7 +19057,7 @@
       },
       "rstar": {
         "kc_fed": -0.343645,
-        "dkw": 0.180633,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19081,7 +19081,7 @@
       },
       "rstar": {
         "kc_fed": -0.160402,
-        "dkw": 0.224305,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19105,7 +19105,7 @@
       },
       "rstar": {
         "kc_fed": -0.140898,
-        "dkw": 0.215255,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19129,7 +19129,7 @@
       },
       "rstar": {
         "kc_fed": -0.155291,
-        "dkw": 0.10985,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19153,7 +19153,7 @@
       },
       "rstar": {
         "kc_fed": -0.20006,
-        "dkw": 0.192491,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19177,7 +19177,7 @@
       },
       "rstar": {
         "kc_fed": -0.277816,
-        "dkw": 0.367365,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19201,7 +19201,7 @@
       },
       "rstar": {
         "kc_fed": -0.257394,
-        "dkw": 0.495559,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19225,7 +19225,7 @@
       },
       "rstar": {
         "kc_fed": -0.245368,
-        "dkw": 0.5775,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19249,7 +19249,7 @@
       },
       "rstar": {
         "kc_fed": -0.297723,
-        "dkw": 0.590975,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19273,7 +19273,7 @@
       },
       "rstar": {
         "kc_fed": -0.30454,
-        "dkw": 0.520541,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19297,7 +19297,7 @@
       },
       "rstar": {
         "kc_fed": -0.147433,
-        "dkw": 0.586284,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19321,7 +19321,7 @@
       },
       "rstar": {
         "kc_fed": -0.133197,
-        "dkw": 0.663595,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19345,7 +19345,7 @@
       },
       "rstar": {
         "kc_fed": -0.177469,
-        "dkw": 0.616538,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19369,7 +19369,7 @@
       },
       "rstar": {
         "kc_fed": -0.147758,
-        "dkw": 0.555995,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19393,7 +19393,7 @@
       },
       "rstar": {
         "kc_fed": -0.221787,
-        "dkw": 0.539348,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19417,7 +19417,7 @@
       },
       "rstar": {
         "kc_fed": -0.105919,
-        "dkw": 0.511124,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19441,7 +19441,7 @@
       },
       "rstar": {
         "kc_fed": -0.225335,
-        "dkw": 0.438776,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19465,7 +19465,7 @@
       },
       "rstar": {
         "kc_fed": -0.119093,
-        "dkw": 0.451695,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19489,7 +19489,7 @@
       },
       "rstar": {
         "kc_fed": -0.132194,
-        "dkw": 0.408695,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19513,7 +19513,7 @@
       },
       "rstar": {
         "kc_fed": -0.108415,
-        "dkw": 0.350586,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19537,7 +19537,7 @@
       },
       "rstar": {
         "kc_fed": -0.064031,
-        "dkw": 0.3888,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19561,7 +19561,7 @@
       },
       "rstar": {
         "kc_fed": 0.033371,
-        "dkw": 0.300245,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19585,7 +19585,7 @@
       },
       "rstar": {
         "kc_fed": 0.048406,
-        "dkw": 0.304022,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19609,7 +19609,7 @@
       },
       "rstar": {
         "kc_fed": 0.145699,
-        "dkw": 0.222568,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19633,7 +19633,7 @@
       },
       "rstar": {
         "kc_fed": 0.05429,
-        "dkw": 0.08318,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19657,7 +19657,7 @@
       },
       "rstar": {
         "kc_fed": 0.060889,
-        "dkw": 0.131858,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19681,7 +19681,7 @@
       },
       "rstar": {
         "kc_fed": -0.011234,
-        "dkw": 0.157,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19705,7 +19705,7 @@
       },
       "rstar": {
         "kc_fed": 0.017701,
-        "dkw": 0.1262,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19729,7 +19729,7 @@
       },
       "rstar": {
         "kc_fed": -0.042438,
-        "dkw": 0.250715,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19753,7 +19753,7 @@
       },
       "rstar": {
         "kc_fed": 0.05983,
-        "dkw": 0.315255,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19777,7 +19777,7 @@
       },
       "rstar": {
         "kc_fed": 0.024082,
-        "dkw": 0.292377,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19801,7 +19801,7 @@
       },
       "rstar": {
         "kc_fed": 0.086559,
-        "dkw": 0.214995,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19825,7 +19825,7 @@
       },
       "rstar": {
         "kc_fed": -0.04562,
-        "dkw": 0.229743,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19849,7 +19849,7 @@
       },
       "rstar": {
         "kc_fed": -0.011449,
-        "dkw": 0.186295,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19873,7 +19873,7 @@
       },
       "rstar": {
         "kc_fed": -0.095682,
-        "dkw": 0.259426,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19897,7 +19897,7 @@
       },
       "rstar": {
         "kc_fed": 0.058574,
-        "dkw": 0.243059,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19921,7 +19921,7 @@
       },
       "rstar": {
         "kc_fed": 0.055777,
-        "dkw": 0.182663,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19945,7 +19945,7 @@
       },
       "rstar": {
         "kc_fed": -0.165619,
-        "dkw": 0.07128,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19969,7 +19969,7 @@
       },
       "rstar": {
         "kc_fed": -0.175282,
-        "dkw": 0.1028,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -19993,7 +19993,7 @@
       },
       "rstar": {
         "kc_fed": -0.143756,
-        "dkw": 0.064724,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20017,7 +20017,7 @@
       },
       "rstar": {
         "kc_fed": 0.014817,
-        "dkw": 0.064138,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20041,7 +20041,7 @@
       },
       "rstar": {
         "kc_fed": -0.00907,
-        "dkw": -0.007659,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20065,7 +20065,7 @@
       },
       "rstar": {
         "kc_fed": 0.06094,
-        "dkw": -0.075975,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20089,7 +20089,7 @@
       },
       "rstar": {
         "kc_fed": 0.050423,
-        "dkw": -0.055496,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20113,7 +20113,7 @@
       },
       "rstar": {
         "kc_fed": 0.066678,
-        "dkw": -0.023095,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20137,7 +20137,7 @@
       },
       "rstar": {
         "kc_fed": 0.252496,
-        "dkw": 0.030335,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20161,7 +20161,7 @@
       },
       "rstar": {
         "kc_fed": 0.419772,
-        "dkw": 0.19875,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20185,7 +20185,7 @@
       },
       "rstar": {
         "kc_fed": 0.653891,
-        "dkw": 0.340029,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20209,7 +20209,7 @@
       },
       "rstar": {
         "kc_fed": 0.689236,
-        "dkw": 0.299315,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20233,7 +20233,7 @@
       },
       "rstar": {
         "kc_fed": 0.808956,
-        "dkw": 0.298,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20257,7 +20257,7 @@
       },
       "rstar": {
         "kc_fed": 1.049825,
-        "dkw": 0.317313,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20281,7 +20281,7 @@
       },
       "rstar": {
         "kc_fed": 1.067986,
-        "dkw": 0.246158,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20305,7 +20305,7 @@
       },
       "rstar": {
         "kc_fed": 1.094888,
-        "dkw": 0.252018,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20329,7 +20329,7 @@
       },
       "rstar": {
         "kc_fed": 1.138499,
-        "dkw": 0.189777,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20353,7 +20353,7 @@
       },
       "rstar": {
         "kc_fed": 1.096548,
-        "dkw": 0.246275,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20377,7 +20377,7 @@
       },
       "rstar": {
         "kc_fed": 0.987246,
-        "dkw": 0.203522,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20401,7 +20401,7 @@
       },
       "rstar": {
         "kc_fed": 1.006575,
-        "dkw": 0.19057,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20425,7 +20425,7 @@
       },
       "rstar": {
         "kc_fed": 0.993215,
-        "dkw": 0.240733,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20449,7 +20449,7 @@
       },
       "rstar": {
         "kc_fed": 1.031946,
-        "dkw": 0.227248,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20473,7 +20473,7 @@
       },
       "rstar": {
         "kc_fed": 1.108869,
-        "dkw": 0.230805,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20497,7 +20497,7 @@
       },
       "rstar": {
         "kc_fed": 1.154988,
-        "dkw": 0.289419,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20521,7 +20521,7 @@
       },
       "rstar": {
         "kc_fed": 1.13952,
-        "dkw": 0.407711,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20545,7 +20545,7 @@
       },
       "rstar": {
         "kc_fed": 1.16271,
-        "dkw": 0.391205,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20569,7 +20569,7 @@
       },
       "rstar": {
         "kc_fed": 1.099082,
-        "dkw": 0.38241,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20593,7 +20593,7 @@
       },
       "rstar": {
         "kc_fed": 1.200301,
-        "dkw": 0.426291,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20617,7 +20617,7 @@
       },
       "rstar": {
         "kc_fed": 1.16105,
-        "dkw": 0.399133,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20641,7 +20641,7 @@
       },
       "rstar": {
         "kc_fed": 1.264382,
-        "dkw": 0.383086,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20665,7 +20665,7 @@
       },
       "rstar": {
         "kc_fed": 1.233007,
-        "dkw": 0.383109,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20689,7 +20689,7 @@
       },
       "rstar": {
         "kc_fed": 1.27772,
-        "dkw": 0.423453,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20713,7 +20713,7 @@
       },
       "rstar": {
         "kc_fed": 1.357056,
-        "dkw": 0.49025,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20737,7 +20737,7 @@
       },
       "rstar": {
         "kc_fed": 1.320642,
-        "dkw": 0.48482,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20761,7 +20761,7 @@
       },
       "rstar": {
         "kc_fed": 1.199964,
-        "dkw": 0.372658,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20785,7 +20785,7 @@
       },
       "rstar": {
         "kc_fed": 1.220334,
-        "dkw": 0.333133,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20809,7 +20809,7 @@
       },
       "rstar": {
         "kc_fed": 1.344375,
-        "dkw": 0.322842,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20833,7 +20833,7 @@
       },
       "rstar": {
         "kc_fed": 1.312887,
-        "dkw": 0.291419,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20857,7 +20857,7 @@
       },
       "rstar": {
         "kc_fed": 1.301222,
-        "dkw": 0.280405,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20881,7 +20881,7 @@
       },
       "rstar": {
         "kc_fed": 1.272054,
-        "dkw": 0.236605,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20905,7 +20905,7 @@
       },
       "rstar": {
         "kc_fed": 1.216854,
-        "dkw": 0.124005,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20929,7 +20929,7 @@
       },
       "rstar": {
         "kc_fed": 1.108203,
-        "dkw": 0.107595,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20953,7 +20953,7 @@
       },
       "rstar": {
         "kc_fed": 0.929909,
-        "dkw": -0.067382,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -20977,7 +20977,7 @@
       },
       "rstar": {
         "kc_fed": 0.9028,
-        "dkw": -0.043415,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21001,7 +21001,7 @@
       },
       "rstar": {
         "kc_fed": 0.837296,
-        "dkw": -0.042414,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21025,7 +21025,7 @@
       },
       "rstar": {
         "kc_fed": 0.774655,
-        "dkw": -0.000832,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21049,7 +21049,7 @@
       },
       "rstar": {
         "kc_fed": 0.891113,
-        "dkw": 0.021829,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21073,7 +21073,7 @@
       },
       "rstar": {
         "kc_fed": 0.933945,
-        "dkw": -0.014333,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21097,7 +21097,7 @@
       },
       "rstar": {
         "kc_fed": 0.970126,
-        "dkw": -0.112405,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21121,7 +21121,7 @@
       },
       "rstar": {
         "kc_fed": 0.192978,
-        "dkw": -0.335818,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21145,7 +21145,7 @@
       },
       "rstar": {
         "kc_fed": -2.645666,
-        "dkw": -0.417843,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21169,7 +21169,7 @@
       },
       "rstar": {
         "kc_fed": -2.176353,
-        "dkw": -0.413145,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21193,7 +21193,7 @@
       },
       "rstar": {
         "kc_fed": -1.246586,
-        "dkw": -0.388068,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21217,7 +21217,7 @@
       },
       "rstar": {
         "kc_fed": -0.733102,
-        "dkw": -0.440123,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21241,7 +21241,7 @@
       },
       "rstar": {
         "kc_fed": 0.010773,
-        "dkw": -0.431129,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21265,7 +21265,7 @@
       },
       "rstar": {
         "kc_fed": 0.393437,
-        "dkw": -0.414386,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21289,7 +21289,7 @@
       },
       "rstar": {
         "kc_fed": 0.51902,
-        "dkw": -0.367167,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21313,7 +21313,7 @@
       },
       "rstar": {
         "kc_fed": 0.52611,
-        "dkw": -0.331426,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21337,7 +21337,7 @@
       },
       "rstar": {
         "kc_fed": 0.391266,
-        "dkw": -0.299177,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21361,7 +21361,7 @@
       },
       "rstar": {
         "kc_fed": 0.435983,
-        "dkw": -0.225468,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21385,7 +21385,7 @@
       },
       "rstar": {
         "kc_fed": 0.464043,
-        "dkw": -0.130111,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21409,7 +21409,7 @@
       },
       "rstar": {
         "kc_fed": 0.473918,
-        "dkw": 0.049509,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21433,7 +21433,7 @@
       },
       "rstar": {
         "kc_fed": 0.323178,
-        "dkw": 0.053277,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21457,7 +21457,7 @@
       },
       "rstar": {
         "kc_fed": 0.250372,
-        "dkw": 0.052465,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21481,7 +21481,7 @@
       },
       "rstar": {
         "kc_fed": 0.30329,
-        "dkw": -0.007255,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21505,7 +21505,7 @@
       },
       "rstar": {
         "kc_fed": 0.528015,
-        "dkw": -0.118424,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21529,7 +21529,7 @@
       },
       "rstar": {
         "kc_fed": 0.758283,
-        "dkw": -0.140673,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21553,7 +21553,7 @@
       },
       "rstar": {
         "kc_fed": 0.9486,
-        "dkw": -0.109086,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21577,7 +21577,7 @@
       },
       "rstar": {
         "kc_fed": 0.993095,
-        "dkw": -0.03454,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21601,7 +21601,7 @@
       },
       "rstar": {
         "kc_fed": 1.087179,
-        "dkw": -0.06408,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21625,7 +21625,7 @@
       },
       "rstar": {
         "kc_fed": 1.16293,
-        "dkw": -0.119595,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21649,7 +21649,7 @@
       },
       "rstar": {
         "kc_fed": 1.215842,
-        "dkw": 0.00192,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21673,7 +21673,7 @@
       },
       "rstar": {
         "kc_fed": 1.349906,
-        "dkw": 0.040111,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21697,7 +21697,7 @@
       },
       "rstar": {
         "kc_fed": 1.52131,
-        "dkw": 0.076987,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21721,7 +21721,7 @@
       },
       "rstar": {
         "kc_fed": 1.663424,
-        "dkw": 0.297255,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21745,7 +21745,7 @@
       },
       "rstar": {
         "kc_fed": 1.863414,
-        "dkw": 0.385871,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21769,7 +21769,7 @@
       },
       "rstar": {
         "kc_fed": 1.891121,
-        "dkw": 0.4838,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21793,7 +21793,7 @@
       },
       "rstar": {
         "kc_fed": 1.966718,
-        "dkw": 0.406185,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21817,7 +21817,7 @@
       },
       "rstar": {
         "kc_fed": 1.926285,
-        "dkw": 0.383022,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21841,7 +21841,7 @@
       },
       "rstar": {
         "kc_fed": 1.889766,
-        "dkw": 0.620229,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21865,7 +21865,7 @@
       },
       "rstar": {
         "kc_fed": 1.878495,
-        "dkw": 0.802485,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21889,7 +21889,7 @@
       },
       "rstar": {
         "kc_fed": 1.969097,
-        "dkw": 0.77951,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21913,7 +21913,7 @@
       },
       "rstar": {
         "kc_fed": 1.983668,
-        "dkw": 0.652829,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21937,7 +21937,7 @@
       },
       "rstar": {
         "kc_fed": 1.963066,
-        "dkw": 0.63012,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21961,7 +21961,7 @@
       },
       "rstar": {
         "kc_fed": 1.903543,
-        "dkw": 0.701568,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -21985,7 +21985,7 @@
       },
       "rstar": {
         "kc_fed": 1.891882,
-        "dkw": 0.697317,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22009,7 +22009,7 @@
       },
       "rstar": {
         "kc_fed": 1.912452,
-        "dkw": 0.64358,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22033,7 +22033,7 @@
       },
       "rstar": {
         "kc_fed": 1.834966,
-        "dkw": 0.705968,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22057,7 +22057,7 @@
       },
       "rstar": {
         "kc_fed": 1.798096,
-        "dkw": 0.723395,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22081,7 +22081,7 @@
       },
       "rstar": {
         "kc_fed": 1.898976,
-        "dkw": 0.76067,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22105,7 +22105,7 @@
       },
       "rstar": {
         "kc_fed": 1.821265,
-        "dkw": 0.88083,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22129,7 +22129,7 @@
       },
       "rstar": {
         "kc_fed": 1.840696,
-        "dkw": 0.975245,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22153,7 +22153,7 @@
       },
       "rstar": {
         "kc_fed": 1.769696,
-        "dkw": 1.185852,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22177,7 +22177,7 @@
       },
       "rstar": {
         "kc_fed": 1.826641,
-        "dkw": 1.067667,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22201,7 +22201,7 @@
       },
       "rstar": {
         "kc_fed": 1.774256,
-        "dkw": 0.8771,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22225,7 +22225,7 @@
       },
       "rstar": {
         "kc_fed": 1.754834,
-        "dkw": 0.897762,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22249,7 +22249,7 @@
       },
       "rstar": {
         "kc_fed": 1.719529,
-        "dkw": 0.94405,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22273,7 +22273,7 @@
       },
       "rstar": {
         "kc_fed": 1.665793,
-        "dkw": 0.925935,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22297,7 +22297,7 @@
       },
       "rstar": {
         "kc_fed": 1.651243,
-        "dkw": 1.032459,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22321,7 +22321,7 @@
       },
       "rstar": {
         "kc_fed": 1.67976,
-        "dkw": 1.011927,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22345,7 +22345,7 @@
       },
       "rstar": {
         "kc_fed": 1.617433,
-        "dkw": 0.945684,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22369,7 +22369,7 @@
       },
       "rstar": {
         "kc_fed": 1.578267,
-        "dkw": 0.952318,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22393,7 +22393,7 @@
       },
       "rstar": {
         "kc_fed": 1.532917,
-        "dkw": 0.827755,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22417,7 +22417,7 @@
       },
       "rstar": {
         "kc_fed": 1.442871,
-        "dkw": 0.779185,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22441,7 +22441,7 @@
       },
       "rstar": {
         "kc_fed": 1.387563,
-        "dkw": 0.909827,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22465,7 +22465,7 @@
       },
       "rstar": {
         "kc_fed": 1.327943,
-        "dkw": 0.991679,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22489,7 +22489,7 @@
       },
       "rstar": {
         "kc_fed": 1.310329,
-        "dkw": 1.004538,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22513,7 +22513,7 @@
       },
       "rstar": {
         "kc_fed": 1.30199,
-        "dkw": 1.109424,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22537,7 +22537,7 @@
       },
       "rstar": {
         "kc_fed": 1.346584,
-        "dkw": 1.030253,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22561,7 +22561,7 @@
       },
       "rstar": {
         "kc_fed": 1.34146,
-        "dkw": 0.991305,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22585,7 +22585,7 @@
       },
       "rstar": {
         "kc_fed": 1.392718,
-        "dkw": 1.028624,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22609,7 +22609,7 @@
       },
       "rstar": {
         "kc_fed": 1.31841,
-        "dkw": 1.095562,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22633,7 +22633,7 @@
       },
       "rstar": {
         "kc_fed": 1.269093,
-        "dkw": 1.07705,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22657,7 +22657,7 @@
       },
       "rstar": {
         "kc_fed": 1.238052,
-        "dkw": 1.084255,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22681,7 +22681,7 @@
       },
       "rstar": {
         "kc_fed": 1.206,
-        "dkw": 1.039995,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22705,7 +22705,7 @@
       },
       "rstar": {
         "kc_fed": 1.120329,
-        "dkw": 0.980433,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22729,7 +22729,7 @@
       },
       "rstar": {
         "kc_fed": 1.103273,
-        "dkw": 0.950232,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22753,7 +22753,7 @@
       },
       "rstar": {
         "kc_fed": 1.052593,
-        "dkw": 0.964656,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22777,7 +22777,7 @@
       },
       "rstar": {
         "kc_fed": 0.969797,
-        "dkw": 0.993,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22801,7 +22801,7 @@
       },
       "rstar": {
         "kc_fed": 0.964152,
-        "dkw": 1.013575,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22825,7 +22825,7 @@
       },
       "rstar": {
         "kc_fed": 0.980428,
-        "dkw": 0.985084,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22849,7 +22849,7 @@
       },
       "rstar": {
         "kc_fed": 1.086618,
-        "dkw": 1.0178,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22873,7 +22873,7 @@
       },
       "rstar": {
         "kc_fed": 0.98128,
-        "dkw": 1.038609,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22897,7 +22897,7 @@
       },
       "rstar": {
         "kc_fed": 0.945112,
-        "dkw": 1.09972,
+        "dkw": null,
         "tips_10y10y": null
       }
     },
@@ -22931,7 +22931,7 @@
       "quarter": "2026 Q3",
       "policy": {
         "effr": 3.63,
-        "treasury_1y": 4.0
+        "treasury_1y": 3.97
       },
       "inflation": {
         "core_pce_ma": null,
@@ -30907,7 +30907,7 @@
       "quarter": "2026 Q3",
       "policy": {
         "effr": 3.63,
-        "treasury_1y": 4.0
+        "treasury_1y": 3.97
       },
       "inflation": {
         "core_pce_ma": null,
