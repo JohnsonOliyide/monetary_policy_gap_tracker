@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-07-15T12:45:11+00:00",
+    "generated_at_utc": "2026-07-22T12:48:38+00:00",
     "description": "Generated from public data sources by scripts/update_data.py.",
     "source_urls": {
       "kc_fed": "https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv",
@@ -22930,8 +22930,8 @@
       "period": "Jul 2026",
       "quarter": "2026 Q3",
       "policy": {
-        "effr": 3.625556,
-        "treasury_1y": 4.02875
+        "effr": 3.627143,
+        "treasury_1y": 4.019231
       },
       "inflation": {
         "core_pce_ma": null,
@@ -30906,8 +30906,8 @@
       "period": "2026 Q3",
       "quarter": "2026 Q3",
       "policy": {
-        "effr": 3.625556,
-        "treasury_1y": 4.02875
+        "effr": 3.627143,
+        "treasury_1y": 4.019231
       },
       "inflation": {
         "core_pce_ma": null,
