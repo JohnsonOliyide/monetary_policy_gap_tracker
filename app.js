@@ -1,5 +1,4 @@
-const DATA_URL = 'data/data.json';
-const SAMPLE_DATA_URL = 'data/sample_data.json';
+const DATA_URL = 'https://raw.githubusercontent.com/JohnsonOliyide/monetary_policy_gap_tracker/main/data/data.json';
 
 const measures = {
   kc_fed: {
@@ -639,22 +638,11 @@ function attachEvents() {
 }
 
 async function loadDashboardData() {
-  try {
-    const live = await fetch(DATA_URL, { cache: 'no-store' });
-    if (live.ok) {
-      const data = await live.json();
-      data.__isSample = false;
-      return data;
-    }
-    throw new Error(`Live data request returned ${live.status}`);
-  } catch (liveErr) {
-    console.warn('Live data unavailable; falling back to sample data.', liveErr);
-    const sample = await fetch(SAMPLE_DATA_URL, { cache: 'no-store' });
-    if (!sample.ok) throw new Error(`Sample data request returned ${sample.status}`);
-    const data = await sample.json();
-    data.__isSample = true;
-    return data;
-  }
+ const response = await fetch(DATA_URL, {cache: 'no-store', signal: AbortSignal.timeout(30000)});
+ if (!response.ok) throw new Error(`Data request returned ${response.status}`);
+ const data = await response.json();
+ if (!data.months?.length || !data.quarters?.length || !data.metadata?.generated_at_utc) throw new Error('Invalid dashboard data');
+ return data;
 }
 
 loadDashboardData()
@@ -663,11 +651,15 @@ loadDashboardData()
     initDateControls();
     attachEvents();
     updateAll();
-    if (rawData.__isSample) {
-      document.body.insertAdjacentHTML('afterbegin', `<div class="data-warning">Showing illustrative sample data because data/data.json has not been generated yet. Run <code>python scripts/update_data.py</code> or the GitHub Action to build the live data file.</div>`);
-    }
+    const notice = document.createElement('div');
+   notice.className = 'data-warning';
+   const refreshed = new Date(data.metadata.generated_at_utc);
+   notice.textContent = 'Data refreshed ' + refreshed.toLocaleDateString() + '. Individual series have different publication dates; see latest periods below.';
+   if (Date.now() - refreshed.getTime() > 10 * 86400000) notice.textContent += ' The refresh is overdue.';
+   document.querySelector('main')?.prepend(notice);
+
   })
   .catch(err => {
     console.error(err);
-    document.body.insertAdjacentHTML('afterbegin', `<div style="padding:20px;background:#fff3cd;color:#6b4e00">Could not load dashboard data. Run this dashboard from a local web server rather than opening index.html directly.</div>`);
+    document.body.insertAdjacentHTML('afterbegin', `<div style="padding:20px;background:#fff3cd;color:#6b4e00">Could not load dashboard data. Please reload or try again later. No illustrative values are shown.</div>`);
   });

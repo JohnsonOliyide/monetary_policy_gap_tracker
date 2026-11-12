@@ -140,3 +140,8 @@ The Sources section links to the original pages for:
 Author: [Johnson Oliyide](https://www.johnsonoliyide.com/)
 
 The views expressed in this dashboard are those of the author and should not be interpreted as reflecting the views of the Federal Reserve Bank of Kansas City or the Federal Reserve System.
+
+
+## Data refresh reliability
+
+The scheduled workflow validates downloads before replacing published files. The live dashboard reads data directly from the repository so automated data commits are visible without a separate Pages rebuild. Source publication dates differ and missing observations remain missing. Run `python -m unittest discover -s tests` to check refresh safeguards.

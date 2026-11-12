@@ -153,7 +153,7 @@
             <tbody id="latestTableBody"></tbody>
           </table>
         </div>
-        <p class="caption">Latest periods are the latest available observations within the selected date range. Values are generated from public sources by the data update pipeline. If the live data file is missing, the page falls back to illustrative sample values.</p>
+        <p class="caption">Latest periods are the latest available observations within the selected date range. Values are generated from public sources by the data update pipeline. If the data cannot be loaded, the page displays an error.</p>
       </article>
 
       <article class="card summary-card">
@@ -213,7 +213,7 @@
         <p>The default expected-inflation measure is the Core PCE moving-average proxy. This proxy uses recent realized inflation as a simple measure of expected inflation. The idea is that expectations may be partly adaptive: when recent inflation has been high, the inflation rate used to form the real policy rate may also be higher. This approach is useful because it is transparent, reproducible, available over a long history, and closely related to the real-rate construction used in several natural-rate models.</p>
         <p>For monthly calculations, the moving-average proxy is calculated as the average of the previous 12 months of annualized month-over-month inflation:</p>
         <div class="formula compact">π<sup>e,k</sup><sub>t</sub> = (1 / 12) × Σ<sub>j=1</sub><sup>12</sup> π<sup>k</sup><sub>t−j, MoM annualized</sub></div>
-        <p>The current month is excluded, so the expectation proxy for month <em>t</em> uses inflation information available through month <em>t−1</em>. For quarterly calculations, the proxy is calculated as the average of the previous four quarters of annualized quarter-over-quarter inflation:</p>
+        <p>Missing source months are not interpolated. A moving average is unavailable when its full window contains a missing observation. Quarterly price averages require all three months. The current month is excluded, so the expectation proxy for month <em>t</em> uses inflation information available through month <em>t−1</em>. For quarterly calculations, the proxy is calculated as the average of the previous four quarters of annualized quarter-over-quarter inflation:</p>
         <div class="formula compact">π<sup>e,k</sup><sub>q</sub> = (1 / 4) × Σ<sub>j=1</sub><sup>4</sup> π<sup>k</sup><sub>q−j, QoQ annualized</sub></div>
         <p>The dashboard includes moving-average proxies based on core PCE inflation, headline PCE inflation, core CPI inflation, and headline CPI inflation. Core PCE is the default because it is less volatile than headline inflation and is closely related to the inflation concept commonly emphasized in Federal Reserve analysis. The other options allow users to examine whether the implied stance of policy changes when expectations are proxied using broader or CPI-based inflation measures.</p>
 
@@ -223,7 +223,7 @@
 
         <h3>Natural rate of interest measures</h3>
         <p>The dashboard compares the real policy rate with several natural rate of interest measures and natural-rate proxies. These include model-based estimates, market-implied longer-run real-rate measures, policymaker-implied measures, and a simple benchmark. The D’Amico-Kim-Wei measure is the 5-to-10-year-ahead expected real short rate from the Federal Reserve’s DKW updates file. It is useful as a market-based longer-run neutral-rate proxy, but it should not be interpreted as the same type of structural model estimate as KC Fed, HLW, LW, or Lubik-Matthes. The fixed 2 percent benchmark is not an estimated natural rate. It is included as a simple reference assumption, r* = 2%, so users can compare model-based and market-based estimates with a constant real neutral-rate benchmark.</p>
-        <p>For Laubach-Williams, the dashboard allows users to choose between the one-sided and two-sided estimate when those source series are available. The one-sided estimate uses only information available up to that date, making it more appropriate for real-time policy assessment. The two-sided estimate uses information from the full sample and is more appropriate for revised historical analysis. Holston-Laubach-Williams is treated as a current published estimate.</p>
+        <p>For Laubach-Williams, the dashboard allows users to choose between the one-sided and two-sided estimate when those source series are available. The one sided estimate filters observations through each date using the current data vintage. It does not reconstruct the information actually available historically. The two-sided estimate uses information from the full sample and is more appropriate for revised historical analysis. Holston-Laubach-Williams is treated as a current published estimate.</p>
 
         <h3>Frequency treatment</h3>
         <p>The dashboard preserves the natural frequency of each series. Monthly natural-rate measures remain monthly, while quarterly natural-rate measures remain quarterly. The dashboard does not interpolate quarterly r* estimates into monthly values.</p>

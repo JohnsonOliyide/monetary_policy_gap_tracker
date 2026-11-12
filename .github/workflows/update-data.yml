@@ -1,16 +1,25 @@
 name: Update dashboard data
 
 on:
+  push:
+    paths:
+      - "scripts/**"
+      - "requirements.txt"
+      - ".github/workflows/**"
   workflow_dispatch:
   schedule:
-    # Runs every Wednesday morning UTC. Adjust as needed.
-    - cron: "15 11 * * 3"
+    - cron: "35 19 * * 1-5"
 
 permissions:
   contents: write
 
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
 jobs:
   update-data:
+    timeout-minutes: 20
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -23,6 +32,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Check refresh safeguards
+        run: python -m unittest discover -s tests
 
       - name: Build data file
         run: python scripts/update_data.py

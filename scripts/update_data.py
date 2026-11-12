@@ -8,6 +8,8 @@ available series and the missing source is recorded in data/update_log.json.
 from __future__ import annotations
 
 import io
+import csv
+import time
 import json
 import math
 import os
@@ -76,7 +78,7 @@ def get_bytes(url: str, timeout: int = 60, attempts: int = 3) -> bytes:
 
 def fetch_fred_series(series_id: str) -> pd.Series:
     url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
-    df = pd.read_csv(url)
+    df = pd.read_csv(io.BytesIO(get_bytes(url)))
     if df.shape[1] < 2:
         raise ValueError(f"FRED response for {series_id} had unexpected columns: {df.columns.tolist()}")
     date_col = df.columns[0]
@@ -93,19 +95,22 @@ def month_end_index(s: pd.Series, how: str = "mean") -> pd.Series:
         out = s.resample("ME").last()
     else:
         out = s.resample("ME").mean()
+    out = out[out.index <= pd.Timestamp.now().normalize()]
     out.name = s.name
-    return out.dropna()
+    return out.loc[out.first_valid_index():out.last_valid_index()] if out.notna().any() else out
 
 
-def quarter_end_index(s: pd.Series, how: str = "mean") -> pd.Series:
+def quarter_end_index(s: pd.Series, how: str = "mean", min_observations: int = 1) -> pd.Series:
     if s.empty:
         return s
     if how == "last":
         out = s.resample("QE").last()
     else:
         out = s.resample("QE").mean()
+    out = out.where(s.resample("QE").count() >= min_observations)
+    out = out[out.index <= pd.Timestamp.now().normalize()]
     out.name = s.name
-    return out.dropna()
+    return out.loc[out.first_valid_index():out.last_valid_index()] if out.notna().any() else out
 
 
 def annualized_log_change(index_series: pd.Series, periods_per_year: int) -> pd.Series:
@@ -114,8 +119,12 @@ def annualized_log_change(index_series: pd.Series, periods_per_year: int) -> pd.
 
 def moving_average_proxy(index_series: pd.Series, obs_per_year: int) -> pd.Series:
     """Lagged moving average of annualized inflation rates."""
+    if not index_series.empty:
+        offset = pd.offsets.MonthEnd(1) if obs_per_year == 12 else pd.offsets.QuarterEnd(1)
+        index_series = index_series.reindex(index_series.index.union([index_series.index[-1] + offset]))
     ann = annualized_log_change(index_series, obs_per_year)
-    return ann.shift(1).rolling(obs_per_year, min_periods=obs_per_year).mean()
+    result = ann.shift(1).rolling(obs_per_year, min_periods=obs_per_year).mean()
+    return result[result.index <= pd.Timestamp.today().normalize()]
 
 
 def quarter_label(dt: pd.Timestamp) -> str:
@@ -251,25 +260,44 @@ def extract_rstar_from_excel(url: str, prefer_terms: Iterable[str] = ()) -> pd.S
 
 
 def fetch_kc_fed() -> pd.Series:
-    content = get_bytes(SOURCES["kc_fed"])
-    df = pd.read_csv(io.BytesIO(content))
-    df = clean_columns(df)
-    dcol = find_date_column(df) or df.columns[0]
-    rcol = find_numeric_rstar_column(df, prefer=["rstar", "r*"])
-    if rcol is None:
-        # A conservative fallback: choose the first numeric column with r in its name.
-        for c in df.columns:
-            if c == dcol:
-                continue
-            if pd.to_numeric(df[c], errors="coerce").notna().sum() > 20:
-                rcol = c
-                break
-    if rcol is None:
-        raise ValueError(f"Could not identify KC Fed r-star column. Columns: {df.columns.tolist()}")
-    dates = pd.to_datetime(df[dcol], errors="coerce")
-    dates = pd.Series(dates).dt.to_period("M").dt.to_timestamp("M")
-    vals = pd.to_numeric(df[rcol], errors="coerce")
+    df = pd.read_csv(io.BytesIO(get_bytes(SOURCES["kc_fed"])), header=1)
+    if list(df.columns[:2]) != ["Date", "Point Estimate"]:
+        raise ValueError("KC Fed CSV schema changed; refusing to select a different measure.")
+    dates = pd.to_datetime(df.iloc[:, 0], errors="coerce").dt.to_period("M").dt.to_timestamp("M")
+    vals = pd.to_numeric(df.iloc[:, 1], errors="coerce")
     return pd.Series(vals.values, index=dates, name="kc_fed").dropna().sort_index()
+
+
+def fetch_nyfed_rstar(model: str, side: str = "one") -> pd.Series:
+    key = "hlw_current" if model == "hlw" else "lw_current"
+    content = get_bytes(SOURCES[key])
+    sheet = "HLW Estimates" if model == "hlw" else "data"
+    raw = pd.read_excel(io.BytesIO(content), sheet_name=sheet, header=None)
+    header = next((i for i in range(min(15, len(raw)))
+                   if str(raw.iloc[i, 0]).strip().lower() == "date"), None)
+    if header is None:
+        raise ValueError("NY Fed date header not found")
+    # These files use merged group headers; the repeated US/rstar labels alone
+    # cannot distinguish trend growth from r-star or one-sided from two-sided.
+    if model == "hlw":
+        col = next((j for j in range(raw.shape[1])
+                    if "natural rate" in str(raw.iloc[header-1, j]).lower()
+                    and str(raw.iloc[header, j]).strip() == "US"), None)
+    else:
+        group = "one-sided" if side == "one" else "two-sided"
+        col = next((j for j in range(raw.shape[1])
+                    if group in str(raw.iloc[header-1, j]).lower()
+                    and str(raw.iloc[header, j]).strip().lower() == "rstar"), None)
+    if col is None:
+        raise ValueError(f"NY Fed {model} {side} r-star column not found")
+    data = raw.iloc[header+1:]
+    dates = pd.to_datetime(data.iloc[:, 0], errors="coerce").dt.to_period("Q").dt.to_timestamp("Q")
+    vals = pd.to_numeric(data.iloc[:, col], errors="coerce")
+    ser = pd.Series(vals.values, index=dates).dropna()
+    ser = ser[~ser.index.isna()].sort_index()
+    if len(ser) < 20 or ser.index.has_duplicates:
+        raise ValueError("NY Fed r-star sample is incomplete or has duplicate dates")
+    return ser
 
 
 def fetch_lubik_matthes() -> pd.Series:
@@ -293,9 +321,8 @@ def fetch_lubik_matthes() -> pd.Series:
 
 def fetch_tips_10y10y() -> pd.Series:
     content = get_bytes(SOURCES["tips_yield_curve"])
-    df = pd.read_csv(io.BytesIO(content))
-    df = clean_columns(df)
-    dcol = find_date_column(df) or df.columns[0]
+    df = read_noted_csv(content, {"Date", "TIPSY10", "TIPSY20"})
+    dcol = "Date"
     dates = pd.to_datetime(df[dcol], errors="coerce")
     cols = {str(c).lower().replace(" ", "").replace("_", ""): c for c in df.columns}
 
@@ -334,15 +361,7 @@ def fetch_dkw_5f5() -> pd.Series:
     content = get_bytes(SOURCES["dkw_updates"])
     # The CSV contains descriptive notes above the actual header row. Locate the
     # header robustly rather than hard-coding a fixed skip count.
-    lines = content.decode("utf-8", errors="replace").splitlines()
-    header_idx = None
-    for i, line in enumerate(lines):
-        if line.lower().startswith("date,") and "exp.real.short.rate.5f5" in line.lower():
-            header_idx = i
-            break
-    if header_idx is None:
-        raise ValueError("Could not find DKW header row with exp.real.short.rate.5f5")
-    df = pd.read_csv(io.BytesIO(content), skiprows=header_idx)
+    df = read_noted_csv(content, {"date", "exp.real.short.rate.5f5"})
     df = clean_columns(df)
     dcol = "date" if "date" in df.columns else find_date_column(df) or df.columns[0]
     vcol = "exp.real.short.rate.5f5"
@@ -355,91 +374,54 @@ def fetch_dkw_5f5() -> pd.Series:
     return month_end_index(daily, how="mean")
 
 
+def read_noted_csv(content: bytes, required: set) -> pd.DataFrame:
+    lines = content.decode("utf-8-sig").splitlines()
+    for i, line in enumerate(lines):
+        fields = {x.strip() for x in next(csv.reader([line]))}
+        if required.issubset(fields):
+            return pd.read_csv(io.StringIO("\n".join(lines[i:])))
+    raise ValueError(f"CSV header not found for {sorted(required)}")
+
+
 def fetch_sce_1y() -> Optional[pd.Series]:
     try:
-        content = get_bytes(SOURCES["sce"])
-        sheets = pd.read_excel(io.BytesIO(content), sheet_name=None)
-        candidates = []
-        for sheet, df in sheets.items():
-            for header in range(0, min(8, len(df))):
-                try:
-                    tmp = pd.read_excel(io.BytesIO(content), sheet_name=sheet, header=header)
-                except Exception:
-                    continue
-                tmp = clean_columns(tmp).dropna(how="all")
-                dcol = find_date_column(tmp)
-                if dcol is None:
-                    continue
-                # Prefer the median one-year ahead expected inflation rate.
-                best_col = None
-                best_score = 0
-                for c in tmp.columns:
-                    cl = str(c).lower()
-                    score = 0
-                    if "inflation" in cl: score += 3
-                    if "one" in cl or "1" in cl: score += 2
-                    if "year" in cl or "yr" in cl: score += 2
-                    if "median" in cl: score += 2
-                    if "expected" in cl or "expectation" in cl: score += 2
-                    if "three" in cl or "3" in cl or "uncert" in cl or "dispersion" in cl or "point" in cl:
-                        score -= 2
-                    if score > best_score and pd.to_numeric(tmp[c], errors="coerce").notna().sum() > 20:
-                        best_score = score
-                        best_col = c
-                if best_col is not None and best_score >= 5:
-                    dates = pd.to_datetime(tmp[dcol], errors="coerce")
-                    dates = pd.Series(dates).dt.to_period("M").dt.to_timestamp("M")
-                    vals = pd.to_numeric(tmp[best_col], errors="coerce")
-                    ser = pd.Series(vals.values, index=dates, name="nyfed_sce_1y").dropna().sort_index()
-                    if len(ser) > 20:
-                        candidates.append((len(ser), sheet, best_col, ser))
-        if candidates:
-            candidates.sort(reverse=True, key=lambda x: x[0])
-            return candidates[0][3]
-        raise ValueError("Could not identify SCE one-year inflation expectation column")
-    except Exception as e:
-        log("warnings", f"NY Fed SCE unavailable or could not be parsed: {e}")
+        raw = pd.read_excel(io.BytesIO(get_bytes(SOURCES["sce"])),
+                            sheet_name="Inflation expectations", header=None)
+        target = "median one-year ahead expected inflation rate"
+        found = [(i, j) for i in range(min(12, len(raw))) for j in range(raw.shape[1])
+                 if str(raw.iloc[i, j]).strip().lower() == target]
+        if len(found) != 1:
+            raise ValueError("SCE median one-year inflation column not found")
+        i, j = found[0]
+        data = raw.iloc[i+1:]
+        months = pd.to_numeric(data.iloc[:, 0], errors="coerce").astype("Int64").astype(str)
+        dates = pd.to_datetime(months, format="%Y%m", errors="coerce").dt.to_period("M").dt.to_timestamp("M")
+        vals = pd.to_numeric(data.iloc[:, j], errors="coerce")
+        out = pd.Series(vals.values, index=dates, name="nyfed_sce_1y").dropna()
+        out = out[~out.index.isna()].sort_index()
+        if len(out) < 20:
+            raise ValueError("SCE sample too short")
+        log("success", "Fetched NY Fed SCE median one-year expected inflation")
+        return out
+    except Exception as exc:
+        log("warnings", f"NY Fed SCE unavailable: {exc}")
         return None
 
 
 def fetch_spf_1y() -> Optional[pd.Series]:
     try:
-        content = get_bytes(SOURCES["spf_inflation"])
-        sheets = pd.read_excel(io.BytesIO(content), sheet_name=None)
-        candidates = []
-        for sheet, df in sheets.items():
-            for header in range(0, min(8, len(df))):
-                try:
-                    tmp = pd.read_excel(io.BytesIO(content), sheet_name=sheet, header=header)
-                except Exception:
-                    continue
-                tmp = clean_columns(tmp).dropna(how="all")
-                dates = parse_period_from_df(tmp)
-                if dates is None:
-                    continue
-                best_col, best_score = None, 0
-                for c in tmp.columns:
-                    cl = str(c).lower()
-                    score = 0
-                    if "cpi" in cl or "inflation" in cl: score += 2
-                    if "1" in cl or "one" in cl or "year" in cl: score += 2
-                    if "median" in cl: score += 2
-                    if "10" in cl or "long" in cl or "mean" in cl or "disp" in cl:
-                        score -= 3
-                    if score > best_score and pd.to_numeric(tmp[c], errors="coerce").notna().sum() > 10:
-                        best_col, best_score = c, score
-                if best_col is not None and best_score >= 3:
-                    vals = pd.to_numeric(tmp[best_col], errors="coerce")
-                    ser = pd.Series(vals.values, index=pd.to_datetime(dates), name="spf_1y").dropna().sort_index()
-                    # SPF inflation values are annual rates in percent.
-                    if len(ser) > 10:
-                        candidates.append((len(ser), sheet, best_col, ser))
-        if candidates:
-            candidates.sort(reverse=True, key=lambda x: x[0])
-            return candidates[0][3]
-        raise ValueError("Could not identify SPF 1-year expected inflation column")
-    except Exception as e:
-        log("warnings", f"SPF one-year inflation expectation unavailable or could not be parsed: {e}")
+        df = pd.read_excel(io.BytesIO(get_bytes(SOURCES["spf_inflation"])), sheet_name="INFLATION")
+        required = {"YEAR", "QUARTER", "INFCPI1YR"}
+        if not required.issubset(df.columns):
+            raise ValueError("SPF CPI one-year forecast columns not found")
+        dates = [pd.Timestamp(int(y), int(q)*3, 1) + pd.offsets.MonthEnd(0)
+                 for y, q in zip(df.YEAR, df.QUARTER)]
+        out = pd.Series(pd.to_numeric(df.INFCPI1YR, errors="coerce").values,
+                        index=dates, name="spf_1y").dropna().sort_index()
+        log("success", "Fetched SPF one-year CPI inflation forecast")
+        return out
+    except Exception as exc:
+        log("warnings", f"SPF one-year inflation forecast unavailable: {exc}")
         return None
 
 
@@ -486,19 +468,21 @@ def build_records() -> Dict:
     core_cpi_m = moving_average_proxy(month_end_index(fred["core_cpi"], how="last"), 12)
     cpi_m = moving_average_proxy(month_end_index(fred["cpi"], how="last"), 12)
 
-    core_pce_q = moving_average_proxy(quarter_end_index(fred["core_pce"], how="mean"), 4)
-    pce_q = moving_average_proxy(quarter_end_index(fred["pce"], how="mean"), 4)
-    core_cpi_q = moving_average_proxy(quarter_end_index(fred["core_cpi"], how="mean"), 4)
-    cpi_q = moving_average_proxy(quarter_end_index(fred["cpi"], how="mean"), 4)
+    core_pce_q = moving_average_proxy(quarter_end_index(fred["core_pce"], how="mean", min_observations=3), 4)
+    pce_q = moving_average_proxy(quarter_end_index(fred["pce"], how="mean", min_observations=3), 4)
+    core_cpi_q = moving_average_proxy(quarter_end_index(fred["core_cpi"], how="mean", min_observations=3), 4)
+    cpi_q = moving_average_proxy(quarter_end_index(fred["cpi"], how="mean", min_observations=3), 4)
 
     cleveland_m = month_end_index(fred["cleveland_1y"], how="last")
     mich_m = month_end_index(fred["michigan_1y"], how="last")
-    cleveland_q = quarter_end_index(cleveland_m, how="mean")
-    mich_q = quarter_end_index(mich_m, how="mean")
+    cleveland_q = quarter_end_index(cleveland_m, how="mean", min_observations=3)
+    mich_q = quarter_end_index(mich_m, how="mean", min_observations=3)
 
     sce_m = fetch_sce_1y()
-    sce_q = quarter_end_index(sce_m, how="mean") if sce_m is not None else pd.Series(dtype=float)
-    spf_q = fetch_spf_1y() or pd.Series(dtype=float)
+    sce_q = quarter_end_index(sce_m, how="mean", min_observations=3) if sce_m is not None else pd.Series(dtype=float)
+    spf_q = fetch_spf_1y()
+    if spf_q is None:
+        spf_q = pd.Series(dtype=float)
 
     # Natural-rate measures.
     try:
@@ -521,23 +505,23 @@ def build_records() -> Dict:
         log("warnings", f"Failed to fetch DKW 5-to-10-year-ahead expected real short rate: {e}")
 
     try:
-        hlw_q = extract_rstar_from_excel(SOURCES["hlw_current"], prefer_terms=["us", "rstar"])
+        hlw_q = fetch_nyfed_rstar("hlw")
         hlw_q.name = "hlw"
         log("success", "Fetched HLW current r-star")
     except Exception as e:
         hlw_q = pd.Series(dtype=float)
         log("warnings", f"Failed to fetch HLW current r-star: {e}")
     try:
-        lw_current_q = extract_rstar_from_excel(SOURCES["lw_current"], prefer_terms=["rstar"])
+        lw_current_q = fetch_nyfed_rstar("lw", "two")
         lw_current_q.name = "lw_two_sided"
         log("success", "Fetched LW current/two-sided r-star")
     except Exception as e:
         lw_current_q = pd.Series(dtype=float)
         log("warnings", f"Failed to fetch LW current/two-sided r-star: {e}")
     try:
-        lw_rt_q = extract_rstar_from_excel(SOURCES["lw_realtime"], prefer_terms=["rstar"])
+        lw_rt_q = fetch_nyfed_rstar("lw", "one")
         lw_rt_q.name = "lw_one_sided"
-        log("success", "Fetched LW real-time/one-sided r-star")
+        log("success", "Fetched LW current-vintage one-sided r-star")
     except Exception as e:
         lw_rt_q = pd.Series(dtype=float)
         log("warnings", f"Failed to fetch LW real-time/one-sided r-star: {e}")
@@ -655,8 +639,14 @@ def build_records() -> Dict:
 def main() -> None:
     DATA_DIR.mkdir(exist_ok=True)
     payload = build_records()
-    OUT_JSON.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    LOG_JSON.write_text(json.dumps(LOG, indent=2), encoding="utf-8")
+    # Never replace real data with an empty or partially failed core refresh.
+    if LOG["errors"] or LOG["warnings"] or not payload["months"] or not payload["quarters"]:
+        raise RuntimeError("Core data refresh incomplete; existing data kept: " + "; ".join(LOG["errors"] + LOG["warnings"]))
+    payload["metadata"]["source_status"] = LOG
+    for path, value in [(OUT_JSON, payload), (LOG_JSON, LOG)]:
+        temp = path.with_suffix(path.suffix + ".tmp")
+        temp.write_text(json.dumps(value, indent=2, allow_nan=False), encoding="utf-8")
+        temp.replace(path)
     log("success", f"Wrote {OUT_JSON.relative_to(ROOT)} with {len(payload['months'])} monthly rows and {len(payload['quarters'])} quarterly rows")
 
 
