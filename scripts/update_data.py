@@ -10,6 +10,7 @@ from __future__ import annotations
 import io
 import csv
 from functools import lru_cache
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import json
 import math
@@ -82,7 +83,7 @@ def get_bytes(url: str, timeout: int = 60, attempts: int = 3) -> bytes:
 
 def fetch_fred_series(series_id: str) -> pd.Series:
     url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={series_id}"
-    df = pd.read_csv(io.BytesIO(get_bytes(url)))
+    df = pd.read_csv(io.BytesIO(get_bytes(url, timeout=35, attempts=2)))
     if df.shape[1] < 2:
         raise ValueError(f"FRED response for {series_id} had unexpected columns: {df.columns.tolist()}")
     date_col = df.columns[0]
@@ -457,13 +458,18 @@ def build_records() -> Dict:
     LOG["success"].clear(); LOG["warnings"].clear(); LOG["errors"].clear()
 
     fred = {}
-    for key, sid in FRED_SERIES.items():
-        try:
-            fred[key] = fetch_fred_series(sid)
-            log("success", f"Fetched FRED {sid}")
-        except Exception as e:
-            fred[key] = pd.Series(dtype=float)
-            log("errors", f"Failed to fetch FRED {sid}: {e}")
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        futures = {pool.submit(fetch_fred_series, sid): (key, sid)
+                   for key, sid in FRED_SERIES.items()}
+        for future in as_completed(futures):
+            key, sid = futures[future]
+            try:
+                fred[key] = future.result()
+                log("success", f"Fetched FRED {sid}")
+            except Exception as exc:
+                log("errors", f"Failed to fetch FRED {sid}: {exc}")
+    if LOG["errors"]:
+        raise RuntimeError("Required sources unavailable; existing data kept: " + "; ".join(LOG["errors"]))
 
     # Policy rates: monthly and quarterly averages.
     effr_m = month_end_index(fred["effr_daily"], how="mean")
