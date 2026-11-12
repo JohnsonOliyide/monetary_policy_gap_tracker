@@ -289,7 +289,7 @@ function getPolicyAndInflationForQuarter(q, policyKey, inflationKey) {
   if (!row) return { policy: null, inflation: null, realRate: null };
   const policy = row.policy[policyKey];
   const inflation = row.inflation[inflationKey];
-  return { policy, inflation, realRate: policy - inflation };
+  return { policy, inflation, realRate: hasNumber(policy) && hasNumber(inflation) ? policy - inflation : null };
 }
 
 function policyGap(policy, inflation, rstar) {
@@ -313,7 +313,7 @@ function averageMonthlyRstarByQuarter(measureId) {
   quarters.forEach(q => {
     const ms = rawData.months.filter(m => m.quarter === q);
     const vals = ms.map(m => getRstarFromMonth(m, measureId)).filter(v => v !== null && v !== undefined);
-    if (vals.length) out.set(q, avg(vals));
+    if (vals.length === 3) out.set(q, avg(vals));
   });
   return out;
 }
@@ -431,8 +431,8 @@ function buildRealRateTrace(policyKey, inflationKey) {
   const rows = filterDateRows(spfMode ? rawData.quarters : rawData.months);
   return {
     x: rows.map(d => d.date),
-    y: rows.map(d => d.policy[policyKey] - d.inflation[inflationKey]),
-    text: rows.map(d => `${d.period}<br>Policy rate: ${fmt(d.policy[policyKey])}%<br>Expected inflation: ${fmt(d.inflation[inflationKey])}%<br>Real rate: ${fmt(d.policy[policyKey] - d.inflation[inflationKey])}%`),
+    y: rows.map(d => hasNumber(d.policy[policyKey]) && hasNumber(d.inflation[inflationKey]) ? d.policy[policyKey] - d.inflation[inflationKey] : null),
+    text: rows.map(d => `${d.period}<br>Policy rate: ${fmt(d.policy[policyKey])}%<br>Expected inflation: ${fmt(d.inflation[inflationKey])}%<br>Real rate: ${fmt(hasNumber(d.policy[policyKey]) && hasNumber(d.inflation[inflationKey]) ? d.policy[policyKey] - d.inflation[inflationKey] : null)}%`),
     type: 'scatter',
     mode: 'lines',
     name: 'Real policy rate',
@@ -446,7 +446,10 @@ function latestReading(measureId, policyKey, inflationKey) {
   const spfMode = inflationKey === 'spf_1y';
 
   if (measureId === 'sep_implied') {
-    const row = [...filterDateRows(rawData.sep)].reverse()[0];
+    const row = [...filterDateRows(rawData.sep)].reverse().find(d => {
+      const qi = getPolicyAndInflationForQuarter(d.quarter, policyKey, inflationKey);
+      return policyGap(qi.policy, qi.inflation, d.rstar) !== null;
+    });
     if (!row) return null;
     const qi = getPolicyAndInflationForQuarter(row.quarter, policyKey, inflationKey);
     const gap = policyGap(qi.policy, qi.inflation, row.rstar);
@@ -454,7 +457,10 @@ function latestReading(measureId, policyKey, inflationKey) {
   }
 
   if (spfMode) {
-    const qrow = [...filterDateRows(rawData.quarters)].reverse().find(q => q.inflation[inflationKey] !== undefined);
+    const qrow = [...filterDateRows(rawData.quarters)].reverse().find(q => {
+      const r = isMonthlyMeasure(measureId) ? averageMonthlyRstarByQuarter(measureId).get(q.quarter) : getRstarFromQuarter(q, measureId);
+      return policyGap(q.policy[policyKey], q.inflation[inflationKey], r) !== null;
+    });
     if (!qrow) return null;
     let rstar;
     if (isMonthlyMeasure(measureId)) {
@@ -465,26 +471,26 @@ function latestReading(measureId, policyKey, inflationKey) {
     const policy = qrow.policy[policyKey];
     const inflation = qrow.inflation[inflationKey];
     const gap = policyGap(policy, inflation, rstar);
-    return { measureId, period: qrow.period, frequency: 'Quarterly', policy, inflation, realRate: policy - inflation, rstar, gap };
+    return { measureId, period: qrow.period, frequency: 'Quarterly', policy, inflation, realRate: hasNumber(policy) && hasNumber(inflation) ? policy - inflation : null, rstar, gap };
   }
 
   if (isMonthlyMeasure(measureId)) {
-    const row = [...filterDateRows(rawData.months)].reverse().find(d => getRstarFromMonth(d, measureId) !== null);
+    const row = [...filterDateRows(rawData.months)].reverse().find(d => policyGap(d.policy[policyKey], d.inflation[inflationKey], getRstarFromMonth(d, measureId)) !== null);
     if (!row) return null;
     const policy = row.policy[policyKey];
     const inflation = row.inflation[inflationKey];
     const rstar = getRstarFromMonth(row, measureId);
     const gap = policyGap(policy, inflation, rstar);
-    return { measureId, period: row.period, frequency: meta.frequency, policy, inflation, realRate: policy - inflation, rstar, gap };
+    return { measureId, period: row.period, frequency: meta.frequency, policy, inflation, realRate: hasNumber(policy) && hasNumber(inflation) ? policy - inflation : null, rstar, gap };
   }
 
-  const qrow = [...filterDateRows(rawData.quarters)].reverse().find(d => getRstarFromQuarter(d, measureId) !== null);
+  const qrow = [...filterDateRows(rawData.quarters)].reverse().find(d => policyGap(d.policy[policyKey], d.inflation[inflationKey], getRstarFromQuarter(d, measureId)) !== null);
   if (!qrow) return null;
   const policy = qrow.policy[policyKey];
   const inflation = qrow.inflation[inflationKey];
   const rstar = getRstarFromQuarter(qrow, measureId);
   const gap = policyGap(policy, inflation, rstar);
-  return { measureId, period: qrow.period, frequency: meta.frequency, policy, inflation, realRate: policy - inflation, rstar, gap };
+  return { measureId, period: qrow.period, frequency: meta.frequency, policy, inflation, realRate: hasNumber(policy) && hasNumber(inflation) ? policy - inflation : null, rstar, gap };
 }
 
 function chartLayout(base = {}) {
