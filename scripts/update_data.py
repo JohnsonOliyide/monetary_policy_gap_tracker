@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import io
 import csv
+from functools import lru_cache
 import time
 import json
 import math
@@ -59,13 +60,15 @@ LOG = {"success": [], "warnings": [], "errors": []}
 
 def log(kind: str, message: str) -> None:
     LOG.setdefault(kind, []).append(message)
-    print(f"[{kind.upper()}] {message}")
+    print(f"[{kind.upper()}] {message}", flush=True)
 
 
+@lru_cache(maxsize=32)
 def get_bytes(url: str, timeout: int = 60, attempts: int = 3) -> bytes:
     last_exc = None
     for attempt in range(1, attempts + 1):
         try:
+            print(f"Downloading {url} (attempt {attempt}/{attempts})", flush=True)
             r = requests.get(url, timeout=timeout, headers={"User-Agent": USER_AGENT})
             r.raise_for_status()
             return r.content
@@ -73,6 +76,7 @@ def get_bytes(url: str, timeout: int = 60, attempts: int = 3) -> bytes:
             last_exc = exc
             if attempt == attempts:
                 break
+            time.sleep(min(2 ** attempt, 8))
     raise last_exc
 
 
@@ -85,7 +89,9 @@ def fetch_fred_series(series_id: str) -> pd.Series:
     val_col = df.columns[1]
     s = pd.to_numeric(df[val_col].replace(".", np.nan), errors="coerce")
     out = pd.Series(s.values, index=pd.to_datetime(df[date_col]), name=series_id).dropna()
-    return out
+    if len(out) < 24 or out.index.has_duplicates or not np.isfinite(out.to_numpy()).all():
+        raise ValueError(f"FRED {series_id} returned incomplete or invalid observations")
+    return out.sort_index()
 
 
 def month_end_index(s: pd.Series, how: str = "mean") -> pd.Series:
@@ -265,7 +271,10 @@ def fetch_kc_fed() -> pd.Series:
         raise ValueError("KC Fed CSV schema changed; refusing to select a different measure.")
     dates = pd.to_datetime(df.iloc[:, 0], errors="coerce").dt.to_period("M").dt.to_timestamp("M")
     vals = pd.to_numeric(df.iloc[:, 1], errors="coerce")
-    return pd.Series(vals.values, index=dates, name="kc_fed").dropna().sort_index()
+    result = pd.Series(vals.values, index=dates, name="kc_fed").dropna().sort_index()
+    if len(result) < 24 or result.index.hasnans or result.index.has_duplicates:
+        raise ValueError("KC Fed sample is incomplete or dates are invalid")
+    return result
 
 
 def fetch_nyfed_rstar(model: str, side: str = "one") -> pd.Series:

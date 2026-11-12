@@ -9,6 +9,10 @@ u = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(u)
 
 class RefreshTests(unittest.TestCase):
+    def test_empty_core_source_rejected(self):
+        with patch.object(u, 'get_bytes', return_value=b'DATE,EFFR\n2026-01-01,.\n'):
+            with self.assertRaises(ValueError): u.fetch_fred_series('EFFR')
+
     def test_quoted_header_after_preamble(self):
         frame = u.read_noted_csv(b'Explanatory note\n"date","rate"\n2020-01-01,1.5\n', {'date', 'rate'})
         self.assertEqual(frame['rate'].iloc[0], 1.5)
