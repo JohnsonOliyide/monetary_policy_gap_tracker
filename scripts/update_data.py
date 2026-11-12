@@ -70,7 +70,7 @@ def get_bytes(url: str, timeout: int = 60, attempts: int = 3) -> bytes:
     for attempt in range(1, attempts + 1):
         try:
             print(f"Downloading {url} (attempt {attempt}/{attempts})", flush=True)
-            r = requests.get(url, timeout=timeout, headers={"User-Agent": USER_AGENT})
+            r = requests.get(url, timeout=timeout)
             r.raise_for_status()
             return r.content
         except Exception as exc:
