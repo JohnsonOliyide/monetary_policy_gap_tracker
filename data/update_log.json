@@ -1,14 +1,14 @@
 {
   "success": [
     "Fetched FRED PCEPILFE",
+    "Fetched FRED EFFR",
     "Fetched FRED PCEPI",
     "Fetched FRED CPIAUCSL",
-    "Fetched FRED EFFR",
     "Fetched FRED DGS1",
     "Fetched FRED CPILFESL",
     "Fetched FRED MICH",
-    "Fetched FRED FEDTARMDLR",
     "Fetched FRED EXPINF1YR",
+    "Fetched FRED FEDTARMDLR",
     "Fetched NY Fed SCE median one-year expected inflation",
     "Fetched SPF one-year CPI inflation forecast",
     "Fetched KC Fed r-star",
