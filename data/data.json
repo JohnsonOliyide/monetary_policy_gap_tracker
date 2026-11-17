@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-11-14T00:26:48+00:00",
+    "generated_at_utc": "2026-11-17T02:35:43+00:00",
     "description": "Generated from public data sources by scripts/update_data.py.",
     "source_urls": {
       "kc_fed": "https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv",
@@ -31,12 +31,12 @@
       "success": [
         "Fetched FRED PCEPILFE",
         "Fetched FRED PCEPI",
-        "Fetched FRED EFFR",
         "Fetched FRED DGS1",
         "Fetched FRED CPIAUCSL",
-        "Fetched FRED EXPINF1YR",
-        "Fetched FRED MICH",
         "Fetched FRED CPILFESL",
+        "Fetched FRED EXPINF1YR",
+        "Fetched FRED EFFR",
+        "Fetched FRED MICH",
         "Fetched FRED FEDTARMDLR",
         "Fetched NY Fed SCE median one-year expected inflation",
         "Fetched SPF one-year CPI inflation forecast",
@@ -31014,6 +31014,31 @@
         "michigan_1y": 4.266667,
         "nyfed_sce_1y": 3.704765,
         "spf_1y": 2.4303
+      },
+      "rstar": {
+        "hlw": null,
+        "lw_one_sided": null,
+        "lw_two_sided": null,
+        "lubik_matthes": null
+      }
+    },
+    {
+      "date": "2026-12-31",
+      "period": "2026 Q4",
+      "quarter": "2026 Q4",
+      "policy": {
+        "effr": null,
+        "treasury_1y": null
+      },
+      "inflation": {
+        "core_pce_ma": null,
+        "headline_pce_ma": null,
+        "core_cpi_ma": null,
+        "headline_cpi_ma": null,
+        "cleveland_1y": null,
+        "michigan_1y": null,
+        "nyfed_sce_1y": null,
+        "spf_1y": 2.4361
       },
       "rstar": {
         "hlw": null,
