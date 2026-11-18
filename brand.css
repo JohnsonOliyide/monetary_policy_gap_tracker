@@ -66,3 +66,8 @@ th { background: #faf8f7; }
  .hero, .site-header { background: #fff; color: #262321; border-color: var(--border); }
  .hero h1, .hero p, .hero .strong, .hero a, .hero-copy h1, .intro-text, .intro-subtitle, .interpretation, .hero-eyebrow { color: #262321; }
 }
+
+/* Keep wide data tables inside their own scroll container. */
+.main { grid-template-columns: minmax(0, 1fr); }
+.main > * { min-width: 0; }
+.table-wrap { max-width: 100%; }
