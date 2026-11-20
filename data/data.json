@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-11-19T01:26:46+00:00",
+    "generated_at_utc": "2026-11-20T01:25:46+00:00",
     "description": "Generated from public data sources by scripts/update_data.py.",
     "source_urls": {
       "kc_fed": "https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv",
@@ -29,13 +29,13 @@
     ],
     "source_status": {
       "success": [
+        "Fetched FRED EFFR",
+        "Fetched FRED CPIAUCSL",
+        "Fetched FRED CPILFESL",
         "Fetched FRED PCEPILFE",
         "Fetched FRED PCEPI",
-        "Fetched FRED DGS1",
-        "Fetched FRED CPILFESL",
-        "Fetched FRED CPIAUCSL",
-        "Fetched FRED EFFR",
         "Fetched FRED FEDTARMDLR",
+        "Fetched FRED DGS1",
         "Fetched FRED MICH",
         "Fetched FRED EXPINF1YR",
         "Fetched NY Fed SCE median one-year expected inflation",
