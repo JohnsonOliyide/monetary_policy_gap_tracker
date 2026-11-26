@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-11-25T03:08:47+00:00",
+    "generated_at_utc": "2026-11-26T02:25:40+00:00",
     "description": "Generated from public data sources by scripts/update_data.py.",
     "source_urls": {
       "kc_fed": "https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv",
@@ -29,15 +29,15 @@
     ],
     "source_status": {
       "success": [
-        "Fetched FRED PCEPILFE",
         "Fetched FRED PCEPI",
+        "Fetched FRED PCEPILFE",
         "Fetched FRED DGS1",
         "Fetched FRED CPIAUCSL",
         "Fetched FRED CPILFESL",
         "Fetched FRED EFFR",
+        "Fetched FRED MICH",
         "Fetched FRED EXPINF1YR",
         "Fetched FRED FEDTARMDLR",
-        "Fetched FRED MICH",
         "Fetched NY Fed SCE median one-year expected inflation",
         "Fetched SPF one-year CPI inflation forecast",
         "Fetched KC Fed r-star",
@@ -22983,7 +22983,7 @@
       },
       "inflation": {
         "core_pce_ma": 2.951355,
-        "headline_pce_ma": 3.317713,
+        "headline_pce_ma": 3.316189,
         "core_cpi_ma": null,
         "headline_cpi_ma": null,
         "cleveland_1y": 2.398831,
@@ -23006,8 +23006,8 @@
         "treasury_1y": 4.365238
       },
       "inflation": {
-        "core_pce_ma": 2.989314,
-        "headline_pce_ma": 3.386199,
+        "core_pce_ma": 3.001575,
+        "headline_pce_ma": 3.396836,
         "core_cpi_ma": null,
         "headline_cpi_ma": null,
         "cleveland_1y": 2.659877,
@@ -23030,8 +23030,8 @@
         "treasury_1y": 4.462857
       },
       "inflation": {
-        "core_pce_ma": 3.073442,
-        "headline_pce_ma": 3.583879,
+        "core_pce_ma": 3.094066,
+        "headline_pce_ma": 3.603536,
         "core_cpi_ma": null,
         "headline_cpi_ma": null,
         "cleveland_1y": 2.9801,
