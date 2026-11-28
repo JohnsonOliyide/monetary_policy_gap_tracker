@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at_utc": "2026-11-27T02:22:50+00:00",
+    "generated_at_utc": "2026-11-28T02:08:02+00:00",
     "description": "Generated from public data sources by scripts/update_data.py.",
     "source_urls": {
       "kc_fed": "https://kcresearch-share.kansascityfed.org/kc-mbnr/KCFed_ModelBased_Rstar_Ustar.csv",
@@ -29,15 +29,15 @@
     ],
     "source_status": {
       "success": [
-        "Fetched FRED PCEPILFE",
         "Fetched FRED EFFR",
-        "Fetched FRED CPIAUCSL",
+        "Fetched FRED PCEPILFE",
         "Fetched FRED PCEPI",
-        "Fetched FRED CPILFESL",
-        "Fetched FRED FEDTARMDLR",
         "Fetched FRED DGS1",
-        "Fetched FRED MICH",
         "Fetched FRED EXPINF1YR",
+        "Fetched FRED CPILFESL",
+        "Fetched FRED CPIAUCSL",
+        "Fetched FRED MICH",
+        "Fetched FRED FEDTARMDLR",
         "Fetched NY Fed SCE median one-year expected inflation",
         "Fetched SPF one-year CPI inflation forecast",
         "Fetched KC Fed r-star",
@@ -24467,8 +24467,8 @@
       },
       "rstar": {
         "hlw": 5.477347,
-        "lw_one_sided": 5.105656,
-        "lw_two_sided": 4.428702,
+        "lw_one_sided": 5.118313,
+        "lw_two_sided": 4.345973,
         "lubik_matthes": null
       }
     },
@@ -24492,8 +24492,8 @@
       },
       "rstar": {
         "hlw": 5.697022,
-        "lw_one_sided": 5.319995,
-        "lw_two_sided": 4.413735,
+        "lw_one_sided": 5.347298,
+        "lw_two_sided": 4.331679,
         "lubik_matthes": null
       }
     },
@@ -24517,8 +24517,8 @@
       },
       "rstar": {
         "hlw": 5.613162,
-        "lw_one_sided": 5.296293,
-        "lw_two_sided": 4.394873,
+        "lw_one_sided": 5.288568,
+        "lw_two_sided": 4.313961,
         "lubik_matthes": null
       }
     },
@@ -24542,8 +24542,8 @@
       },
       "rstar": {
         "hlw": 5.585808,
-        "lw_one_sided": 5.293034,
-        "lw_two_sided": 4.373279,
+        "lw_one_sided": 5.262097,
+        "lw_two_sided": 4.294023,
         "lubik_matthes": null
       }
     },
@@ -24567,8 +24567,8 @@
       },
       "rstar": {
         "hlw": 5.407605,
-        "lw_one_sided": 5.153628,
-        "lw_two_sided": 4.35217,
+        "lw_one_sided": 5.093217,
+        "lw_two_sided": 4.274527,
         "lubik_matthes": null
       }
     },
@@ -24592,8 +24592,8 @@
       },
       "rstar": {
         "hlw": 4.873822,
-        "lw_one_sided": 4.660524,
-        "lw_two_sided": 4.340848,
+        "lw_one_sided": 4.589099,
+        "lw_two_sided": 4.26392,
         "lubik_matthes": null
       }
     },
@@ -24617,8 +24617,8 @@
       },
       "rstar": {
         "hlw": 4.760113,
-        "lw_one_sided": 4.546667,
-        "lw_two_sided": 4.33366,
+        "lw_one_sided": 4.472796,
+        "lw_two_sided": 4.256689,
         "lubik_matthes": null
       }
     },
@@ -24642,8 +24642,8 @@
       },
       "rstar": {
         "hlw": 4.30215,
-        "lw_one_sided": 4.103095,
-        "lw_two_sided": 4.340317,
+        "lw_one_sided": 4.040352,
+        "lw_two_sided": 4.261795,
         "lubik_matthes": null
       }
     },
@@ -24667,8 +24667,8 @@
       },
       "rstar": {
         "hlw": 4.286196,
-        "lw_one_sided": 4.088623,
-        "lw_two_sided": 4.348555,
+        "lw_one_sided": 4.027268,
+        "lw_two_sided": 4.268149,
         "lubik_matthes": null
       }
     },
@@ -24692,8 +24692,8 @@
       },
       "rstar": {
         "hlw": 4.252213,
-        "lw_one_sided": 4.053945,
-        "lw_two_sided": 4.357974,
+        "lw_one_sided": 3.996482,
+        "lw_two_sided": 4.275644,
         "lubik_matthes": null
       }
     },
@@ -24717,8 +24717,8 @@
       },
       "rstar": {
         "hlw": 4.581289,
-        "lw_one_sided": 4.36415,
-        "lw_two_sided": 4.357831,
+        "lw_one_sided": 4.300759,
+        "lw_two_sided": 4.274093,
         "lubik_matthes": null
       }
     },
@@ -24742,8 +24742,8 @@
       },
       "rstar": {
         "hlw": 4.309992,
-        "lw_one_sided": 4.104882,
-        "lw_two_sided": 4.367089,
+        "lw_one_sided": 4.049495,
+        "lw_two_sided": 4.281167,
         "lubik_matthes": null
       }
     },
@@ -24767,8 +24767,8 @@
       },
       "rstar": {
         "hlw": 4.615689,
-        "lw_one_sided": 4.392322,
-        "lw_two_sided": 4.365604,
+        "lw_one_sided": 4.328594,
+        "lw_two_sided": 4.278348,
         "lubik_matthes": null
       }
     },
@@ -24792,8 +24792,8 @@
       },
       "rstar": {
         "hlw": 4.53019,
-        "lw_one_sided": 4.308943,
-        "lw_two_sided": 4.36798,
+        "lw_one_sided": 4.250859,
+        "lw_two_sided": 4.278908,
         "lubik_matthes": null
       }
     },
@@ -24817,8 +24817,8 @@
       },
       "rstar": {
         "hlw": 4.629327,
-        "lw_one_sided": 4.405134,
-        "lw_two_sided": 4.367465,
+        "lw_one_sided": 4.344414,
+        "lw_two_sided": 4.276419,
         "lubik_matthes": null
       }
     },
@@ -24842,8 +24842,8 @@
       },
       "rstar": {
         "hlw": 4.372271,
-        "lw_one_sided": 4.159597,
-        "lw_two_sided": 4.376646,
+        "lw_one_sided": 4.11033,
+        "lw_two_sided": 4.282959,
         "lubik_matthes": null
       }
     },
@@ -24867,8 +24867,8 @@
       },
       "rstar": {
         "hlw": 4.754811,
-        "lw_one_sided": 4.523461,
-        "lw_two_sided": 4.367855,
+        "lw_one_sided": 4.45997,
+        "lw_two_sided": 4.273137,
         "lubik_matthes": null
       }
     },
@@ -24892,8 +24892,8 @@
       },
       "rstar": {
         "hlw": 4.725812,
-        "lw_one_sided": 4.49281,
-        "lw_two_sided": 4.357782,
+        "lw_one_sided": 4.432296,
+        "lw_two_sided": 4.262406,
         "lubik_matthes": null
       }
     },
@@ -24917,8 +24917,8 @@
       },
       "rstar": {
         "hlw": 4.982061,
-        "lw_one_sided": 4.731436,
-        "lw_two_sided": 4.332149,
+        "lw_one_sided": 4.659713,
+        "lw_two_sided": 4.238035,
         "lubik_matthes": null
       }
     },
@@ -24942,8 +24942,8 @@
       },
       "rstar": {
         "hlw": 5.202292,
-        "lw_one_sided": 4.937567,
-        "lw_two_sided": 4.29199,
+        "lw_one_sided": 4.856157,
+        "lw_two_sided": 4.200952,
         "lubik_matthes": null
       }
     },
@@ -24967,8 +24967,8 @@
       },
       "rstar": {
         "hlw": 5.434634,
-        "lw_one_sided": 5.16078,
-        "lw_two_sided": 4.239055,
+        "lw_one_sided": 5.06843,
+        "lw_two_sided": 4.152067,
         "lubik_matthes": null
       }
     },
@@ -24992,8 +24992,8 @@
       },
       "rstar": {
         "hlw": 5.174365,
-        "lw_one_sided": 4.918247,
-        "lw_two_sided": 4.197522,
+        "lw_one_sided": 4.83869,
+        "lw_two_sided": 4.113432,
         "lubik_matthes": null
       }
     },
@@ -25017,8 +25017,8 @@
       },
       "rstar": {
         "hlw": 5.158089,
-        "lw_one_sided": 4.904192,
-        "lw_two_sided": 4.155097,
+        "lw_one_sided": 4.827423,
+        "lw_two_sided": 4.073871,
         "lubik_matthes": null
       }
     },
@@ -25042,8 +25042,8 @@
       },
       "rstar": {
         "hlw": 5.135224,
-        "lw_one_sided": 4.887371,
-        "lw_two_sided": 4.111771,
+        "lw_one_sided": 4.815906,
+        "lw_two_sided": 4.033237,
         "lubik_matthes": null
       }
     },
@@ -25067,8 +25067,8 @@
       },
       "rstar": {
         "hlw": 5.098548,
-        "lw_one_sided": 4.848492,
-        "lw_two_sided": 4.067673,
+        "lw_one_sided": 4.781585,
+        "lw_two_sided": 3.991415,
         "lubik_matthes": 1.4569
       }
     },
@@ -25092,8 +25092,8 @@
       },
       "rstar": {
         "hlw": 4.871128,
-        "lw_one_sided": 4.658141,
-        "lw_two_sided": 4.032049,
+        "lw_one_sided": 4.603759,
+        "lw_two_sided": 3.957082,
         "lubik_matthes": 1.393033
       }
     },
@@ -25117,8 +25117,8 @@
       },
       "rstar": {
         "hlw": 4.892438,
-        "lw_one_sided": 4.704729,
-        "lw_two_sided": 3.992767,
+        "lw_one_sided": 4.651372,
+        "lw_two_sided": 3.919188,
         "lubik_matthes": 1.434397
       }
     },
@@ -25142,8 +25142,8 @@
       },
       "rstar": {
         "hlw": 4.820772,
-        "lw_one_sided": 4.661519,
-        "lw_two_sided": 3.952903,
+        "lw_one_sided": 4.614203,
+        "lw_two_sided": 3.880922,
         "lubik_matthes": 1.441549
       }
     },
@@ -25167,8 +25167,8 @@
       },
       "rstar": {
         "hlw": 5.045068,
-        "lw_one_sided": 4.893996,
-        "lw_two_sided": 3.897662,
+        "lw_one_sided": 4.836939,
+        "lw_two_sided": 3.828829,
         "lubik_matthes": 1.488581
       }
     },
@@ -25192,8 +25192,8 @@
       },
       "rstar": {
         "hlw": 5.108266,
-        "lw_one_sided": 4.982197,
-        "lw_two_sided": 3.835701,
+        "lw_one_sided": 4.921378,
+        "lw_two_sided": 3.770521,
         "lubik_matthes": 1.51451
       }
     },
@@ -25217,8 +25217,8 @@
       },
       "rstar": {
         "hlw": 4.972883,
-        "lw_one_sided": 4.889467,
-        "lw_two_sided": 3.776759,
+        "lw_one_sided": 4.831926,
+        "lw_two_sided": 3.714884,
         "lubik_matthes": 1.432952
       }
     },
@@ -25242,8 +25242,8 @@
       },
       "rstar": {
         "hlw": 4.818507,
-        "lw_one_sided": 4.773431,
-        "lw_two_sided": 3.720941,
+        "lw_one_sided": 4.720896,
+        "lw_two_sided": 3.662376,
         "lubik_matthes": 1.425605
       }
     },
@@ -25267,8 +25267,8 @@
       },
       "rstar": {
         "hlw": 4.946398,
-        "lw_one_sided": 4.905988,
-        "lw_two_sided": 3.654975,
+        "lw_one_sided": 4.846932,
+        "lw_two_sided": 3.600439,
         "lubik_matthes": 1.514245
       }
     },
@@ -25292,8 +25292,8 @@
       },
       "rstar": {
         "hlw": 4.753288,
-        "lw_one_sided": 4.739407,
-        "lw_two_sided": 3.597069,
+        "lw_one_sided": 4.690394,
+        "lw_two_sided": 3.545617,
         "lubik_matthes": 1.603424
       }
     },
@@ -25317,8 +25317,8 @@
       },
       "rstar": {
         "hlw": 4.708309,
-        "lw_one_sided": 4.69219,
-        "lw_two_sided": 3.541097,
+        "lw_one_sided": 4.644436,
+        "lw_two_sided": 3.492123,
         "lubik_matthes": 1.589759
       }
     },
@@ -25342,8 +25342,8 @@
       },
       "rstar": {
         "hlw": 4.429362,
-        "lw_one_sided": 4.411935,
-        "lw_two_sided": 3.499666,
+        "lw_one_sided": 4.377107,
+        "lw_two_sided": 3.45156,
         "lubik_matthes": 1.526613
       }
     },
@@ -25367,8 +25367,8 @@
       },
       "rstar": {
         "hlw": 4.286528,
-        "lw_one_sided": 4.264872,
-        "lw_two_sided": 3.464803,
+        "lw_one_sided": 4.235228,
+        "lw_two_sided": 3.41685,
         "lubik_matthes": 1.509851
       }
     },
@@ -25392,8 +25392,8 @@
       },
       "rstar": {
         "hlw": 4.211807,
-        "lw_one_sided": 4.184858,
-        "lw_two_sided": 3.433055,
+        "lw_one_sided": 4.157859,
+        "lw_two_sided": 3.384987,
         "lubik_matthes": 1.46273
       }
     },
@@ -25417,8 +25417,8 @@
       },
       "rstar": {
         "hlw": 4.274828,
-        "lw_one_sided": 4.225398,
-        "lw_two_sided": 3.399102,
+        "lw_one_sided": 4.194615,
+        "lw_two_sided": 3.350548,
         "lubik_matthes": 1.414924
       }
     },
@@ -25442,8 +25442,8 @@
       },
       "rstar": {
         "hlw": 3.865612,
-        "lw_one_sided": 3.856679,
-        "lw_two_sided": 3.385846,
+        "lw_one_sided": 3.843139,
+        "lw_two_sided": 3.335442,
         "lubik_matthes": 1.304999
       }
     },
@@ -25467,8 +25467,8 @@
       },
       "rstar": {
         "hlw": 4.335966,
-        "lw_one_sided": 4.274144,
-        "lw_two_sided": 3.348137,
+        "lw_one_sided": 4.237614,
+        "lw_two_sided": 3.297919,
         "lubik_matthes": 1.299444
       }
     },
@@ -25492,8 +25492,8 @@
       },
       "rstar": {
         "hlw": 4.087532,
-        "lw_one_sided": 4.045976,
-        "lw_two_sided": 3.32317,
+        "lw_one_sided": 4.021167,
+        "lw_two_sided": 3.271556,
         "lubik_matthes": 1.380062
       }
     },
@@ -25517,8 +25517,8 @@
       },
       "rstar": {
         "hlw": 3.944024,
-        "lw_one_sided": 3.896606,
-        "lw_two_sided": 3.304446,
+        "lw_one_sided": 3.876287,
+        "lw_two_sided": 3.250582,
         "lubik_matthes": 1.445598
       }
     },
@@ -25542,8 +25542,8 @@
       },
       "rstar": {
         "hlw": 3.647904,
-        "lw_one_sided": 3.592934,
-        "lw_two_sided": 3.295035,
+        "lw_one_sided": 3.584016,
+        "lw_two_sided": 3.238512,
         "lubik_matthes": 1.381104
       }
     },
@@ -25567,8 +25567,8 @@
       },
       "rstar": {
         "hlw": 3.873258,
-        "lw_one_sided": 3.755286,
-        "lw_two_sided": 3.272193,
+        "lw_one_sided": 3.734566,
+        "lw_two_sided": 3.214919,
         "lubik_matthes": 1.355112
       }
     },
@@ -25592,8 +25592,8 @@
       },
       "rstar": {
         "hlw": 4.031992,
-        "lw_one_sided": 3.871641,
-        "lw_two_sided": 3.236807,
+        "lw_one_sided": 3.841647,
+        "lw_two_sided": 3.180121,
         "lubik_matthes": 1.497621
       }
     },
@@ -25617,8 +25617,8 @@
       },
       "rstar": {
         "hlw": 3.901447,
-        "lw_one_sided": 3.741178,
-        "lw_two_sided": 3.204729,
+        "lw_one_sided": 3.712065,
+        "lw_two_sided": 3.148946,
         "lubik_matthes": 1.478756
       }
     },
@@ -25642,8 +25642,8 @@
       },
       "rstar": {
         "hlw": 3.994815,
-        "lw_one_sided": 3.80444,
-        "lw_two_sided": 3.161565,
+        "lw_one_sided": 3.765529,
+        "lw_two_sided": 3.108776,
         "lubik_matthes": 1.506537
       }
     },
@@ -25667,8 +25667,8 @@
       },
       "rstar": {
         "hlw": 4.276254,
-        "lw_one_sided": 4.035476,
-        "lw_two_sided": 3.100453,
+        "lw_one_sided": 3.980544,
+        "lw_two_sided": 3.052868,
         "lubik_matthes": 1.576967
       }
     },
@@ -25692,8 +25692,8 @@
       },
       "rstar": {
         "hlw": 4.340335,
-        "lw_one_sided": 4.068125,
-        "lw_two_sided": 3.040793,
+        "lw_one_sided": 4.006522,
+        "lw_two_sided": 2.998327,
         "lubik_matthes": 1.514518
       }
     },
@@ -25717,8 +25717,8 @@
       },
       "rstar": {
         "hlw": 4.04544,
-        "lw_one_sided": 3.783449,
-        "lw_two_sided": 2.995952,
+        "lw_one_sided": 3.730734,
+        "lw_two_sided": 2.957755,
         "lubik_matthes": 1.544056
       }
     },
@@ -25742,8 +25742,8 @@
       },
       "rstar": {
         "hlw": 4.235486,
-        "lw_one_sided": 3.910303,
-        "lw_two_sided": 2.944029,
+        "lw_one_sided": 3.848989,
+        "lw_two_sided": 2.910687,
         "lubik_matthes": 1.424993
       }
     },
@@ -25767,8 +25767,8 @@
       },
       "rstar": {
         "hlw": 4.008118,
-        "lw_one_sided": 3.682365,
-        "lw_two_sided": 2.907992,
+        "lw_one_sided": 3.630756,
+        "lw_two_sided": 2.878086,
         "lubik_matthes": 1.279484
       }
     },
@@ -25792,8 +25792,8 @@
       },
       "rstar": {
         "hlw": 4.196275,
-        "lw_one_sided": 3.796701,
-        "lw_two_sided": 2.87352,
+        "lw_one_sided": 3.741095,
+        "lw_two_sided": 2.84636,
         "lubik_matthes": 1.243795
       }
     },
@@ -25817,8 +25817,8 @@
       },
       "rstar": {
         "hlw": 4.029124,
-        "lw_one_sided": 3.62939,
-        "lw_two_sided": 2.858408,
+        "lw_one_sided": 3.584601,
+        "lw_two_sided": 2.831468,
         "lubik_matthes": 1.132002
       }
     },
@@ -25842,8 +25842,8 @@
       },
       "rstar": {
         "hlw": 3.896901,
-        "lw_one_sided": 3.457747,
-        "lw_two_sided": 2.85585,
+        "lw_one_sided": 3.426843,
+        "lw_two_sided": 2.826877,
         "lubik_matthes": 1.019876
       }
     },
@@ -25867,8 +25867,8 @@
       },
       "rstar": {
         "hlw": 3.430639,
-        "lw_one_sided": 2.974675,
-        "lw_two_sided": 2.876283,
+        "lw_one_sided": 2.975901,
+        "lw_two_sided": 2.842622,
         "lubik_matthes": 1.031891
       }
     },
@@ -25892,8 +25892,8 @@
       },
       "rstar": {
         "hlw": 3.336632,
-        "lw_one_sided": 2.85894,
-        "lw_two_sided": 2.894875,
+        "lw_one_sided": 2.874599,
+        "lw_two_sided": 2.856622,
         "lubik_matthes": 1.14177
       }
     },
@@ -25917,8 +25917,8 @@
       },
       "rstar": {
         "hlw": 3.3837,
-        "lw_one_sided": 2.972847,
-        "lw_two_sided": 2.9055,
+        "lw_one_sided": 2.984828,
+        "lw_two_sided": 2.863378,
         "lubik_matthes": 1.280288
       }
     },
@@ -25942,8 +25942,8 @@
       },
       "rstar": {
         "hlw": 3.343349,
-        "lw_one_sided": 3.00396,
-        "lw_two_sided": 2.914585,
+        "lw_one_sided": 3.009749,
+        "lw_two_sided": 2.86921,
         "lubik_matthes": 1.250498
       }
     },
@@ -25967,8 +25967,8 @@
       },
       "rstar": {
         "hlw": 3.509982,
-        "lw_one_sided": 3.173648,
-        "lw_two_sided": 2.913299,
+        "lw_one_sided": 3.166178,
+        "lw_two_sided": 2.865662,
         "lubik_matthes": 1.278369
       }
     },
@@ -25992,8 +25992,8 @@
       },
       "rstar": {
         "hlw": 3.244338,
-        "lw_one_sided": 2.897558,
-        "lw_two_sided": 2.92289,
+        "lw_one_sided": 2.901081,
+        "lw_two_sided": 2.871885,
         "lubik_matthes": 1.34262
       }
     },
@@ -26017,8 +26017,8 @@
       },
       "rstar": {
         "hlw": 3.158214,
-        "lw_one_sided": 2.824786,
-        "lw_two_sided": 2.940798,
+        "lw_one_sided": 2.824736,
+        "lw_two_sided": 2.88566,
         "lubik_matthes": 1.277502
       }
     },
@@ -26042,8 +26042,8 @@
       },
       "rstar": {
         "hlw": 3.112522,
-        "lw_one_sided": 2.795528,
-        "lw_two_sided": 2.962315,
+        "lw_one_sided": 2.792546,
+        "lw_two_sided": 2.902736,
         "lubik_matthes": 1.240705
       }
     },
@@ -26067,8 +26067,8 @@
       },
       "rstar": {
         "hlw": 3.201255,
-        "lw_one_sided": 2.855907,
-        "lw_two_sided": 2.981418,
+        "lw_one_sided": 2.849695,
+        "lw_two_sided": 2.917754,
         "lubik_matthes": 1.243494
       }
     },
@@ -26092,8 +26092,8 @@
       },
       "rstar": {
         "hlw": 3.375224,
-        "lw_one_sided": 2.980044,
-        "lw_two_sided": 2.991284,
+        "lw_one_sided": 2.97023,
+        "lw_two_sided": 2.924387,
         "lubik_matthes": 1.322113
       }
     },
@@ -26117,8 +26117,8 @@
       },
       "rstar": {
         "hlw": 3.510547,
-        "lw_one_sided": 3.108091,
-        "lw_two_sided": 2.997838,
+        "lw_one_sided": 3.09111,
+        "lw_two_sided": 2.92742,
         "lubik_matthes": 1.334667
       }
     },
@@ -26142,8 +26142,8 @@
       },
       "rstar": {
         "hlw": 3.169503,
-        "lw_one_sided": 2.796709,
-        "lw_two_sided": 3.020328,
+        "lw_one_sided": 2.793611,
+        "lw_two_sided": 2.944643,
         "lubik_matthes": 1.383581
       }
     },
@@ -26167,8 +26167,8 @@
       },
       "rstar": {
         "hlw": 3.080697,
-        "lw_one_sided": 2.703229,
-        "lw_two_sided": 3.043827,
+        "lw_one_sided": 2.703514,
+        "lw_two_sided": 2.963755,
         "lubik_matthes": 1.390723
       }
     },
@@ -26192,8 +26192,8 @@
       },
       "rstar": {
         "hlw": 3.841006,
-        "lw_one_sided": 3.394002,
-        "lw_two_sided": 3.028919,
+        "lw_one_sided": 3.362093,
+        "lw_two_sided": 2.948012,
         "lubik_matthes": 1.509166
       }
     },
@@ -26217,8 +26217,8 @@
       },
       "rstar": {
         "hlw": 3.728982,
-        "lw_one_sided": 3.310933,
-        "lw_two_sided": 3.018427,
+        "lw_one_sided": 3.281924,
+        "lw_two_sided": 2.936261,
         "lubik_matthes": 1.516687
       }
     },
@@ -26242,8 +26242,8 @@
       },
       "rstar": {
         "hlw": 3.84271,
-        "lw_one_sided": 3.423034,
-        "lw_two_sided": 3.003389,
+        "lw_one_sided": 3.384437,
+        "lw_two_sided": 2.920215,
         "lubik_matthes": 1.634276
       }
     },
@@ -26267,8 +26267,8 @@
       },
       "rstar": {
         "hlw": 3.578216,
-        "lw_one_sided": 3.121146,
-        "lw_two_sided": 2.996143,
+        "lw_one_sided": 3.101555,
+        "lw_two_sided": 2.911085,
         "lubik_matthes": 1.617824
       }
     },
@@ -26292,8 +26292,8 @@
       },
       "rstar": {
         "hlw": 3.678591,
-        "lw_one_sided": 3.27564,
-        "lw_two_sided": 2.991526,
+        "lw_one_sided": 3.23847,
+        "lw_two_sided": 2.904397,
         "lubik_matthes": 1.579838
       }
     },
@@ -26317,8 +26317,8 @@
       },
       "rstar": {
         "hlw": 3.714688,
-        "lw_one_sided": 3.315934,
-        "lw_two_sided": 2.982061,
+        "lw_one_sided": 3.278637,
+        "lw_two_sided": 2.89304,
         "lubik_matthes": 1.697012
       }
     },
@@ -26342,8 +26342,8 @@
       },
       "rstar": {
         "hlw": 3.726294,
-        "lw_one_sided": 3.285098,
-        "lw_two_sided": 2.976346,
+        "lw_one_sided": 3.251329,
+        "lw_two_sided": 2.884727,
         "lubik_matthes": 1.905085
       }
     },
@@ -26367,8 +26367,8 @@
       },
       "rstar": {
         "hlw": 3.847961,
-        "lw_one_sided": 3.413619,
-        "lw_two_sided": 2.973718,
+        "lw_one_sided": 3.368248,
+        "lw_two_sided": 2.878277,
         "lubik_matthes": 1.931608
       }
     },
@@ -26392,8 +26392,8 @@
       },
       "rstar": {
         "hlw": 3.304523,
-        "lw_one_sided": 2.929262,
-        "lw_two_sided": 2.998333,
+        "lw_one_sided": 2.903891,
+        "lw_two_sided": 2.896369,
         "lubik_matthes": 1.556185
       }
     },
@@ -26417,8 +26417,8 @@
       },
       "rstar": {
         "hlw": 3.365868,
-        "lw_one_sided": 2.979202,
-        "lw_two_sided": 3.017991,
+        "lw_one_sided": 2.952319,
+        "lw_two_sided": 2.910396,
         "lubik_matthes": 1.515522
       }
     },
@@ -26442,8 +26442,8 @@
       },
       "rstar": {
         "hlw": 3.793563,
-        "lw_one_sided": 3.419091,
-        "lw_two_sided": 3.01621,
+        "lw_one_sided": 3.373066,
+        "lw_two_sided": 2.90515,
         "lubik_matthes": 2.395482
       }
     },
@@ -26467,8 +26467,8 @@
       },
       "rstar": {
         "hlw": 3.996121,
-        "lw_one_sided": 3.646254,
-        "lw_two_sided": 3.000845,
+        "lw_one_sided": 3.590527,
+        "lw_two_sided": 2.887302,
         "lubik_matthes": 2.206991
       }
     },
@@ -26492,8 +26492,8 @@
       },
       "rstar": {
         "hlw": 3.54703,
-        "lw_one_sided": 3.262215,
-        "lw_two_sided": 3.000119,
+        "lw_one_sided": 3.2186,
+        "lw_two_sided": 2.883593,
         "lubik_matthes": 2.31553
       }
     },
@@ -26517,8 +26517,8 @@
       },
       "rstar": {
         "hlw": 3.771872,
-        "lw_one_sided": 3.522607,
-        "lw_two_sided": 2.984852,
+        "lw_one_sided": 3.457282,
+        "lw_two_sided": 2.866937,
         "lubik_matthes": 2.291014
       }
     },
@@ -26542,8 +26542,8 @@
       },
       "rstar": {
         "hlw": 3.411306,
-        "lw_one_sided": 3.219284,
-        "lw_two_sided": 2.986372,
+        "lw_one_sided": 3.162408,
+        "lw_two_sided": 2.865368,
         "lubik_matthes": 1.787612
       }
     },
@@ -26567,8 +26567,8 @@
       },
       "rstar": {
         "hlw": 2.954147,
-        "lw_one_sided": 2.799898,
-        "lw_two_sided": 3.005594,
+        "lw_one_sided": 2.762564,
+        "lw_two_sided": 2.880154,
         "lubik_matthes": 2.217486
       }
     },
@@ -26592,8 +26592,8 @@
       },
       "rstar": {
         "hlw": 3.029958,
-        "lw_one_sided": 2.868884,
-        "lw_two_sided": 3.019864,
+        "lw_one_sided": 2.829913,
+        "lw_two_sided": 2.890305,
         "lubik_matthes": 2.311472
       }
     },
@@ -26617,8 +26617,8 @@
       },
       "rstar": {
         "hlw": 2.92572,
-        "lw_one_sided": 2.843803,
-        "lw_two_sided": 3.043894,
+        "lw_one_sided": 2.79685,
+        "lw_two_sided": 2.909306,
         "lubik_matthes": 1.813857
       }
     },
@@ -26642,8 +26642,8 @@
       },
       "rstar": {
         "hlw": 2.822299,
-        "lw_one_sided": 2.75046,
-        "lw_two_sided": 3.072245,
+        "lw_one_sided": 2.705965,
+        "lw_two_sided": 2.932565,
         "lubik_matthes": 1.888822
       }
     },
@@ -26667,8 +26667,8 @@
       },
       "rstar": {
         "hlw": 2.964752,
-        "lw_one_sided": 2.860527,
-        "lw_two_sided": 3.093092,
+        "lw_one_sided": 2.812718,
+        "lw_two_sided": 2.949483,
         "lubik_matthes": 2.021132
       }
     },
@@ -26692,8 +26692,8 @@
       },
       "rstar": {
         "hlw": 3.064089,
-        "lw_one_sided": 2.880302,
-        "lw_two_sided": 3.100931,
+        "lw_one_sided": 2.841729,
+        "lw_two_sided": 2.955094,
         "lubik_matthes": 2.106035
       }
     },
@@ -26717,8 +26717,8 @@
       },
       "rstar": {
         "hlw": 3.375941,
-        "lw_one_sided": 3.219956,
-        "lw_two_sided": 3.101581,
+        "lw_one_sided": 3.152255,
+        "lw_two_sided": 2.95486,
         "lubik_matthes": 2.281694
       }
     },
@@ -26742,8 +26742,8 @@
       },
       "rstar": {
         "hlw": 3.361484,
-        "lw_one_sided": 3.149394,
-        "lw_two_sided": 3.093574,
+        "lw_one_sided": 3.089545,
+        "lw_two_sided": 2.947513,
         "lubik_matthes": 2.243963
       }
     },
@@ -26767,8 +26767,8 @@
       },
       "rstar": {
         "hlw": 3.542537,
-        "lw_one_sided": 3.287425,
-        "lw_two_sided": 3.078502,
+        "lw_one_sided": 3.216865,
+        "lw_two_sided": 2.934379,
         "lubik_matthes": 2.302756
       }
     },
@@ -26792,8 +26792,8 @@
       },
       "rstar": {
         "hlw": 3.719086,
-        "lw_one_sided": 3.434808,
-        "lw_two_sided": 3.058366,
+        "lw_one_sided": 3.351559,
+        "lw_two_sided": 2.916979,
         "lubik_matthes": 2.469539
       }
     },
@@ -26817,8 +26817,8 @@
       },
       "rstar": {
         "hlw": 3.627991,
-        "lw_one_sided": 3.33153,
-        "lw_two_sided": 3.040666,
+        "lw_one_sided": 3.25345,
+        "lw_two_sided": 2.902021,
         "lubik_matthes": 2.40143
       }
     },
@@ -26842,8 +26842,8 @@
       },
       "rstar": {
         "hlw": 3.562213,
-        "lw_one_sided": 3.229069,
-        "lw_two_sided": 3.023362,
+        "lw_one_sided": 3.158542,
+        "lw_two_sided": 2.887705,
         "lubik_matthes": 2.019483
       }
     },
@@ -26867,8 +26867,8 @@
       },
       "rstar": {
         "hlw": 3.806983,
-        "lw_one_sided": 3.547203,
-        "lw_two_sided": 3.002829,
+        "lw_one_sided": 3.449106,
+        "lw_two_sided": 2.870546,
         "lubik_matthes": 2.093194
       }
     },
@@ -26892,8 +26892,8 @@
       },
       "rstar": {
         "hlw": 3.69851,
-        "lw_one_sided": 3.422126,
-        "lw_two_sided": 2.981099,
+        "lw_one_sided": 3.340435,
+        "lw_two_sided": 2.852356,
         "lubik_matthes": 2.065275
       }
     },
@@ -26917,8 +26917,8 @@
       },
       "rstar": {
         "hlw": 3.877644,
-        "lw_one_sided": 3.588134,
-        "lw_two_sided": 2.952355,
+        "lw_one_sided": 3.50261,
+        "lw_two_sided": 2.827547,
         "lubik_matthes": 2.184214
       }
     },
@@ -26942,8 +26942,8 @@
       },
       "rstar": {
         "hlw": 3.695978,
-        "lw_one_sided": 3.361548,
-        "lw_two_sided": 2.92741,
+        "lw_one_sided": 3.299744,
+        "lw_two_sided": 2.806055,
         "lubik_matthes": 2.135571
       }
     },
@@ -26967,8 +26967,8 @@
       },
       "rstar": {
         "hlw": 3.776438,
-        "lw_one_sided": 3.423125,
-        "lw_two_sided": 2.902029,
+        "lw_one_sided": 3.361086,
+        "lw_two_sided": 2.783976,
         "lubik_matthes": 2.055939
       }
     },
@@ -26992,8 +26992,8 @@
       },
       "rstar": {
         "hlw": 3.552215,
-        "lw_one_sided": 3.203791,
-        "lw_two_sided": 2.88135,
+        "lw_one_sided": 3.161529,
+        "lw_two_sided": 2.766089,
         "lubik_matthes": 1.970037
       }
     },
@@ -27017,8 +27017,8 @@
       },
       "rstar": {
         "hlw": 3.551798,
-        "lw_one_sided": 3.21533,
-        "lw_two_sided": 2.859066,
+        "lw_one_sided": 3.178877,
+        "lw_two_sided": 2.746489,
         "lubik_matthes": 1.881845
       }
     },
@@ -27042,8 +27042,8 @@
       },
       "rstar": {
         "hlw": 3.4806,
-        "lw_one_sided": 3.177785,
-        "lw_two_sided": 2.841247,
+        "lw_one_sided": 3.145114,
+        "lw_two_sided": 2.730703,
         "lubik_matthes": 2.022375
       }
     },
@@ -27067,8 +27067,8 @@
       },
       "rstar": {
         "hlw": 3.37972,
-        "lw_one_sided": 3.027974,
-        "lw_two_sided": 2.824226,
+        "lw_one_sided": 3.01319,
+        "lw_two_sided": 2.715573,
         "lubik_matthes": 1.956295
       }
     },
@@ -27092,8 +27092,8 @@
       },
       "rstar": {
         "hlw": 3.525186,
-        "lw_one_sided": 3.14639,
-        "lw_two_sided": 2.804266,
+        "lw_one_sided": 3.126879,
+        "lw_two_sided": 2.697681,
         "lubik_matthes": 2.171258
       }
     },
@@ -27117,8 +27117,8 @@
       },
       "rstar": {
         "hlw": 3.504765,
-        "lw_one_sided": 3.129257,
-        "lw_two_sided": 2.7836,
+        "lw_one_sided": 3.113144,
+        "lw_two_sided": 2.679341,
         "lubik_matthes": 2.098522
       }
     },
@@ -27142,8 +27142,8 @@
       },
       "rstar": {
         "hlw": 3.746155,
-        "lw_one_sided": 3.335135,
-        "lw_two_sided": 2.753026,
+        "lw_one_sided": 3.311763,
+        "lw_two_sided": 2.651853,
         "lubik_matthes": 2.120842
       }
     },
@@ -27167,8 +27167,8 @@
       },
       "rstar": {
         "hlw": 3.611475,
-        "lw_one_sided": 3.196978,
-        "lw_two_sided": 2.728079,
+        "lw_one_sided": 3.183953,
+        "lw_two_sided": 2.629527,
         "lubik_matthes": 2.008757
       }
     },
@@ -27192,8 +27192,8 @@
       },
       "rstar": {
         "hlw": 3.801884,
-        "lw_one_sided": 3.400579,
-        "lw_two_sided": 2.697182,
+        "lw_one_sided": 3.376562,
+        "lw_two_sided": 2.601651,
         "lubik_matthes": 2.145024
       }
     },
@@ -27217,8 +27217,8 @@
       },
       "rstar": {
         "hlw": 3.709141,
-        "lw_one_sided": 3.366385,
-        "lw_two_sided": 2.669394,
+        "lw_one_sided": 3.343846,
+        "lw_two_sided": 2.576618,
         "lubik_matthes": 2.261532
       }
     },
@@ -27242,8 +27242,8 @@
       },
       "rstar": {
         "hlw": 3.82674,
-        "lw_one_sided": 3.46086,
-        "lw_two_sided": 2.633875,
+        "lw_one_sided": 3.438848,
+        "lw_two_sided": 2.544588,
         "lubik_matthes": 2.268148
       }
     },
@@ -27267,8 +27267,8 @@
       },
       "rstar": {
         "hlw": 3.836703,
-        "lw_one_sided": 3.489976,
-        "lw_two_sided": 2.595274,
+        "lw_one_sided": 3.469099,
+        "lw_two_sided": 2.50976,
         "lubik_matthes": 2.404436
       }
     },
@@ -27292,8 +27292,8 @@
       },
       "rstar": {
         "hlw": 3.745505,
-        "lw_one_sided": 3.386,
-        "lw_two_sided": 2.554865,
+        "lw_one_sided": 3.375757,
+        "lw_two_sided": 2.473437,
         "lubik_matthes": 2.291761
       }
     },
@@ -27317,8 +27317,8 @@
       },
       "rstar": {
         "hlw": 3.667692,
-        "lw_one_sided": 3.301767,
-        "lw_two_sided": 2.51154,
+        "lw_one_sided": 3.300285,
+        "lw_two_sided": 2.434571,
         "lubik_matthes": 2.140864
       }
     },
@@ -27342,8 +27342,8 @@
       },
       "rstar": {
         "hlw": 3.589074,
-        "lw_one_sided": 3.260149,
-        "lw_two_sided": 2.470083,
+        "lw_one_sided": 3.258241,
+        "lw_two_sided": 2.397787,
         "lubik_matthes": 2.121458
       }
     },
@@ -27367,8 +27367,8 @@
       },
       "rstar": {
         "hlw": 3.803288,
-        "lw_one_sided": 3.494393,
-        "lw_two_sided": 2.41989,
+        "lw_one_sided": 3.477178,
+        "lw_two_sided": 2.353122,
         "lubik_matthes": 2.186778
       }
     },
@@ -27392,8 +27392,8 @@
       },
       "rstar": {
         "hlw": 3.730555,
-        "lw_one_sided": 3.454655,
-        "lw_two_sided": 2.374003,
+        "lw_one_sided": 3.438156,
+        "lw_two_sided": 2.312097,
         "lubik_matthes": 2.204498
       }
     },
@@ -27417,8 +27417,8 @@
       },
       "rstar": {
         "hlw": 3.571853,
-        "lw_one_sided": 3.336398,
-        "lw_two_sided": 2.337052,
+        "lw_one_sided": 3.326096,
+        "lw_two_sided": 2.27855,
         "lubik_matthes": 2.113314
       }
     },
@@ -27442,8 +27442,8 @@
       },
       "rstar": {
         "hlw": 3.157006,
-        "lw_one_sided": 2.883679,
-        "lw_two_sided": 2.31935,
+        "lw_one_sided": 2.903745,
+        "lw_two_sided": 2.262031,
         "lubik_matthes": 1.912818
       }
     },
@@ -27467,8 +27467,8 @@
       },
       "rstar": {
         "hlw": 2.961671,
-        "lw_one_sided": 2.644525,
-        "lw_two_sided": 2.311111,
+        "lw_one_sided": 2.682358,
+        "lw_two_sided": 2.254105,
         "lubik_matthes": 1.706229
       }
     },
@@ -27492,8 +27492,8 @@
       },
       "rstar": {
         "hlw": 2.993344,
-        "lw_one_sided": 2.725975,
-        "lw_two_sided": 2.299343,
+        "lw_one_sided": 2.762586,
+        "lw_two_sided": 2.242798,
         "lubik_matthes": 1.879835
       }
     },
@@ -27517,8 +27517,8 @@
       },
       "rstar": {
         "hlw": 2.956752,
-        "lw_one_sided": 2.756108,
-        "lw_two_sided": 2.2922,
+        "lw_one_sided": 2.788352,
+        "lw_two_sided": 2.235429,
         "lubik_matthes": 1.943375
       }
     },
@@ -27542,8 +27542,8 @@
       },
       "rstar": {
         "hlw": 2.816389,
-        "lw_one_sided": 2.621062,
-        "lw_two_sided": 2.291073,
+        "lw_one_sided": 2.661498,
+        "lw_two_sided": 2.233633,
         "lubik_matthes": 1.757575
       }
     },
@@ -27567,8 +27567,8 @@
       },
       "rstar": {
         "hlw": 2.892606,
-        "lw_one_sided": 2.669629,
-        "lw_two_sided": 2.286223,
+        "lw_one_sided": 2.71006,
+        "lw_two_sided": 2.228529,
         "lubik_matthes": 1.696268
       }
     },
@@ -27592,8 +27592,8 @@
       },
       "rstar": {
         "hlw": 2.8719,
-        "lw_one_sided": 2.660427,
-        "lw_two_sided": 2.282293,
+        "lw_one_sided": 2.701772,
+        "lw_two_sided": 2.224229,
         "lubik_matthes": 1.76621
       }
     },
@@ -27617,8 +27617,8 @@
       },
       "rstar": {
         "hlw": 2.788524,
-        "lw_one_sided": 2.530127,
-        "lw_two_sided": 2.281388,
+        "lw_one_sided": 2.583207,
+        "lw_two_sided": 2.222645,
         "lubik_matthes": 1.624542
       }
     },
@@ -27642,8 +27642,8 @@
       },
       "rstar": {
         "hlw": 2.815943,
-        "lw_one_sided": 2.55696,
-        "lw_two_sided": 2.2841,
+        "lw_one_sided": 2.606204,
+        "lw_two_sided": 2.223966,
         "lubik_matthes": 1.722642
       }
     },
@@ -27667,8 +27667,8 @@
       },
       "rstar": {
         "hlw": 2.593774,
-        "lw_one_sided": 2.384884,
-        "lw_two_sided": 2.300647,
+        "lw_one_sided": 2.438903,
+        "lw_two_sided": 2.237499,
         "lubik_matthes": 1.701853
       }
     },
@@ -27692,8 +27692,8 @@
       },
       "rstar": {
         "hlw": 2.567089,
-        "lw_one_sided": 2.355558,
-        "lw_two_sided": 2.323451,
+        "lw_one_sided": 2.409426,
+        "lw_two_sided": 2.256306,
         "lubik_matthes": 1.723686
       }
     },
@@ -27717,8 +27717,8 @@
       },
       "rstar": {
         "hlw": 2.413545,
-        "lw_one_sided": 2.188599,
-        "lw_two_sided": 2.353046,
+        "lw_one_sided": 2.255037,
+        "lw_two_sided": 2.281094,
         "lubik_matthes": 1.705811
       }
     },
@@ -27742,8 +27742,8 @@
       },
       "rstar": {
         "hlw": 2.503735,
-        "lw_one_sided": 2.249452,
-        "lw_two_sided": 2.37893,
+        "lw_one_sided": 2.317076,
+        "lw_two_sided": 2.30225,
         "lubik_matthes": 1.69197
       }
     },
@@ -27767,8 +27767,8 @@
       },
       "rstar": {
         "hlw": 2.451937,
-        "lw_one_sided": 2.187795,
-        "lw_two_sided": 2.407374,
+        "lw_one_sided": 2.260994,
+        "lw_two_sided": 2.325595,
         "lubik_matthes": 1.804759
       }
     },
@@ -27792,8 +27792,8 @@
       },
       "rstar": {
         "hlw": 2.616691,
-        "lw_one_sided": 2.352541,
-        "lw_two_sided": 2.433426,
+        "lw_one_sided": 2.413138,
+        "lw_two_sided": 2.346471,
         "lubik_matthes": 2.100274
       }
     },
@@ -27817,8 +27817,8 @@
       },
       "rstar": {
         "hlw": 2.507179,
-        "lw_one_sided": 2.220353,
-        "lw_two_sided": 2.465601,
+        "lw_one_sided": 2.287926,
+        "lw_two_sided": 2.372797,
         "lubik_matthes": 2.133789
       }
     },
@@ -27842,8 +27842,8 @@
       },
       "rstar": {
         "hlw": 2.5924,
-        "lw_one_sided": 2.252258,
-        "lw_two_sided": 2.495431,
+        "lw_one_sided": 2.319756,
+        "lw_two_sided": 2.396675,
         "lubik_matthes": 2.244488
       }
     },
@@ -27867,8 +27867,8 @@
       },
       "rstar": {
         "hlw": 2.502748,
-        "lw_one_sided": 2.168359,
-        "lw_two_sided": 2.532478,
+        "lw_one_sided": 2.237757,
+        "lw_two_sided": 2.426764,
         "lubik_matthes": 2.272543
       }
     },
@@ -27892,8 +27892,8 @@
       },
       "rstar": {
         "hlw": 2.476204,
-        "lw_one_sided": 2.119415,
-        "lw_two_sided": 2.57367,
+        "lw_one_sided": 2.189609,
+        "lw_two_sided": 2.460516,
         "lubik_matthes": 2.204526
       }
     },
@@ -27917,8 +27917,8 @@
       },
       "rstar": {
         "hlw": 2.54168,
-        "lw_one_sided": 2.16261,
-        "lw_two_sided": 2.611442,
+        "lw_one_sided": 2.232021,
+        "lw_two_sided": 2.490994,
         "lubik_matthes": 2.184324
       }
     },
@@ -27942,8 +27942,8 @@
       },
       "rstar": {
         "hlw": 2.580037,
-        "lw_one_sided": 2.222702,
-        "lw_two_sided": 2.648881,
+        "lw_one_sided": 2.286263,
+        "lw_two_sided": 2.521025,
         "lubik_matthes": 2.18382
       }
     },
@@ -27967,8 +27967,8 @@
       },
       "rstar": {
         "hlw": 2.581256,
-        "lw_one_sided": 2.224183,
-        "lw_two_sided": 2.683918,
+        "lw_one_sided": 2.288074,
+        "lw_two_sided": 2.549072,
         "lubik_matthes": 2.04168
       }
     },
@@ -27992,8 +27992,8 @@
       },
       "rstar": {
         "hlw": 2.848223,
-        "lw_one_sided": 2.472897,
-        "lw_two_sided": 2.706964,
+        "lw_one_sided": 2.522938,
+        "lw_two_sided": 2.566189,
         "lubik_matthes": 2.200401
       }
     },
@@ -28017,8 +28017,8 @@
       },
       "rstar": {
         "hlw": 2.850705,
-        "lw_one_sided": 2.490226,
-        "lw_two_sided": 2.729852,
+        "lw_one_sided": 2.536835,
+        "lw_two_sided": 2.583129,
         "lubik_matthes": 2.248948
       }
     },
@@ -28042,8 +28042,8 @@
       },
       "rstar": {
         "hlw": 2.968937,
-        "lw_one_sided": 2.630352,
-        "lw_two_sided": 2.749576,
+        "lw_one_sided": 2.663938,
+        "lw_two_sided": 2.597107,
         "lubik_matthes": 2.22918
       }
     },
@@ -28067,8 +28067,8 @@
       },
       "rstar": {
         "hlw": 2.889641,
-        "lw_one_sided": 2.54485,
-        "lw_two_sided": 2.769499,
+        "lw_one_sided": 2.583661,
+        "lw_two_sided": 2.611486,
         "lubik_matthes": 2.179204
       }
     },
@@ -28092,8 +28092,8 @@
       },
       "rstar": {
         "hlw": 3.160246,
-        "lw_one_sided": 2.831606,
-        "lw_two_sided": 2.776845,
+        "lw_one_sided": 2.852037,
+        "lw_two_sided": 2.614532,
         "lubik_matthes": 2.362619
       }
     },
@@ -28117,8 +28117,8 @@
       },
       "rstar": {
         "hlw": 3.125809,
-        "lw_one_sided": 2.800775,
-        "lw_two_sided": 2.779509,
+        "lw_one_sided": 2.827221,
+        "lw_two_sided": 2.613284,
         "lubik_matthes": 2.253215
       }
     },
@@ -28142,8 +28142,8 @@
       },
       "rstar": {
         "hlw": 3.123266,
-        "lw_one_sided": 2.811629,
-        "lw_two_sided": 2.780894,
+        "lw_one_sided": 2.83521,
+        "lw_two_sided": 2.610972,
         "lubik_matthes": 2.198222
       }
     },
@@ -28167,8 +28167,8 @@
       },
       "rstar": {
         "hlw": 3.164703,
-        "lw_one_sided": 2.87643,
-        "lw_two_sided": 2.77741,
+        "lw_one_sided": 2.894103,
+        "lw_two_sided": 2.604355,
         "lubik_matthes": 2.304055
       }
     },
@@ -28192,8 +28192,8 @@
       },
       "rstar": {
         "hlw": 3.201186,
-        "lw_one_sided": 2.956109,
-        "lw_two_sided": 2.769187,
+        "lw_one_sided": 2.966272,
+        "lw_two_sided": 2.593665,
         "lubik_matthes": 2.259226
       }
     },
@@ -28217,8 +28217,8 @@
       },
       "rstar": {
         "hlw": 3.345013,
-        "lw_one_sided": 3.150633,
-        "lw_two_sided": 2.751327,
+        "lw_one_sided": 3.145636,
+        "lw_two_sided": 2.574575,
         "lubik_matthes": 2.396
       }
     },
@@ -28242,8 +28242,8 @@
       },
       "rstar": {
         "hlw": 3.517831,
-        "lw_one_sided": 3.33353,
-        "lw_two_sided": 2.721408,
+        "lw_one_sided": 3.318763,
+        "lw_two_sided": 2.544646,
         "lubik_matthes": 2.028555
       }
     },
@@ -28267,8 +28267,8 @@
       },
       "rstar": {
         "hlw": 3.477621,
-        "lw_one_sided": 3.308301,
-        "lw_two_sided": 2.68892,
+        "lw_one_sided": 3.295285,
+        "lw_two_sided": 2.512451,
         "lubik_matthes": 2.080192
       }
     },
@@ -28292,8 +28292,8 @@
       },
       "rstar": {
         "hlw": 3.493764,
-        "lw_one_sided": 3.354854,
-        "lw_two_sided": 2.652978,
+        "lw_one_sided": 3.336508,
+        "lw_two_sided": 2.47739,
         "lubik_matthes": 2.105728
       }
     },
@@ -28317,8 +28317,8 @@
       },
       "rstar": {
         "hlw": 3.617358,
-        "lw_one_sided": 3.440924,
-        "lw_two_sided": 2.606786,
+        "lw_one_sided": 3.420718,
+        "lw_two_sided": 2.433379,
         "lubik_matthes": 2.313122
       }
     },
@@ -28342,8 +28342,8 @@
       },
       "rstar": {
         "hlw": 3.827335,
-        "lw_one_sided": 3.635768,
-        "lw_two_sided": 2.54898,
+        "lw_one_sided": 3.605089,
+        "lw_two_sided": 2.378824,
         "lubik_matthes": 2.389472
       }
     },
@@ -28367,8 +28367,8 @@
       },
       "rstar": {
         "hlw": 3.7066,
-        "lw_one_sided": 3.535686,
-        "lw_two_sided": 2.493801,
+        "lw_one_sided": 3.50698,
+        "lw_two_sided": 2.32714,
         "lubik_matthes": 2.353429
       }
     },
@@ -28392,8 +28392,8 @@
       },
       "rstar": {
         "hlw": 3.896861,
-        "lw_one_sided": 3.65742,
-        "lw_two_sided": 2.422709,
+        "lw_one_sided": 3.629637,
+        "lw_two_sided": 2.261031,
         "lubik_matthes": 2.54482
       }
     },
@@ -28417,8 +28417,8 @@
       },
       "rstar": {
         "hlw": 3.71971,
-        "lw_one_sided": 3.522873,
-        "lw_two_sided": 2.358583,
+        "lw_one_sided": 3.498642,
+        "lw_two_sided": 2.201356,
         "lubik_matthes": 2.361569
       }
     },
@@ -28442,8 +28442,8 @@
       },
       "rstar": {
         "hlw": 3.721319,
-        "lw_one_sided": 3.534584,
-        "lw_two_sided": 2.292248,
+        "lw_one_sided": 3.508422,
+        "lw_two_sided": 2.139582,
         "lubik_matthes": 2.297499
       }
     },
@@ -28467,8 +28467,8 @@
       },
       "rstar": {
         "hlw": 3.559326,
-        "lw_one_sided": 3.413415,
-        "lw_two_sided": 2.234289,
+        "lw_one_sided": 3.38913,
+        "lw_two_sided": 2.085475,
         "lubik_matthes": 1.901028
       }
     },
@@ -28492,8 +28492,8 @@
       },
       "rstar": {
         "hlw": 3.5075,
-        "lw_one_sided": 3.392164,
-        "lw_two_sided": 2.173115,
+        "lw_one_sided": 3.372193,
+        "lw_two_sided": 2.02811,
         "lubik_matthes": 1.607794
       }
     },
@@ -28517,8 +28517,8 @@
       },
       "rstar": {
         "hlw": 3.163413,
-        "lw_one_sided": 3.086127,
-        "lw_two_sided": 2.123942,
+        "lw_one_sided": 3.085731,
+        "lw_two_sided": 1.981396,
         "lubik_matthes": 1.354434
       }
     },
@@ -28542,8 +28542,8 @@
       },
       "rstar": {
         "hlw": 3.1388,
-        "lw_one_sided": 3.116355,
-        "lw_two_sided": 2.076851,
+        "lw_one_sided": 3.111258,
+        "lw_two_sided": 1.93652,
         "lubik_matthes": 1.118035
       }
     },
@@ -28567,8 +28567,8 @@
       },
       "rstar": {
         "hlw": 3.074325,
-        "lw_one_sided": 3.078101,
-        "lw_two_sided": 2.028244,
+        "lw_one_sided": 3.079726,
+        "lw_two_sided": 1.890056,
         "lubik_matthes": 1.358903
       }
     },
@@ -28592,8 +28592,8 @@
       },
       "rstar": {
         "hlw": 3.066193,
-        "lw_one_sided": 3.098626,
-        "lw_two_sided": 1.984095,
+        "lw_one_sided": 3.095761,
+        "lw_two_sided": 1.847312,
         "lubik_matthes": 1.585761
       }
     },
@@ -28617,8 +28617,8 @@
       },
       "rstar": {
         "hlw": 2.939241,
-        "lw_one_sided": 2.964766,
-        "lw_two_sided": 1.947337,
+        "lw_one_sided": 2.968566,
+        "lw_two_sided": 1.810891,
         "lubik_matthes": 1.480838
       }
     },
@@ -28642,8 +28642,8 @@
       },
       "rstar": {
         "hlw": 2.680732,
-        "lw_one_sided": 2.702947,
-        "lw_two_sided": 1.920053,
+        "lw_one_sided": 2.72343,
+        "lw_two_sided": 1.78285,
         "lubik_matthes": 1.187132
       }
     },
@@ -28667,8 +28667,8 @@
       },
       "rstar": {
         "hlw": 2.567791,
-        "lw_one_sided": 2.562168,
-        "lw_two_sided": 1.895698,
+        "lw_one_sided": 2.593781,
+        "lw_two_sided": 1.757412,
         "lubik_matthes": 1.255578
       }
     },
@@ -28692,8 +28692,8 @@
       },
       "rstar": {
         "hlw": 2.564578,
-        "lw_one_sided": 2.535729,
-        "lw_two_sided": 1.869717,
+        "lw_one_sided": 2.570556,
+        "lw_two_sided": 1.730717,
         "lubik_matthes": 1.311853
       }
     },
@@ -28717,8 +28717,8 @@
       },
       "rstar": {
         "hlw": 2.743683,
-        "lw_one_sided": 2.747561,
-        "lw_two_sided": 1.834421,
+        "lw_one_sided": 2.768523,
+        "lw_two_sided": 1.69564,
         "lubik_matthes": 1.419622
       }
     },
@@ -28742,8 +28742,8 @@
       },
       "rstar": {
         "hlw": 2.739297,
-        "lw_one_sided": 2.756948,
-        "lw_two_sided": 1.798704,
+        "lw_one_sided": 2.774727,
+        "lw_two_sided": 1.660048,
         "lubik_matthes": 1.449871
       }
     },
@@ -28767,8 +28767,8 @@
       },
       "rstar": {
         "hlw": 2.657233,
-        "lw_one_sided": 2.673785,
-        "lw_two_sided": 1.768225,
+        "lw_one_sided": 2.692194,
+        "lw_two_sided": 1.629153,
         "lubik_matthes": 1.337635
       }
     },
@@ -28792,8 +28792,8 @@
       },
       "rstar": {
         "hlw": 2.639701,
-        "lw_one_sided": 2.642082,
-        "lw_two_sided": 1.737971,
+        "lw_one_sided": 2.661045,
+        "lw_two_sided": 1.598436,
         "lubik_matthes": 1.311201
       }
     },
@@ -28817,8 +28817,8 @@
       },
       "rstar": {
         "hlw": 2.55369,
-        "lw_one_sided": 2.519516,
-        "lw_two_sided": 1.705607,
+        "lw_one_sided": 2.551052,
+        "lw_two_sided": 1.565786,
         "lubik_matthes": 1.458044
       }
     },
@@ -28842,8 +28842,8 @@
       },
       "rstar": {
         "hlw": 2.617702,
-        "lw_one_sided": 2.573953,
-        "lw_two_sided": 1.670112,
+        "lw_one_sided": 2.601548,
+        "lw_two_sided": 1.530331,
         "lubik_matthes": 1.640901
       }
     },
@@ -28867,8 +28867,8 @@
       },
       "rstar": {
         "hlw": 2.730197,
-        "lw_one_sided": 2.688344,
-        "lw_two_sided": 1.630453,
+        "lw_one_sided": 2.70615,
+        "lw_two_sided": 1.490988,
         "lubik_matthes": 1.805349
       }
     },
@@ -28892,8 +28892,8 @@
       },
       "rstar": {
         "hlw": 2.558761,
-        "lw_one_sided": 2.52462,
-        "lw_two_sided": 1.592908,
+        "lw_one_sided": 2.55187,
+        "lw_two_sided": 1.453608,
         "lubik_matthes": 1.80126
       }
     },
@@ -28917,8 +28917,8 @@
       },
       "rstar": {
         "hlw": 2.512767,
-        "lw_one_sided": 2.454305,
-        "lw_two_sided": 1.551558,
+        "lw_one_sided": 2.487428,
+        "lw_two_sided": 1.412864,
         "lubik_matthes": 1.903359
       }
     },
@@ -28942,8 +28942,8 @@
       },
       "rstar": {
         "hlw": 2.565343,
-        "lw_one_sided": 2.496371,
-        "lw_two_sided": 1.507601,
+        "lw_one_sided": 2.523156,
+        "lw_two_sided": 1.370124,
         "lubik_matthes": 1.963338
       }
     },
@@ -28967,8 +28967,8 @@
       },
       "rstar": {
         "hlw": 2.708021,
-        "lw_one_sided": 2.651174,
-        "lw_two_sided": 1.451685,
+        "lw_one_sided": 2.66827,
+        "lw_two_sided": 1.316607,
         "lubik_matthes": 2.201816
       }
     },
@@ -28992,8 +28992,8 @@
       },
       "rstar": {
         "hlw": 2.683871,
-        "lw_one_sided": 2.688483,
-        "lw_two_sided": 1.397953,
+        "lw_one_sided": 2.693556,
+        "lw_two_sided": 1.265144,
         "lubik_matthes": 2.287683
       }
     },
@@ -29017,8 +29017,8 @@
       },
       "rstar": {
         "hlw": 2.515971,
-        "lw_one_sided": 2.501867,
-        "lw_two_sided": 1.343603,
+        "lw_one_sided": 2.518753,
+        "lw_two_sided": 1.213529,
         "lubik_matthes": 2.150972
       }
     },
@@ -29042,8 +29042,8 @@
       },
       "rstar": {
         "hlw": 2.549417,
-        "lw_one_sided": 2.504989,
-        "lw_two_sided": 1.279601,
+        "lw_one_sided": 2.52558,
+        "lw_two_sided": 1.153426,
         "lubik_matthes": 1.995887
       }
     },
@@ -29067,8 +29067,8 @@
       },
       "rstar": {
         "hlw": 2.564659,
-        "lw_one_sided": 2.567656,
-        "lw_two_sided": 1.21359,
+        "lw_one_sided": 2.577898,
+        "lw_two_sided": 1.091901,
         "lubik_matthes": 2.126428
       }
     },
@@ -29092,8 +29092,8 @@
       },
       "rstar": {
         "hlw": 2.488122,
-        "lw_one_sided": 2.457683,
-        "lw_two_sided": 1.140678,
+        "lw_one_sided": 2.478484,
+        "lw_two_sided": 1.024624,
         "lubik_matthes": 2.085411
       }
     },
@@ -29117,8 +29117,8 @@
       },
       "rstar": {
         "hlw": 2.506944,
-        "lw_one_sided": 2.474193,
-        "lw_two_sided": 1.062054,
+        "lw_one_sided": 2.491608,
+        "lw_two_sided": 0.952703,
         "lubik_matthes": 2.11515
       }
     },
@@ -29142,8 +29142,8 @@
       },
       "rstar": {
         "hlw": 2.611322,
-        "lw_one_sided": 2.586652,
-        "lw_two_sided": 0.978628,
+        "lw_one_sided": 2.591524,
+        "lw_two_sided": 0.876645,
         "lubik_matthes": 1.847274
       }
     },
@@ -29167,8 +29167,8 @@
       },
       "rstar": {
         "hlw": 2.319134,
-        "lw_one_sided": 2.244978,
-        "lw_two_sided": 0.903057,
+        "lw_one_sided": 2.270739,
+        "lw_two_sided": 0.808193,
         "lubik_matthes": 1.078506
       }
     },
@@ -29192,8 +29192,8 @@
       },
       "rstar": {
         "hlw": 2.310556,
-        "lw_one_sided": 2.134555,
-        "lw_two_sided": 0.824144,
+        "lw_one_sided": 2.174085,
+        "lw_two_sided": 0.736636,
         "lubik_matthes": 1.054785
       }
     },
@@ -29217,8 +29217,8 @@
       },
       "rstar": {
         "hlw": 2.037189,
-        "lw_one_sided": 1.846658,
-        "lw_two_sided": 0.762202,
+        "lw_one_sided": 1.901823,
+        "lw_two_sided": 0.679619,
         "lubik_matthes": 1.109458
       }
     },
@@ -29242,8 +29242,8 @@
       },
       "rstar": {
         "hlw": 1.128344,
-        "lw_one_sided": 0.961428,
-        "lw_two_sided": 0.734898,
+        "lw_one_sided": 1.069223,
+        "lw_two_sided": 0.653562,
         "lubik_matthes": -0.005353
       }
     },
@@ -29267,8 +29267,8 @@
       },
       "rstar": {
         "hlw": 0.806745,
-        "lw_one_sided": 0.747942,
-        "lw_two_sided": 0.723616,
+        "lw_one_sided": 0.860998,
+        "lw_two_sided": 0.641874,
         "lubik_matthes": 0.527464
       }
     },
@@ -29292,8 +29292,8 @@
       },
       "rstar": {
         "hlw": 0.860373,
-        "lw_one_sided": 0.908432,
-        "lw_two_sided": 0.718438,
+        "lw_one_sided": 1.001784,
+        "lw_two_sided": 0.635625,
         "lubik_matthes": 0.95377
       }
     },
@@ -29317,8 +29317,8 @@
       },
       "rstar": {
         "hlw": 0.865999,
-        "lw_one_sided": 0.880021,
-        "lw_two_sided": 0.715241,
+        "lw_one_sided": 0.974107,
+        "lw_two_sided": 0.631398,
         "lubik_matthes": 1.072009
       }
     },
@@ -29342,8 +29342,8 @@
       },
       "rstar": {
         "hlw": 1.140605,
-        "lw_one_sided": 1.137674,
-        "lw_two_sided": 0.707846,
+        "lw_one_sided": 1.208869,
+        "lw_two_sided": 0.623512,
         "lubik_matthes": 1.293296
       }
     },
@@ -29367,8 +29367,8 @@
       },
       "rstar": {
         "hlw": 0.99423,
-        "lw_one_sided": 0.951019,
-        "lw_two_sided": 0.705185,
+        "lw_one_sided": 1.033018,
+        "lw_two_sided": 0.620292,
         "lubik_matthes": 0.845527
       }
     },
@@ -29392,8 +29392,8 @@
       },
       "rstar": {
         "hlw": 1.000955,
-        "lw_one_sided": 0.924201,
-        "lw_two_sided": 0.700541,
+        "lw_one_sided": 1.008308,
+        "lw_two_sided": 0.615646,
         "lubik_matthes": 0.780207
       }
     },
@@ -29417,8 +29417,8 @@
       },
       "rstar": {
         "hlw": 0.912257,
-        "lw_one_sided": 0.822865,
-        "lw_two_sided": 0.697659,
+        "lw_one_sided": 0.913227,
+        "lw_two_sided": 0.612837,
         "lubik_matthes": 0.853601
       }
     },
@@ -29442,8 +29442,8 @@
       },
       "rstar": {
         "hlw": 0.891592,
-        "lw_one_sided": 0.798009,
-        "lw_two_sided": 0.699812,
+        "lw_one_sided": 0.885852,
+        "lw_two_sided": 0.614568,
         "lubik_matthes": 0.86339
       }
     },
@@ -29467,8 +29467,8 @@
       },
       "rstar": {
         "hlw": 0.74675,
-        "lw_one_sided": 0.632626,
-        "lw_two_sided": 0.713908,
+        "lw_one_sided": 0.723994,
+        "lw_two_sided": 0.627334,
         "lubik_matthes": 0.983523
       }
     },
@@ -29492,8 +29492,8 @@
       },
       "rstar": {
         "hlw": 0.905967,
-        "lw_one_sided": 0.762272,
-        "lw_two_sided": 0.727078,
+        "lw_one_sided": 0.841751,
+        "lw_two_sided": 0.639189,
         "lubik_matthes": 0.996998
       }
     },
@@ -29517,8 +29517,8 @@
       },
       "rstar": {
         "hlw": 0.74927,
-        "lw_one_sided": 0.602665,
-        "lw_two_sided": 0.748094,
+        "lw_one_sided": 0.689268,
+        "lw_two_sided": 0.658391,
         "lubik_matthes": 0.824253
       }
     },
@@ -29542,8 +29542,8 @@
       },
       "rstar": {
         "hlw": 0.864768,
-        "lw_one_sided": 0.71202,
-        "lw_two_sided": 0.762241,
+        "lw_one_sided": 0.794058,
+        "lw_two_sided": 0.671526,
         "lubik_matthes": 0.779357
       }
     },
@@ -29567,8 +29567,8 @@
       },
       "rstar": {
         "hlw": 0.9958,
-        "lw_one_sided": 0.892845,
-        "lw_two_sided": 0.776296,
+        "lw_one_sided": 0.95827,
+        "lw_two_sided": 0.684528,
         "lubik_matthes": 0.894312
       }
     },
@@ -29592,8 +29592,8 @@
       },
       "rstar": {
         "hlw": 0.859089,
-        "lw_one_sided": 0.75776,
-        "lw_two_sided": 0.795245,
+        "lw_one_sided": 0.831916,
+        "lw_two_sided": 0.701836,
         "lubik_matthes": 0.846009
       }
     },
@@ -29617,8 +29617,8 @@
       },
       "rstar": {
         "hlw": 0.685929,
-        "lw_one_sided": 0.60406,
-        "lw_two_sided": 0.821355,
+        "lw_one_sided": 0.686176,
+        "lw_two_sided": 0.725523,
         "lubik_matthes": 0.775299
       }
     },
@@ -29642,8 +29642,8 @@
       },
       "rstar": {
         "hlw": 0.646977,
-        "lw_one_sided": 0.588104,
-        "lw_two_sided": 0.852532,
+        "lw_one_sided": 0.666911,
+        "lw_two_sided": 0.75393,
         "lubik_matthes": 0.795921
       }
     },
@@ -29667,8 +29667,8 @@
       },
       "rstar": {
         "hlw": 0.756284,
-        "lw_one_sided": 0.676453,
-        "lw_two_sided": 0.878822,
+        "lw_one_sided": 0.752338,
+        "lw_two_sided": 0.777776,
         "lubik_matthes": 0.871346
       }
     },
@@ -29692,8 +29692,8 @@
       },
       "rstar": {
         "hlw": 0.62531,
-        "lw_one_sided": 0.558713,
-        "lw_two_sided": 0.910341,
+        "lw_one_sided": 0.64014,
+        "lw_two_sided": 0.806437,
         "lubik_matthes": 0.909545
       }
     },
@@ -29717,8 +29717,8 @@
       },
       "rstar": {
         "hlw": 0.749439,
-        "lw_one_sided": 0.721355,
-        "lw_two_sided": 0.938693,
+        "lw_one_sided": 0.788208,
+        "lw_two_sided": 0.832306,
         "lubik_matthes": 0.927555
       }
     },
@@ -29742,8 +29742,8 @@
       },
       "rstar": {
         "hlw": 0.83592,
-        "lw_one_sided": 0.818766,
-        "lw_two_sided": 0.966267,
+        "lw_one_sided": 0.877524,
+        "lw_two_sided": 0.857131,
         "lubik_matthes": 0.923018
       }
     },
@@ -29767,8 +29767,8 @@
       },
       "rstar": {
         "hlw": 0.566448,
-        "lw_one_sided": 0.54384,
-        "lw_two_sided": 1.005638,
+        "lw_one_sided": 0.616746,
+        "lw_two_sided": 0.892903,
         "lubik_matthes": 0.783666
       }
     },
@@ -29792,8 +29792,8 @@
       },
       "rstar": {
         "hlw": 0.840501,
-        "lw_one_sided": 0.818658,
-        "lw_two_sided": 1.033809,
+        "lw_one_sided": 0.873899,
+        "lw_two_sided": 0.918757,
         "lubik_matthes": 1.015105
       }
     },
@@ -29817,8 +29817,8 @@
       },
       "rstar": {
         "hlw": 0.948421,
-        "lw_one_sided": 0.932068,
-        "lw_two_sided": 1.056371,
+        "lw_one_sided": 0.981769,
+        "lw_two_sided": 0.939463,
         "lubik_matthes": 0.97048
       }
     },
@@ -29842,8 +29842,8 @@
       },
       "rstar": {
         "hlw": 0.841882,
-        "lw_one_sided": 0.840742,
-        "lw_two_sided": 1.081892,
+        "lw_one_sided": 0.894408,
+        "lw_two_sided": 0.963004,
         "lubik_matthes": 0.872055
       }
     },
@@ -29867,8 +29867,8 @@
       },
       "rstar": {
         "hlw": 0.853079,
-        "lw_one_sided": 0.878528,
-        "lw_two_sided": 1.104218,
+        "lw_one_sided": 0.928931,
+        "lw_two_sided": 0.983734,
         "lubik_matthes": 0.915207
       }
     },
@@ -29892,8 +29892,8 @@
       },
       "rstar": {
         "hlw": 0.946332,
-        "lw_one_sided": 1.078417,
-        "lw_two_sided": 1.127575,
+        "lw_one_sided": 1.107027,
+        "lw_two_sided": 1.005324,
         "lubik_matthes": 0.938189
       }
     },
@@ -29917,8 +29917,8 @@
       },
       "rstar": {
         "hlw": 0.874147,
-        "lw_one_sided": 1.044492,
-        "lw_two_sided": 1.15416,
+        "lw_one_sided": 1.071882,
+        "lw_two_sided": 1.029681,
         "lubik_matthes": 0.973655
       }
     },
@@ -29942,8 +29942,8 @@
       },
       "rstar": {
         "hlw": 0.771855,
-        "lw_one_sided": 0.976541,
-        "lw_two_sided": 1.185341,
+        "lw_one_sided": 1.004888,
+        "lw_two_sided": 1.058151,
         "lubik_matthes": 0.891962
       }
     },
@@ -29967,8 +29967,8 @@
       },
       "rstar": {
         "hlw": 0.875893,
-        "lw_one_sided": 1.151631,
-        "lw_two_sided": 1.215836,
+        "lw_one_sided": 1.163495,
+        "lw_two_sided": 1.08584,
         "lubik_matthes": 1.064184
       }
     },
@@ -29992,8 +29992,8 @@
       },
       "rstar": {
         "hlw": 0.902829,
-        "lw_one_sided": 1.251571,
-        "lw_two_sided": 1.24903,
+        "lw_one_sided": 1.251449,
+        "lw_two_sided": 1.115913,
         "lubik_matthes": 0.963262
       }
     },
@@ -30017,8 +30017,8 @@
       },
       "rstar": {
         "hlw": 0.938138,
-        "lw_one_sided": 1.27897,
-        "lw_two_sided": 1.279944,
+        "lw_one_sided": 1.27874,
+        "lw_two_sided": 1.143831,
         "lubik_matthes": 1.106922
       }
     },
@@ -30042,8 +30042,8 @@
       },
       "rstar": {
         "hlw": 0.899243,
-        "lw_one_sided": 1.232957,
-        "lw_two_sided": 1.311598,
+        "lw_one_sided": 1.237037,
+        "lw_two_sided": 1.172323,
         "lubik_matthes": 1.003307
       }
     },
@@ -30067,8 +30067,8 @@
       },
       "rstar": {
         "hlw": 0.915756,
-        "lw_one_sided": 1.269264,
-        "lw_two_sided": 1.34436,
+        "lw_one_sided": 1.268984,
+        "lw_two_sided": 1.201802,
         "lubik_matthes": 1.09965
       }
     },
@@ -30092,8 +30092,8 @@
       },
       "rstar": {
         "hlw": 0.866,
-        "lw_one_sided": 1.186015,
-        "lw_two_sided": 1.376558,
+        "lw_one_sided": 1.193655,
+        "lw_two_sided": 1.230904,
         "lubik_matthes": 1.225592
       }
     },
@@ -30117,8 +30117,8 @@
       },
       "rstar": {
         "hlw": 0.897634,
-        "lw_one_sided": 1.223377,
-        "lw_two_sided": 1.404864,
+        "lw_one_sided": 1.229005,
+        "lw_two_sided": 1.256789,
         "lubik_matthes": 1.357965
       }
     },
@@ -30142,8 +30142,8 @@
       },
       "rstar": {
         "hlw": 1.081047,
-        "lw_one_sided": 1.418648,
-        "lw_two_sided": 1.426081,
+        "lw_one_sided": 1.409786,
+        "lw_two_sided": 1.276487,
         "lubik_matthes": 1.401619
       }
     },
@@ -30167,8 +30167,8 @@
       },
       "rstar": {
         "hlw": 1.212416,
-        "lw_one_sided": 1.561831,
-        "lw_two_sided": 1.44523,
+        "lw_one_sided": 1.538718,
+        "lw_two_sided": 1.294466,
         "lubik_matthes": 1.521496
       }
     },
@@ -30192,8 +30192,8 @@
       },
       "rstar": {
         "hlw": 1.186365,
-        "lw_one_sided": 1.551313,
-        "lw_two_sided": 1.464785,
+        "lw_one_sided": 1.525142,
+        "lw_two_sided": 1.313027,
         "lubik_matthes": 1.575874
       }
     },
@@ -30217,8 +30217,8 @@
       },
       "rstar": {
         "hlw": 1.117773,
-        "lw_one_sided": 1.483385,
-        "lw_two_sided": 1.482966,
+        "lw_one_sided": 1.462559,
+        "lw_two_sided": 1.330445,
         "lubik_matthes": 1.434167
       }
     },
@@ -30242,8 +30242,8 @@
       },
       "rstar": {
         "hlw": 1.060966,
-        "lw_one_sided": 1.454901,
-        "lw_two_sided": 1.504505,
+        "lw_one_sided": 1.431664,
+        "lw_two_sided": 1.351201,
         "lubik_matthes": 1.468552
       }
     },
@@ -30267,8 +30267,8 @@
       },
       "rstar": {
         "hlw": 1.077784,
-        "lw_one_sided": 1.496608,
-        "lw_two_sided": 1.521669,
+        "lw_one_sided": 1.470494,
+        "lw_two_sided": 1.368416,
         "lubik_matthes": 1.581008
       }
     },
@@ -30292,8 +30292,8 @@
       },
       "rstar": {
         "hlw": 1.16436,
-        "lw_one_sided": 1.622914,
-        "lw_two_sided": 1.532464,
+        "lw_one_sided": 1.587144,
+        "lw_two_sided": 1.380399,
         "lubik_matthes": 1.668185
       }
     },
@@ -30317,8 +30317,8 @@
       },
       "rstar": {
         "hlw": 1.289063,
-        "lw_one_sided": 1.731932,
-        "lw_two_sided": 1.534612,
+        "lw_one_sided": 1.690339,
+        "lw_two_sided": 1.384923,
         "lubik_matthes": 1.600173
       }
     },
@@ -30342,8 +30342,8 @@
       },
       "rstar": {
         "hlw": 1.272861,
-        "lw_one_sided": 1.738757,
-        "lw_two_sided": 1.536038,
+        "lw_one_sided": 1.694123,
+        "lw_two_sided": 1.388933,
         "lubik_matthes": 1.2486
       }
     },
@@ -30367,8 +30367,8 @@
       },
       "rstar": {
         "hlw": 1.297908,
-        "lw_one_sided": 1.719601,
-        "lw_two_sided": 1.540872,
+        "lw_one_sided": 1.69251,
+        "lw_two_sided": 1.395072,
         "lubik_matthes": 1.091837
       }
     },
@@ -30392,8 +30392,8 @@
       },
       "rstar": {
         "hlw": 1.265183,
-        "lw_one_sided": 1.685499,
-        "lw_two_sided": 1.547325,
+        "lw_one_sided": 1.661935,
+        "lw_two_sided": 1.402678,
         "lubik_matthes": -0.128862
       }
     },
@@ -30417,8 +30417,8 @@
       },
       "rstar": {
         "hlw": 1.33408,
-        "lw_one_sided": 1.746364,
-        "lw_two_sided": 1.550069,
+        "lw_one_sided": 1.718725,
+        "lw_two_sided": 1.406696,
         "lubik_matthes": 1.969146
       }
     },
@@ -30442,8 +30442,8 @@
       },
       "rstar": {
         "hlw": 1.31431,
-        "lw_one_sided": 1.730276,
-        "lw_two_sided": 1.553764,
+        "lw_one_sided": 1.702357,
+        "lw_two_sided": 1.411829,
         "lubik_matthes": 1.480319
       }
     },
@@ -30467,8 +30467,8 @@
       },
       "rstar": {
         "hlw": 1.449088,
-        "lw_one_sided": 1.868786,
-        "lw_two_sided": 1.553716,
+        "lw_one_sided": 1.824201,
+        "lw_two_sided": 1.412812,
         "lubik_matthes": 1.40592
       }
     },
@@ -30492,8 +30492,8 @@
       },
       "rstar": {
         "hlw": 1.519806,
-        "lw_one_sided": 1.994795,
-        "lw_two_sided": 1.553618,
+        "lw_one_sided": 1.93235,
+        "lw_two_sided": 1.414071,
         "lubik_matthes": 1.601075
       }
     },
@@ -30517,8 +30517,8 @@
       },
       "rstar": {
         "hlw": 1.473082,
-        "lw_one_sided": 1.981683,
-        "lw_two_sided": 1.55372,
+        "lw_one_sided": 1.91416,
+        "lw_two_sided": 1.416154,
         "lubik_matthes": 1.142236
       }
     },
@@ -30542,8 +30542,8 @@
       },
       "rstar": {
         "hlw": 1.730836,
-        "lw_one_sided": 2.258171,
-        "lw_two_sided": 1.543446,
+        "lw_one_sided": 2.176162,
+        "lw_two_sided": 1.407948,
         "lubik_matthes": 1.349987
       }
     },
@@ -30567,8 +30567,8 @@
       },
       "rstar": {
         "hlw": 1.452469,
-        "lw_one_sided": 1.978553,
-        "lw_two_sided": 1.549739,
+        "lw_one_sided": 1.921967,
+        "lw_two_sided": 1.412861,
         "lubik_matthes": 1.066257
       }
     },
@@ -30592,8 +30592,8 @@
       },
       "rstar": {
         "hlw": 1.228528,
-        "lw_one_sided": 1.644134,
-        "lw_two_sided": 1.566874,
+        "lw_one_sided": 1.651705,
+        "lw_two_sided": 1.426821,
         "lubik_matthes": 1.273697
       }
     },
@@ -30617,8 +30617,8 @@
       },
       "rstar": {
         "hlw": 1.317893,
-        "lw_one_sided": 1.787669,
-        "lw_two_sided": 1.57912,
+        "lw_one_sided": 1.807688,
+        "lw_two_sided": 1.436042,
         "lubik_matthes": 1.876029
       }
     },
@@ -30642,8 +30642,8 @@
       },
       "rstar": {
         "hlw": 1.253545,
-        "lw_one_sided": 1.721372,
-        "lw_two_sided": 1.594183,
+        "lw_one_sided": 1.735358,
+        "lw_two_sided": 1.447499,
         "lubik_matthes": 2.056675
       }
     },
@@ -30667,8 +30667,8 @@
       },
       "rstar": {
         "hlw": 1.20983,
-        "lw_one_sided": 1.70867,
-        "lw_two_sided": 1.610095,
+        "lw_one_sided": 1.716888,
+        "lw_two_sided": 1.459152,
         "lubik_matthes": 2.103422
       }
     },
@@ -30692,8 +30692,8 @@
       },
       "rstar": {
         "hlw": 1.09116,
-        "lw_one_sided": 1.616769,
-        "lw_two_sided": 1.626294,
+        "lw_one_sided": 1.616436,
+        "lw_two_sided": 1.473327,
         "lubik_matthes": 2.158864
       }
     },
@@ -30717,8 +30717,8 @@
       },
       "rstar": {
         "hlw": 1.033447,
-        "lw_one_sided": 1.483638,
-        "lw_two_sided": 1.635647,
+        "lw_one_sided": 1.494213,
+        "lw_two_sided": 1.482557,
         "lubik_matthes": 2.064124
       }
     },
@@ -30742,8 +30742,8 @@
       },
       "rstar": {
         "hlw": 0.936104,
-        "lw_one_sided": 1.363131,
-        "lw_two_sided": 1.642842,
+        "lw_one_sided": 1.448831,
+        "lw_two_sided": 1.49001,
         "lubik_matthes": 2.07158
       }
     },
@@ -30767,8 +30767,8 @@
       },
       "rstar": {
         "hlw": 0.927792,
-        "lw_one_sided": 1.438635,
-        "lw_two_sided": 1.652855,
+        "lw_one_sided": 1.439996,
+        "lw_two_sided": 1.499963,
         "lubik_matthes": 2.152726
       }
     },
@@ -30792,8 +30792,8 @@
       },
       "rstar": {
         "hlw": 0.936959,
-        "lw_one_sided": 1.446636,
-        "lw_two_sided": 1.656364,
+        "lw_one_sided": 1.439317,
+        "lw_two_sided": 1.50575,
         "lubik_matthes": 2.240849
       }
     },
@@ -30817,8 +30817,8 @@
       },
       "rstar": {
         "hlw": 0.91508,
-        "lw_one_sided": 1.399492,
-        "lw_two_sided": 1.6572,
+        "lw_one_sided": 1.381715,
+        "lw_two_sided": 1.510363,
         "lubik_matthes": 2.149833
       }
     },
@@ -30842,8 +30842,8 @@
       },
       "rstar": {
         "hlw": 0.870307,
-        "lw_one_sided": 1.376399,
-        "lw_two_sided": 1.660187,
+        "lw_one_sided": 1.386123,
+        "lw_two_sided": 1.515947,
         "lubik_matthes": 1.796928
       }
     },
@@ -30867,8 +30867,8 @@
       },
       "rstar": {
         "hlw": 0.793002,
-        "lw_one_sided": 1.356188,
-        "lw_two_sided": 1.667213,
+        "lw_one_sided": 1.356191,
+        "lw_two_sided": 1.524429,
         "lubik_matthes": 1.75074
       }
     },
@@ -30892,8 +30892,8 @@
       },
       "rstar": {
         "hlw": 0.905804,
-        "lw_one_sided": 1.448294,
-        "lw_two_sided": 1.665007,
+        "lw_one_sided": 1.515816,
+        "lw_two_sided": 1.525757,
         "lubik_matthes": 2.021764
       }
     },
@@ -30917,8 +30917,8 @@
       },
       "rstar": {
         "hlw": 1.052875,
-        "lw_one_sided": 1.624137,
-        "lw_two_sided": 1.656837,
+        "lw_one_sided": 1.589431,
+        "lw_two_sided": 1.523971,
         "lubik_matthes": 1.975115
       }
     },
@@ -30942,8 +30942,8 @@
       },
       "rstar": {
         "hlw": 0.888922,
-        "lw_one_sided": 1.470079,
-        "lw_two_sided": 1.654904,
+        "lw_one_sided": 1.417911,
+        "lw_two_sided": 1.529101,
         "lubik_matthes": 1.695481
       }
     },
@@ -30967,8 +30967,8 @@
       },
       "rstar": {
         "hlw": 1.091693,
-        "lw_one_sided": 1.728992,
-        "lw_two_sided": 1.652443,
+        "lw_one_sided": 1.621243,
+        "lw_two_sided": 1.532826,
         "lubik_matthes": 1.800417
       }
     },
@@ -30992,8 +30992,8 @@
       },
       "rstar": {
         "hlw": 1.008648,
-        "lw_one_sided": 1.652443,
-        "lw_two_sided": 1.652443,
+        "lw_one_sided": 1.587478,
+        "lw_two_sided": 1.536916,
         "lubik_matthes": 1.849795
       }
     },
@@ -31017,8 +31017,8 @@
       },
       "rstar": {
         "hlw": null,
-        "lw_one_sided": null,
-        "lw_two_sided": null,
+        "lw_one_sided": 1.536916,
+        "lw_two_sided": 1.536916,
         "lubik_matthes": null
       }
     },
